@@ -49,14 +49,14 @@ function advanceSave.onAdvance(player, skill, oldLevel, newLevel)
     --     player:setStorageValue(TIBIA_COIN_LVL_40, 2)
     -- end
 
-    if player:getStorageValue(TIBIA_COIN_LVL_50) < 1 and newLevel == 50 then
-        db.query("UPDATE accounts SET coins = coins + 25 WHERE id = '" ..player:getAccountId().. "';")
-        player:getPosition():sendMagicEffect(CONST_ME_PINK_BEAM)
-        player:getPosition():sendMagicEffect(CONST_ME_HOLYAREA)
-        player:sendTextMessage(MESSAGE_STATUS_DEFAULT, "You earned 25 Tibia Coins for reaching level 50.")
-        player:say("You earned 25 Tibia Coins for reaching level 50.", TALKTYPE_MONSTER_SAY)
-        player:setStorageValue(TIBIA_COIN_LVL_50, 2)
-    end
+    -- if player:getStorageValue(TIBIA_COIN_LVL_50) < 1 and newLevel == 50 then
+    --     db.query("UPDATE accounts SET coins = coins + 25 WHERE id = '" ..player:getAccountId().. "';")
+    --     player:getPosition():sendMagicEffect(CONST_ME_PINK_BEAM)
+    --     player:getPosition():sendMagicEffect(CONST_ME_HOLYAREA)
+    --     player:sendTextMessage(MESSAGE_STATUS_DEFAULT, "You earned 25 Tibia Coins for reaching level 50.")
+    --     player:say("You earned 25 Tibia Coins for reaching level 50.", TALKTYPE_MONSTER_SAY)
+    --     player:setStorageValue(TIBIA_COIN_LVL_50, 2)
+    -- end
 
     -- if player:getStorageValue(TIBIA_COIN_LVL_60) < 1 and newLevel == 60 then
     --     db.query("UPDATE accounts SET coins = coins + 25 WHERE id = '" ..player:getAccountId().. "';")
@@ -103,40 +103,58 @@ function advanceSave.onAdvance(player, skill, oldLevel, newLevel)
         player:setStorageValue(TIBIA_COIN_LVL_100, 2)
     end
 
-    if player:getStorageValue(TIBIA_COIN_LVL_150) < 1 and newLevel == 150 then
+    -- if player:getStorageValue(TIBIA_COIN_LVL_150) < 1 and newLevel == 150 then
+    --     db.query("UPDATE accounts SET coins = coins + 100 WHERE id = '" ..player:getAccountId().. "';")
+    --     player:getPosition():sendMagicEffect(CONST_ME_PINK_BEAM)
+    --     player:getPosition():sendMagicEffect(CONST_ME_HOLYAREA)
+    --     player:sendTextMessage(MESSAGE_STATUS_DEFAULT, "You earned 100 Tibia Coins for reaching level 150.")
+    --     player:say("You earned 100 Tibia Coins for reaching level 150.", TALKTYPE_MONSTER_SAY)
+    --     player:setStorageValue(TIBIA_COIN_LVL_150, 2)
+    -- end
+
+    if player:getStorageValue(TIBIA_COIN_LVL_200) < 1 and newLevel == 200 then
         db.query("UPDATE accounts SET coins = coins + 100 WHERE id = '" ..player:getAccountId().. "';")
         player:getPosition():sendMagicEffect(CONST_ME_PINK_BEAM)
         player:getPosition():sendMagicEffect(CONST_ME_HOLYAREA)
-        player:sendTextMessage(MESSAGE_STATUS_DEFAULT, "You earned 100 Tibia Coins for reaching level 150.")
-        player:say("You earned 100 Tibia Coins for reaching level 150.", TALKTYPE_MONSTER_SAY)
-        player:setStorageValue(TIBIA_COIN_LVL_150, 2)
-    end
-
-    if player:getStorageValue(TIBIA_COIN_LVL_200) < 1 and newLevel == 200 then
-        db.query("UPDATE accounts SET coins = coins + 150 WHERE id = '" ..player:getAccountId().. "';")
-        player:getPosition():sendMagicEffect(CONST_ME_PINK_BEAM)
-        player:getPosition():sendMagicEffect(CONST_ME_HOLYAREA)
-        player:sendTextMessage(MESSAGE_STATUS_DEFAULT, "You earned 150 Tibia Coins for reaching level 200.")
-        player:say("You earned 150 Tibia Coins for reaching level 200.", TALKTYPE_MONSTER_SAY)
+        player:sendTextMessage(MESSAGE_STATUS_DEFAULT, "You earned 100 Tibia Coins for reaching level 200.")
+        player:say("You earned 100 Tibia Coins for reaching level 200.", TALKTYPE_MONSTER_SAY)
         player:setStorageValue(TIBIA_COIN_LVL_200, 2)
     end
 
-    if player:getStorageValue(TIBIA_COIN_LVL_250) < 1 and newLevel == 250 then
+    -- if player:getStorageValue(TIBIA_COIN_LVL_250) < 1 and newLevel == 250 then
+    --     db.query("UPDATE accounts SET coins = coins + 200 WHERE id = '" ..player:getAccountId().. "';")
+    --     player:getPosition():sendMagicEffect(CONST_ME_PINK_BEAM)
+    --     player:getPosition():sendMagicEffect(CONST_ME_HOLYAREA)
+    --     player:sendTextMessage(MESSAGE_STATUS_DEFAULT, "You earned 200 Tibia Coins for reaching level 250.")
+    --     player:say("You earned 200 Tibia Coins for reaching level 250.", TALKTYPE_MONSTER_SAY)
+    --     player:setStorageValue(TIBIA_COIN_LVL_250, 2)
+    -- end
+
+    if player:getStorageValue(TIBIA_COIN_LVL_300) < 1 and newLevel == 300 then
+        db.query("UPDATE accounts SET coins = coins + 150 WHERE id = '" ..player:getAccountId().. "';")
+        player:getPosition():sendMagicEffect(CONST_ME_PINK_BEAM)
+        player:getPosition():sendMagicEffect(CONST_ME_HOLYAREA)
+        player:sendTextMessage(MESSAGE_STATUS_DEFAULT, "You earned 150 Tibia Coins for reaching level 300.")
+        player:say("You earned 150 Tibia Coins for reaching level 300.", TALKTYPE_MONSTER_SAY)
+        player:setStorageValue(TIBIA_COIN_LVL_300, 2)
+    end
+
+    if player:getStorageValue(TIBIA_COIN_LVL_400) < 1 and newLevel == 400 then
         db.query("UPDATE accounts SET coins = coins + 200 WHERE id = '" ..player:getAccountId().. "';")
         player:getPosition():sendMagicEffect(CONST_ME_PINK_BEAM)
         player:getPosition():sendMagicEffect(CONST_ME_HOLYAREA)
-        player:sendTextMessage(MESSAGE_STATUS_DEFAULT, "You earned 200 Tibia Coins for reaching level 250.")
-        player:say("You earned 200 Tibia Coins for reaching level 250.", TALKTYPE_MONSTER_SAY)
-        player:setStorageValue(TIBIA_COIN_LVL_250, 2)
+        player:sendTextMessage(MESSAGE_STATUS_DEFAULT, "You earned 200 Tibia Coins for reaching level 400.")
+        player:say("You earned 200 Tibia Coins for reaching level 400.", TALKTYPE_MONSTER_SAY)
+        player:setStorageValue(TIBIA_COIN_LVL_400, 2)
     end
 
-    if player:getStorageValue(TIBIA_COIN_LVL_300) < 1 and newLevel == 300 then
+    if player:getStorageValue(TIBIA_COIN_LVL_500) < 1 and newLevel == 500 then
         db.query("UPDATE accounts SET coins = coins + 250 WHERE id = '" ..player:getAccountId().. "';")
         player:getPosition():sendMagicEffect(CONST_ME_PINK_BEAM)
         player:getPosition():sendMagicEffect(CONST_ME_HOLYAREA)
-        player:sendTextMessage(MESSAGE_STATUS_DEFAULT, "You earned 250 Tibia Coins for reaching level 300.")
-        player:say("You earned 250 Tibia Coins for reaching level 300.", TALKTYPE_MONSTER_SAY)
-        player:setStorageValue(TIBIA_COIN_LVL_300, 2)
+        player:sendTextMessage(MESSAGE_STATUS_DEFAULT, "You earned 250 Tibia Coins for reaching level 500.")
+        player:say("You earned 250 Tibia Coins for reaching level 500.", TALKTYPE_MONSTER_SAY)
+        player:setStorageValue(TIBIA_COIN_LVL_500, 2)
     end
 
 	if config.save then
