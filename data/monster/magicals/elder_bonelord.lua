@@ -75,8 +75,8 @@ monster.light = {
 }
 
 monster.summons = {
-	{name = "Gazer", chance = 10, interval = 2000},
-	{name = "Crypt Shambler", chance = 15, interval = 2000}
+	{name = "Gazer", chance = 3, interval = 25000},
+	{name = "Crypt Shambler", chance = 2, interval = 30000}
 }
 
 monster.voices = {

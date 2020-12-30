@@ -83,8 +83,8 @@ monster.loot = {
 	{id = "demonbone amulet", chance = 400},--raro
 	{id = "heavy mace", chance = 300},--raro
 	{id = "mastermind shield", chance = 200},--raro
-	{id = "falcon rod", chance = 12},--muitoraro
-	{id = "falcon greaves", chance = 10}--muitoraro
+	{id = "falcon rod", chance = 14},--muitoraro
+	{id = "falcon greaves", chance = 12}--muitoraro
 }
 
 monster.attacks = {

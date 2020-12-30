@@ -73,7 +73,7 @@ monster.light = {
 }
 
 monster.summons = {
-	{name = "Spidris Elite", chance = 40, interval = 2000, max = 2}
+	{name = "Spidris Elite", chance = 4, interval = 30000, max = 1}
 }
 
 monster.voices = {

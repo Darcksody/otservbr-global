@@ -73,7 +73,7 @@ monster.light = {
 }
 
 monster.summons = {
-	{name = "Squidgy Slime", chance = 10, interval = 2000}
+	{name = "Squidgy Slime", chance = 5, interval = 25000}
 }
 
 monster.voices = {

@@ -30,7 +30,7 @@ monster.health = 8900
 monster.maxHealth = 8900
 monster.race = "fire"
 monster.corpse = 0
-monster.speed = 300
+monster.speed = 250
 monster.manaCost = 0
 monster.maxSummons = 0
 

@@ -87,13 +87,13 @@ monster.loot = {
 	{id = "great spirit potion", chance = 2010},
 	{id = "ultimate health potion", chance = 750},
 	{id = "belted cape", chance = 580},
-	{id = "paladin armor", chance = 140},
+	{id = "paladin armor", chance = 190},
 	{id = "springsprout rod", chance = 1020},
 	{id = "boggy dreads", chance = 9870}
 }
 
 monster.attacks = {
-	{name ="melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -183, condition = {type = CONDITION_POISON, totalDamage = 80, interval = 4000}},
+	{name ="melee", interval = 2000, chance = 100, minDamage = -30, maxDamage = -183, condition = {type = CONDITION_POISON, totalDamage = 80, interval = 4000}},
 	{name ="combat", interval = 2000, chance = 10, type = COMBAT_LIFEDRAIN, minDamage = -90, maxDamage = -140, range = 7, effect = CONST_ME_MAGIC_RED, target = true},
 	{name ="combat", interval = 2000, chance = 10, type = COMBAT_EARTHDAMAGE, minDamage = -100, maxDamage = -175, radius = 3, effect = CONST_ME_BUBBLES, target = false},
 	{name ="combat", interval = 2000, chance = 15, type = COMBAT_EARTHDAMAGE, minDamage = -96, maxDamage = -110, range = 7, shootEffect = CONST_ANI_SMALLEARTH, target = true},

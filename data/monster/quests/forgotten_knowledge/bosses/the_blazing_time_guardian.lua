@@ -19,7 +19,7 @@ monster.race = "undead"
 monster.corpse = 27753
 monster.speed = 340
 monster.manaCost = 0
-monster.maxSummons = 8
+monster.maxSummons = 4
 
 monster.changeTarget = {
 	interval = 2000,
@@ -60,7 +60,7 @@ monster.light = {
 }
 
 monster.summons = {
-	{name = "time waster", chance = 3, interval = 2000, max = 8}
+	{name = "time waster", chance = 2, interval = 35000, max = 4}
 }
 
 monster.voices = {
@@ -81,7 +81,7 @@ monster.loot = {
 	{id = 7440, chance = 2000},
 	{id = 2214, chance = 2000},
 	{id = 2436, chance = 1000},
-	{id = 25377, chance = 100000}
+	{id = 25377, chance = 100000, maxCount = 3}
 }
 
 monster.attacks = {
@@ -98,7 +98,7 @@ monster.attacks = {
 monster.defenses = {
 	defense = 70,
 	armor = 70,
-	{name ="time guardian lost time", interval = 2000, chance = 10, target = false}
+	{name ="time guardian lost time", interval = 20000, chance = 10, target = false}
 }
 
 monster.elements = {

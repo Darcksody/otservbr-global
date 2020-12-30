@@ -73,8 +73,8 @@ monster.light = {
 }
 
 monster.summons = {
-	{name = "Dworc Fleshhunter", chance = 30, interval = 1000, max = 1},
-	{name = "Terror Bird", chance = 30, interval = 1000, max = 1}
+	{name = "Dworc Fleshhunter", chance = 3, interval = 25000, max = 1},
+	{name = "Terror Bird", chance = 3, interval = 20000, max = 1}
 }
 
 monster.voices = {

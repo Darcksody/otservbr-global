@@ -71,7 +71,7 @@ monster.light = {
 }
 
 monster.summons = {
-	{name = "Snake", chance = 20, interval = 2000, max = 4}
+	{name = "Snake", chance = 4, interval = 25000, max = 2}
 }
 
 monster.voices = {
