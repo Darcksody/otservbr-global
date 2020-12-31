@@ -3,10 +3,6 @@
 	<spawn centerx="1014" centery="1024" centerz="5" radius="2">
 		<npc name="Tamoril" x="-1" y="0" z="5" spawntime="90" direction="2" />
 	</spawn>
-	<spawn centerx="32358" centery="32208" centerz="5" radius="4">
-		<npc name="Yaman" x="-3" y="0" z="5" spawntime="60" />
-		<npc name="Haroun" x="4" y="0" z="5" spawntime="60" />
-	</spawn>
 	<spawn centerx="988" centery="1023" centerz="6" radius="1">
 		<npc name="Haroun" x="0" y="0" z="6" spawntime="60" />
 	</spawn>
@@ -29,10 +25,8 @@
 	<spawn centerx="998" centery="1037" centerz="6" radius="1">
 		<npc name="Rashid" x="0" y="-1" z="6" spawntime="60" />
 	</spawn>
-	<spawn centerx="32358" centery="32207" centerz="6" radius="5">
-		<npc name="nah_bob" x="-4" y="-2" z="6" spawntime="60" />
-		<npc name="Yasir" x="5" y="-2" z="6" spawntime="60" direction="3" />
-		<npc name="Alesar" x="-4" y="3" z="6" spawntime="60" />
+	<spawn centerx="32354" centery="32205" centerz="6" radius="5">
+		<npc name="nah_bob" x="0" y="0" z="6" spawntime="60" />
 	</spawn>
 	<spawn centerx="1059" centery="1018" centerz="7" radius="3">
 		<npc name="zuma_magehide" x="-1" y="1" z="7" spawntime="60" />
@@ -51,9 +45,5 @@
 	</spawn>
 	<spawn centerx="1001" centery="1036" centerz="7" radius="1">
 		<npc name="Lailene" x="0" y="0" z="7" spawntime="60" />
-	</spawn>
-	<spawn centerx="32356" centery="32207" centerz="7" radius="2">
-		<npc name="Grizzly Adams" x="-2" y="-1" z="7" spawntime="60" />
-		<npc name="Rashid" x="-2" y="2" z="7" spawntime="60" direction="2" />
 	</spawn>
 </spawns>
