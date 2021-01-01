@@ -100,13 +100,13 @@ monster.loot = {
 	{id = 8900, chance = 1970},
 	{id = 11355, chance = 1970},
 	{id = 25383, chance = 1970},
-	{id = 25377, chance = 100000, maxCount = 3},
+	{id = 25377, chance = 90000, maxCount = 2},
 	{id = 25172, chance = 100000, maxCount = 3}
 }
 
 monster.attacks = {
 	{name ="melee", interval = 2000, chance = 100, minDamage = -200, maxDamage = -1400},
-	{name ="combat", interval = 2000, chance = 12, type = COMBAT_ENERGYDAMAGE, minDamage = -130, maxDamage = -460, length = 6, spread = 3, effect = CONST_ME_PURPLEENERGY, target = false},
+	{name ="combat", interval = 2000, chance = 12, type = COMBAT_ENERGYDAMAGE, minDamage = -230, maxDamage = -470, length = 6, spread = 3, effect = CONST_ME_PURPLEENERGY, target = false},
 	{name ="lloyd wave", interval = 2000, chance = 12, minDamage = -430, maxDamage = -560, target = false},
 	{name ="lloyd wave2", interval = 2000, chance = 12, minDamage = -230, maxDamage = -460, target = false},
 	{name ="lloyd wave3", interval = 2000, chance = 12, minDamage = -430, maxDamage = -660, target = false}

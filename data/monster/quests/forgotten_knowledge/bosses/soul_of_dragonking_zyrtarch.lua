@@ -65,7 +65,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 25377, chance = 100000, maxCount = 3},
+	{id = 25377, chance = 90000, maxCount = 3},
 	{id = 25172, chance = 100000, maxCount = 3},
 	{id = 2148, chance = 97000, maxCount = 100},
 	{id = 2148, chance = 97000, maxCount = 100},
@@ -122,12 +122,12 @@ monster.elements = {
 	{type = COMBAT_PHYSICALDAMAGE, percent = 0},
 	{type = COMBAT_ENERGYDAMAGE, percent = 20},
 	{type = COMBAT_EARTHDAMAGE, percent = 100},
-	{type = COMBAT_FIREDAMAGE, percent = 0},
+	{type = COMBAT_FIREDAMAGE, percent = 100},
 	{type = COMBAT_LIFEDRAIN, percent = 100},
 	{type = COMBAT_MANADRAIN, percent = 0},
 	{type = COMBAT_DROWNDAMAGE, percent = 100},
 	{type = COMBAT_ICEDAMAGE, percent = 0},
-	{type = COMBAT_HOLYDAMAGE , percent = 1},
+	{type = COMBAT_HOLYDAMAGE , percent = 0},
 	{type = COMBAT_DEATHDAMAGE , percent = -10}
 }
 
