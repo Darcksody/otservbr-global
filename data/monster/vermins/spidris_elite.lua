@@ -49,7 +49,7 @@ monster.flags = {
 	attackable = true,
 	hostile = true,
 	convinceable = false,
-	pushable = true,
+	pushable = false,
 	rewardBoss = false,
 	illusionable = false,
 	canPushItems = true,
@@ -94,7 +94,7 @@ monster.loot = {
 }
 
 monster.attacks = {
-	{name ="melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -349}
+	{name ="melee", interval = 2000, chance = 100, minDamage = -50, maxDamage = -349}
 }
 
 monster.defenses = {
