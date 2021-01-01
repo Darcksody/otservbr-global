@@ -51,7 +51,7 @@ monster.flags = {
 	attackable = true,
 	hostile = true,
 	convinceable = true,
-	pushable = true,
+	pushable = false,
 	rewardBoss = false,
 	illusionable = true,
 	canPushItems = false,
@@ -109,7 +109,7 @@ monster.loot = {
 
 monster.attacks = {
 	{name ="vile grandmaster", interval = 2000, chance = 15, target = false},
-	{name ="melee", interval = 2000, chance = 100, minDamage = 10, maxDamage = -260},
+	{name ="melee", interval = 2000, chance = 100, minDamage = -20, maxDamage = -260},
 	-- bleed
 	{name ="condition", type = CONDITION_BLEEDING, interval = 2000, chance = 20, minDamage = -150, maxDamage = -225, radius = 4, shootEffect = CONST_ANI_THROWINGKNIFE, target = true}
 }

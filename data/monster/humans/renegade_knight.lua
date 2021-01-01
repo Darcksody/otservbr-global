@@ -51,7 +51,7 @@ monster.flags = {
 	attackable = true,
 	hostile = true,
 	convinceable = true,
-	pushable = true,
+	pushable = false,
 	rewardBoss = false,
 	illusionable = true,
 	canPushItems = false,
@@ -105,7 +105,7 @@ monster.loot = {
 
 monster.attacks = {
 	{name ="renegade knight", interval = 2000, chance = 30, target = false},
-	{name ="melee", interval = 2000, chance = 100, minDamage = 10, maxDamage = -175}
+	{name ="melee", interval = 2000, chance = 100, minDamage = -10, maxDamage = -175}
 }
 
 monster.defenses = {
