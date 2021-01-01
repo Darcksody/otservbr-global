@@ -14,18 +14,6 @@
 		<vocation name="Elder Druid"/>
 	</instant>
 	<!-- under construction -->
-	<instant group="support" spellid="192" name="Conjure Diamond Arrow" words="exevo gran con hur" lvl="150" mana="1000" soul="0" prem="1" aggressive="0" selftarget="1" exhaustion="600000" groupcooldown="2000" needlearn="0" script="conjuring/Conjure_Diamond_Arrow.lua">
-		<vocation name="Paladin" />
-		<vocation name="Royal Paladin" />
-	</instant>
-	<instant group="support" spellid="193" name="Conjure Spectral Bolt" words="exevo gran con vis" lvl="150" mana="1000" soul="0" prem="1" aggressive="0" selftarget="1" exhaustion="600000" groupcooldown="2000" needlearn="0" script="conjuring/Conjure_Spectral_Bolt.lua">
-		<vocation name="Paladin" />
-		<vocation name="Royal Paladin" />
-	</instant>
-	<instant group="support" spellid="191" name="Conjure Royal Star" words="exevo gran con grav" lvl="150" mana="1000" soul="0" prem="1" aggressive="0" selftarget="1" exhaustion="600000" groupcooldown="2000" needlearn="0" script="conjuring/Conjure_Royal_Star.lua">
-		<vocation name="Paladin" />
-		<vocation name="Royal Paladin" />
-	</instant>
 	<instant group="support" spellid="92" name="Conjure Wand of Darkness" words="exevo gran mort" lvl="41" mana="250" soul="0" prem="1" aggressive="0" selftarget="1" exhaustion="1800000" groupcooldown="2000" needlearn="0" script="conjuring/Conjure_Wand_of_Darkness.lua">
 		<vocation name="Sorcerer" />
 		<vocation name="Master Sorcerer" />
@@ -512,14 +500,6 @@
 	</rune>
 
 	<!-- Conjuring Spells -->
-	<instant group="support" name="Blank Rune" words="adori blank" lvl="20" mana="50" soul="1" cooldown="2000" groupcooldown="2000" needlearn="0" script="conjuring/blank_rune.lua">
-		<vocation name="Druid" />
-		<vocation name="Elder Druid" />
-		<vocation name="Paladin" />
-		<vocation name="Royal Paladin" />
-		<vocation name="Sorcerer" />
-		<vocation name="Master Sorcerer" />
-	</instant>
 	<instant group="support" spellid="51" name="Conjure Arrow" words="exevo con" lvl="13" mana="100" soul="1" prem="0" aggressive="0" selftarget="1" cooldown="2000" groupcooldown="2000" needlearn="0" script="conjuring/conjure_arrow.lua">
 		<vocation name="Paladin" />
 		<vocation name="Royal Paladin" />
@@ -880,7 +860,7 @@
 	<instant name="furyosa deathball" words="###122" aggressive="1" blockwalls="1" needtarget="0" needlearn="1" script="monster/furyosa deathball.lua"/>
 	<instant name="gaz'haragoth iceball" words="###123" aggressive="1" blockwalls="1" needtarget="0" needlearn="1" script="monster/gaz'haragoth iceball.lua"/>
 	<instant name="gaz'haragoth paralyze" words="###124" aggressive="1" blockwalls="1" needtarget="0" needlearn="1" script="monster/gaz'haragoth paralyze.lua"/>
-	<instant name="gaz'haragoth summon" words="###125" aggressive="0" blockwalls="1" needtarget="0" needlearn="1" script="monster/gaz'haragoth summon.lua"/>
+	<instant name="gaz'haragoth summon" words="125" aggressive="0" blockwalls="1" needtarget="0" needlearn="1" script="monster/gaz'haragoth summon.lua"/>
 	<instant name="hideous fungus summon" words="###126" aggressive="0" blockwalls="1" needtarget="0" needlearn="1" script="monster/hideous fungus summon.lua"/>
 	<instant name="apprentice sheng summon" words="###127" aggressive="0" blockwalls="1" needtarget="0" needlearn="1" script="monster/apprentice sheng summon.lua"/>
 	<instant name="arachir the ancient one summon" words="###128" aggressive="0" blockwalls="1" needtarget="0" needlearn="1" script="monster/arachir the ancient one summon.lua"/>
