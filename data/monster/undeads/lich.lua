@@ -74,7 +74,7 @@ monster.light = {
 }
 
 monster.summons = {
-	{name = "Bonebeast", chance = 3, interval = 28000}
+	{name = "Bonebeast", chance = 3, interval = 25000}
 }
 
 monster.voices = {
@@ -112,7 +112,7 @@ monster.loot = {
 }
 
 monster.attacks = {
-	{name ="melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -75},
+	{name ="melee", interval = 2000, chance = 100, minDamage = -10, maxDamage = -75},
 	{name ="combat", interval = 2000, chance = 10, type = COMBAT_LIFEDRAIN, minDamage = -140, maxDamage = -190, length = 7, spread = 3, effect = CONST_ME_MAGIC_RED, target = false},
 	-- poison
 	{name ="condition", type = CONDITION_POISON, interval = 2000, chance = 10, minDamage = -300, maxDamage = -400, length = 7, spread = 3, effect = CONST_ME_HITBYPOISON, target = false},
