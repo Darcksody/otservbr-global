@@ -108,7 +108,7 @@ monster.loot = {
 }
 
 monster.attacks = {
-	{name ="melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -269},
+	{name ="melee", interval = 2000, chance = 100, minDamage = -30, maxDamage = -269},
 	{name ="combat", interval = 2000, chance = 10, type = COMBAT_MANADRAIN, minDamage = 0, maxDamage = -70, range = 7, target = false},
 	{name ="combat", interval = 2000, chance = 10, type = COMBAT_LIFEDRAIN, minDamage = 100, maxDamage = 400, length = 8, spread = 3, effect = CONST_ME_PURPLEENERGY, target = false},
 	{name ="combat", interval = 2000, chance = 10, type = COMBAT_DEATHDAMAGE, minDamage = 100, maxDamage = 400, length = 8, spread = 3, effect = CONST_ME_BLACKSMOKE, target = false},
@@ -121,20 +121,20 @@ monster.defenses = {
 	armor = 75,
 	{name ="combat", interval = 2000, chance = 15, type = COMBAT_HEALING, minDamage = 50, maxDamage = 100, effect = CONST_ME_MAGIC_BLUE, target = false},
 	{name ="speed", interval = 2000, chance = 15, speedChange = 320, effect = CONST_ME_MAGIC_RED, target = false, duration = 5000},
-	{name ="invisible", interval = 2000, chance = 20, effect = CONST_ME_MAGIC_BLUE}
+	{name ="invisible", interval = 3500, chance = 20, effect = CONST_ME_MAGIC_BLUE}
 }
 
 monster.elements = {
 	{type = COMBAT_PHYSICALDAMAGE, percent = 0},
 	{type = COMBAT_ENERGYDAMAGE, percent = -10},
-	{type = COMBAT_EARTHDAMAGE, percent = -15},
+	{type = COMBAT_EARTHDAMAGE, percent = -10},
 	{type = COMBAT_FIREDAMAGE, percent = 20},
 	{type = COMBAT_LIFEDRAIN, percent = 0},
 	{type = COMBAT_MANADRAIN, percent = 0},
 	{type = COMBAT_DROWNDAMAGE, percent = 0},
-	{type = COMBAT_ICEDAMAGE, percent = 20},
+	{type = COMBAT_ICEDAMAGE, percent = 10},
 	{type = COMBAT_HOLYDAMAGE , percent = 0},
-	{type = COMBAT_DEATHDAMAGE , percent = 0}
+	{type = COMBAT_DEATHDAMAGE , percent = 100}
 }
 
 monster.immunities = {

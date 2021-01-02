@@ -59,7 +59,7 @@ monster.flags = {
 	healthHidden = false,
 	isBlockable = false,
 	canWalkOnEnergy = false,
-	canWalkOnFire = false,
+	canWalkOnFire = true,
 	canWalkOnPoison = false,
 	pet = false
 }
@@ -102,7 +102,7 @@ monster.loot = {
 }
 
 monster.attacks = {
-	{name ="melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -269},
+	{name ="melee", interval = 2000, chance = 100, minDamage = -30, maxDamage = -269},
 	{name ="combat", interval = 2000, chance = 10, type = COMBAT_MANADRAIN, minDamage = 0, maxDamage = -100, range = 7, target = false},
 	{name ="combat", interval = 2000, chance = 10, type = COMBAT_LIFEDRAIN, minDamage = -50, maxDamage = -200, length = 4, spread = 2, effect = CONST_ME_MAGIC_RED, target = false},
 	{name ="combat", interval = 1000, chance = 15, type = COMBAT_FIREDAMAGE, minDamage = 120, maxDamage = 450, length = 1, spread = 0, effect = CONST_ME_HITBYFIRE, target = false},
@@ -120,15 +120,15 @@ monster.defenses = {
 
 monster.elements = {
 	{type = COMBAT_PHYSICALDAMAGE, percent = 0},
-	{type = COMBAT_ENERGYDAMAGE, percent = -10},
-	{type = COMBAT_EARTHDAMAGE, percent = -15},
-	{type = COMBAT_FIREDAMAGE, percent = 0},
+	{type = COMBAT_ENERGYDAMAGE, percent = 10},
+	{type = COMBAT_EARTHDAMAGE, percent = 0},
+	{type = COMBAT_FIREDAMAGE, percent = 100},
 	{type = COMBAT_LIFEDRAIN, percent = 0},
 	{type = COMBAT_MANADRAIN, percent = 0},
 	{type = COMBAT_DROWNDAMAGE, percent = 0},
 	{type = COMBAT_ICEDAMAGE, percent = 20},
 	{type = COMBAT_HOLYDAMAGE , percent = 0},
-	{type = COMBAT_DEATHDAMAGE , percent = 0}
+	{type = COMBAT_DEATHDAMAGE , percent = -10}
 }
 
 monster.immunities = {
