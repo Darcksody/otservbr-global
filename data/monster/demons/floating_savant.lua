@@ -70,7 +70,7 @@ monster.light = {
 }
 
 monster.summons = {
-	{name = "Lava Lurker Attendant", chance = 70, interval = 2000}
+	{name = "Lava Lurker Attendant", chance = 10, interval = 20000}
 }
 
 monster.voices = {
