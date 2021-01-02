@@ -60,7 +60,7 @@ monster.light = {
 }
 
 monster.summons = {
-	{name = "Eruption of Destruction", chance = 15, interval = 2000, max = 2}
+	{name = "Eruption of Destruction", chance = 15, interval = 45000, max = 2}
 }
 
 monster.voices = {
@@ -124,7 +124,7 @@ monster.defenses = {
 	armor = 188,
 	{name ="combat", interval = 2000, chance = 15, type = COMBAT_HEALING, minDamage = 1000, maxDamage = 3000, effect = CONST_ME_MAGIC_BLUE, target = false},
 	{name ="speed", interval = 2000, chance = 8, speedChange = 480, effect = CONST_ME_MAGIC_RED, target = false, duration = 6000},
-	{name ="razzagorn summon", interval = 2000, chance = 3, target = false}
+	{name ="razzagorn summon", interval = 38000, chance = 3, target = false}
 }
 
 monster.elements = {
