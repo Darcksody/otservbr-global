@@ -2,43 +2,43 @@ local raids = {
 	-- Weekly
 	--Segunda-Feira
 	['Monday'] = {
-		['06:00'] = {raidName = 'RatsThais'},
+		['06:00'] = {raidName = ''},
 	},
 
 	--Terça-Feira
 	['Tuesday'] = {
-		['16:00'] = {raidName = 'Midnight Panther'}
+		['16:00'] = {raidName = ''}
 	},
 
 	--Quarta-Feira
 	['Wednesday'] = {
-		['12:00'] = {raidName = 'Draptor'}
+		['12:00'] = {raidName = ''}
 	},
 
 	--Quinta-Feira
 	['Thursday'] = {
-		['19:00'] = {raidName = 'Undead Cavebear'}
+		['19:00'] = {raidName = ''}
 	},
 
 	--Sexta-feira
 	['Friday'] = {
-		['06:00'] = {raidName = 'Titanica'}
+		['06:00'] = {raidName = ''}
 	},
 
 	--Sábado
 	['Saturday'] = {
-		['20:00'] = {raidName = 'Draptor'}
+		['20:00'] = {raidName = ''}
 	},
 
 	--Domingo
 	['Sunday'] = {
-		['15:00'] = {raidName = 'Midnight Panther'},
-		['13:00'] = {raidName = 'Orc Backpack'}
+		['15:00'] = {raidName = ''},
+		['13:00'] = {raidName = ''}
 	},
 
 	-- By date (Day/Month)
 	['31/10'] = {
-		['16:00'] = {raidName = 'Halloween Hare'}
+		['16:00'] = {raidName = ''}
 	}
 }
 
