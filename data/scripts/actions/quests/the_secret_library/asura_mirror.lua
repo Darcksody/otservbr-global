@@ -7,7 +7,7 @@ function asuraMirror.onUse(creature, item, position, fromPosition, pos, target, 
         return
     end
 
-    if player:getLevel() >= 250 then
+    if player:getLevel() >= 100 then
         position:sendMagicEffect(CONST_ME_TELEPORT)
         player:teleportTo(goPos)
         player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
