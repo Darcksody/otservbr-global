@@ -60,7 +60,7 @@ monster.light = {
 }
 
 monster.summons = {
-	{name = "sword of vengeance", chance = 50, interval = 2000}
+	{name = "sword of vengeance", chance = 50, interval = 15000}
 }
 
 monster.voices = {
