@@ -82,29 +82,29 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2148, chance = 50320, maxCount = 185},
-	{id = 2788, chance = 50320, maxCount = 3},
-	{id = 7588, chance = 50320},
-	{id = 2194, chance = 20000},
-	{id = 2428, chance = 50320},
-	{id = 27048, chance = 20000},
+	{id = 2148, chance = 5320, maxCount = 185},
+	{id = 2788, chance = 5320, maxCount = 3},
+	{id = 7588, chance = 5320},
+	{id = 2194, chance = 2000},
+	{id = 2428, chance = 5320},
+	{id = 27048, chance = 2000},
 	{id = 27049, chance = 4900},
 	{id = 27050, chance = 1800, maxCount = 2},
-	{id = 2144, chance = 12750, maxCount = 2},
+	{id = 2144, chance = 1750, maxCount = 2},
 	{id = 2147, chance = 2510, maxCount = 3},
 	{id = 7452, chance = 1940},
 	{id = 8843, chance = 1000, maxCount = 2},
-	{id = 9970, chance = 8870, maxCount = 3},
-	{id = 18417, chance = 9700},
-	{id = 20108, chance = 15290, maxCount = 3},
+	{id = 9970, chance = 1870, maxCount = 3},
+	{id = 18417, chance = 1970},
+	{id = 20108, chance = 1590, maxCount = 3},
 	{id = 3953, chance = 910},
 	{id = 7439, chance = 910},
 	{id = 11374, chance = 910},
-	{id = 26479, chance = 300}
+	{id = 26479, chance = 900}
 }
 
 monster.attacks = {
-	{name ="melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -300},
+	{name ="melee", interval = 2000, chance = 100, minDamage = -20, maxDamage = -300},
 	{name ="combat", interval = 2000, chance = 35, type = COMBAT_PHYSICALDAMAGE, minDamage = -117, maxDamage = -220, range = 7, shootEffect = CONST_ANI_LARGEROCK, target = true},
 	-- curse
 	{name ="condition", type = CONDITION_CURSED, interval = 2000, chance = 50, minDamage = -100, maxDamage = -200, radius = 4, shootEffect = CONST_ANI_WHIRLWINDCLUB, effect = CONST_ME_EXPLOSIONAREA, target = true}
