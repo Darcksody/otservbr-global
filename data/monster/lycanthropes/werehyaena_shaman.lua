@@ -62,26 +62,26 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = "platinum coin", chance = 100000},
-	{id = "great mana potion", chance = 20070},
-	{id = "werehyaena nose", chance = 15550},
-	{id = "small amethyst", chance = 10840},
-	{id = "green crystal splinter", chance = 9120},
-	{id = "hailstorm rod", chance = 6430},
-	{id = "doublet", chance = 5390},
-	{id = "brown crystal splinter", chance = 5030},
-	{id = "wand of starstorm", chance = 4920},
-	{id = "small enchanted emerald", chance = 4630},
-	{id = "sword ring", chance = 4490},
-	{id = "wand of voodoo", chance = 3990},
-	{id = "protection amulet", chance = 2660},
+	{id = "platinum coin", chance = 10000},
+	{id = "great mana potion", chance = 2070},
+	{id = "werehyaena nose", chance = 1550},
+	{id = "small amethyst", chance = 1840},
+	{id = "green crystal splinter", chance = 3120},
+	{id = "hailstorm rod", chance = 3430},
+	{id = "doublet", chance = 3390},
+	{id = "brown crystal splinter", chance = 2030},
+	{id = "wand of starstorm", chance = 2920},
+	{id = "small enchanted emerald", chance = 2630},
+	{id = "sword ring", chance = 2490},
+	{id = "wand of voodoo", chance = 2990},
+	{id = "protection amulet", chance = 1660},
 	{id = "werehyaena talisman", chance = 650},
 	{id = "moonlight crystals", chance = 610},
 	{id = "werehyaena trophy", chance = 140}
 }
 
 monster.attacks = {
-	{name = "melee", type = COMBAT_PHYSICALDAMAGE, interval = 2*1000, minDamage = 0, maxDamage = -260},
+	{name = "melee", type = COMBAT_PHYSICALDAMAGE, interval = 2*1000, minDamage = -10, maxDamage = -260},
     {name = "combat", type = COMBAT_DEATHDAMAGE, interval = 2*1000, chance = 10, minDamage = -280, maxDamage = -325, radius = 3, effect = CONST_ME_HITBYPOISON},
     {name = "combat", type = COMBAT_EARTHDAMAGE, interval = 2*1000, chance = 17, minDamage = -280, maxDamage = -315, range = 5, radius = 4, target = true, shootEffect = CONST_ANI_EARTH, effect = CONST_ME_GREEN_RINGS},
     {name = "combat", type = COMBAT_DEATHDAMAGE, interval = 2*1000, chance = 15, minDamage = -370, maxDamage = -430, range = 5, radius = 1, target = true, shootEffect = CONST_ANI_DEATH, effect = CONST_ME_MORTAREA},
@@ -103,7 +103,7 @@ monster.elements = {
 	{type = COMBAT_MANADRAIN, percent = 0},
 	{type = COMBAT_DROWNDAMAGE, percent = 0},
 	{type = COMBAT_ICEDAMAGE, percent = -20},
-	{type = COMBAT_HOLYDAMAGE , percent = 95},
+	{type = COMBAT_HOLYDAMAGE , percent = 65},
 	{type = COMBAT_DEATHDAMAGE , percent = -5}
 }
 

@@ -17,7 +17,7 @@ monster.health = 2700
 monster.maxHealth = monster.health
 monster.race = "blood"
 monster.corpse = 38656
-monster.speed = 120
+monster.speed = 125
 monster.manaCost = 0
 monster.maxSummons = 0
 
@@ -62,27 +62,27 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = "platinum coin", chance = 100000, maxCount = 3},
-    {id = "great health potion", chance = 49970, maxCount = 3},
-    {id = "meat", chance = 19070},
-    {id = "axe", chance = 16810},
-    {id = "knife", chance = 16620},
-    {id = "werehyaena nose", chance = 12670},
-    {id = "halberd", chance = 11480},
-    {id = "red crystal fragment", chance = 9540},
+	{id = "platinum coin", chance = 10000, maxCount = 3},
+    {id = "great health potion", chance = 4970, maxCount = 3},
+    {id = "meat", chance = 1970},
+    {id = "axe", chance = 1610},
+    {id = "knife", chance = 1620},
+    {id = "werehyaena nose", chance = 1670},
+    {id = "halberd", chance = 1480},
+    {id = "red crystal fragment", chance = 2540},
     {id = "small enchanted amethyst", chance = 5760, maxCount = 5},
     {id = "life preserver", chance = 5670},
-    {id = "red gem", chance = 5590},
-    {id = "yellow gem", chance = 5420},
-    {id = "combat knife", chance = 4700},
-    {id = "green crystal fragment", chance = 4580},
-    {id = "ratana", chance = 4280},
+    {id = "red gem", chance = 3590},
+    {id = "yellow gem", chance = 4420},
+    {id = "combat knife", chance = 3700},
+    {id = "green crystal fragment", chance = 3580},
+    {id = "ratana", chance = 3280},
     {id = "werehyaena talisman", chance = 750},
     {id = "werehyaena trophy", chance = 190}
 }
 
 monster.attacks = {
-	{name = "melee", type = COMBAT_PHYSICALDAMAGE, interval = 2*1000, minDamage = 0, maxDamage = -300},
+	{name = "melee", type = COMBAT_PHYSICALDAMAGE, interval = 2*1000, minDamage = -20, maxDamage = -300},
     {name = "combat", type = COMBAT_EARTHDAMAGE, interval = 2*1000, chance = 17, minDamage = -175, maxDamage = -255, radius = 3, effect = CONST_ME_HITBYPOISON},
     {name = "combat", type = COMBAT_DEATHDAMAGE, interval = 2*1000, chance = 15, minDamage = -330, maxDamage = -370, target = true, range = 5, radius = 1, shootEffect = CONST_ANI_LARGEROCK, effect = CONST_ME_MORTAREA},
     {name = "combat", type = COMBAT_DEATHDAMAGE, interval = 2*1000, chance = 13, minDamage = -225, maxDamage = -275, length = 3, spread = 0, effect = CONST_ME_MORTAREA}
@@ -98,12 +98,12 @@ monster.elements = {
 	{type = COMBAT_PHYSICALDAMAGE, percent = 0},
 	{type = COMBAT_ENERGYDAMAGE, percent = 0},
 	{type = COMBAT_EARTHDAMAGE, percent = 60},
-	{type = COMBAT_FIREDAMAGE, percent = 75},
+	{type = COMBAT_FIREDAMAGE, percent = 80},
 	{type = COMBAT_LIFEDRAIN, percent = 0},
 	{type = COMBAT_MANADRAIN, percent = 0},
 	{type = COMBAT_DROWNDAMAGE, percent = 0},
-	{type = COMBAT_ICEDAMAGE, percent = -20},
-	{type = COMBAT_HOLYDAMAGE , percent = 95},
+	{type = COMBAT_ICEDAMAGE, percent = -15},
+	{type = COMBAT_HOLYDAMAGE , percent = 35},
 	{type = COMBAT_DEATHDAMAGE , percent = -5}
 }
 
