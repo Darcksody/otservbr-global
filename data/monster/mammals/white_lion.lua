@@ -58,22 +58,22 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = "Platinum Coin", chance = 100000, maxCount = 5},
-	{id = "Great Spirit Potion", chance = 5000, maxCount = 2},
-	{id = "Lion's Mane", chance = 5000},
-	{id = "Green Crystal Shard", chance = 5000, maxCount = 2},
-	{id = "Cyan Crystal Fragment", chance = 1500},
-	{id = "Green Crystal Fragment", chance = 1500},
-	{id = "Terra Boots", chance = 5000},
-	{id = "Axe", chance = 5000},
-	{id = "Leather Boots", chance = 5000},
-	{id = "Twin Hooks", chance = 5000},
+	{id = "Platinum Coin", chance = 10000, maxCount = 5},
+	{id = "Great Spirit Potion", chance = 3000, maxCount = 2},
+	{id = "Lion's Mane", chance = 4000},
+	{id = "Green Crystal Shard", chance = 3000, maxCount = 2},
+	{id = "Cyan Crystal Fragment", chance = 1400},
+	{id = "Green Crystal Fragment", chance = 1300},
+	{id = "Terra Boots", chance = 3000},
+	{id = "Axe", chance = 4000},
+	{id = "Leather Boots", chance = 3200},
+	{id = "Twin Hooks", chance = 2500},
 	{id = "War Hammer", chance = 1500},
 	{id = "Combat Knife", chance = 1500}
 }
 
 monster.attacks = {
-	{name ="melee", interval = 2000, chance = 0, minDamage = 0, maxDamage = -300},
+	{name ="melee", interval = 2000, chance = 0, minDamage = -10, maxDamage = -300},
 	{name ="combat", interval = 2000, chance = 0, type = COMBAT_HOLYDAMAGE, minDamage = -300, maxDamage = -400, range = 1, effect = CONST_ME_HOLYAREA, target = false},
 	{name ="combat", interval = 2000, chance = 0, type = COMBAT_HOLYDAMAGE, minDamage = -250, maxDamage = -350, range = 1, radius = 2, effect = CONST_ME_HOLYAREA, target = false},
 	{name ="combat", interval = 2000, chance = 100, type = COMBAT_PHYSICALDAMAGE, minDamage = -250, maxDamage = -350, range = 1, radius = 2, effect = CONST_ME_EXPLOSIONAREA, target = false}
