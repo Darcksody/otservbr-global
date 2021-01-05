@@ -79,8 +79,8 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = "gold coin", chance = 100000, maxCount = 100},
-	{id = "platinum coin", chance = 92000, maxCount = 7},
+	{id = "gold coin", chance = 10000, maxCount = 100},
+	{id = "platinum coin", chance = 9200, maxCount = 7},
 	{id = "stone skin amulet", chance = 2270},
 	{id = "dwarven ring", chance = 2840},
 	{id = "giant sword", chance = 570},
@@ -89,22 +89,22 @@ monster.loot = {
 	{id = "sapphire hammer", chance = 1490},
 	{id = "spiked squelcher", chance = 1490},
 	{id = "glorious axe", chance = 3340},
-	{id = "strong health potion", chance = 13840, maxCount = 2},
-	{id = "strong mana potion", chance = 14900, maxCount = 2},
-	{id = "great mana potion", chance = 15610, maxCount = 2},
-	{id = "mana potion", chance = 15050, maxCount = 2},
-	{id = "ultimate health potion", chance = 14410},
-	{id = 8748, chance = 11360},
-	{id = "ancient stone", chance = 12850},
-	{id = "crystalline arrow", chance = 9940, maxCount = 10},
-	{id = "green crystal splinter", chance = 6960},
-	{id = "cyan crystal fragment", chance = 6810},
-	{id = "stone nose", chance = 18679},
-	{id = "crystalline spikes", chance = 16320}
+	{id = "strong health potion", chance = 1340, maxCount = 2},
+	{id = "strong mana potion", chance = 1400, maxCount = 2},
+	{id = "great mana potion", chance = 1610, maxCount = 2},
+	{id = "mana potion", chance = 1550, maxCount = 2},
+	{id = "ultimate health potion", chance = 1410},
+	{id = 8748, chance = 1360},
+	{id = "ancient stone", chance = 1250},
+	{id = "crystalline arrow", chance = 2940, maxCount = 10},
+	{id = "green crystal splinter", chance = 3960},
+	{id = "cyan crystal fragment", chance = 3810},
+	{id = "stone nose", chance = 1679},
+	{id = "crystalline spikes", chance = 1620}
 }
 
 monster.attacks = {
-	{name ="melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -990},
+	{name ="melee", interval = 2000, chance = 100, minDamage = -10, maxDamage = -990},
 	{name ="combat", interval = 2000, chance = 15, type = COMBAT_EARTHDAMAGE, minDamage = -230, maxDamage = -460, range = 7, shootEffect = CONST_ANI_SMALLEARTH, effect = CONST_ME_STONES, target = true},
 	{name ="combat", interval = 2000, chance = 15, type = COMBAT_PHYSICALDAMAGE, minDamage = 0, maxDamage = -650, range = 7, shootEffect = CONST_ANI_LARGEROCK, target = true},
 	{name ="combat", interval = 2000, chance = 15, type = COMBAT_LIFEDRAIN, minDamage = -150, maxDamage = -260, length = 5, spread = 3, effect = CONST_ME_STONES, target = false}

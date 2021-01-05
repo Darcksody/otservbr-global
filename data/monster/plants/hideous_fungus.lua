@@ -73,7 +73,7 @@ monster.light = {
 }
 
 monster.summons = {
-	{name = "humorless fungus", chance = 10, interval = 2000, max = 2}
+	{name = "humorless fungus", chance = 10, interval = 20000, max = 2}
 }
 
 monster.voices = {
@@ -83,8 +83,8 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = "gold coin", chance = 100000, maxCount = 197},
-	{id = "platinum coin", chance = 100000, maxCount = 7},
+	{id = "gold coin", chance = 10000, maxCount = 197},
+	{id = "platinum coin", chance = 10000, maxCount = 7},
 	{id = "war hammer", chance = 4010},
 	{id = "white piece of cloth", chance = 6430},
 	{id = "green piece of cloth", chance = 3003},
@@ -106,7 +106,7 @@ monster.loot = {
 }
 
 monster.attacks = {
-	{name ="melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -450},
+	{name ="melee", interval = 2000, chance = 100, minDamage = -10, maxDamage = -450},
 	{name ="combat", interval = 2000, chance = 15, type = COMBAT_EARTHDAMAGE, minDamage = -250, maxDamage = -430, range = 7, shootEffect = CONST_ANI_SMALLEARTH, effect = CONST_ME_SMALLPLANTS, target = false},
 	{name ="combat", interval = 2000, chance = 15, type = COMBAT_ICEDAMAGE, minDamage = -250, maxDamage = -550, length = 8, spread = 3, shootEffect = CONST_ANI_SNOWBALL, target = false},
 	{name ="speed", interval = 2000, chance = 10, speedChange = -600, radius = 1, effect = CONST_ME_MAGIC_RED, target = true, duration = 60000},

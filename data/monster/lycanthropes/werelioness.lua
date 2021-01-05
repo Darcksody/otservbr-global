@@ -58,22 +58,22 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = "Platinum Coin", chance = 100000, maxCount = 5},
-	{id = "Gold Coin", chance = 100000, maxCount = 60},
-	{id = "Small Enchanted Sapphire", chance = 5000, maxCount = 2},
-	{id = "Black Pearl", chance = 5000, maxCount = 2},
-	{id = "Ham", chance = 5000, maxCount = 2},
-	{id = "Meat", chance = 5000, maxCount = 2},
-	{id = "Soul Orb", chance = 5000, maxCount = 2},
+	{id = "Platinum Coin", chance = 10000, maxCount = 5},
+	{id = "Gold Coin", chance = 10000, maxCount = 60},
+	{id = "Small Enchanted Sapphire", chance = 2500, maxCount = 2},
+	{id = "Black Pearl", chance = 3000, maxCount = 2},
+	{id = "Ham", chance = 4000, maxCount = 2},
+	{id = "Meat", chance = 3000, maxCount = 2},
+	{id = "Soul Orb", chance = 2000, maxCount = 2},
 	{id = "White Pearl", chance = 1500, maxCount = 2},
-	{id = "Ankh", chance = 5000},
-	{id = "Crystal Sword", chance = 5000},
-	{id = "Serpent Sword", chance = 5000},
-	{id = "Rapier", chance = 5000},
-	{id = "Lion's Mane", chance = 5000},
-	{id = "Lightning Headband", chance = 1500},
-	{id = "Steel Helmet", chance = 1500},
-	{id = "Doublet", chance = 1500},
+	{id = "Ankh", chance = 3000},
+	{id = "Crystal Sword", chance = 4000},
+	{id = "Serpent Sword", chance = 3000},
+	{id = "Rapier", chance = 4000},
+	{id = "Lion's Mane", chance = 2000},
+	{id = "Lightning Headband", chance = 1400},
+	{id = "Steel Helmet", chance = 1300},
+	{id = "Doublet", chance = 1400},
 	{id = "Ivory Carving", chance = 1500},
 	{id = "Magma Legs", chance = 500},
 	{id = "Crown Helmet", chance = 500},
@@ -82,7 +82,7 @@ monster.loot = {
 }
 
 monster.attacks = {
-	{name ="melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -300},
+	{name ="melee", interval = 2000, chance = 100, minDamage = -20, maxDamage = -300},
 	{name ="combat", interval = 2000, chance = 10, type = COMBAT_HOLYDAMAGE, minDamage = -300, maxDamage = -410, range = 3, effect = CONST_ME_HOLYAREA, target = true},
 	{name ="combat", interval = 2000, chance = 10, type = COMBAT_HOLYDAMAGE, minDamage = -170, maxDamage = -350, range = 3, shootEffect = CONST_ANI_HOLY, target = true},
 	{name ="combat", interval = 2000, chance = 10, type = COMBAT_FIREDAMAGE, minDamage = -250, maxDamage = -300, length = 4, spread = 1, effect = CONST_ME_FIREAREA, target = false}
@@ -98,11 +98,11 @@ monster.elements = {
 	{type = COMBAT_PHYSICALDAMAGE, percent = 0},
 	{type = COMBAT_ENERGYDAMAGE, percent = 0},
 	{type = COMBAT_EARTHDAMAGE, percent = 40},
-	{type = COMBAT_FIREDAMAGE, percent = 35},
+	{type = COMBAT_FIREDAMAGE, percent = 45},
 	{type = COMBAT_LIFEDRAIN, percent = 0},
 	{type = COMBAT_MANADRAIN, percent = 0},
 	{type = COMBAT_DROWNDAMAGE, percent = 0},
-	{type = COMBAT_ICEDAMAGE, percent = 25},
+	{type = COMBAT_ICEDAMAGE, percent = -20},
 	{type = COMBAT_HOLYDAMAGE , percent = -5},
 	{type = COMBAT_DEATHDAMAGE , percent = 50}
 }

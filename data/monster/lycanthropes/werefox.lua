@@ -57,7 +57,7 @@ monster.flags = {
 	canPushItems = true,
 	canPushCreatures = true,
 	staticAttackChance = 90,
-	targetDistance = 1,
+	targetDistance = 3,
 	runHealth = 0,
 	healthHidden = false,
 	isBlockable = false,
@@ -84,7 +84,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = "Gold Coin", chance = 405000, maxCount = 200},
+	{id = "Gold Coin", chance = 40500, maxCount = 200},
 	{id = "Platinum Coin", chance = 4050, maxCount = 2},
 	{id = "Fox Paw", chance = 4050, maxCount = 2},
 	{id = "Werefox Tail", chance = 4050, maxCount = 2},

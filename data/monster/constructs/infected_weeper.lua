@@ -71,7 +71,7 @@ monster.light = {
 }
 
 monster.summons = {
-	{name = "Parasite", chance = 10, interval = 2000}
+	{name = "Parasite", chance = 10, interval = 8000}
 }
 
 monster.voices = {
@@ -81,13 +81,13 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = "gold coin", chance = 100000, maxCount = 198},
-	{id = "platinum coin", chance = 100000, maxCount = 7},
+	{id = "gold coin", chance = 10000, maxCount = 198},
+	{id = "platinum coin", chance = 10000, maxCount = 7},
 	{id = 8748, chance = 1460}
 }
 
 monster.attacks = {
-	{name ="melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -280},
+	{name ="melee", interval = 2000, chance = 100, minDamage = -10, maxDamage = -280},
 	{name ="combat", interval = 2000, chance = 15, type = COMBAT_LIFEDRAIN, minDamage = -250, maxDamage = -700, length = 5, spread = 3, effect = CONST_ME_MAGIC_RED, target = false},
 	{name ="combat", interval = 2000, chance = 30, type = COMBAT_FIREDAMAGE, minDamage = -80, maxDamage = -250, radius = 3, effect = CONST_ME_HITBYFIRE, target = false},
 	{name ="speed", interval = 2000, chance = 10, speedChange = -800, length = 5, spread = 3, effect = CONST_ME_BLOCKHIT, target = false, duration = 30000}

@@ -79,13 +79,13 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = "gold coin", chance = 100000, maxCount = 200},
-	{id = "platinum coin", chance = 999900, maxCount = 6},
-	{id = "mushroom pie", chance = 17130, maxCount = 3},
-	{id = "brown piece of cloth", chance = 15120},
-	{id = "drill bolt", chance = 15120, maxCount = 15},
-	{id = "humongous chunk", chance = 10470},
-	{id = "white piece of cloth", chance = 10230},
+	{id = "gold coin", chance = 1000, maxCount = 200},
+	{id = "platinum coin", chance = 8900, maxCount = 6},
+	{id = "mushroom pie", chance = 1710, maxCount = 3},
+	{id = "brown piece of cloth", chance = 1510},
+	{id = "drill bolt", chance = 1510, maxCount = 15},
+	{id = "humongous chunk", chance = 1470},
+	{id = "white piece of cloth", chance = 1230},
 	{id = "strong health potion", chance = 5040, maxCount = 2},
 	{id = "great mana potion", chance = 4960, maxCount = 2},
 	{id = "great health potion", chance = 4950, maxCount = 2},
@@ -104,7 +104,7 @@ monster.loot = {
 }
 
 monster.attacks = {
-	{name ="melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -330},
+	{name ="melee", interval = 2000, chance = 100, minDamage = -20, maxDamage = -330},
 	{name ="combat", interval = 2000, chance = 15, type = COMBAT_EARTHDAMAGE, minDamage = -180, maxDamage = -350, range = 7, shootEffect = CONST_ANI_SMALLEARTH, effect = CONST_ME_SMALLPLANTS, target = false},
 	{name ="poisonfield", interval = 2000, chance = 20, radius = 4, target = false},
 	-- poison
@@ -118,7 +118,7 @@ monster.defenses = {
 	defense = 0,
 	armor = 70,
 	{name ="combat", interval = 2000, chance = 10, type = COMBAT_HEALING, minDamage = 225, maxDamage = 380, effect = CONST_ME_MAGIC_BLUE, target = false},
-	{name ="invisible", interval = 2000, chance = 15, effect = CONST_ME_MAGIC_BLUE}
+	{name ="invisible", interval = 4000, chance = 15, effect = CONST_ME_MAGIC_BLUE}
 }
 
 monster.elements = {
