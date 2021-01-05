@@ -9,7 +9,7 @@ function ban.onSay(player, words, param)
 	end
 
 	if param == "" then
-		player:sendCancelMessage("Command param required. Esta es una prueba")
+		player:sendCancelMessage("Command param required.")
 		return false
 	end
 
