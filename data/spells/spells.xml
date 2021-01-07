@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <spells>
 	<!-- under construction summons -->
-	<instant group="support" spellid="194" name="Summon Skullfrost" words="utevo gran res eq" lvl="200" mana="1000"  cooldown="1800000" groupcooldown="2000" needlearn="0" script="summon/summons.lua">
+	<instant group="support" spellid="194" name="Knight familiar" words="utevo gran res eq" lvl="200" mana="1000"  cooldown="1800000" groupcooldown="2000" needlearn="0" script="summon/familiars.lua">
+		<vocation name="Knight"/>
 		<vocation name="Elite Knight"/>
 	</instant>
-	<instant group="support" spellid="195" name="Summon Emberwing" words="utevo gran res sac" lvl="200" mana="2000"  cooldown="1800000" groupcooldown="2000" needlearn="0" script="summon/summons.lua">
+	<instant group="support" spellid="195" name="Paladin familiar" words="utevo gran res sac" lvl="200" mana="2000"  cooldown="1800000" groupcooldown="2000" needlearn="0" script="summon/familiars.lua">
+		<vocation name="Paladin"/>
 		<vocation name="Royal Paladin"/>
 	</instant>
-	<instant group="support" spellid="196" name="Summon Thundergiant" words="utevo gran res ven" lvl="200" mana="3000"  cooldown="1800000" groupcooldown="2000" needlearn="0" script="summon/summons.lua">
+	<instant group="support" spellid="196" name="Sorcerer familiar" words="utevo gran res ven" lvl="200" mana="3000"  cooldown="1800000" groupcooldown="2000" needlearn="0" script="summon/familiars.lua">
+		<vocation name="Sorcerer"/>
 		<vocation name="Master Sorcerer"/>
 	</instant>
-	<instant group="support" spellid="197" name="Summon Grovebeast" words="utevo gran res dru" lvl="200" mana="3000"  cooldown="1800000" groupcooldown="2000" needlearn="0" script="summon/summons.lua">
+	<instant group="support" spellid="197" name="Druid familiar" words="utevo gran res dru" lvl="200" mana="3000"  cooldown="1800000" groupcooldown="2000" needlearn="0" script="summon/familiars.lua">
+		<vocation name="Druid"/>
 		<vocation name="Elder Druid"/>
 	</instant>
 	<!-- under construction -->
@@ -34,7 +38,7 @@
 		<vocation name="Knight" />
 		<vocation name="Elite Knight" />
 	</instant>
-	<instant group="support" spellid="133" name="Blood Rage" words="utito tempo" lvl="60" mana="290" prem="1" aggressive="0" selftarget="1" exhaustion="2000" groupcooldown="2000" needlearn="0" script="support/blood rage.lua">
+	<instant group="support" secondarygroup="focus" spellid="133" name="Blood Rage" words="utito tempo" lvl="60" mana="290" prem="1" aggressive="0" selftarget="1" exhaustion="2000" groupcooldown="2000" secondarygroupcooldown="2000" needlearn="0" script="support/blood rage.lua">
 		<vocation name="Knight" />
 		<vocation name="Elite Knight" />
 	</instant>
@@ -133,7 +137,7 @@
 		<vocation name="Druid" />
 		<vocation name="Elder Druid" />
 	</instant>
-	<instant group="attack" spellid="118" name="Eternal Winter" words="exevo gran mas frigo" lvl="60" mana="1050" prem="1" selftarget="1" exhaustion="40000" groupcooldown="4000" needlearn="0" script="attack/eternal winter.lua">
+	<instant group="attack" secondarygroup="focus" spellid="118" name="Eternal Winter" words="exevo gran mas frigo" lvl="60" mana="1050" prem="1" selftarget="1" exhaustion="40000" groupcooldown="4000" secondarygroupcooldown="40000" needlearn="0" script="attack/eternal winter.lua">
 		<vocation name="Druid" />
 		<vocation name="Elder Druid" />
 	</instant>
@@ -201,7 +205,7 @@
 		<vocation name="Royal Paladin" />
 		<vocation name="Elite Knight" />
 	</instant>
-	<instant group="healing" spellid="84" name="Heal Friend" words="exura sio" lvl="18" mana="140" prem="1" aggressive="0" blockwalls="1" needtarget="1" playernameparam="1" params="1" exhaustion="1000" groupcooldown="1000" needlearn="0" script="healing/heal friend.lua">
+	<instant group="healing" spellid="84" name="Heal Friend" words="exura sio" lvl="18" mana="120" prem="1" aggressive="0" blockwalls="1" needtarget="1" playernameparam="1" params="1" exhaustion="1000" groupcooldown="1000" needlearn="0" script="healing/heal friend.lua">
 		<vocation name="Druid" />
 		<vocation name="Elder Druid" />
 	</instant>
@@ -209,7 +213,7 @@
 		<vocation name="Druid" />
 		<vocation name="Elder Druid" />
 	</instant>
-	<instant group="attack" spellid="24" name="Hell's Core" words="exevo gran mas flam" lvl="60" mana="1100" prem="1" exhaustion="40000" groupcooldown="4000" selftarget="1" needlearn="0" script="attack/hells core.lua">
+	<instant group="attack" secondarygroup="focus" spellid="24" name="Hell's Core" words="exevo gran mas flam" lvl="60" mana="1100" prem="1" exhaustion="40000" groupcooldown="4000" secondarygroupcooldown="40000" selftarget="1" needlearn="0" script="attack/hells core.lua">
 		<vocation name="Sorcerer" />
 		<vocation name="Master Sorcerer" />
 	</instant>
@@ -287,7 +291,7 @@
 		<vocation name="Elder Druid" />
 		<vocation name="Royal Paladin" />
 	</instant>
-	<instant group="attack" spellid="149" name="Lightning" words="exori amp vis" lvl="55" mana="60" prem="1" range="4" casterTargetOrDirection="1" blockwalls="1" exhaustion="8000" groupcooldown="2000" needlearn="0" script="attack/lightning.lua">
+	<instant group="attack" secondarygroup="special" spellid="149" name="Lightning" words="exori amp vis" lvl="55" mana="60" prem="1" range="4" casterTargetOrDirection="1" blockwalls="1" exhaustion="8000" groupcooldown="2000" secondarygroupcooldown="8000" needlearn="0" script="attack/lightning.lua">
 		<vocation name="Sorcerer" />
 		<vocation name="Master Sorcerer" />
 	</instant>
@@ -325,11 +329,11 @@
 		<vocation name="Paladin" />
 		<vocation name="Royal Paladin" />
 	</instant>
-	<instant group="support" spellid="132" name="Protector" words="utamo tempo" lvl="55" mana="200" prem="1" aggressive="0" selftarget="1" exhaustion="2000" groupcooldown="2000" needlearn="0" script="support/protector.lua">
+	<instant group="support" secondarygroup="focus" spellid="132" name="Protector" words="utamo tempo" lvl="55" mana="200" prem="1" aggressive="0" selftarget="1" exhaustion="2000" groupcooldown="2000" secondarygroupcooldown="2000" needlearn="0" script="support/protector.lua">
 		<vocation name="Knight" />
 		<vocation name="Elite Knight" />
 	</instant>
-	<instant group="attack" spellid="119" name="Rage of the Skies" words="exevo gran mas vis" lvl="55" mana="600" selftarget="1" prem="1" exhaustion="40000" groupcooldown="4000" needlearn="0" script="attack/rage of the skies.lua">
+	<instant group="attack" secondarygroup="focus" spellid="119" name="Rage of the Skies" words="exevo gran mas vis" lvl="55" mana="600" selftarget="1" prem="1" exhaustion="40000" groupcooldown="4000" secondarygroupcooldown="40000" needlearn="0" script="attack/rage of the skies.lua">
 		<vocation name="Sorcerer" />
 		<vocation name="Master Sorcerer" />
 	</instant>
@@ -347,7 +351,7 @@
 		<vocation name="Paladin" />
 		<vocation name="Royal Paladin" />
 	</instant>
-	<instant group="attack" spellid="151" name="Strong Energy Strike" words="exori gran vis" lvl="80" mana="60" prem="1" range="3" casterTargetOrDirection="1" blockwalls="1" exhaustion="8000" groupcooldown="2000" needlearn="0" script="attack/strong energy strike.lua">
+	<instant group="attack" secondarygroup="special" spellid="151" name="Strong Energy Strike" words="exori gran vis" lvl="80" mana="60" prem="1" range="3" casterTargetOrDirection="1" blockwalls="1" exhaustion="8000" groupcooldown="2000" secondarygroupcooldown="8000" needlearn="0" script="attack/strong energy strike.lua">
 		<vocation name="Sorcerer" />
 		<vocation name="Master Sorcerer" />
 	</instant>
@@ -355,7 +359,7 @@
 		<vocation name="Paladin" />
 		<vocation name="Royal Paladin" />
 	</instant>
-	<instant group="attack" spellid="150" name="Strong Flame Strike" words="exori gran flam" lvl="70" mana="60" prem="1" range="3" casterTargetOrDirection="1" blockwalls="1" exhaustion="8000" groupcooldown="2000" needlearn="0" script="attack/strong flame strike.lua">
+	<instant group="attack" secondarygroup="special" spellid="150" name="Strong Flame Strike" words="exori gran flam" lvl="70" mana="60" prem="1" range="3" casterTargetOrDirection="1" blockwalls="1" exhaustion="8000" groupcooldown="2000" secondarygroupcooldown="8000" needlearn="0" script="attack/strong flame strike.lua">
 		<vocation name="Sorcerer" />
 		<vocation name="Master Sorcerer" />
 	</instant>
@@ -365,7 +369,7 @@
 		<vocation name="Master Sorcerer" />
 		<vocation name="Elder Druid" />
 	</instant>
-	<instant group="attack" spellid="152" name="Strong Ice Strike" words="exori gran frigo" lvl="80" mana="60" prem="1" range="3" casterTargetOrDirection="1" blockwalls="1" exhaustion="8000" groupcooldown="2000" needlearn="0" script="attack/strong ice strike.lua">
+	<instant group="attack" secondarygroup="special" spellid="152" name="Strong Ice Strike" words="exori gran frigo" lvl="80" mana="60" prem="1" range="3" casterTargetOrDirection="1" blockwalls="1" exhaustion="8000" groupcooldown="2000" secondarygroupcooldown="8000" needlearn="0" script="attack/strong ice strike.lua">
 		<vocation name="Druid" />
 		<vocation name="Elder Druid" />
 	</instant>
@@ -373,7 +377,7 @@
 		<vocation name="Druid" />
 		<vocation name="Elder Druid" />
 	</instant>
-	<instant group="attack" spellid="153" name="Strong Terra Strike" words="exori gran tera" lvl="70" mana="60" prem="1" range="3" casterTargetOrDirection="1" blockwalls="1" exhaustion="8000" groupcooldown="2000" needlearn="0" script="attack/strong terra strike.lua">
+	<instant group="attack" secondarygroup="special" spellid="153" name="Strong Terra Strike" words="exori gran tera" lvl="70" mana="60" prem="1" range="3" casterTargetOrDirection="1" blockwalls="1" exhaustion="8000" groupcooldown="2000" secondarygroupcooldown="8000" needlearn="0" script="attack/strong terra strike.lua">
 		<vocation name="Druid" />
 		<vocation name="Elder Druid" />
 	</instant>
@@ -393,7 +397,7 @@
 		<vocation name="Druid" />
 		<vocation name="Elder Druid" />
 	</instant>
-	<instant group="attack" spellid="120" name="Terra Wave" words="exevo tera hur" lvl="38" mana="210" direction="1" exhaustion="4000" groupcooldown="2000" needlearn="0" script="attack/terra wave.lua">
+	<instant group="attack" spellid="120" name="Terra Wave" words="exevo tera hur" lvl="38" mana="170" direction="1" exhaustion="4000" groupcooldown="2000" needlearn="0" script="attack/terra wave.lua">
 		<vocation name="Druid" />
 		<vocation name="Elder Druid" />
 	</instant>
@@ -401,11 +405,11 @@
 		<vocation name="Knight" />
 		<vocation name="Elite Knight" />
 	</instant>
-	<instant group="attack" spellid="155" name="Ultimate Energy Strike" words="exori max vis" lvl="100" mana="100" prem="1" range="3" casterTargetOrDirection="1" blockwalls="1" exhaustion="30000" groupcooldown="4000" needlearn="0" script="attack/ultimate energy strike.lua">
+	<instant group="attack" secondarygroup="ultimatestrikes" spellid="155" name="Ultimate Energy Strike" words="exori max vis" lvl="100" mana="100" prem="1" range="3" casterTargetOrDirection="1" blockwalls="1" exhaustion="30000" groupcooldown="4000" secondarygroupcooldown="30000" needlearn="0" script="attack/ultimate energy strike.lua">
 		<vocation name="Sorcerer" />
 		<vocation name="Master Sorcerer" />
 	</instant>
-	<instant group="attack" spellid="154" name="Ultimate Flame Strike" words="exori max flam" lvl="90" mana="100" prem="1" range="3" casterTargetOrDirection="1" blockwalls="1" exhaustion="30000" groupcooldown="4000" needlearn="0" script="attack/ultimate flame strike.lua">
+	<instant group="attack" secondarygroup="ultimatestrikes" spellid="154" name="Ultimate Flame Strike" words="exori max flam" lvl="90" mana="100" prem="1" range="3" casterTargetOrDirection="1" blockwalls="1" exhaustion="30000" groupcooldown="4000" secondarygroupcooldown="30000" needlearn="0" script="attack/ultimate flame strike.lua">
 		<vocation name="Sorcerer" />
 		<vocation name="Master Sorcerer" />
 	</instant>
@@ -415,7 +419,7 @@
 		<vocation name="Master Sorcerer" />
 		<vocation name="Elder Druid" />
 	</instant>
-	<instant group="attack" spellid="156" name="Ultimate Ice Strike" words="exori max frigo" lvl="100" mana="100" prem="1" range="3" casterTargetOrDirection="1" blockwalls="1" exhaustion="30000" groupcooldown="4000" needlearn="0" script="attack/ultimate ice strike.lua">
+	<instant group="attack" secondarygroup="ultimatestrikes" spellid="156" name="Ultimate Ice Strike" words="exori max frigo" lvl="100" mana="100" prem="1" range="3" casterTargetOrDirection="1" blockwalls="1" exhaustion="30000" groupcooldown="4000" secondarygroupcooldown="30000" needlearn="0" script="attack/ultimate ice strike.lua">
 		<vocation name="Druid" />
 		<vocation name="Elder Druid" />
 	</instant>
@@ -425,7 +429,7 @@
 		<vocation name="Master Sorcerer" />
 		<vocation name="Elder Druid" />
 	</instant>
-	<instant group="attack" spellid="157" name="Ultimate Terra Strike" words="exori max tera" lvl="90" mana="100" prem="1" range="3" casterTargetOrDirection="1" blockwalls="1" exhaustion="30000" groupcooldown="4000" needlearn="0" script="attack/ultimate terra strike.lua">
+	<instant group="attack" secondarygroup="ultimatestrikes" spellid="157" name="Ultimate Terra Strike" words="exori max tera" lvl="90" mana="100" prem="1" range="3" casterTargetOrDirection="1" blockwalls="1" exhaustion="30000" groupcooldown="4000" secondarygroupcooldown="30000" needlearn="0" script="attack/ultimate terra strike.lua">
 		<vocation name="Druid" />
 		<vocation name="Elder Druid" />
 	</instant>
@@ -437,8 +441,48 @@
 		<vocation name="Knight" />
 		<vocation name="Elite Knight" />
 	</instant>
-	<instant group="attack" spellid="56" name="Wrath of Nature" words="exevo gran mas tera" lvl="55" mana="700" prem="1" selftarget="1" exhaustion="40000" groupcooldown="4000" needlearn="0" script="attack/wrath of nature.lua">
+	<instant group="attack" secondarygroup="focus" spellid="56" name="Wrath of Nature" words="exevo gran mas tera" lvl="55" mana="700" prem="1" selftarget="1" exhaustion="40000" groupcooldown="4000" secondarygroupcooldown="40000" needlearn="0" script="attack/wrath of nature.lua">
 		<vocation name="Druid" />
+		<vocation name="Elder Druid" />
+	</instant>
+	<instant group="support" spellid="237" name="Chivalrous Challenge" words="exeta amp res" lvl="150" mana="80" prem="1" aggressive="0" exhaustion="2000" groupcooldown="2000" needlearn="0" script="support/chivalrous challenge.lua">
+		<vocation name="Knight" />
+		<vocation name="Elite Knight" />
+	</instant>
+	<instant group="support" spellid="238" name="Divine Dazzle" words="exana amp res" lvl="250" mana="80" prem="1" aggressive="0" exhaustion="16000" groupcooldown="2000" needlearn="0" script="support/divine dazzle.lua">
+		<vocation name="Paladin" />
+		<vocation name="Royal Paladin" />
+	</instant>
+	<instant group="healing" spellid="239" name="Fair Wound Cleansing" words="exura med ico" lvl="300" mana="90" prem="1" selftarget="1" aggressive="0" exhaustion="1000" groupcooldown="1000" needlearn="0" script="healing/fair wound cleansing.lua">
+		<vocation name="Knight" />
+		<vocation name="Elite Knight" />
+	</instant>
+	<instant group="attack" spellid="240" name="Great Fire Wave" words="exevo gran flam hur" lvl="38" mana="120" direction="1" exhaustion="4000" groupcooldown="2000" needlearn="0" script="attack/great fire wave.lua">
+		<vocation name="Sorcerer" />
+		<vocation name="Master Sorcerer" />
+	</instant>
+	<instant group="healing" spellid="241" name="Restoration" words="exura max vita" lvl="300" mana="260" aggressive="0" selftarget="1" exhaustion="6000" groupcooldown="1000" needlearn="0" script="healing/restoration.lua">
+		<vocation name="Sorcerer" />
+		<vocation name="Druid" />
+		<vocation name="Master Sorcerer" />
+		<vocation name="Elder Druid" />
+	</instant>
+	<instant group="healing" spellid="242" name="Nature's Embrace" words="exura gran sio" lvl="300" mana="400" prem="1" aggressive="0" blockwalls="1" needtarget="1" playernameparam="1" params="1" exhaustion="1000" groupcooldown="1000" needlearn="0" script="healing/nature's embrace.lua">
+		<vocation name="Druid" />
+		<vocation name="Elder Druid" />
+	</instant>
+	<instant group="support" secondarygroup="crippling" spellid="243" name="Expose Weakness" words="exori moe" lvl="275" mana="400" selftarget="1" exhaustion="12000" groupcooldown="2000" secondarygroupcooldown="12000" needlearn="0" script="support/expose weakness.lua">
+		<vocation name="Sorcerer" />
+		<vocation name="Master Sorcerer" />
+	</instant>
+	<instant group="support" secondarygroup="crippling" spellid="244" name="Sap Strength" words="exori kor" lvl="275" mana="300" selftarget="1" exhaustion="12000" groupcooldown="2000" secondarygroupcooldown="12000" needlearn="0" script="support/sap strength.lua">
+		<vocation name="Sorcerer" />
+		<vocation name="Master Sorcerer" />
+	</instant>
+	<instant group="support" spellid="245" name="Cancel Magic Shield" words="exana vita" lvl="14" mana="50" aggressive="0" selftarget="1" exhaustion="2000" groupcooldown="2000" needlearn="0" script="support/cancel magic shield.lua">
+		<vocation name="Sorcerer" />
+		<vocation name="Druid" />
+		<vocation name="Master Sorcerer" />
 		<vocation name="Elder Druid" />
 	</instant>
 

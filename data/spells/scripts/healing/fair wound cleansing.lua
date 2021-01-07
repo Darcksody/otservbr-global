@@ -6,7 +6,7 @@ combat:setParameter(COMBAT_PARAM_DISPEL, CONDITION_PARALYZE)
 
 function onGetFormulaValues(player, level, maglevel)
 	local min = (level / 2.5) + (maglevel * 8) + 50
-	local max = (level / 2.5) + (maglevel * 16.9) + 102
+	local max = (level / 2.5) + (maglevel * 16.9) + 102 -- TODO: Formulas (TibiaWiki says x2 but need more acurracy)
 	return min, max
 end
 

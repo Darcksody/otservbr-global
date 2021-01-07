@@ -228,7 +228,7 @@ function Player:onLookInBattleList(creature, distance)
 	local description = "You see " .. creature:getDescription(distance)
 	if creature:isMonster() then
 		local master = creature:getMaster()
-		local summons = {'thundergiant','grovebeast','emberwing','skullfrost'}
+		local summons = {'sorcerer familiar','knight familiar','druid familiar','paladin familiar'}
 		if master and table.contains(summons, creature:getName():lower()) then
 			description = description..' (Master: ' .. master:getName() .. '). \z
 				It will disappear in ' .. getTimeinWords(master:getStorageValue(Storage.PetSummon) - os.time())
@@ -430,7 +430,7 @@ function Player:onMoveItem(item, count, fromPosition, toPosition, fromCylinder, 
 		local itemType, moveItem = ItemType(item:getId())
 		if bit.band(itemType:getSlotPosition(), SLOTP_TWO_HAND) ~= 0 and toPosition.y == CONST_SLOT_LEFT then
 			moveItem = self:getSlotItem(CONST_SLOT_RIGHT)
-		if moveItem and itemType:getWeaponType() == WEAPON_DISTANCE and ItemType(moveItem:getId()):getWeaponType() == WEAPON_QUIVER then
+			if moveItem and itemType:getWeaponType() == WEAPON_DISTANCE and ItemType(moveItem:getId()):getWeaponType() == WEAPON_QUIVER then
 				return true
 			end
 		elseif itemType:getWeaponType() == WEAPON_SHIELD and toPosition.y == CONST_SLOT_RIGHT then
@@ -941,6 +941,14 @@ end
 function Player:onCombat(target, item, primaryDamage, primaryType, secondaryDamage, secondaryType)
 	if not item or not target then
 		return primaryDamage, primaryType, secondaryDamage, secondaryType
+	end
+
+	if ItemType(item:getId()):getWeaponType() == WEAPON_AMMO then
+		if isInArray({ITEM_OLD_DIAMOND_ARROW, ITEM_DIAMOND_ARROW}, item:getId()) then
+			return primaryDamage, primaryType, secondaryDamage, secondaryType
+		else
+			item = self:getSlotItem(CONST_SLOT_LEFT)
+		end
 	end
 
 	local slots = ItemType(item:getId()):getImbuingSlots()

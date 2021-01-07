@@ -3266,7 +3266,17 @@ if not equipmentsTable then
 			itemid = 29058,
 			type = "equip",
 			slot = "ammo"
-		}, -- spectral bolt
+		}, 
+		{
+			itemid = 40737,
+			type = "equip",
+			slot = "ammo"
+		}, -- spectral bolt (no decay)
+		{
+			itemid = 40737,
+			type = "deequip",
+			slot = "ammo"
+		}, -- spectral bolt (no decay)
 		{
 			itemid = 29058,
 			type = "deequip",
@@ -14519,6 +14529,25 @@ if not equipmentsTable then
 			type = "deequip",
 			slot = "hand"
 		}, -- small stone
+		{
+			itemid = 40359,
+			type = "equip",
+			slot = "right-hand",
+			vocation = {
+				{"Paladin", true, true},
+				{"Royal Paladin"}
+			}
+		}, -- jungle quiver
+		{
+			itemid = 40359,
+			type = "deequip",
+			slot = "right-hand",
+			level = 150,
+			vocation = {
+				{"Paladin", true, true},
+				{"Royal Paladin"}
+			}
+		}, -- jungle quiver
 		{
 			itemid = 40397,
 			type = "equip",

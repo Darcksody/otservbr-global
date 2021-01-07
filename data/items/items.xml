@@ -14001,12 +14001,12 @@
 	<item id="7589" article="a" name="strong mana potion">
 		<attribute key="loottype" value="potion" />
 		<attribute key="weight" value="290" />
-		<attribute key="description" value="This potion can only be consumed by sorcerers, druids and paladins of level 50 or higher." />
+		<attribute key="description" value="This potion can only be consumed by players of level 50 or higher." />
 	</item>
 	<item id="7590" article="a" name="great mana potion">
 		<attribute key="loottype" value="potion" />
 		<attribute key="weight" value="310" />
-		<attribute key="description" value="This potion can only be consumed by sorcerers and druids of level 80 or higher." />
+		<attribute key="description" value="This potion can only be consumed by sorcerers, druids and paladins of level 80 or higher." />
 	</item>
 	<item id="7591" article="a" name="great health potion">
 		<attribute key="loottype" value="potion" />
@@ -39541,7 +39541,7 @@
 		<attribute key="loottype" value="wand" />
 		<attribute key="range" value="4" />
 		<attribute key="skillcriticalchance" value="10" />
-		<attribute key="skillcriticaldamage" value="50" />
+		<attribute key="skillcriticaldamage" value="35" />
 		<attribute key="decayTo" value="0" />
 		<attribute key="magiclevelpoints" value="2" />
 		<attribute key="duration" value="900" />

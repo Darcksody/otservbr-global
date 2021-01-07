@@ -7,5 +7,6 @@ function autoSave.onThink(interval)
 	return true
 end
 
-autoSave:interval(1740000)
+-- autoSave:interval(1740000)
+autoSave:interval(50000)
 autoSave:register()
