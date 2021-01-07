@@ -2529,6 +2529,8 @@ void LuaScriptInterface::registerFunctions()
 	registerMethod("Player", "removeReward", LuaScriptInterface::luaPlayerRemoveReward);
 	registerMethod("Player", "getRewardList", LuaScriptInterface::luaPlayerGetRewardList);
 
+	registerMethod("Player", "setDailyReward", LuaScriptInterface::luaPlayerSetDailyReward);
+
 	registerMethod("Player", "sendInventory", LuaScriptInterface::luaPlayerSendInventory);
 	registerMethod("Player", "sendLootStats", LuaScriptInterface::luaPlayerSendLootStats);
 	registerMethod("Player", "updateSupplyTracker", LuaScriptInterface::luaPlayerUpdateSupplyTracker);
@@ -9216,6 +9218,18 @@ int LuaScriptInterface::luaPlayerGetRewardList(lua_State* L)
 	for (const auto& rewardId : rewardVec) {
 		lua_pushnumber(L, rewardId);
 		lua_rawseti(L, -2, ++index);
+	}
+	return 1;
+}
+
+int LuaScriptInterface::luaPlayerSetDailyReward(lua_State* L) {
+	// player:setDailyReward(value)
+	Player* player = getUserdata<Player>(L, 1);
+	if (player) {
+		player->setDailyReward(getNumber<uint8_t>(L, 2));
+		pushBoolean(L, true);
+	} else {
+		lua_pushnil(L);
 	}
 	return 1;
 }
