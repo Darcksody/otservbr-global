@@ -253,7 +253,7 @@ class Map
 
 		bool getPathMatching(const Creature& creature, std::forward_list<Direction>& dirList,
 						const FrozenPathingConditionCall& pathCondition, const FindPathParams& fpp) const;
-		
+
 		bool getPathMatching(const Position& startPos, std::forward_list<Direction>& dirList,
 			const FrozenPathingConditionCall& pathCondition, const FindPathParams& fpp) const;
 

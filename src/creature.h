@@ -243,7 +243,7 @@ class Creature : virtual public Thing
 			return mana;
 		}
 
-		 uint16_t getManaShield() const {
+    uint16_t getManaShield() const {
       return manaShield;
     }
 

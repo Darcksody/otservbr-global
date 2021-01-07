@@ -17,12 +17,11 @@
 		<vocation name="Druid"/>
 		<vocation name="Elder Druid"/>
 	</instant>
-	<!-- under construction -->
+	
 	<instant group="support" spellid="92" name="Conjure Wand of Darkness" words="exevo gran mort" lvl="41" mana="250" soul="0" prem="1" aggressive="0" selftarget="1" exhaustion="1800000" groupcooldown="2000" needlearn="0" script="conjuring/Conjure_Wand_of_Darkness.lua">
 		<vocation name="Sorcerer" />
 		<vocation name="Master Sorcerer" />
 	</instant>
-	<!-- end of under construction -->
 
 	<instant group="attack" spellid="62" name="Annihilation" words="exori gran ico" lvl="110" mana="300" prem="1" range="1" needtarget="1" blockwalls="1" needweapon="1" exhaustion="30000" groupcooldown="4000" needlearn="0" script="attack/annihilation.lua">
 		<vocation name="Knight" />
@@ -305,7 +304,7 @@
 		<vocation name="Royal Paladin" />
 		<vocation name="Elite Knight" />
 	</instant>
-	<instant group="support" spellid="44" name="Magic Shield" words="utamo vita" lvl="14" mana="50" aggressive="0" selftarget="1" exhaustion="2000" groupcooldown="2000" needlearn="0" script="support/magic shield.lua">
+	<instant group="support" spellid="44" name="Magic Shield" words="utamo vita" lvl="14" mana="50" aggressive="0" selftarget="1" exhaustion="14000" groupcooldown="2000" needlearn="0" script="support/magic shield.lua">
 		<vocation name="Sorcerer" />
 		<vocation name="Druid" />
 		<vocation name="Master Sorcerer" />
@@ -443,6 +442,7 @@
 	</instant>
 	<instant group="attack" secondarygroup="focus" spellid="56" name="Wrath of Nature" words="exevo gran mas tera" lvl="55" mana="700" prem="1" selftarget="1" exhaustion="40000" groupcooldown="4000" secondarygroupcooldown="40000" needlearn="0" script="attack/wrath of nature.lua">
 		<vocation name="Druid" />
+		<vocation name="Master Sorcerer" />
 		<vocation name="Elder Druid" />
 	</instant>
 	<instant group="support" spellid="237" name="Chivalrous Challenge" words="exeta amp res" lvl="150" mana="80" prem="1" aggressive="0" exhaustion="2000" groupcooldown="2000" needlearn="0" script="support/chivalrous challenge.lua">

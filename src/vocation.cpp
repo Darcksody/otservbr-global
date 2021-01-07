@@ -58,13 +58,13 @@ bool Vocations::loadFromXml()
 			voc.description = attr.as_string();
 		}
 
+    if ((attr = vocationNode.attribute("magicshield"))) {
+      voc.magicShield = attr.as_bool();
+    }
+
 		if ((attr = vocationNode.attribute("gaincap"))) {
 			voc.gainCap = pugi::cast<uint32_t>(attr.value()) * 100;
 		}
-
-		if ((attr = vocationNode.attribute("magicshield"))) {
-      		voc.magicShield = attr.as_bool();
-    	}
 
 		if ((attr = vocationNode.attribute("gainhp"))) {
 			voc.gainHP = pugi::cast<uint32_t>(attr.value());

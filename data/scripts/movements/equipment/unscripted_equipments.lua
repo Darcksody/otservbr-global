@@ -3283,6 +3283,16 @@ if not equipmentsTable then
 			slot = "ammo"
 		}, -- spectral bolt
 		{
+			itemid = 40737,
+			type = "equip",
+			slot = "ammo"
+		}, -- spectral bolt (no decay)
+		{
+			itemid = 40737,
+			type = "deequip",
+			slot = "ammo"
+		}, -- spectral bolt (no decay)
+		{
 			itemid = 29036,
 			type = "equip",
 			slot = "hand"
@@ -13604,7 +13614,13 @@ if not equipmentsTable then
 		{
 			itemid = 2204,
 			type = "equip",
-			slot = "ring"
+			slot = "ring",
+			vocation = {
+				{"Knight", true},
+				{"Paladin", true, true},
+				{"Elite Knight"},
+				{"Royal Paladin"}
+			}
 		}, -- energy ring
 		{
 			itemid = 2204,
@@ -13950,7 +13966,13 @@ if not equipmentsTable then
 		{
 			itemid = 2167,
 			type = "equip",
-			slot = "ring"
+			slot = "ring",
+			vocation = {
+				{"Knight", true},
+				{"Paladin", true, true},
+				{"Elite Knight"},
+				{"Royal Paladin"}
+			}
 		}, -- energy ring
 		{
 			itemid = 2167,
@@ -14552,6 +14574,7 @@ if not equipmentsTable then
 			itemid = 40397,
 			type = "equip",
 			slot = "right-hand",
+			level = 150,
 			vocation = {
 				{"None", true},
 				{"Paladin", true, true},

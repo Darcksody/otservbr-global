@@ -12,7 +12,7 @@ skill:setParameter(CONDITION_PARAM_BUFF_SPELL, true)
 combat:addCondition(skill)
 
 function onCastSpell(creature, variant)
-if creature:getCondition(CONDITION_ATTRIBUTES, CONDITIONID_COMBAT, 5) then
+	if creature:getCondition(CONDITION_ATTRIBUTES, CONDITIONID_COMBAT, 5) then
 		creature:removeCondition(CONDITION_ATTRIBUTES, CONDITIONID_COMBAT, 5)
 	end
 	return combat:execute(creature, variant)

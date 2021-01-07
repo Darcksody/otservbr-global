@@ -86,9 +86,9 @@ class Vocation
 			return fromVocation;
 		}
 
-		bool getMagicShield() const {
-      		return magicShield;
-    	}
+    bool getMagicShield() const {
+      return magicShield;
+    }
 
 		float meleeDamageMultiplier = 1.0f;
 		float distDamageMultiplier = 1.0f;
@@ -119,13 +119,9 @@ class Vocation
 		uint32_t baseSpeed = 220;
 		uint16_t id;
 
-		bool magicShield = false;
+    bool magicShield = false;
 
-		uint16_t gainSoulTicks = 120;
-
-		uint8_t soulMax = 100;
 		uint8_t clientId = 0;
-
 		static uint32_t skillBase[SKILL_LAST + 1];
 };
 
