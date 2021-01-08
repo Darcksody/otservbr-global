@@ -753,6 +753,11 @@ function Player:onGainExperience(source, exp, rawExp)
 	if SCHEDULE_EXP_RATE ~= 100 then
 		exp = (exp * SCHEDULE_EXP_RATE)/100
 	end
+
+	if DOBLE_EXP_CLIENT then
+		displayRate = displayRate * 2;
+	end
+
 	self:setBaseXpGain(displayRate * 100)
 	return exp
 end

@@ -121,6 +121,10 @@ class Vocation
 
     bool magicShield = false;
 
+		uint16_t gainSoulTicks = 120;
+
+		uint8_t soulMax = 100;
+
 		uint8_t clientId = 0;
 		static uint32_t skillBase[SKILL_LAST + 1];
 };

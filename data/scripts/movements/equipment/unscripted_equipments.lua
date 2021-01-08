@@ -3268,16 +3268,6 @@ if not equipmentsTable then
 			slot = "ammo"
 		}, 
 		{
-			itemid = 40737,
-			type = "equip",
-			slot = "ammo"
-		}, -- spectral bolt (no decay)
-		{
-			itemid = 40737,
-			type = "deequip",
-			slot = "ammo"
-		}, -- spectral bolt (no decay)
-		{
 			itemid = 29058,
 			type = "deequip",
 			slot = "ammo"
