@@ -136,8 +136,9 @@ Storage = {
 	BlueberryCupcake = 30053,
 	PetSummonEvent10 = 30054,
 	PetSummonEvent60 = 30055,
+	FreeQuests = 990000,
 	PremiumAccount = 998899,
-	
+
 	--[[
 	Old storages
 	Over time, this will be dropped and replaced by the table above
@@ -1713,6 +1714,7 @@ Storage = {
 			ID3800 = 3800,
 			ID3801 = 3801,
 			ID3802 = 3802,
+			ID3899 = 3899,
 			ID3940 = 3940,
 			ID3980 = 3980,
 			ID4055 = 4055,
@@ -1907,7 +1909,19 @@ Storage = {
 		TheAnnihilator = {
 			Reward = 10102
 		},
-		TheParadoxTower = {},
+		TheParadoxTower = {
+			QuestLine = 10103,
+			TheFearedHugo = 10104,
+			FirstParadoxAcess = 10105,
+			FavoriteColour = 10106,
+			Mathemagics = 10107,
+			Reward = {
+				Egg = 10108,
+				Gold = 10109,
+				Talon = 10110,
+				Wand = 10111
+			}
+		},
 		ThePostmanMissions = {},
 		TheWhiteRavenMonastery = {},
 		VoodooDoll = {},
