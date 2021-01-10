@@ -31,7 +31,7 @@ monster.health = 580
 monster.maxHealth = 580
 monster.race = "blood"
 monster.corpse = 20455
-monster.speed = 188
+monster.speed = 158
 monster.manaCost = 0
 monster.maxSummons = 2
 
@@ -71,9 +71,9 @@ monster.light = {
 }
 
 monster.summons = {
-	{name = "Ghoul", chance = 3, interval = 32000},
-	{name = "Ghost", chance = 3, interval = 32000},
-	{name = "Mummy", chance = 3, interval = 32000}
+	{name = "Ghoul", chance = 3, interval = 6000},
+	{name = "Ghost", chance = 3, interval = 12000},
+	{name = "Mummy", chance = 3, interval = 12000}
 }
 
 monster.voices = {
@@ -100,8 +100,8 @@ monster.loot = {
 
 monster.attacks = {
 	{name ="melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -80, condition = {type = CONDITION_POISON, totalDamage = 160, interval = 4000}},
-	{name ="combat", interval = 2000, chance = 20, type = COMBAT_DEATHDAMAGE, minDamage = -60, maxDamage = -120, range = 1, shootEffect = CONST_ANI_DEATH, effect = CONST_ME_SMALLCLOUDS, target = true},
-	{name ="combat", interval = 2000, chance = 20, type = COMBAT_EARTHDAMAGE, minDamage = -65, maxDamage = -120, range = 7, shootEffect = CONST_ANI_POISON, effect = CONST_ME_POISONAREA, target = false}
+	{name ="combat", interval = 2000, chance = 18, type = COMBAT_DEATHDAMAGE, minDamage = -60, maxDamage = -120, range = 1, shootEffect = CONST_ANI_DEATH, effect = CONST_ME_SMALLCLOUDS, target = true},
+	{name ="combat", interval = 2000, chance = 18, type = COMBAT_EARTHDAMAGE, minDamage = -65, maxDamage = -120, range = 7, shootEffect = CONST_ANI_POISON, effect = CONST_ME_POISONAREA, target = false}
 }
 
 monster.defenses = {
