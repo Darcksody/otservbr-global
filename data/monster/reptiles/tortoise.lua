@@ -31,7 +31,7 @@ monster.health = 185
 monster.maxHealth = 185
 monster.race = "blood"
 monster.corpse = 6072
-monster.speed = 200
+monster.speed = 160
 monster.manaCost = 445
 monster.maxSummons = 0
 
@@ -49,7 +49,7 @@ monster.flags = {
 	attackable = true,
 	hostile = true,
 	convinceable = true,
-	pushable = true,
+	pushable = false,
 	rewardBoss = false,
 	illusionable = false,
 	canPushItems = true,
