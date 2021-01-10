@@ -30,7 +30,7 @@ monster.health = 1700
 monster.maxHealth = 1700
 monster.race = "blood"
 monster.corpse = 15211
-monster.speed = 230
+monster.speed = 200
 monster.manaCost = 0
 monster.maxSummons = 0
 
@@ -51,7 +51,7 @@ monster.flags = {
 	attackable = true,
 	hostile = true,
 	convinceable = false,
-	pushable = true,
+	pushable = false,
 	rewardBoss = false,
 	illusionable = false,
 	canPushItems = true,
@@ -78,11 +78,11 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = "gold coin", chance = 100000, maxCount = 100},
-	{id = "platinum coin", chance = 89000, maxCount = 3},
-	{id = "spellsinger's seal", chance = 25000},
-	{id = "deepling filet", chance = 20000},
-	{id = "key to the Drowned Library", chance = 20000},
+	{id = "gold coin", chance = 10000, maxCount = 100},
+	{id = "platinum coin", chance = 8900, maxCount = 3},
+	{id = "spellsinger's seal", chance = 2500},
+	{id = "deepling filet", chance = 10000},
+	{id = "key to the Drowned Library", chance = 10000},
 	{id = "eye of a deepling", chance = 9380},
 	{id = 2667, chance = 9090, maxCount = 2},
 	{id = "small sapphire", chance = 8440, maxCount = 3},
@@ -95,7 +95,7 @@ monster.loot = {
 
 
 monster.attacks = {
-	{name ="melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -210, effect = CONST_ME_DRAWBLOOD},
+	{name ="melee", interval = 2000, chance = 100, minDamage = -10, maxDamage = -210, effect = CONST_ME_DRAWBLOOD},
 	{name ="combat", interval = 2000, chance = 10, type = COMBAT_ICEDAMAGE, minDamage = -260, maxDamage = -450, length = 10, spread = 3, effect = CONST_ME_ICETORNADO, target = false},
 	{name ="combat", interval = 2000, chance = 20, type = COMBAT_DROWNDAMAGE, minDamage = -150, maxDamage = -280, radius = 4, effect = CONST_ME_BUBBLES, target = true},
 	{name ="combat", interval = 2000, chance = 15, type = COMBAT_LIFEDRAIN, minDamage = -80, maxDamage = -140, range = 7, effect = CONST_ME_SMALLPLANTS, target = false},

@@ -30,7 +30,7 @@ monster.health = 380
 monster.maxHealth = 380
 monster.race = "blood"
 monster.corpse = 13840
-monster.speed = 170
+monster.speed = 140
 monster.manaCost = 0
 monster.maxSummons = 0
 
@@ -51,7 +51,7 @@ monster.flags = {
 	attackable = true,
 	hostile = true,
 	convinceable = false,
-	pushable = true,
+	pushable = false,
 	rewardBoss = false,
 	illusionable = false,
 	canPushItems = true,
@@ -79,8 +79,8 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = "gold coin", chance = 96000, maxCount = 44},
-	{id = 2667, chance = 19730, maxCount = 3},
+	{id = "gold coin", chance = 9600, maxCount = 44},
+	{id = 2667, chance = 1973, maxCount = 3},
 	{id = "deepling scales", chance = 14500},
 	{id = "eye of a deepling", chance = 6500},
 	{id = "heavy trident", chance = 2720},
@@ -88,7 +88,7 @@ monster.loot = {
 }
 
 monster.attacks = {
-	{name ="melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -100, effect = CONST_ME_DRAWBLOOD},
+	{name ="melee", interval = 2000, chance = 100, minDamage = -5, maxDamage = -100, effect = CONST_ME_DRAWBLOOD},
 	{name ="combat", interval = 2000, chance = 15, type = COMBAT_DROWNDAMAGE, minDamage = -60, maxDamage = -120, range = 7, shootEffect = CONST_ANI_SPEAR, effect = CONST_ME_LOSEENERGY, target = true}
 }
 

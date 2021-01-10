@@ -30,7 +30,7 @@ monster.health = 3200
 monster.maxHealth = 3200
 monster.race = "blood"
 monster.corpse = 15176
-monster.speed = 330
+monster.speed = 280
 monster.manaCost = 0
 monster.maxSummons = 0
 
@@ -51,7 +51,7 @@ monster.flags = {
 	attackable = true,
 	hostile = true,
 	convinceable = false,
-	pushable = true,
+	pushable = false,
 	rewardBoss = false,
 	illusionable = false,
 	canPushItems = true,
@@ -78,16 +78,16 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = "gold coin", chance = 100000, maxCount = 100},
-	{id = "gold coin", chance = 100000, maxCount = 86},
+	{id = "gold coin", chance = 10000, maxCount = 100},
+	{id = "gold coin", chance = 10000, maxCount = 86},
 	{id = "great health potion", chance = 25000},
-	{id = "eye of a deepling", chance = 25000},
-	{id = "deepling filet", chance = 25000},
-	{id = "vortex bolt", chance = 24800, maxCount = 5},
-	{id = "deepling warts", chance = 24400},
-	{id = "great mana potion", chance = 24200},
-	{id = "deeptags", chance = 20600},
-	{id = "deepling ridge", chance = 19500},
+	{id = "eye of a deepling", chance = 2500},
+	{id = "deepling filet", chance = 2500},
+	{id = "vortex bolt", chance = 2480, maxCount = 5},
+	{id = "deepling warts", chance = 2440},
+	{id = "great mana potion", chance = 2420},
+	{id = "deeptags", chance = 2060},
+	{id = "deepling ridge", chance = 1950},
 	{id = "small emerald", chance = 6890, maxCount = 2},
 	{id = "life ring", chance = 5360},
 	{id = "heavy trident", chance = 3680},
@@ -97,7 +97,7 @@ monster.loot = {
 }
 
 monster.attacks = {
-	{name ="melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -300, effect = CONST_ME_DRAWBLOOD},
+	{name ="melee", interval = 2000, chance = 100, minDamage = -20, maxDamage = -300, effect = CONST_ME_DRAWBLOOD},
 	{name ="combat", interval = 2000, chance = 20, type = COMBAT_PHYSICALDAMAGE, minDamage = 0, maxDamage = -290, range = 7, shootEffect = CONST_ANI_LARGEROCK, target = true}
 }
 
