@@ -6823,14 +6823,14 @@
 	<item id="3058" article="a" name="dead human">
 		<attribute key="containerSize" value="10" />
 		<attribute key="decayTo" value="3059" />
-		<attribute key="duration" value="1200" />
+		<attribute key="duration" value="3000" />
 		<attribute key="corpseType" value="blood" />
 		<attribute key="fluidSource" value="blood" />
 	</item>
 	<item id="3059" article="a" name="dead human">
 		<attribute key="containerSize" value="10" />
 		<attribute key="decayTo" value="3060" />
-		<attribute key="duration" value="1200" />
+		<attribute key="duration" value="6000" />
 		<attribute key="corpseType" value="blood" />
 	</item>
 	<item id="3060" article="a" name="dead human">
