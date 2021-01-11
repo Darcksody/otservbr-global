@@ -30,7 +30,7 @@ monster.health = 190
 monster.maxHealth = 190
 monster.race = "blood"
 monster.corpse = 15497
-monster.speed = 130
+monster.speed = 90
 monster.manaCost = 0
 monster.maxSummons = 0
 
@@ -51,7 +51,7 @@ monster.flags = {
 	attackable = true,
 	hostile = true,
 	convinceable = false,
-	pushable = true,
+	pushable = false,
 	rewardBoss = false,
 	illusionable = false,
 	canPushItems = true,
@@ -89,7 +89,7 @@ monster.loot = {
 }
 
 monster.attacks = {
-	{name ="melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -80, effect = CONST_ME_DRAWBLOOD}
+	{name ="melee", interval = 2000, chance = 100, minDamage = -5, maxDamage = -80, effect = CONST_ME_DRAWBLOOD}
 }
 
 monster.defenses = {

@@ -30,7 +30,7 @@ monster.health = 450
 monster.maxHealth = 450
 monster.race = "blood"
 monster.corpse = 6065
-monster.speed = 380
+monster.speed = 290
 monster.manaCost = 670
 monster.maxSummons = 0
 
@@ -89,7 +89,7 @@ monster.loot = {
 }
 
 monster.attacks = {
-	{name ="melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -150, effect = CONST_ME_DRAWBLOOD, condition = {type = CONDITION_POISON, totalDamage = 20, interval = 4000}},
+	{name ="melee", interval = 2000, chance = 100, minDamage = -5, maxDamage = -150, effect = CONST_ME_DRAWBLOOD, condition = {type = CONDITION_POISON, totalDamage = 20, interval = 4000}},
 	{name ="combat", interval = 2000, chance = 10, type = COMBAT_LIFEDRAIN, minDamage = -50, maxDamage = -90, radius = 3, effect = CONST_ME_HITAREA, target = false},
 	{name ="quara constrictor freeze", interval = 2000, chance = 10, target = false},
 	{name ="combat", interval = 2000, chance = 10, type = COMBAT_ICEDAMAGE, minDamage = -40, maxDamage = -70, range = 7, radius = 4, effect = CONST_ME_ICEATTACK, target = false},

@@ -30,7 +30,7 @@ monster.health = 800
 monster.maxHealth = 800
 monster.race = "blood"
 monster.corpse = 6064
-monster.speed = 590
+monster.speed = 320
 monster.manaCost = 480
 monster.maxSummons = 0
 
@@ -92,7 +92,7 @@ monster.loot = {
 }
 
 monster.attacks = {
-	{name ="melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -138, effect = CONST_ME_DRAWBLOOD}
+	{name ="melee", interval = 2000, chance = 100, minDamage = -5, maxDamage = -138, effect = CONST_ME_DRAWBLOOD}
 }
 
 monster.defenses = {
