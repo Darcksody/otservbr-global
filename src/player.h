@@ -118,7 +118,7 @@ struct FamiliarEntry {
 struct Skill {
 	uint64_t tries = 0;
 	uint16_t level = 10;
-	uint8_t percent = 0;
+	double_t percent = 0;
 };
 
 struct Kill {
@@ -369,7 +369,7 @@ class Player final : public Creature, public Cylinder
 			return inbox;
 		}
 
-		uint16_t getClientIcons() const;
+		uint32_t getClientIcons() const;
 
 		const GuildWarVector& getGuildWarVector() const {
 		return guildWarVector;
@@ -565,7 +565,7 @@ class Player final : public Creature, public Cylinder
 		uint32_t getBaseMagicLevel() const {
 			return magLevel;
 		}
-		uint8_t getMagicLevelPercent() const {
+		double_t getMagicLevelPercent() const {
 			return magLevelPercent;
 		}
 		uint8_t getSoul() const {
@@ -736,6 +736,10 @@ class Player final : public Creature, public Cylinder
 			return shopOwner;
 		}
 
+		Npc* getOnlyShopOwner() {
+			return shopOwner;
+		}
+
 		//V.I.P. functions
 		void notifyStatusChange(Player* player, VipStatus_t status);
 		bool removeVIP(uint32_t vipGuid);
@@ -805,7 +809,7 @@ class Player final : public Creature, public Cylinder
 		uint16_t getBaseSkill(uint8_t skill) const {
 			return skills[skill].level;
 		}
-		uint8_t getSkillPercent(uint8_t skill) const {
+		double_t getSkillPercent(uint8_t skill) const {
 			return skills[skill].percent;
 		}
 
@@ -1002,6 +1006,11 @@ class Player final : public Creature, public Cylinder
 		void sendCreatureLight(const Creature* creature) {
 			if (client) {
 				client->sendCreatureLight(creature);
+			}
+		}
+    void sendCreatureIcon(const Creature* creature) {
+			if (client) {
+				client->sendCreatureIcon(creature);
 			}
 		}
 		void sendCreatureWalkthrough(const Creature* creature, bool walkthrough) {
@@ -1802,7 +1811,7 @@ class Player final : public Creature, public Cylinder
 
 		void setNextWalkActionTask(SchedulerTask* task);
 		void setNextWalkTask(SchedulerTask* task);
-		void setNextActionTask(SchedulerTask* task);
+		void setNextActionTask(SchedulerTask* task, bool resetIdleTime = true);
 		void setNextActionPushTask(SchedulerTask* task);
 		void setNextPotionActionTask(SchedulerTask* task);
 
@@ -2011,7 +2020,7 @@ class Player final : public Creature, public Cylinder
 
 		uint8_t soul = 0;
 		uint8_t levelPercent = 0;
-		uint8_t magLevelPercent = 0;
+		double_t magLevelPercent = 0;
 
 		PlayerSex_t sex = PLAYERSEX_FEMALE;
 		OperatingSystem_t operatingSystem = CLIENTOS_NONE;
@@ -2057,7 +2066,7 @@ class Player final : public Creature, public Cylinder
 			return vocation->getAttackSpeed();
 		}
 
-		static uint8_t getPercentLevel(uint64_t count, uint64_t nextLevelCount);
+		static double_t getPercentLevel(uint64_t count, uint64_t nextLevelCount);
 		double getLostPercent() const;
 		uint64_t getLostExperience() const override {
 			return skillLoss ? static_cast<uint64_t>(experience * getLostPercent()) : 0;

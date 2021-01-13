@@ -124,7 +124,16 @@ void ProtocolGame::AddItem(NetworkMessage &msg, const Item *item)
 		}
 
 		// Quiver ammo count
-		msg.addByte(0x00);
+    	if (item->getWeaponType() == WEAPON_QUIVER && player->getThing(CONST_SLOT_RIGHT) == item) {
+      		uint16_t ammoTotal = 0;
+      		for (Item* listItem : container->getItemList()) {
+        		ammoTotal += listItem->getItemCount();
+      		}
+      		msg.addByte(0x01);
+      		msg.add<uint32_t>(ammoTotal);
+    	}
+    	else
+      		msg.addByte(0x00);
 	}
 }
 
@@ -2232,6 +2241,24 @@ void ProtocolGame::sendCreatureLight(const Creature *creature)
 	writeToOutputBuffer(msg);
 }
 
+void ProtocolGame::sendCreatureIcon(const Creature* creature)
+{
+	if (!creature)
+    	return;
+  	CreatureIcon_t icon = creature->getIcon();
+  	NetworkMessage msg;
+ 	msg.addByte(0x8B);
+  	msg.add<uint32_t>(creature->getID());
+  	msg.addByte(14); // type 14 for this
+  	msg.addByte(icon != CREATUREICON_NONE); // 0 = no icon, 1 = we'll send an icon
+  	if (icon != CREATUREICON_NONE) {
+    	msg.addByte(icon);
+    	msg.addByte(1); // ???
+    	msg.add<uint16_t>(0); // used for the life in the new quest
+  	}
+	writeToOutputBuffer(msg);
+}
+
 void ProtocolGame::sendWorldLight(const LightInfo &lightInfo)
 {
 	NetworkMessage msg;
@@ -2933,7 +2960,7 @@ void ProtocolGame::sendBasicData()
 	{
 		msg.addByte(sid);
 	}
-	msg.addByte(0); // bool - determine whether magic shield is active or not
+	msg.addByte(player->getVocation()->getMagicShield()); // bool - determine whether magic shield is active or not
 	writeToOutputBuffer(msg);
 }
 
@@ -3172,7 +3199,7 @@ void ProtocolGame::sendChannelMessage(const std::string &author, const std::stri
 	writeToOutputBuffer(msg);
 }
 
-void ProtocolGame::sendIcons(uint16_t icons)
+void ProtocolGame::sendIcons(uint32_t icons)
 {
 	NetworkMessage msg;
 	msg.addByte(0xA2);
@@ -3378,9 +3405,20 @@ void ProtocolGame::sendSaleItemList(const std::vector<ShopInfo> &shop, const std
 	msg.addByte(0xEE);
 	msg.addByte(0x00);
 	msg.add<uint64_t>(player->getBankBalance());
-	msg.addByte(0xEE);
-	msg.addByte(0x01);
-	msg.add<uint64_t>(playerMoney);
+	uint16_t currency = player->getOnlyShopOwner() ? player->getOnlyShopOwner()->getCurrency() : ITEM_GOLD_COIN;
+  	msg.addByte(0xEE);
+  	if (currency == ITEM_GOLD_COIN) {
+		msg.addByte(0x01);
+ 		msg.add<uint64_t>(playerMoney);
+  	} else {
+		msg.addByte(0x02);
+		uint64_t newCurrency = 0;
+		auto search = inventoryMap.find(currency);
+  		if (search != inventoryMap.end()) {
+    		newCurrency += static_cast<uint64_t>(search->second);
+  		}
+		msg.add<uint64_t>(newCurrency);
+  	}
 	msg.addByte(0x7B);
 	msg.add<uint64_t>(playerMoney);
 
@@ -4902,9 +4940,8 @@ void ProtocolGame::sendOutfitWindow()
 
 	bool mounted = false;
 	Outfit_t currentOutfit = player->getDefaultOutfit();
-	Mount *currentMount = g_game.mounts.getMountByID(player->getCurrentMount());
-	if (currentMount)
-	{
+	Mount* currentMount = g_game.mounts.getMountByID(player->getCurrentMount());
+	if (currentMount) {
 		mounted = (currentOutfit.lookMount == currentMount->clientId);
 		currentOutfit.lookMount = currentMount->clientId;
 	}
@@ -4917,79 +4954,99 @@ void ProtocolGame::sendOutfitWindow()
 	msg.addByte(currentOutfit.lookMountFeet);
 	msg.add<uint16_t>(currentOutfit.lookFamiliarsType);
 
-	std::vector<ProtocolOutfit> protocolOutfits;
-	if (player->isAccessPlayer())
-	{
-		static const std::string gamemasterOutfitName = "Game Master";
-		protocolOutfits.emplace_back(gamemasterOutfitName, 75, 0);
+	auto startOutfits = msg.getBufferPosition();
+	uint16_t limitOutfits = std::numeric_limits<uint16_t>::max();
+	uint16_t outfitSize = 0;
+	msg.skipBytes(2);
 
-		static const std::string gmCustomerSupport = "Customer Support";
-		protocolOutfits.emplace_back(gmCustomerSupport, 266, 0);
+	if (player->isAccessPlayer()) {
+		msg.add<uint16_t>(75);
+		msg.addString("Gamemaster");
+		msg.addByte(0);
+		msg.addByte(0x00);
+		++outfitSize;
 
-		static const std::string communityManager = "Community Manager";
-		protocolOutfits.emplace_back(communityManager, 302, 0);
+		msg.add<uint16_t>(266);
+		msg.addString("Customer Support");
+		msg.addByte(0);
+		msg.addByte(0x00);
+		++outfitSize;
+
+		msg.add<uint16_t>(302);
+		msg.addString("Community Manager");
+		msg.addByte(0);
+		msg.addByte(0x00);
+		++outfitSize;
 	}
 
-	const auto &outfits = Outfits::getInstance().getOutfits(player->getSex());
-	protocolOutfits.reserve(outfits.size());
-	for (const Outfit &outfit : outfits)
-	{
+	const auto& outfits = Outfits::getInstance().getOutfits(player->getSex());
+
+	for (const Outfit& outfit : outfits) {
 		uint8_t addons;
-		if (!player->getOutfitAddons(outfit, addons))
-		{
+		if (!player->getOutfitAddons(outfit, addons)) {
 			continue;
 		}
 
-		protocolOutfits.emplace_back(outfit.name, outfit.lookType, addons);
-	}
-
-	msg.add<uint16_t>(protocolOutfits.size());
-	for (const ProtocolOutfit &outfit : protocolOutfits)
-	{
 		msg.add<uint16_t>(outfit.lookType);
 		msg.addString(outfit.name);
-		msg.addByte(outfit.addons);
+		msg.addByte(addons);
 		msg.addByte(0x00);
-	}
-
-	std::vector<const Mount *> protocolMounts;
-	const auto &mounts = g_game.mounts.getMounts();
-	protocolMounts.reserve(mounts.size());
-	for (const Mount &mount : mounts)
-	{
-		if (player->hasMount(&mount))
-		{
-			protocolMounts.push_back(&mount);
+		if (++outfitSize == limitOutfits) {
+			break;
 		}
 	}
 
-	msg.add<uint16_t>(protocolMounts.size());
-	for (const Mount *mount : protocolMounts)
-	{
-		msg.add<uint16_t>(mount->clientId);
-		msg.addString(mount->name);
-		msg.addByte(0x00);
+	auto endOutfits = msg.getBufferPosition();
+	msg.setBufferPosition(startOutfits);
+	msg.add<uint16_t>(outfitSize);
+	msg.setBufferPosition(endOutfits);
+
+	auto startMounts = msg.getBufferPosition();
+	uint16_t limitMounts = std::numeric_limits<uint16_t>::max();
+	uint16_t mountSize = 0;
+	msg.skipBytes(2);
+
+	const auto& mounts = g_game.mounts.getMounts();
+	for (const Mount& mount : mounts) {
+		if (player->hasMount(&mount)) {
+			msg.add<uint16_t>(mount.clientId);
+			msg.addString(mount.name);
+			msg.addByte(0x00);
+			if (++mountSize == limitMounts) {
+				break;
+			}
+		}
 	}
 
-	std::vector<ProtocolFamiliars> protocolFamiliars;
-	const auto &familiars = Familiars::getInstance().getFamiliars(player->getVocationId());
-	protocolFamiliars.reserve(familiars.size());
-	for (const Familiar &familiar : familiars)
-	{
-		if (!player->getFamiliar(familiar))
-		{
+	auto endMounts = msg.getBufferPosition();
+	msg.setBufferPosition(startMounts);
+	msg.add<uint16_t>(mountSize);
+	msg.setBufferPosition(endMounts);
+
+	auto startFamiliars = msg.getBufferPosition();
+	uint16_t limitFamiliars = std::numeric_limits<uint16_t>::max();
+	uint16_t familiarSize = 0;
+	msg.skipBytes(2);
+
+	const auto& familiars = Familiars::getInstance().getFamiliars(player->getVocationId());
+
+	for (const Familiar& familiar : familiars) {
+		if (!player->getFamiliar(familiar)) {
 			continue;
 		}
-		protocolFamiliars.emplace_back(familiar.name, familiar.lookType);
-	}
 
-	msg.add<uint16_t>(protocolFamiliars.size());
-	for (const ProtocolFamiliars &familiar : protocolFamiliars)
-	{
 		msg.add<uint16_t>(familiar.lookType);
 		msg.addString(familiar.name);
 		msg.addByte(0x00);
+		if (++familiarSize == limitFamiliars) {
+				break;
+		}
 	}
+
+	auto endFamiliars = msg.getBufferPosition();
+	msg.setBufferPosition(startFamiliars);
+	msg.add<uint16_t>(familiarSize);
+	msg.setBufferPosition(endFamiliars);
 
 	msg.addByte(0x00); //Try outfit
 	msg.addByte(mounted ? 0x01 : 0x00);
@@ -5365,7 +5422,13 @@ void ProtocolGame::AddCreature(NetworkMessage &msg, const Creature *creature, bo
 
 	msg.add<uint16_t>(creature->getStepSpeed() / 2);
 
-	msg.addByte(0); // Icons
+	CreatureIcon_t icon = creature->getIcon();
+	msg.addByte(icon != CREATUREICON_NONE); // Icons
+	if (icon != CREATUREICON_NONE) {
+		msg.addByte(icon);
+		msg.addByte(1);
+		msg.add<uint16_t>(0);
+	}
 
 	msg.addByte(player->getSkullClient(creature));
 	msg.addByte(player->getPartyShield(otherPlayer));
@@ -5465,8 +5528,8 @@ void ProtocolGame::AddPlayerStats(NetworkMessage &msg)
 	msg.add<uint16_t>(player->getExpBoostStamina()); // xp boost time (seconds)
 	msg.addByte(1);									 // enables exp boost in the store
 
-	msg.add<uint16_t>(0); // remaining mana shield
-	msg.add<uint16_t>(0); // total mana shield
+	msg.add<uint16_t>(player->getManaShield());  // remaining mana shield
+	msg.add<uint16_t>(player->getMaxManaShield());  // total mana shield
 }
 
 void ProtocolGame::AddPlayerSkills(NetworkMessage &msg)
