@@ -31,9 +31,9 @@ function advanceSave.onAdvance(player, skill, oldLevel, newLevel)
 
 	if config.heal then
 		player:addHealth(player:getMaxHealth())
-		player:addItem(2152, 2)
+		player:addItem(2152, 5)
         player:getPosition():sendMagicEffect(CONST_ME_CRAPS)
-        player:sendTextMessage(MESSAGE_INFO_DESCR, "You received 2 platinum coin for getting " .. newLevel .. " level.")
+        player:sendTextMessage(MESSAGE_INFO_DESCR, "You received 5 platinum coin for getting " .. newLevel .. " level.")
 	end
 
 	-- if player:getStorageValue(TIBIA_COIN_LVL_20) < 1 and newLevel == 20 then
