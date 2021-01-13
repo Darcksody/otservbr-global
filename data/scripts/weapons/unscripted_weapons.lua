@@ -3636,12 +3636,12 @@ local weapons = {
 	{
 		itemId = 2544,
 		type = WEAPON_AMMO,
-		breakChance = 5
+		breakChance = 3
 	}, -- arrow
 	{
 		itemId = 2543,
 		type = WEAPON_AMMO,
-		breakChance = 5
+		breakChance = 3
 	}, -- bolt
 	{
 		itemId = 2456,
@@ -4035,7 +4035,7 @@ local weapons = {
 	{
 		itemId = 2389,
 		type = WEAPON_DISTANCE,
-		breakChance = 3
+		breakChance = 1
 	}, -- spear
 	{
 		itemId = 2388,
