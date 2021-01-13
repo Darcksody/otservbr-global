@@ -1,13 +1,27 @@
 local config = {
 	heal = true,
 	save = true,
-	effect = false
+	effect = false,
+	freePromotion = true
 }
 
 local advanceSave = CreatureEvent("AdvanceSave")
 function advanceSave.onAdvance(player, skill, oldLevel, newLevel)
 	if skill ~= SKILL_LEVEL or newLevel <= oldLevel then
 		return true
+	end
+
+	if config.freePromotion then
+		if isPremium(player) then
+			if player:getLevel() >= 20 then
+				if player:getStorageValue(STORAGEVALUE_PROMOTION) < 1 then
+					local promotion = player:getVocation():getPromotion()
+					player:setVocation(promotion)
+					player:setStorageValue(STORAGEVALUE_PROMOTION, 1)
+					player:say('Congratulations! You are now promoted.', TALKTYPE_MONSTER_SAY)
+				end
+			end
+		end
 	end
 
 	if config.effect then

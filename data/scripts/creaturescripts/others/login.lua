@@ -101,6 +101,15 @@ function playerLogin.onLogin(player)
 	-- End kick other players from account
 	if isPremium(player) then
 		player:setStorageValue(Storage.PremiumAccount, 1)
+
+		if player:getLevel() >= 20 then
+			if player:getStorageValue(STORAGEVALUE_PROMOTION) < 1 then
+				local promotion = player:getVocation():getPromotion()
+				player:setVocation(promotion)
+				player:setStorageValue(STORAGEVALUE_PROMOTION, 1)
+				player:say('Congratulations! You are now promoted.', TALKTYPE_MONSTER_SAY)
+			end
+		end
 	end
 	-- Premium Ends Teleport to Temple, change addon (citizen) houseless
 	local defaultTown = "Thais" -- default town where player is teleported if his home town is in premium area
