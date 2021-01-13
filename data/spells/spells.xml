@@ -442,7 +442,6 @@
 	</instant>
 	<instant group="attack" secondarygroup="focus" spellid="56" name="Wrath of Nature" words="exevo gran mas tera" lvl="55" mana="700" prem="1" selftarget="1" exhaustion="40000" groupcooldown="4000" secondarygroupcooldown="40000" needlearn="0" script="attack/wrath of nature.lua">
 		<vocation name="Druid" />
-		<vocation name="Master Sorcerer" />
 		<vocation name="Elder Druid" />
 	</instant>
 	<instant group="support" spellid="237" name="Chivalrous Challenge" words="exeta amp res" lvl="150" mana="80" prem="1" aggressive="0" exhaustion="2000" groupcooldown="2000" needlearn="0" script="support/chivalrous challenge.lua">

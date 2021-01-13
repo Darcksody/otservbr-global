@@ -964,7 +964,7 @@ void Creature::goToFollowCreature()
 bool Creature::setFollowCreature(Creature* creature)
 {
 	if (creature) {
-			if (returnToMasterInterval > 0 && master && creature != master)
+		if (returnToMasterInterval > 0 && master && creature != master)
 			return false;
 
 		if (followCreature == creature) {
@@ -1596,7 +1596,6 @@ bool FrozenPathingConditionCall::isInRange(const Position& startPos, const Posit
 	}
 	return true;
 }
-
 bool FrozenPathingConditionCall::operator()(const Position& startPos, const Position& testPos,
         const FindPathParams& fpp, int32_t& bestMatchDist) const
 {
@@ -1618,7 +1617,6 @@ bool FrozenPathingConditionCall::operator()(const Position& startPos, const Posi
 		if (testDist < fpp.minTargetDist || testDist > fpp.maxTargetDist) {
 			return false;
 		}
-
 		return true;
 	} else if (testDist <= fpp.maxTargetDist) {
 		if (testDist < fpp.minTargetDist) {
