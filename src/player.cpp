@@ -1767,14 +1767,16 @@ void Player::onThink(uint32_t interval)
 	}
 
 	if (!getTile()->hasFlag(TILESTATE_NOLOGOUT)) {
-		idleTime += interval;
-		const int32_t kickAfterMinutes = g_config.getNumber(ConfigManager::KICK_AFTER_MINUTES);
-		if (idleTime > (kickAfterMinutes * 60000) + 60000) {
-			kickPlayer(true);
-		} else if (client && idleTime == 60000 * kickAfterMinutes) {
-			std::ostringstream ss;
-			ss << "There was no variation in your behaviour for " << kickAfterMinutes << " minutes. You will be disconnected in one minute if there is no change in your actions until then.";
-			client->sendTextMessage(TextMessage(MESSAGE_STATUS_WARNING, ss.str()));
+		if (!isAccessPlayer()) {
+			idleTime += interval;
+			const int32_t kickAfterMinutes = g_config.getNumber(ConfigManager::KICK_AFTER_MINUTES);
+			if (idleTime > (kickAfterMinutes * 60000) + 60000) {
+				kickPlayer(true);
+			} else if (client && idleTime == 60000 * kickAfterMinutes) {
+				std::ostringstream ss;
+				ss << "There was no variation in your behaviour for " << kickAfterMinutes << " minutes. You will be disconnected in one minute if there is no change in your actions until then.";
+				client->sendTextMessage(TextMessage(MESSAGE_STATUS_WARNING, ss.str()));
+			}
 		}
 	}
 
@@ -4109,11 +4111,11 @@ bool Player::canWear(uint32_t lookType, uint8_t addons) const
 
 bool Player::canLogout()
 {
-	if (isConnecting) {
+	if (getTile()->hasFlag(TILESTATE_NOLOGOUT)) {
 		return false;
 	}
 
-	if (getTile()->hasFlag(TILESTATE_NOLOGOUT)) {
+	if (isConnecting) {
 		return false;
 	}
 
