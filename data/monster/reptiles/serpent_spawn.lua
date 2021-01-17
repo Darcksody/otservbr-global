@@ -93,7 +93,7 @@ monster.loot = {
 	{id = "warrior helmet", chance = 560},
 	{id = "strange helmet", chance = 670},
 	{id = "crown armor", chance = 510},
-	{id = "royal helmet", chance = 140},
+	{id = "royal helmet", chance = 100},
 	{id = "tower shield", chance = 920},
 	{id = "power bolt", chance = 6200},
 	{id = "green mushroom", chance = 18200},

@@ -68,7 +68,7 @@ monster.loot = {
 	{id = "white gem", chance = 40000, maxCount = 2},
 	{id = "moonstone", chance = 30000},
 	{id = "gemmed figurine", chance = 20000},
-	{id = "ornate crossbow", chance = 10000},
+	{id = "ornate crossbow", chance = 5000},
 	{id = "silver hand mirror", chance = 150},
 	{id = "death toll", chance = 150},
 	{id = "pair of nightmare boots", chance = 150}

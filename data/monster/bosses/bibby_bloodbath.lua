@@ -80,7 +80,7 @@ monster.loot = {
 	{id = "plate legs", chance = 8100},
 	{id = "stealth ring", chance = 6960},
 	{id = "magma amulet", chance = 5700},
-	{id = "giant sword", chance = 3160},
+	{id = "giant sword", chance = 1000},
 	{id = "crusader helmet", chance = 1900},
 	{id = "butcher's axe", chance = 1270},
 	{id = 7395, chance = 1270}-- orc trophy

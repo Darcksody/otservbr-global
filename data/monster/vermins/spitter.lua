@@ -91,8 +91,8 @@ monster.loot = {
 	{id = "great health potion", chance = 5000},
 	{id = "spitter nose", chance = 18000},
 	{id = "compound eye", chance = 15000},
-	{id = "calopteryx cape", chance = 240},
-	{id = "grasshopper legs", chance = 130}
+	{id = "calopteryx cape", chance = 100},
+	{id = "grasshopper legs", chance = 100}
 }
 
 monster.attacks = {

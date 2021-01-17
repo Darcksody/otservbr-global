@@ -95,7 +95,7 @@ monster.loot = {
 	{id = "orb", chance = 6666},
 	{id = "life crystal", chance = 12500},
 	{id = "mind stone", chance = 20000},
-	{id = "boots of haste", chance = 12500},
+	{id = "boots of haste", chance = 10000},
 	{id = "protection amulet", chance = 20000},
 	{id = "ring of healing", chance = 33333},
 	{id = "two handed sword", chance = 12500},

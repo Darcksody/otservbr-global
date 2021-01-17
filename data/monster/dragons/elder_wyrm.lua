@@ -94,7 +94,7 @@ monster.loot = {
 	{id = "lightning boots", chance = 310},
 	{id = "lightning legs", chance = 930},
 	{id = "lightning robe", chance = 310},
-	{id = "composite hornbow", chance = 310},
+	{id = "composite hornbow", chance = 200},
 	{id = "focus cape", chance = 100},
 	{id = "wand of starstorm", chance = 410},
 	{id = "wand of draconia", chance = 2000},

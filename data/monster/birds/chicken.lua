@@ -82,7 +82,7 @@ monster.loot = {
 	{id = "meat", chance = 2120, maxCount = 2},
 	{id = 2695, chance = 950},
 	{id = "worm", chance = 10000, maxCount = 3},
-	{id = "chicken feather", chance = 20000}
+	{id = "chicken feather", chance = 20000, maxCount = 3}
 }
 
 monster.defenses = {

@@ -98,7 +98,7 @@ monster.loot = {
 	{id = "crown helmet", chance = 450},
 	{id = "crown shield", chance = 280},
 	{id = "arrow", chance = 26000, maxCount = 13},
-	{id = "green tunic", chance = 8000},
+	{id = "green tunic", chance = 1000},
 	{id = "scarf", chance = 1110},
 	{id = "meat", chance = 8200, maxCount = 3},
 	{id = "grapes", chance = 19850},

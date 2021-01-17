@@ -92,7 +92,7 @@ monster.loot = {
 	{id = "red lantern", chance = 2170},
 	{id = "Zaoan armor", chance = 530},
 	{id = "Zaoan shoes", chance = 1000},
-	{id = "Zaoan legs", chance = 1001},
+	{id = "Zaoan legs", chance = 300},
 	{id = "zaogun flag", chance = 8280},
 	{id = "zaogun shoulderplates", chance = 14980}
 }

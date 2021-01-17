@@ -92,7 +92,7 @@ monster.loot = {
 	{id = "burst arrow", chance = 5360, maxCount = 3},
 	{id = "orange", chance = 20300, maxCount = 2},
 	{id = "roll", chance = 11370, maxCount = 2},
-	{id = "sniper gloves", chance = 610},
+	{id = "sniper gloves", chance = 1000},
 	{id = "slingshot", chance = 120},
 	{id = 7394, chance = 190},
 	{id = 7397, chance = 520},

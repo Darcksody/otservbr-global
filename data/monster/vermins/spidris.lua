@@ -89,7 +89,7 @@ monster.loot = {
 	{id = "ultimate health potion", chance = 6250, maxCount = 2},
 	{id = "spidris mandible", chance = 14960},
 	{id = "compound eye", chance = 12500},
-	{id = "calopteryx cape", chance = 370},
+	{id = "calopteryx cape", chance = 200},
 	{id = "carapace shield", chance = 10},
 	{id = "hive scythe", chance = 690}
 }

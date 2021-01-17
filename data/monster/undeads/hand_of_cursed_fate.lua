@@ -90,7 +90,7 @@ monster.loot = {
 	{id = "platinum amulet", chance = 1005},
 	{id = "mind stone", chance = 9090},
 	{id = "wand of inferno", chance = 5590},
-	{id = "boots of haste", chance = 540},
+	{id = "boots of haste", chance = 100},
 	{id = "protection amulet", chance = 8740},
 	{id = "sudden death rune", chance = 4200, maxCount = 8},
 	{id = "skull staff", chance = 700},

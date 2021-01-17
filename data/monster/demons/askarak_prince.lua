@@ -88,7 +88,7 @@ monster.loot = {
 	{id = "small emerald", chance = 12500, maxCount = 5},
 	{id = "platinum coin", chance = 35333, maxCount = 4},
 	{id = "stealth ring", chance = 4545},
-	{id = "giant sword", chance = 320},
+	{id = "giant sword", chance = 200},
 	{id = "brown mushroom", chance = 6666, maxCount = 5},
 	{id = "magic sulphur", chance = 740},
 	{id = "mastermind potion", chance = 1315},

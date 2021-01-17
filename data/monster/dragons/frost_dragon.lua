@@ -94,7 +94,7 @@ monster.loot = {
 	{id = "ice rapier", chance = 350},
 	{id = "strange helmet", chance = 450},
 	{id = "dragon scale mail", chance = 80},
-	{id = "royal helmet", chance = 210},
+	{id = "royal helmet", chance = 100},
 	{id = "tower shield", chance = 340},
 	{id = "power bolt", chance = 6000, maxCount = 6},
 	{id = "dragon ham", chance = 80370, maxCount = 5},

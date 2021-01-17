@@ -71,10 +71,10 @@ monster.loot = {
 	{id = "depth calcei", chance = 1100},
 	{id = 15408, chance = 1400},-- depth galea
 	{id = "depth lorica", chance = 800},
-	{id = "ornate chestplate", chance = 650, unique = true},
-	{id = "ornate legs", chance = 740},
+	{id = "ornate chestplate", chance = 500, unique = true},
+	{id = "ornate legs", chance = 600},
 	{id = "ornate mace", chance = 1500},
-	{id = "ornate shield", chance = 1400}
+	{id = "ornate shield", chance = 800}
 }
 
 monster.attacks = {

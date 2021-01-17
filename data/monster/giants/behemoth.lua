@@ -91,7 +91,7 @@ monster.loot = {
 	{id = 2231, chance = 670},
 	{id = "two handed sword", chance = 5980},
 	{id = "double axe", chance = 10510},
-	{id = "giant sword", chance = 1006},
+	{id = "giant sword", chance = 300},
 	{id = "crowbar", chance = 100},
 	{id = "war axe", chance = 50},
 	{id = "plate armor", chance = 3930},

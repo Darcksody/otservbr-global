@@ -93,7 +93,7 @@ monster.loot = {
 	{id = "bunch of ripe rice", chance = 4950},
 	{id = "Zaoan armor", chance = 80},
 	{id = "Zaoan shoes", chance = 700},
-	{id = "Zaoan legs", chance = 720},
+	{id = "Zaoan legs", chance = 300},
 	{id = "spiked iron ball", chance = 7000},
 	{id = "high guard flag", chance = 2990},
 	{id = "high guard shoulderplates", chance = 8150}

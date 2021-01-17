@@ -94,7 +94,7 @@ monster.loot = {
 	{id = "guardian axe", chance = 925},
 	{id = "deepling squelcher", chance = 751},
 	{id = "deepling backpack", chance = 333},
-	{id = "ornate crossbow", chance = 362},
+	{id = "ornate crossbow", chance = 200},
 	{id = "foxtail", chance = 10}
 }
 

@@ -92,7 +92,7 @@ monster.loot = {
 	{id = "strong health potion", chance = 19970},
 	{id = "strong mana potion", chance = 15310},
 	{id = "lightning pendant", chance = 720},
-	{id = "composite hornbow", chance = 90},
+	{id = "composite hornbow", chance = 50},
 	{id = "focus cape", chance = 1250},
 	{id = "hibiscus dress", chance = 250},
 	{id = "wand of starstorm", chance = 420},

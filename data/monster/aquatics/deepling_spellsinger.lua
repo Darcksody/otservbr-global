@@ -92,7 +92,7 @@ monster.loot = {
 	{id = "deepling staff", chance = 2020},
 	{id = "necklace of the deep", chance = 790},
 	{id = "fish fin", chance = 520},
-	{id = "ornate crossbow", chance = 220}
+	{id = "ornate crossbow", chance = 100}
 }
 
 

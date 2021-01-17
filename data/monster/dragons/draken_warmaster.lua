@@ -77,7 +77,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = "ring of the sky", chance = 180},
+	{id = "ring of the sky", chance = 150},
 	{id = "small ruby", chance = 1525, maxCount = 5},
 	{id = "gold coin", chance = 47000, maxCount = 100},
 	{id = "gold coin", chance = 50000, maxCount = 100},
@@ -88,7 +88,7 @@ monster.loot = {
 	{id = "ultimate health potion", chance = 4020},
 	{id = "Zaoan armor", chance = 790},
 	{id = "Zaoan shoes", chance = 1900},
-	{id = "Zaoan legs", chance = 960},
+	{id = "Zaoan legs", chance = 200},
 	{id = "drakinata", chance = 860},
 	{id = "bone shoulderplate", chance = 12010},
 	{id = "warmaster's wristguards", chance = 7000},

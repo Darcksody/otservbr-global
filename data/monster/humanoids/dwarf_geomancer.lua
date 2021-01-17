@@ -88,7 +88,7 @@ monster.loot = {
 	{id = "clerical mace", chance = 1120},
 	{id = "pear", chance = 25000},
 	{id = "white mushroom", chance = 60000, maxCount = 2},
-	{id = "iron ore", chance = 120},
+	{id = "iron ore", chance = 1500},
 	{id = "terra boots", chance = 470},
 	{id = "geomancer's robe", chance = 8000},
 	{id = "geomancer's staff", chance = 7000}

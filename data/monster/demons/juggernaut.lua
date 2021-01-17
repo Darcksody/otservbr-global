@@ -99,7 +99,7 @@ monster.loot = {
 	{id = "golden armor", chance = 550},
 	{id = "golden legs", chance = 500},
 	{id = "knight armor", chance = 4990},
-	{id = "mastermind shield", chance = 800},
+	{id = "mastermind shield", chance = 200},
 	{id = 2578, chance = 280},
 	{id = "ham", chance = 60000, maxCount = 8},
 	{id = "soul orb", chance = 33333},

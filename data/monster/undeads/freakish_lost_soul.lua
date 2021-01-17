@@ -83,7 +83,7 @@ monster.loot = {
 	{id = "ensouled essence", chance = 2720},
 	{id = 26185, chance = 1220},
 	{id = "silver hand mirror", chance = 1090},
-	{id = "ornate crossbow", chance = 1090},
+	{id = "ornate crossbow", chance = 900},
 	{id = "crystal crossbow", chance = 270}
 }
 

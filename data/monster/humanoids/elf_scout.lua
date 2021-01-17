@@ -90,9 +90,10 @@ monster.loot = {
 	{id = "sandals", chance = 1180},
 	{id = "grapes", chance = 17750},
 	{id = 5921, chance = 1130},
-	{id = "elvish bow", chance = 140},
+	{id = "elvish bow", chance = 400},
 	{id = "elvish talisman", chance = 5200},
-	{id = "elven scouting glass", chance = 9750}
+	{id = "elven scouting glass", chance = 9750},
+	{id = "heaven blossom", chance = 1000}
 }
 
 monster.attacks = {

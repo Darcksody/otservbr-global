@@ -88,7 +88,7 @@ monster.loot = {
 	{id = "stone skin amulet", chance = 18000},
 	{id = "hammer of wrath", chance = 1380},
 	{id = "crystal mace", chance = 5500},
-	{id = "magic plate armor", chance = 1380},
+	{id = "magic plate armor", chance = 500},
 	{id = "crown legs", chance = 920},
 	{id = "crusader helmet", chance = 920},
 	{id = "tower shield", chance = 1380},

@@ -101,7 +101,7 @@ monster.loot = {
 	{id = "knight legs", chance = 840},
 	{id = "poison arrow", chance = 11950, maxCount = 12},
 	{id = "plate legs", chance = 8333},
-	{id = "spider silk", chance = 1990},
+	{id = "spider silk", chance = 3000},
 	{id = "strong health potion", chance = 3550},
 	{id = "lightning headband", chance = 270}
 }

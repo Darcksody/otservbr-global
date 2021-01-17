@@ -84,7 +84,7 @@ monster.loot = {
 	{id = "wand of decay", chance = 1050},
 	{id = "orange", chance = 1000, maxCount = 5},
 	{id = "banana", chance = 30350, maxCount = 12},
-	{id = "banana staff", chance = 100},
+	{id = "banana staff", chance = 500},
 	{id = "ape fur", chance = 1000},
 	{id = "mana potion", chance = 660},
 	{id = "banana sash", chance = 1800}

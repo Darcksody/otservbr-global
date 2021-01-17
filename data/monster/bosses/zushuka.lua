@@ -72,7 +72,7 @@ monster.voices = {
 
 monster.loot = {
 	{id = 2148, chance = 92000, maxCount = 200},
-	{id = 21400, chance = 92000},
+	{id = 21400, chance = 800},
 	{id = 7290, chance = 57000},
 	{id = 7449, chance = 42000},
 	{id = 8472, chance = 42000, maxCount = 5},
@@ -101,7 +101,7 @@ monster.loot = {
 	{id = 7902, chance = 7000},
 	{id = 5911, chance = 7000},
 	{id = 21699, chance = 7000},
-	{id = 21700, chance = 3000},
+	{id = 21700, chance = 500},
 	{id = 7410, chance = 3000}
 }
 

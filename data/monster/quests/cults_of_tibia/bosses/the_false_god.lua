@@ -94,10 +94,10 @@ monster.loot = {
 	{id = "piece of royal steel", chance = 15890},
 	{id = "execowtioner axe", chance = 7890},
 	{id = "maimer", chance = 1890},
-	{id = "ornate mace", chance = 7890},
+	{id = "ornate mace", chance = 1000},
 	{id = "velvet mantle", chance = 1890},
 	{id = "iron ore", chance = 14542},
-	{id = "giant sword", chance = 16892}
+	{id = "giant sword", chance = 1000}
 }
 
 monster.attacks = {

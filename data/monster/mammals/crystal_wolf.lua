@@ -82,7 +82,7 @@ monster.loot = {
 	{id = "meat", chance = 52000, maxCount = 4},
 	{id = "wolf paw", chance = 3700},
 	{id = "shiver arrow", chance = 11000, maxCount = 10},
-	{id = "crystalline armor", chance = 3700}
+	{id = "crystalline armor", chance = 1450}
 }
 
 monster.attacks = {

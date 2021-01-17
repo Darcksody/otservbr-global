@@ -80,7 +80,7 @@ monster.loot = {
 	{id = "violet crystal shard", chance = 10000, maxCount = 3},
 	{id = "badger boots", chance = 10000},
 	{id = "blue gem", chance = 10000},
-	{id = "Calopteryx Cape", chance = 10000},
+	{id = "Calopteryx Cape", chance = 5000},
 	{id = 30857, chance = 10000},
 	{id = "Crystal Mace", chance = 10000},
 	{id = "Fire Sword", chance = 10000},

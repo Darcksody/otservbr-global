@@ -101,7 +101,7 @@ monster.loot = {
 	{id = "ice rapier", chance = 4730},
 	{id = "fire axe", chance = 3520},
 	{id = "might ring", chance = 2250},
-	{id = "giant sword", chance = 1880},
+	{id = "giant sword", chance = 500},
 	{id = "stealth ring", chance = 1790},
 	{id = "energy ring", chance = 1790},
 	{id = "rift lance", chance = 1360},
@@ -109,7 +109,7 @@ monster.loot = {
 	{id = "platinum amulet", chance = 940},
 	{id = "devil helmet", chance = 520},
 	{id = "rift crossbow", chance = 370},
-	{id = "magic plate armor", chance = 70},
+	{id = "magic plate armor", chance = 50},
 	{id = "demonrage sword", chance = 30}
 }
 

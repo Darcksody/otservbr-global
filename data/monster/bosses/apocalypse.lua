@@ -72,7 +72,7 @@ monster.loot = {
 	{id = "ancient amulet", chance = 13500},
 	{id = 2231, chance = 19000}, -- big bone
 	{id = "black pearl", chance = 15000, maxCount = 35},
-	{id = "boots of haste", chance = 14000},
+	{id = "boots of haste", chance = 5000},
 	{id = 2192, chance = 22500}, -- crystal ball
 	{id = "crystal necklace", chance = 21500},
 	{id = 2124, chance = 15500}, -- crystal ring

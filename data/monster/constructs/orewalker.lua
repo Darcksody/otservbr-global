@@ -94,7 +94,7 @@ monster.loot = {
 	{id = "great mana potion", chance = 1400, maxCount = 2},
 	{id = "mana potion", chance = 1400, maxCount = 4},
 	{id = "ultimate health potion", chance = 9500, maxCount = 2},
-	{id = "crystalline armor", chance = 560},
+	{id = "crystalline armor", chance = 250},
 	{id = "small topaz", chance = 1650, maxCount = 3},
 	{id = "shiny stone", chance = 1370},
 	{id = "sulphurous stone", chance = 2070},

@@ -92,7 +92,7 @@ monster.loot = {
 	{id = "war axe", chance = 1290},
 	{id = "golden armor", chance = 860},
 	{id = "knight armor", chance = 5500},
-	{id = "royal helmet", chance = 1720},
+	{id = "royal helmet", chance = 520},
 	{id = "power bolt", chance = 15190, maxCount = 15},
 	{id = "hardened bone", chance = 14180},
 	{id = 6300, chance = 1150},

@@ -89,7 +89,7 @@ monster.loot = {
 	{id = "gold ingot", chance = 5160},
 	{id = "kollos shell", chance = 15390},
 	{id = "compound eye", chance = 15720},
-	{id = "calopteryx cape", chance = 360},
+	{id = "calopteryx cape", chance = 200},
 	{id = "carapace shield", chance = 10},
 	{id = "hive scythe", chance = 700},
 	{id = "buggy backpack", chance = 460},

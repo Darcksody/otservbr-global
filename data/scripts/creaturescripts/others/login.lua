@@ -48,7 +48,6 @@ function playerLogin.onLogin(player)
 		local vocation = player:getVocation():getId()
 		local targetVocation = vocationSet[vocation]
 
-		player:sendOutfitWindow()
 		local backpack = player:addItem(1988)
 		if backpack then
 			for i = 1, #items do
@@ -77,6 +76,36 @@ function playerLogin.onLogin(player)
 		player:sendTextMessage(MESSAGE_STATUS_DEFAULT, "Welcome to " .. SERVER_NAME .. "!")
 		player:sendTextMessage(MESSAGE_STATUS_DEFAULT, string.format("Your last visit in ".. SERVER_NAME ..": %s.", os.date("%d. %b %Y %X", player:getLastLoginSaved())))
 	end
+ 
+local msg = [[
+1 *> Fast attack 25% in basics.
+2 *> See our commands with !commands
+3 *> Free promotion at level 20.
+4 *> Protection at level 20.
+5 *> Free Blessings until level 80.
+6 *> Food 5 hours of duration.
+7 *> No infinite runes/potions.
+8 *> Ammunitions breakChance reduce to 1% (spears, arrow, bolt).
+9 *> Free NPCs missions (Rashid, Djins...)
+10 *> Custom balanced regeneration (Fast Mana and Health).
+11 *> On Level Up get 5 Platinum Coins.
+12 *> Fast Stamina Regeneration with Training Monks.
+13 *> Spell adori create item and consumes 30 soul points -
+- spell example: adori bag (bag,spear,backpack,rune,food,rope,shovel).
+-
+Stay Online and get 1 Tibia Coin every hour
+max 5 tibia coins at day, players level > 20.
+-
+Tibia Coins on Level 100(50tc), 200(100tc), 300(150tc), 400(200tc), 500(250tc).
+-
+Training area in third floor of Adventurers' Guild Island
+can be accessed by using an Adventurer's Stone in any city's temple.
+-
+Free Access to areas.
+-
+See upcoming events in Event Schedule on website (razgard.com/?eventcalendar).
+-]]
+player:popupFYI(msg)
 
 	local playerId = player:getId()
 
@@ -190,7 +219,7 @@ function playerLogin.onLogin(player)
 		player:setGhostMode(true)
 	end
 	-- Boosted creature
-	player:sendTextMessage(MESSAGE_LOOT, "Today's boosted creature: " .. Game.getBoostedCreature() .. " \
+	player:sendTextMessage(MESSAGE_STATUS_DEFAULT, "Today's boosted creature: " .. Game.getBoostedCreature() .. " \
 	Boosted creatures yield more experience points, carry more loot than usual and respawn at a faster rate.")
 
 	-- Stamina

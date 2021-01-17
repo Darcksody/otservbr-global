@@ -86,7 +86,7 @@ monster.loot = {
 	{id = "platinum coin", chance = 8000, maxCount = 10},
 	{id = "red gem", chance = 2110},
 	{id = "blue gem", chance = 830},
-	{id = "giant sword", chance = 620},
+	{id = "giant sword", chance = 500},
 	{id = "hammer of wrath", chance = 70},
 	{id = "knight legs", chance = 830},
 	{id = "crown armor", chance = 310},

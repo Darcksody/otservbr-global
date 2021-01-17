@@ -95,7 +95,7 @@ monster.loot = {
 	{id = "Sapphire Hammer", chance = 300},
 	{id = 7441, chance = 100000},
 	{id = "Glacial Rod", chance = 150},
-	{id = "Crystalline Armor", chance = 250}
+	{id = "Crystalline Armor", chance = 125}
 }
 
 monster.attacks = {

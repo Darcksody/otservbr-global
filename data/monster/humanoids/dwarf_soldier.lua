@@ -87,7 +87,7 @@ monster.loot = {
 	{id = "bolt", chance = 40000, maxCount = 7},
 	{id = 2554, chance = 10000},
 	{id = "white mushroom", chance = 40000, maxCount = 3},
-	{id = "iron ore", chance = 300},
+	{id = "iron ore", chance = 1300},
 	{id = "piercing bolt", chance = 4000, maxCount = 3}
 }
 

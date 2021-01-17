@@ -4976,11 +4976,9 @@ bool Game::playerSaySpell(Player* player, SpeakClasses type, const std::string& 
 	if (result == TALKACTION_BREAK) {
 		player->cancelPush();
 
-		if (!g_config.getBoolean(ConfigManager::EMOTE_SPELLS)) {
-			return internalCreatureSay(player, TALKTYPE_SAY, words, false);
-		} else {
-			return internalCreatureSay(player, TALKTYPE_MONSTER_SAY, words, false);
-		}
+		int32_t value;
+		player->getStorageValue(48485022, value);
+		return internalCreatureSay(player, value == 1 ? TALKTYPE_MONSTER_SAY : TALKTYPE_SAY, words, false);
 
 	} else if (result == TALKACTION_FAILED) {
 		return true;

@@ -72,7 +72,7 @@ monster.loot = {
 	{id = "gold coin", chance = 50000, maxCount = 90},
 	{id = "sword ring", chance = 10000},
 	{id = "broadsword", chance = 4000},
-	{id = "magic plate armor", chance = 2000},
+	{id = "magic plate armor", chance = 1000},
 	{id = "spectral stone", chance = 800},
 	{id = "skull helmet", chance = 50000},
 	{id = "soul orb", chance = 10000},

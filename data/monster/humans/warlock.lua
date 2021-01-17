@@ -86,7 +86,7 @@ monster.loot = {
 	{id = "red tome", chance = 300},
 	{id = "candlestick", chance = 1500},
 	{id = "piggy bank", chance = 60},
-	{id = "ring of the sky", chance = 430},
+	{id = "ring of the sky", chance = 200},
 	{id = 2124, chance = 700},
 	{id = "small sapphire", chance = 1190},
 	{id = "gold coin", chance = 29340, maxCount = 80},

@@ -79,7 +79,9 @@ monster.loot = {
 	{id = "small emerald", chance = 11111, maxCount = 4},
 	{id = "small amethyst", chance = 11111, maxCount = 3},
 	{id = "platinum coin", chance = 50000, maxCount = 9},
-	{id = "earthborn titan armor", chance = 2063},
+	{id = "earthborn titan armor", chance = 2000},
+	{id = "oceanborn leviathan armor", chance = 3000},
+	{id = "fireborn giant armor", chance = 2500},
 	{id = "gold ingot", chance = 25000}
 }
 

@@ -100,7 +100,7 @@ monster.loot = {
 	{id = "devil helmet", chance = 1360},
 	{id = "magma legs", chance = 1150},
 	{id = "demon shield", chance = 1010},
-	{id = "nightmare blade", chance = 930},
+	{id = "nightmare blade", chance = 500},
 	{id = "blue gem", chance = 780},
 	{id = "rift crossbow", chance = 720},
 	{id = "steel boots", chance = 640},
@@ -109,7 +109,7 @@ monster.loot = {
 	{id = "rift bow", chance = 370},
 	{id = "abyss hammer", chance = 210},
 	{id = "vile axe", chance = 180},
-	{id = "magic plate armor", chance = 60}
+	{id = "magic plate armor", chance = 50}
 }
 
 monster.attacks = {

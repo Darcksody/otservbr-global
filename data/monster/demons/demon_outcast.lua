@@ -96,7 +96,7 @@ monster.loot = {
 	{id = "stealth ring", chance = 1300},
 	{id = "platinum amulet", chance = 1000},
 	{id = "ring of healing", chance = 3000},
-	{id = "giant sword", chance = 2000},
+	{id = "giant sword", chance = 500},
 	{id = "ice rapier", chance = 660},
 	{id = "devil helmet", chance = 910},
 	{id = "crusader helmet", chance = 740},

@@ -87,7 +87,7 @@ monster.loot = {
 	{id = "dwarven ring", chance = 2280},
 	{id = "knight axe", chance = 2070},
 	{id = "fire axe", chance = 380},
-	{id = "royal helmet", chance = 150},
+	{id = "royal helmet", chance = 100},
 	{id = "guardian shield", chance = 1400},
 	{id = "tower shield", chance = 1002},
 	{id = "black shield", chance = 640},
