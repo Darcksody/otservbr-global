@@ -426,7 +426,11 @@ uint32_t Player::getClientIcons() const
 	uint32_t icons = 0;
 	for (Condition* condition : conditions) {
 		if (!isSuppress(condition->getType())) {
-			icons |= condition->getIcons();
+			if (getProtocolVersion() >= 1200 || condition->getIcons() < ICON_LESSERHEX) {
+				icons |= condition->getIcons();
+			} else if (getProtocolVersion() < 1200 && condition->getIcons() == ICON_NEWMANASHIELD){
+				icons |= ICON_MANASHIELD;
+			}
 		}
 	}
 
@@ -1314,7 +1318,7 @@ void Player::onCreatureAppear(Creature* creature, bool isLogin)
 			bed->wakeUp(this);
 		}
 
-		std::cout << name << " has logged in." << std::endl;
+		std::cout << name << " has logged in." << " | Client: " << getProtocolVersion()/100. << std::endl;
 
 		if (guild) {
 			guild->addMember(this);
@@ -1335,8 +1339,8 @@ void Player::onCreatureAppear(Creature* creature, bool isLogin)
 			}
 		}
 
-		// Reload bestiary tracker
-		refreshBestiaryTracker(getBestiaryTrackerList());
+		if(getProtocolVersion() >= 1200)
+			refreshBestiaryTracker(getBestiaryTrackerList());
 
 		g_game.checkPlayersRecord();
 		IOLoginData::updateOnlineStatus(guid, true);
@@ -1439,7 +1443,7 @@ void Player::onRemoveCreature(Creature* creature, bool isLogout)
 
 		g_chat->removeUserFromAllChannels(*this);
 
-		std::cout << getName() << " has logged out." << std::endl;
+		std::cout << getName() << " has logged out." << " | Client: " << getProtocolVersion()/100. << std::endl;
 
 		if (guild) {
 			guild->removeMember(this);

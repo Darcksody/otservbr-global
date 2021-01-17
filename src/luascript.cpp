@@ -2113,6 +2113,7 @@ void LuaScriptInterface::registerFunctions()
 	registerEnumIn("configKeys", ConfigManager::MAP_AUTHOR)
 	registerEnumIn("configKeys", ConfigManager::STORE_IMAGES_URL)
 	registerEnumIn("configKeys", ConfigManager::VERSION_STR)
+	registerEnumIn("configKeys", ConfigManager::ALLOW_CLIENT_OLD)
 
 	registerEnumIn("configKeys", ConfigManager::SQL_PORT)
 	registerEnumIn("configKeys", ConfigManager::MAX_PLAYERS)
@@ -7785,7 +7786,8 @@ int LuaScriptInterface::luaContainerGetContentDescription(lua_State* L)
 	// container:getContentDescription()
 	Container* container = getUserdata<Container>(L, 1);
 	if (container) {
-		pushString(L, container->getContentDescription());
+		bool oldClient = getBoolean(L, 2, false);
+		pushString(L, container->getContentDescription(oldClient));
 	} else {
 		lua_pushnil(L);
 	}
