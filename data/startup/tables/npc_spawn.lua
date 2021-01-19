@@ -954,10 +954,16 @@ NpcTable = {
 	[953] = {name = "orc_berserker_npc", position = {x = 32777, y = 31237, z = 7}},
 	[954] = {name = "one_eyed_joe", position = {x = 32025, y = 32884, z = 6}},
 	[955] = {name = "rashid", position = {x = 32355, y = 32209, z = 7}},
-	[267] = {name = "grizzly_adams", position = {x = 32354, y = 32206, z = 7}},
-	[20] = {name = "nah_bob", position = {x = 32354, y = 32205, z = 6}},
-	[109] = {name = "alesar", position = {x = 32354, y = 32210, z = 6}},
-	[20] = {name = "yasir", position = {x = 32363, y = 32205, z = 6}},
-	[21] = {name = "yaman", position = {x = 32355, y = 32206, z = 5}},
-	[58] = {name = "haroun", position = {x = 32362, y = 32210, z = 5}}
+	[956] = {name = "grizzly_adams", position = {x = 32354, y = 32206, z = 7}},
+	[957] = {name = "nah_bob", position = {x = 32354, y = 32205, z = 6}},
+	[958] = {name = "alesar", position = {x = 32354, y = 32210, z = 6}},
+	[959] = {name = "yasir", position = {x = 32363, y = 32205, z = 6}},
+	[960] = {name = "yaman", position = {x = 32355, y = 32206, z = 5}},
+	[961] = {name = "haroun", position = {x = 32362, y = 32210, z = 5}},
+	[962] = {name = "xodet", position = {x = 32200, y = 32292, z = 3}},
+	[963] = {name = "mandigo", position = {x = 32201, y = 32301, z = 5}},
+	[964] = {name = "tamoril", position = {x = 32359, y = 32234, z = 6}},
+	[965] = {name = "telas", position = {x = 32358, y = 32234, z = 7}},
+	[966] = {name = "esrik", position = {x = 32356, y = 32220, z = 7}},
+	[967] = {name = "flint", position = {x = 32362, y = 32226, z = 6}}
 }
