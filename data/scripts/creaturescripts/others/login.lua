@@ -105,7 +105,10 @@ Free Access to areas.
 -
 See upcoming events in Event Schedule on website (razgard.com/?eventcalendar).
 -]]
-player:popupFYI(msg)
+
+if player:getClient().version < 1200 then
+	player:popupFYI(msg)
+end
 
 	local playerId = player:getId()
 
