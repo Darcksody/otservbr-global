@@ -91,7 +91,7 @@ monster.loot = {
 	{id = 5921, chance = 940},
 	{id = "plum", chance = 20000, maxCount = 2},
 	{id = "elvish talisman", chance = 2100},
-	{id = "heaven blossom", chance = 1000}
+	{id = 5921, chance = 1000} 
 }
 
 monster.attacks = {
