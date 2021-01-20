@@ -83,32 +83,20 @@ local msg = [[
 3 *> Free promotion at level 20.
 4 *> Protection at level 20.
 5 *> Free Blessings until level 80.
-6 *> Food 5 hours of duration.
-7 *> No infinite runes/potions.
-8 *> Ammunitions breakChance reduce to 1% (spears, arrow, bolt).
-9 *> Free NPCs missions (Rashid, Djins...)
-10 *> Custom balanced regeneration (Fast Mana and Health).
-11 *> On Level Up get 5 Platinum Coins.
-12 *> Fast Stamina Regeneration with Training Monks.
-13 *> Spell adori create item and consumes 30 soul points -
+6 *> Custom balanced regeneration (Fast Mana and Health).
+7 *> On Level Up get 5 Platinum Coins.
+8 *> Fast Stamina Regeneration with Training Monks.
+9 *> Spell adori create item and consumes 30 soul points -
 - spell example: adori bag (bag,spear,backpack,rune,food,rope,shovel).
 -
 Stay Online and get 1 Tibia Coin every hour
 max 5 tibia coins at day, players level > 20.
 -
 Tibia Coins on Level 100(50tc), 200(100tc), 300(150tc), 400(200tc), 500(250tc).
--
-Training area in third floor of Adventurers' Guild Island
-can be accessed by using an Adventurer's Stone in any city's temple.
--
-Free Access to areas.
--
-See upcoming events in Event Schedule on website (razgard.com/?eventcalendar).
 -]]
 
-if player:getClient().version < 1200 then
 	player:popupFYI(msg)
-end
+
 
 	local playerId = player:getId()
 
