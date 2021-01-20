@@ -97,9 +97,9 @@ monster.loot = {
 	{id = 7591, chance = 15000, maxCount = 2},
 	{id = 11306, chance = 25},
 	{id = 22396, chance = 450},
-	{id = 22532, chance = 11654},
-	{id = 22533, chance = 16511},
-	{id = "fairy wings", chance = 20100}
+	{id = 22532, chance = 1760},
+	{id = 22533, chance = 1000},
+	{name = "fairy wings", chance = 30100}
 }
 
 monster.attacks = {

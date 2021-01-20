@@ -77,26 +77,26 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = "small ruby", chance = 1590, maxCount = 3},
-	{id = "gold coin", chance = 5000, maxCount = 100},
-	{id = "gold coin", chance = 5000, maxCount = 99},
-	{id = 2152, chance = 10000, maxCount = 7},
-	{id = "fire sword", chance = 3280},
-	{id = "fire axe", chance = 2150},
-	{id = "great mana potion", chance = 1400, maxCount = 2},
-	{id = "magma legs", chance = 790},
-	{id = "magma coat", chance = 790},
-	{id = "ultimate health potion", chance = 1440, maxCount = 2},
-	{id = "fiery heart", chance = 1370},
+	{name = "small ruby", chance = 15690, maxCount = 3},
+	{name = "gold coin", chance = 50000, maxCount = 100},
+	{name = "gold coin", chance = 50000, maxCount = 99},
+	{id = 2152, chance = 100000, maxCount = 7},
+	{name = "fire sword", chance = 3280},
+	{name = "fire axe", chance = 2150},
+	{name = "great mana potion", chance = 14800, maxCount = 2},
+	{name = "magma legs", chance = 790},
+	{name = "magma coat", chance = 790},
+	{name = "ultimate health potion", chance = 15440, maxCount = 2},
+	{name = "fiery heart", chance = 13570},
 	{id = 13757, chance = 1320},
-	{id = "wand of everblazing", chance = 1480},
-	{id = "violet crystal shard", chance = 5430},
-	{id = "brown crystal splinter", chance = 1200, maxCount = 2},
-	{id = "red crystal fragment", chance = 5880},
-	{id = "magma clump", chance = 1340},
-	{id = "blazing bone", chance = 1490},
-	{id = "eye of a weeper", chance = 1870},
-	{id = "prismatic bolt", chance = 1900, maxCount = 5}
+	{name = "wand of everblazing", chance = 980},
+	{name = "violet crystal shard", chance = 5430},
+	{name = "brown crystal splinter", chance = 12100, maxCount = 2},
+	{name = "red crystal fragment", chance = 8880},
+	{name = "magma clump", chance = 13240},
+	{name = "blazing bone", chance = 14890},
+	{name = "eye of a weeper", chance = 15870},
+	{name = "prismatic bolt", chance = 10900, maxCount = 5}
 }
 
 monster.attacks = {

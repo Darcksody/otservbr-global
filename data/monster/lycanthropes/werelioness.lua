@@ -58,27 +58,27 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = "Platinum Coin", chance = 10000, maxCount = 5},
-	{id = "Gold Coin", chance = 10000, maxCount = 60},
-	{id = "Small Enchanted Sapphire", chance = 2500, maxCount = 2},
-	{id = "Black Pearl", chance = 3000, maxCount = 2},
-	{id = "Ham", chance = 4000, maxCount = 2},
-	{id = "Meat", chance = 3000, maxCount = 2},
-	{id = "Soul Orb", chance = 2000, maxCount = 2},
-	{id = "White Pearl", chance = 1500, maxCount = 2},
-	{id = "Ankh", chance = 3000},
-	{id = "Crystal Sword", chance = 4000},
-	{id = "Serpent Sword", chance = 3000},
-	{id = "Rapier", chance = 4000},
-	{id = "Lion's Mane", chance = 2000},
-	{id = "Lightning Headband", chance = 1400},
-	{id = "Steel Helmet", chance = 1300},
-	{id = "Doublet", chance = 1400},
-	{id = "Ivory Carving", chance = 1500},
-	{id = "Magma Legs", chance = 500},
-	{id = "Crown Helmet", chance = 500},
-	{id = "White Silk Flower", chance = 200},
-	{id = "Lion Figurine", chance = 100}
+	{name = "Platinum Coin", chance = 100000, maxCount = 5},
+	{name = "Gold Coin", chance = 100000, maxCount = 60},
+	{name = "Small Enchanted Sapphire", chance = 5000, maxCount = 2},
+	{name = "Black Pearl", chance = 5000, maxCount = 2},
+	{name = "Ham", chance = 5000, maxCount = 2},
+	{name = "Meat", chance = 5000, maxCount = 2},
+	{name = "Soul Orb", chance = 5000, maxCount = 2},
+	{name = "White Pearl", chance = 1500, maxCount = 2},
+	{name = "Ankh", chance = 5000},
+	{name = "Crystal Sword", chance = 5000},
+	{name = "Serpent Sword", chance = 5000},
+	{name = "Rapier", chance = 5000},
+	{name = "Lion's Mane", chance = 5000},
+	{name = "Lightning Headband", chance = 1500},
+	{name = "Steel Helmet", chance = 1500},
+	{name = "Doublet", chance = 1500},
+	{name = "Ivory Carving", chance = 1500},
+	{name = "Magma Legs", chance = 500},
+	{name = "Crown Helmet", chance = 500},
+	{name = "White Silk Flower", chance = 200},
+	{name = "Lion Figurine", chance = 100}
 }
 
 monster.attacks = {

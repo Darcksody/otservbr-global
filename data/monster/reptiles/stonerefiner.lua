@@ -80,14 +80,14 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = "glob of acid slime", chance = 14000}, -- 25
-	{id = "half-digested stones", chance = 13000, maxCount = 3}, -- 40gps
-	{id = "poisonous slime", chance = 12000, maxCount = 3}, -- 50
-	{id = "rare earth", chance = 9000, maxCount = 2}, -- 80gps
-	{id = "stonerefiner's skull", chance = 8000}, -- 100gp
-	{id = "platinum coin", chance = 15000, maxCount = 4},
+	{name = "glob of acid slime", chance = 14000}, -- 25
+	{name = "half-digested stones", chance = 13000, maxCount = 3}, -- 40gps
+	{name = "poisonous slime", chance = 12000, maxCount = 3}, -- 50
+	{name = "rare earth", chance = 9000, maxCount = 2}, -- 80gps
+	{name = "stonerefiner's skull", chance = 8000}, -- 100gp
+	{name = "platinum coin", chance = 15000, maxCount = 4},
 	{id = 13757, chance = 17980, maxCount = 2}, -- coal
-	{id = "rat cheese", chance = 5654}
+	{name = "rat cheese", chance = 5654}
 }
 
 monster.attacks = {
