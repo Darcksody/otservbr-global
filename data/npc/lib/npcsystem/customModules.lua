@@ -193,7 +193,7 @@ function VoiceModule:new(voices, timeout, chance)
 	end
 
 	obj.voiceCount = #voices
-	obj.timeout = timeout or 10
+	obj.timeout = timeout or 60
 	obj.chance = chance or 25
 	return obj
 end

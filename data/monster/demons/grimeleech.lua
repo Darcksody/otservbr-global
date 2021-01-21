@@ -100,7 +100,7 @@ monster.loot = {
 	{id = "devil helmet", chance = 1360},
 	{id = "magma legs", chance = 1150},
 	{id = "demon shield", chance = 1010},
-	{id = "nightmare blade", chance = 500},
+	{id = "nightmare blade", chance = 100},
 	{id = "blue gem", chance = 780},
 	{id = "rift crossbow", chance = 720},
 	{id = "steel boots", chance = 640},

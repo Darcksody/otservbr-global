@@ -91,7 +91,7 @@ monster.loot = {
 	{id = 6300, chance = 330},
 	{id = "demonic essence", chance = 10600},
 	{id = "concentrated demonic blood", chance = 35000},
-	{id = "nightmare blade", chance = 300},
+	{id = "nightmare blade", chance = 100},
 	{id = "great mana potion", chance = 10000},
 	{id = "glacier kilt", chance = 330},
 	{id = "ultimate health potion", chance = 9600},
