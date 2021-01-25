@@ -405,7 +405,9 @@ void ProtocolGame::onRecvFirstMessage(NetworkMessage &msg)
 		enableCompact();
 	}
 
-	clientVersion = msg.get<uint32_t>();
+	version = msg.get<uint16_t>();
+
+	clientVersion = static_cast<int32_t>(msg.get<uint32_t>());
 
 	msg.skipBytes(3); // U16 dat revision, game preview state
 
