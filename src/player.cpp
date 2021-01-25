@@ -1061,24 +1061,31 @@ void Player::sendPing()
 		if (client) {
 			client->sendPing();
 		} else {
-			hasLostConnection = true;
+			if (!(getTile()->hasFlag(TILESTATE_NOLOGOUT))) {
+				hasLostConnection = true;
+			}
 		}
 	}
 
 	int64_t noPongTime = timeNow - lastPong;
 	if ((hasLostConnection || noPongTime >= 7000) && attackedCreature && attackedCreature->getPlayer()) {
-		setAttackedCreature(nullptr);
+		if (!(getTile()->hasFlag(TILESTATE_NOLOGOUT))) {
+			setAttackedCreature(nullptr);
+		}
 	}
-
+	
 	if (noPongTime >= 60000 && canLogout()) {
-		if (g_creatureEvents->playerLogout(this)) {
-			if (client) {
-				client->logout(true, true);
-			} else {
-				g_game.removeCreature(this, true);
+		if (!(getTile()->hasFlag(TILESTATE_NOLOGOUT))) {
+			if (g_creatureEvents->playerLogout(this)) {
+				if (client) {
+					client->logout(true, true);
+				} else {
+					g_game.removeCreature(this, true);
+				}
 			}
 		}
 	}
+	
 }
 
 Item* Player::getWriteItem(uint32_t& retWindowTextId, uint16_t& retMaxWriteLen)
