@@ -22,14 +22,14 @@
 
 #include <string>
 
-#include "configmanager.h"
 #include "protocol.h"
 #include "chat.h"
+#include "configmanager.h"
 #include "creature.h"
 #include "tasks.h"
 #include "gamestore.h"
 
-extern ConfigManager g_config;
+
 
 class NetworkMessage;
 class Player;
@@ -42,6 +42,7 @@ class Quest;
 class ProtocolGame;
 using ProtocolGame_ptr = std::shared_ptr<ProtocolGame>;
 
+extern ConfigManager g_config;
 extern Game g_game;
 
 struct TextMessage
