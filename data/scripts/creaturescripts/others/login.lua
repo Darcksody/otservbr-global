@@ -261,6 +261,7 @@ Tibia Coins on Level 100(50tc), 200(100tc), 300(150tc), 400(200tc), 500(250tc).
 	else
 		player:openChannel(3) -- World chat
 		player:openChannel(5) -- Advertsing main
+		player:openChannel(20) -- deaths
 	end
 
 	-- Rewards

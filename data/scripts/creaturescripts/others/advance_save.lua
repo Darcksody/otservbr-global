@@ -13,7 +13,7 @@ function advanceSave.onAdvance(player, skill, oldLevel, newLevel)
 
 	if config.freePromotion then
 		if isPremium(player) then
-			if player:getLevel() >= 20 then
+			if newLevel >= 20 then
 				if player:getStorageValue(STORAGEVALUE_PROMOTION) < 1 then
 					local promotion = player:getVocation():getPromotion()
 					player:setVocation(promotion)

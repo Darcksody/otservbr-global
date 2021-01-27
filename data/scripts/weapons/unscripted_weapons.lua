@@ -4,7 +4,7 @@ local weapons = {
 		type = WEAPON_AMMO,
 		level = 150,
 		unproperly = true,
-		action = "removecount"
+		breakChance = 150
 	}, -- spectral bolt (no decay)
 	{
 		itemId = 38990,
@@ -1075,21 +1075,21 @@ local weapons = {
 		type = WEAPON_DISTANCE,
 		level = 120,
 		unproperly = true,
-		breakChance = 30
+		breakChance = 120
 	}, -- royal star
 	{
 		itemId = 29058,
 		type = WEAPON_AMMO,
 		level = 150,
 		unproperly = true,
-		action = "removecount"
+		breakChance = 150
 	}, -- spectral bolt
 	{
 		itemId = 29036,
 		type = WEAPON_DISTANCE,
 		level = 60,
 		unproperly = true,
-		breakChance = 40
+		breakChance = 60
 	}, -- leaf star
 	{
 		itemId = 29005,
@@ -1518,7 +1518,7 @@ local weapons = {
 	{
 		itemId = 23839,
 		type = WEAPON_AMMO,
-		action = "removecount"
+		breakChance = 10
 	}, -- simple arrow
 	--[[
 		the chiller
@@ -1608,7 +1608,7 @@ local weapons = {
 		type = WEAPON_DISTANCE,
 		level = 60,
 		unproperly = true,
-		breakChance = 5
+		breakChance = 60
 	}, -- glooth spear
 	{
 		itemId = 22421,
@@ -1911,7 +1911,7 @@ local weapons = {
 	{
 		itemId = 19390,
 		type = WEAPON_DISTANCE,
-		breakChance = 3,
+		breakChance = 10,
 		vocation = {
 			{"None", true}
 		}
@@ -1973,21 +1973,21 @@ local weapons = {
 		type = WEAPON_AMMO,
 		level = 70,
 		unproperly = true,
-		action = "removecount"
+		breakChance = 70
 	}, -- envenomed arrow
 	{
 		itemId = 18436,
 		type = WEAPON_AMMO,
 		level = 70,
 		unproperly = true,
-		action = "removecount"
+		breakChance = 70
 	}, -- drill bolt
 	{
 		itemId = 18435,
 		type = WEAPON_AMMO,
 		level = 90,
 		unproperly = true,
-		action = "removecount"
+		breakChance = 90
 	}, -- prismatic bolt
 	{
 		itemId = 18412,
@@ -2042,12 +2042,12 @@ local weapons = {
 		type = WEAPON_AMMO,
 		level = 90,
 		unproperly = true,
-		action = "removecount"
+		breakChance = 90
 	}, -- crystalline arrow
 	{
 		itemId = 18303,
 		type = WEAPON_AMMO,
-		action = "removecount"
+		breakChance = 10
 	}, -- crystal bolt
 	{
 		itemId = 16111,
@@ -2064,14 +2064,14 @@ local weapons = {
 		type = WEAPON_AMMO,
 		level = 40,
 		unproperly = true,
-		action = "removecount"
+		breakChance = 40
 	}, -- vortex bolt
 	{
 		itemId = 15648,
 		type = WEAPON_AMMO,
 		level = 30,
 		unproperly = true,
-		action = "removecount"
+		breakChance = 30
 	}, -- tarsal arrow
 	{
 		itemId = 15647,
@@ -2804,28 +2804,28 @@ local weapons = {
 		type = WEAPON_AMMO,
 		level = 20,
 		unproperly = true,
-		action = "removecount"
+		breakChance = 20
 	}, -- earth arrow
 	{
 		itemId = 7840,
 		type = WEAPON_AMMO,
 		level = 20,
 		unproperly = true,
-		action = "removecount"
+		breakChance = 20
 	}, -- flaming arrow
 	{
 		itemId = 7839,
 		type = WEAPON_AMMO,
 		level = 20,
 		unproperly = true,
-		action = "removecount"
+		breakChance = 20
 	}, -- shiver arrow
 	{
 		itemId = 7838,
 		type = WEAPON_AMMO,
 		level = 20,
 		unproperly = true,
-		action = "removecount"
+		breakChance = 20
 	}, -- flash arrow
 	{
 		itemId = 7777,
@@ -3506,42 +3506,42 @@ local weapons = {
 		type = WEAPON_DISTANCE,
 		level = 25,
 		unproperly = true,
-		breakChance = 3
+		breakChance = 25
 	}, -- royal spear
 	{
 		itemId = 7368,
 		type = WEAPON_DISTANCE,
 		level = 80,
 		unproperly = true,
-		breakChance = 33
+		breakChance = 80
 	}, -- assassin star
 	{
 		itemId = 7367,
 		type = WEAPON_DISTANCE,
 		level = 42,
 		unproperly = true,
-		breakChance = 5
+		breakChance = 42
 	}, -- enchanted spear
 	{
 		itemId = 7365,
 		type = WEAPON_AMMO,
 		level = 40,
 		unproperly = true,
-		action = "removecount"
+		breakChance = 40
 	}, -- onyx arrow
 	{
 		itemId = 7364,
 		type = WEAPON_AMMO,
 		level = 20,
 		unproperly = true,
-		action = "removecount"
+		breakChance = 20
 	}, -- sniper arrow
 	{
 		itemId = 7363,
 		type = WEAPON_AMMO,
 		level = 30,
 		unproperly = true,
-		action = "removecount"
+		breakChance = 30
 	}, -- piercing bolt
 	{
 		itemId = 6553,
@@ -3558,7 +3558,7 @@ local weapons = {
 		type = WEAPON_AMMO,
 		level = 110,
 		unproperly = true,
-		action = "removecount"
+		breakChance = 110
 	}, -- infernal bolt
 	{
 		itemId = 6528,
@@ -3593,7 +3593,7 @@ local weapons = {
 		type = WEAPON_DISTANCE,
 		level = 20,
 		unproperly = true,
-		breakChance = 2
+		breakChance = 20
 	}, -- hunting spear
 	{
 		itemId = 3964,
@@ -3624,17 +3624,17 @@ local weapons = {
 		type = WEAPON_AMMO,
 		level = 55,
 		unproperly = true,
-		action = "removecount"
+		breakChance = 55
 	}, -- power bolt
 	{
 		itemId = 2544,
 		type = WEAPON_AMMO,
-		breakChance = 3
+		breakChance = 10
 	}, -- arrow
 	{
 		itemId = 2543,
 		type = WEAPON_AMMO,
-		breakChance = 3
+		breakChance = 10
 	}, -- bolt
 	{
 		itemId = 2456,
@@ -3907,7 +3907,7 @@ local weapons = {
 	{
 		itemId = 2410,
 		type = WEAPON_DISTANCE,
-		breakChance = 7
+		breakChance = 10
 	}, -- throwing knife
 	{
 		itemId = 2409,
@@ -4028,7 +4028,7 @@ local weapons = {
 	{
 		itemId = 2389,
 		type = WEAPON_DISTANCE,
-		breakChance = 1
+		breakChance = 10
 	}, -- spear
 	{
 		itemId = 2388,
