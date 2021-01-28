@@ -2126,7 +2126,7 @@ void LuaScriptInterface::registerFunctions()
 	registerEnumIn("configKeys", ConfigManager::MAP_AUTHOR)
 	registerEnumIn("configKeys", ConfigManager::STORE_IMAGES_URL)
 	registerEnumIn("configKeys", ConfigManager::ALLOW_CLIENT_OLD)
-	registerEnumIn("configKeys", ConfigManager::CLIENT_VERSION_STR)
+	registerEnumIn("configKeys", ConfigManager::VERSION_STR)
 
 	registerEnumIn("configKeys", ConfigManager::SQL_PORT)
 	registerEnumIn("configKeys", ConfigManager::MAX_PLAYERS)
@@ -2158,7 +2158,7 @@ void LuaScriptInterface::registerFunctions()
 	registerEnumIn("configKeys", ConfigManager::EXP_FROM_PLAYERS_LEVEL_RANGE)
 	registerEnumIn("configKeys", ConfigManager::MAX_PACKETS_PER_SECOND)
 	registerEnumIn("configKeys", ConfigManager::STORE_COIN_PACKET)
-	registerEnumIn("configKeys", ConfigManager::CLIENT_VERSION)
+	registerEnumIn("configKeys", ConfigManager::VERSION)
 	registerEnumIn("configKeys", ConfigManager::DAY_KILLS_TO_RED)
 	registerEnumIn("configKeys", ConfigManager::WEEK_KILLS_TO_RED)
 	registerEnumIn("configKeys", ConfigManager::MONTH_KILLS_TO_RED)
@@ -5351,8 +5351,8 @@ int LuaScriptInterface::luaGameGetClientVersion(lua_State* L)
 {
 	// Game.getClientVersion()
 	lua_createtable(L, 0, 3);
-	setField(L, "version", g_config.getNumber(ConfigManager::CLIENT_VERSION));
-	setField(L, "string", g_config.getString(ConfigManager::CLIENT_VERSION_STR));
+	setField(L, "version", CLIENT_VERSION);
+	setField(L, "string", CLIENT_VERSION_STR);
 	return 1;
 }
 

@@ -390,7 +390,7 @@ void ProtocolGame::logout(bool displayEffect, bool forced)
 	g_game.removeCreature(player);
 }
 
-void ProtocolGame::onRecvFirstMessage(NetworkMessage &msg)
+void ProtocolGame::onRecvFirstMessage(NetworkMessage& msg)
 {
 	if (g_game.getGameState() == GAME_STATE_SHUTDOWN)
 	{
@@ -404,10 +404,6 @@ void ProtocolGame::onRecvFirstMessage(NetworkMessage &msg)
 	if (version >= 1200 && operatingSystem <= CLIENTOS_NEW_MAC) {
 		enableCompact();
 	}
-
-	version = msg.get<uint16_t>();
-
-	clientVersion = msg.get<uint32_t>();
 
 	msg.skipBytes(3); // U16 dat revision, game preview state
 
