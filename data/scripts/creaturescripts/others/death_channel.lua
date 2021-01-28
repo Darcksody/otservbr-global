@@ -1,63 +1,49 @@
 local deathChannel = CreatureEvent("DeathChannel")
-function deathChannel.onDeath(player, corpse, killer, mostDamageKiller, unjustified, mostDamageUnjustified)
-	local creature = Creature(player)
-    local damageMap = creature:getDamageMap()
-    for creatureId, damage in pairs(damageMap) do
-        local thing = Creature(creatureId)
-    end
-    i = 0
-    str = getCreatureName(player).." ["..getPlayerLevel(player).."]"
-    for _, pid in pairs(damageMap) do
-        i = i + 1
-        if (i == 1) then
-            if(#damageMap <= 1) then
-                str = str.." was killed by "
-            elseif(#damageMap > 1 and #damageMap <= 4) then
-                str = str.." was slain by "
-            elseif(#damageMap > 4 and #damageMap <= 7) then
-                str = str.." was crushed by "
-            elseif(#damageMap > 7 and #damageMap <= 10) then
-                str = str.." was eliminated by "
-            elseif(#damageMap > 10) then
-                str = str.." was annihilated by "
-            end
-        elseif (i == #damageMap) then
-            str = str.." and "
-        else
-            str = str..", "
-        end
 
-        if not(isPlayer(pid) or isMonster(pid)) then
-            str = str.."a field item"
-        elseif isSummon(pid) then
-            str = str.."a "..getCreatureName(pid):lower().." summoned by "..(isPlayer(getCreatureMaster(pid)) and "" or "a ")..""..getCreatureName(getCreatureMaster(pid))
-        elseif isPlayer(pid) then
-            str = str..""..getCreatureName(pid)
-        elseif isMonster(pid) then
-            str = str.."a "..getCreatureName(pid):lower()
-        end
+function table.size(t)
+    local size = 0
+    for k, v in pairs(t) do
+        size = size + 1
     end
-    str = str.."."
-    if(#damageMap <= 1) and not (isMonster(pid)) then
-    sendChannelMessage(20, TALKTYPE_CHANNEL_R1, str)
-    end
-    if(#damageMap > 1 and #damageMap <= 4) and not (isMonster(pid)) then
-    sendChannelMessage(20, TALKTYPE_CHANNEL_R1, str)
-    end
-    if(#damageMap > 4 and #damageMap <= 7) and not (isMonster(pid)) then
-    sendChannelMessage(20, TALKTYPE_CHANNEL_R1, str)
-    end
-    if(#damageMap > 7 and #damageMap <= 10) and not (isMonster(pid)) then
-    sendChannelMessage(20, TALKTYPE_CHANNEL_R1, str)
-    end
-    if(#damageMap > 10) and not (isMonster(pid)) then
-    sendChannelMessage(20, TALKTYPE_CHANNEL_R1, str)
-    end
-    if (isMonster(pid)) then
-    str = str.."a "..getCreatureName(pid):lower()
-    sendChannelMessage(20, TALKTYPE_CHANNEL_R1, str)
-    end
-    return true
-
+    return size
 end
+
+function deathChannel.onDeath(player, corpse, killer, mostDamageKiller, unjustified, mostDamageUnjustified)
+    local damageMap = player:getDamageMap()
+    local damageSize = table.size(damageMap)
+    local str = string.format("%s [%u]", player:getName(), player:getLevel())
+    if (damageSize <= 1) then
+        str = str.." was killed by "
+    elseif (damageSize > 1 and damageSize <= 4) then
+        str = str.." was slain by "
+    elseif (damageSize > 4 and damageSize <= 7) then
+        str = str.." was crushed by "
+    elseif (damageSize > 7 and damageSize <= 10) then
+        str = str.." was eliminated by "
+    elseif (damageSize > 10) then
+        str = str.." was annihilated by "
+    end
+    local saveNames = {}
+    local i = 0
+    for pid, _ in pairs(damageMap) do
+        i = i + 1
+        local creatureName = getCreatureName(pid)
+        if isPlayer(pid) or (isMonster(pid) and not saveNames[creatureName]) then
+            if (i == damageSize) then
+                str = string.format("%s and ", str)
+            elseif (i ~= 1) then
+                str = string.format("%s, ", str)
+            end
+            saveNames[creatureName] = true
+            str = string.format("%s %s", str, creatureName:lower())
+        end
+    end
+
+    for _, pid in ipairs(Game.getPlayers()) do
+    	pid:sendTextMessage(MESSAGE_GUILD, str..".", 20)
+	end
+
+    return true
+end
+
 deathChannel:register()
