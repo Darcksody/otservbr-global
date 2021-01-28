@@ -22,14 +22,14 @@
 
 #include <string>
 
+#include "configmanager.h"
 #include "protocol.h"
 #include "chat.h"
-#include "configmanager.h"
 #include "creature.h"
 #include "tasks.h"
 #include "gamestore.h"
 
-
+extern ConfigManager g_config;
 
 class NetworkMessage;
 class Player;
@@ -42,7 +42,6 @@ class Quest;
 class ProtocolGame;
 using ProtocolGame_ptr = std::shared_ptr<ProtocolGame>;
 
-extern ConfigManager g_config;
 extern Game g_game;
 
 struct TextMessage
@@ -92,7 +91,7 @@ public:
 
 	void sendLockerItems(std::map<uint16_t, uint16_t> itemMap, uint16_t count);
 
-	uint32_t getVersion() const
+	uint16_t getVersion() const
 	{
 		return version;
 	}
@@ -451,8 +450,8 @@ private:
 
 	uint32_t eventConnect = 0;
 	uint32_t challengeTimestamp = 0;
-	uint32_t version = g_config.getNumber(ConfigManager::CLIENT_VERSION);
-	int32_t clientVersion = 0;
+	uint16_t version = g_config.getNumber(ConfigManager::CLIENT_VERSION);
+	uint32_t clientVersion = 0;
 
 	uint8_t challengeRandom = 0;
 
