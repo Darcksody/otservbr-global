@@ -112,7 +112,7 @@ private:
 
 	// we have all the parse methods
 	void parsePacket(NetworkMessage &msg) override;
-	void onRecvFirstMessage(NetworkMessage& msg) override;
+	void onRecvFirstMessage(NetworkMessage &msg) override;
 	void onConnect() override;
 
 	//Parse methods
