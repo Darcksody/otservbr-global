@@ -18,10 +18,17 @@
 		<colors colordark="#935416" colorlight="#b17b45" />
 		<details displaypriority="0" isseasonal="0" specialevent="0" />
 	</event>
-	<event name="Fast Attack" startdate="1/22/2021" enddate="1/24/2021" >
+	<event name="Fast Attack" startdate="1/22/2021" enddate="1/24/2021" script="example.lua">
 		<ingame exprate="100" lootrate="100" spawnrate="100" skillrate="100" />
 		<description description="You have 50% more fast attack in basics. Mages +25% mana regen." />
 		<colors colordark="#9c27b0" colorlight="#d087dc" />
 		<details displaypriority="0" isseasonal="0" specialevent="0" />
 	</event>
+	<event name="All Stars" startdate="1/29/2021" enddate="1/31/2021" >
+		<ingame exprate="100" lootrate="100" spawnrate="100" skillrate="100" />
+		<description description="All events in one (Fast Attack, Loot, Experience, Skills and Rapid respawn)." />
+		<colors colordark="#9c27b0" colorlight="#d087dc" />
+		<details displaypriority="0" isseasonal="0" specialevent="0" />
+	</event>
 </events>
+ 

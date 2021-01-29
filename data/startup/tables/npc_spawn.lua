@@ -965,5 +965,6 @@ NpcTable = {
 	[964] = {name = "tamoril", position = {x = 32359, y = 32234, z = 6}},
 	[965] = {name = "telas", position = {x = 32358, y = 32234, z = 7}},
 	[966] = {name = "esrik", position = {x = 32356, y = 32220, z = 7}},
-	[967] = {name = "flint", position = {x = 32362, y = 32226, z = 6}}
+	[967] = {name = "flint", position = {x = 32362, y = 32226, z = 6}},
+	[968] = {name = "rock_in_a_hard_place", position = {x = 32364, y = 32220, z = 7}}
 }
