@@ -12,6 +12,20 @@ local storeItemID = {
 	32388, -- exercise rod
 	32389, -- exercise wand
 
+	40114, -- durable exercise sword
+	40115, -- durable exercise axe
+	40116, -- durable exercise club
+	40117, -- durable exercise bow
+	40118, -- durable exercise rod
+	40119, -- durable exercise wand
+
+	40120, -- lasting exercise sword
+	40121, -- lasting exercise axe
+	40122, -- lasting exercise club
+	40123, -- lasting exercise bow
+	40124, -- lasting exercise rod
+	40125, -- lasting exercise wand
+
 	-- 50 charges exercise weapons
 	32124, -- training sword
 	32125, -- training axe
