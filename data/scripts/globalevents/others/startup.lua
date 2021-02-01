@@ -92,6 +92,23 @@ function serverstartup.onStartup()
 		result.free(banResultId)
 	end
 
+	-- db.query('ALTER TABLE `players` ADD `lastexp` BIGINT UNSIGNED NOT NULL DEFAULT '0' AFTER `experience`')
+	-- Select id, (experience-lastexp) as gamer FROM players ORDER BY gamer desc LIMIT 5
+	-- Get players current experience ORDER BY `lastlogin` DESC'
+	local expResultId = db.storeQuery('SELECT `id`, `experience` FROM `players`')
+	if expResultId ~= false then
+		repeat
+			local player = result.getNumber(expResultId, 'id')
+			if player then
+				local experience = result.getNumber(expResultId, 'experience')
+				db.query('UPDATE `players` SET `lastexp` = ' .. experience .. ' WHERE `id` = ' .. player)
+			end
+		until not result.next(expResultId)
+		result.free(expResultId)
+	end
+
+	print('LASTEXP');
+
 	-- Ferumbras Ascendant quest
 	for i = 1, #GlobalStorage.FerumbrasAscendant.Habitats do
 		local storage = GlobalStorage.FerumbrasAscendant.Habitats[i]

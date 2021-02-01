@@ -11,7 +11,7 @@ function buyHouse.onSay(player, words, param)
 		return false
 	end
 
-	if player:getLevel() >= 50 then
+	if player:getLevel() < 60 then
 		player:sendCancelMessage("You need level 60 to buy a house.")
 		return false
 	end

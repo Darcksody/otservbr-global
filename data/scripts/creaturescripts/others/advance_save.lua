@@ -17,13 +17,23 @@ function advanceSave.onAdvance(player, skill, oldLevel, newLevel)
 				if player:getStorageValue(STORAGEVALUE_PROMOTION) < 1 then
 					local promotion = player:getVocation():getPromotion()
 					player:setVocation(promotion)
-					player:setStorageValue(STORAGEVALUE_PROMOTION, 1)
+                    player:setStorageValue(STORAGEVALUE_PROMOTION, 1)
+                    player:addItem(2160, 1)
 					player:say('Congratulations! You are now promoted.', TALKTYPE_MONSTER_SAY)
 				end
 			end
 		end
-	end
-
+    end
+    
+    if newLevel >= 50 then
+        if player:getStorageValue(STORAGE_LVL_50_CC) < 1 then
+            player:setStorageValue(STORAGE_LVL_50_CC, 1)
+            player:addItem(2160, 5)
+            player:say('Congratulations! You earned 5 crystal coins.', TALKTYPE_MONSTER_SAY)
+        end
+    end
+    
+ 
 	if config.effect then
 		player:getPosition():sendMagicEffect(math.random(CONST_ME_FIREWORK_YELLOW, CONST_ME_FIREWORK_BLUE))
 		player:say('LEVEL UP!', TALKTYPE_MONSTER_SAY)

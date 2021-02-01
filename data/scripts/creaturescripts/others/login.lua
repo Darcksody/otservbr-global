@@ -127,6 +127,7 @@ Tibia Coins on Level 100(50tc), 200(100tc), 300(150tc), 400(200tc), 500(250tc).
 				local promotion = player:getVocation():getPromotion()
 				player:setVocation(promotion)
 				player:setStorageValue(STORAGEVALUE_PROMOTION, 1)
+				player:addItem(2160, 1)
 				player:say('Congratulations! You are now promoted.', TALKTYPE_MONSTER_SAY)
 			end
 		end
