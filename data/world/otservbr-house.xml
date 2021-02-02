@@ -753,7 +753,7 @@
 	<house name="Trader's Point 1" houseid="3443" entryx="32306" entryy="32826" entryz="7" rent="200000" townid="14" size="36" />
 	<house name="Trader's Point 2 (Shop)" houseid="3444" entryx="32330" entryy="32826" entryz="7" rent="600000" townid="14" size="92" />
 	<house name="Trader's Point 3 (Shop)" houseid="3445" entryx="32344" entryy="32826" entryz="7" rent="600000" townid="14" size="103" />
-	<house name="Ivory Mansion" houseid="3446" entryx="32345" entryy="32843" entryz="7" rent="800000" townid="14" size="271" />
+	<house name="Ivory Mansion" houseid="3446" entryx="32345" entryy="32843" entryz="7" rent="800000" townid="14" size="293" />
 	<house name="Ivory Circle 2" houseid="3447" entryx="32364" entryy="32818" entryz="7" rent="400000" townid="14" size="120" />
 	<house name="Ivy Cottage" houseid="3448" entryx="32277" entryy="32775" entryz="7" rent="500000" guildhall="true" townid="14" size="464" />
 	<house name="Marble Lane 1" houseid="3449" entryx="32300" entryy="32772" entryz="7" rent="600000" townid="14" size="174" />
@@ -940,7 +940,7 @@
 	<house name="Palace Vicinity" houseid="3639" entryx="33866" entryy="31516" entryz="7" rent="200000" townid="22" size="109" />
 	<house name="Wave Tower" houseid="3640" entryx="33879" entryy="31525" entryz="7" rent="400000" townid="22" size="166" />
 	<house name="Old Sanctuary of God King Qjell" houseid="3641" entryx="33473" entryy="31310" entryz="9" rent="300000" townid="18" size="408" />
-	<house name="Old Heritage Estate" houseid="3642" entryx="33598" entryy="31909" entryz="6" rent="600000" townid="20" size="221" />
+	<house name="Old Heritage Estate" houseid="3642" entryx="33598" entryy="31909" entryz="6" rent="600000" townid="20" size="231" />
 	<house name="Rathleton Plaza 4" houseid="3643" entryx="33604" entryy="31915" entryz="6" rent="400000" townid="20" size="101" />
 	<house name="Rathleton Plaza 3" houseid="3644" entryx="33615" entryy="31913" entryz="6" rent="400000" townid="20" size="113" />
 	<house name="Rathleton Plaza 2" houseid="3645" entryx="33625" entryy="31912" entryz="6" rent="400000" townid="20" size="49" />
