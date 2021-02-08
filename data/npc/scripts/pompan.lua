@@ -66,10 +66,7 @@ local function getTable(player)
 			{name='shiver arrow', id=7839, buy=5},
 			{name='sniper arrow', id=7364, buy=5},
 			{name='spear', id=2389, buy=9, sell=3},
-			{name='spectral bolt', id=40737, buy=100},
-			{name='quiver', id=40397, buy=400},
-			{name='blue quiver', id=40683, buy=400},
-			{name='red quiver', id=40684, buy=400},
+			{name='spectral bolt', id=40737, buy=70},
 			{name='tarsal arrow', id=15648, buy=6},
 			{name='throwing star', id=2399, buy=42},
 			{name='vortex bolt', id=15649, buy=6},
@@ -123,13 +120,13 @@ local function onBuy(cid, item, subType, amount, ignoreCap, inBackpacks)
 	local player = Player(cid)
 	local items = setNewTradeTable(getTable(player))
 	if not ignoreCap and player:getFreeCapacity() < ItemType(items[item].itemId):getWeight(amount) then
-		return player:sendTextMessage(MESSAGE_INFO_DESCR, 'You don\'t have enough cap.')
+		return player:sendTextMessage(MESSAGE_FAILURE, 'You don\'t have enough cap.')
 	end
 	if not player:removeMoneyNpc(items[item].buyPrice * amount) then
 		selfSay("You don't have enough money.", cid)
 	else
 		player:addItem(items[item].itemId, amount)
-		return player:sendTextMessage(MESSAGE_INFO_DESCR, 'Bought '..amount..'x '..items[item].realName..' for '..items[item].buyPrice * amount..' gold coins.')
+		return player:sendTextMessage(MESSAGE_TRADE, 'Bought '..amount..'x '..items[item].realName..' for '..items[item].buyPrice * amount..' gold coins.')
 	end
 	return true
 end
@@ -139,7 +136,7 @@ local function onSell(cid, item, subType, amount, ignoreCap, inBackpacks)
 	local items = setNewTradeTable(getTable(player))
 	if items[item].sellPrice and player:removeItem(items[item].itemId, amount) then
 		player:addMoney(items[item].sellPrice * amount)
-		return player:sendTextMessage(MESSAGE_INFO_DESCR, 'Sold '..amount..'x '..items[item].realName..' for '..items[item].sellPrice * amount..' gold coins.')
+		return player:sendTextMessage(MESSAGE_TRADE, 'Sold '..amount..'x '..items[item].realName..' for '..items[item].sellPrice * amount..' gold coins.')
 	else
 		selfSay("You don't have item to sell.", cid)
 	end

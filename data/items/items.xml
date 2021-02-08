@@ -33958,6 +33958,7 @@
 		<attribute key="loottype" value="wand" />
 		<attribute key="shootType" value="fire" />
 		<attribute key="range" value="3" />
+		<attribute key="description" value="It's warm to the touch." />
 	</item>
 	<item id="23721" article="the" name="chiller">
 		<attribute key="weight" value="1500" />
@@ -33965,6 +33966,7 @@
 		<attribute key="loottype" value="wand" />
 		<attribute key="shootType" value="smallice" />
 		<attribute key="range" value="3" />
+		<attribute key="description" value="It is a little, well, chilly to the touch." />
 	</item>
 	<item id="23722" article="a" name="light stone shower rune">
 		<attribute key="type" value="rune" />
@@ -34044,6 +34046,8 @@
 	</item>
 	<item fromid="23769" toid="23770" article="a" name="dead goblin" />
 	<item id="23771" article="a" name="spellbook of the novice">
+		<attribute key="weight" value="1400" />
+		<attribute key="description" value="It shows your spells and can also shield against attacks when worn." />
 		<attribute key="defense" value="8" />
 		<attribute key="weaponType" value="shield" />
 	</item>
@@ -51693,6 +51697,268 @@
 	</item>
 	<item id="39932" article="a" name="dead werehyaena">
 		<attribute key="corpseType" value="blood" />
+	</item>
+	<item id="40114" article="an" name="durable exercise sword">
+		<attribute key="charges" value="1800" />
+		<attribute key="showcharges" value="1" />
+		<attribute key="weight" value="1000" />
+	</item>
+	<item id="40115" article="an" name="durable exercise axe">
+		<attribute key="charges" value="1800" />
+		<attribute key="showcharges" value="1" />
+		<attribute key="weight" value="1000" />
+	</item>
+	<item id="40116" article="an" name="durable exercise club">
+		<attribute key="charges" value="1800" />
+		<attribute key="showcharges" value="1" />
+		<attribute key="weight" value="1000" />
+	</item>
+	<item id="40117" article="an" name="durable exercise bow">
+		<attribute key="charges" value="1800" />
+		<attribute key="showcharges" value="1" />
+		<attribute key="weight" value="1000" />
+	</item>
+	<item id="40118" article="an" name="durable exercise rod">
+		<attribute key="charges" value="1800" />
+		<attribute key="showcharges" value="1" />
+		<attribute key="weight" value="1000" />
+	</item>
+	<item id="40119" article="an" name="durable exercise wand">
+		<attribute key="charges" value="1800" />
+		<attribute key="showcharges" value="1" />
+		<attribute key="weight" value="1000" />
+	</item>
+	<item id="40120" article="an" name="lasting exercise sword">
+		<attribute key="charges" value="14400" />
+		<attribute key="showcharges" value="1" />
+		<attribute key="weight" value="1000" />
+	</item>
+	<item id="40121" article="an" name="lasting exercise axe">
+		<attribute key="charges" value="14400" />
+		<attribute key="showcharges" value="1" />
+		<attribute key="weight" value="1000" />
+	</item>
+	<item id="40122" article="an" name="lasting exercise club">
+		<attribute key="charges" value="14400" />
+		<attribute key="showcharges" value="1" />
+		<attribute key="weight" value="1000" />
+	</item>
+	<item id="40123" article="an" name="lasting exercise bow">
+		<attribute key="charges" value="14400" />
+		<attribute key="showcharges" value="1" />
+		<attribute key="weight" value="1000" />
+	</item>
+	<item id="40124" article="an" name="lasting exercise rod">
+		<attribute key="charges" value="14400" />
+		<attribute key="showcharges" value="1" />
+		<attribute key="weight" value="1000" />
+	</item>
+	<item id="40125" article="an" name="lasting exercise wand">
+		<attribute key="charges" value="14400" />
+		<attribute key="showcharges" value="1" />
+		<attribute key="weight" value="1000" />
+	</item>
+	<item id="40349" article="a" name="jungle flail">
+		<attribute key="weight" value="8900" />
+		<attribute key="defense" value="31" />
+		<attribute key="attack" value="52" />
+		<attribute key="slotType" value="two-handed" />
+		<attribute key="weaponType" value="club" />
+		<attribute key="loottype" value="club" />
+		<attribute key="imbuingSlots" value="2" />
+	</item>
+	<item id="40350" article="a" name="throwing axe">
+		<attribute key="weight" value="4700" />
+		<attribute key="defense" value="30" />
+		<attribute key="attack" value="51" />
+		<attribute key="weaponType" value="axe" />
+		<attribute key="loottype" value="axe" />
+		<attribute key="extradef" value="2" />
+		<attribute key="skillAxe" value="2" />
+		<attribute key="imbuingSlots" value="1" />
+	</item>
+	<item id="40351" name="exotic legs">
+		<attribute key="weight" value="7200" />
+		<attribute key="armor" value="8" />
+		<attribute key="slotType" value="legs" />
+		<attribute key="loottype" value="legs" />
+		<attribute key="absorbPercentPhysical" value="4" />
+	</item>
+	<item id="40352" name="bast legs">
+		<attribute key="weight" value="6400" />
+		<attribute key="armor" value="8" />
+		<attribute key="slotType" value="legs" />
+		<attribute key="loottype" value="legs" />
+		<attribute key="absorbPercentEnergy" value="4" />
+		<attribute key="skillDist" value="2" />
+	</item>
+	<item id="40353" article="a" name="jungle bow">
+		<attribute key="weaponType" value="distance" />
+		<attribute key="loottype" value="distance" />
+		<attribute key="slotType" value="two-handed" />
+		<attribute key="ammoType" value="arrow" />
+		<attribute key="range" value="6" />
+		<attribute key="attack" value="6" />
+		<attribute key="hitChance" value="5" />
+		<attribute key="skillDist" value="1" />
+		<attribute key="absorbPercentPhysical" value="3" />
+		<attribute key="weight" value="4700" />
+		<attribute key="imbuingSlots" value="2" />
+	</item>
+	<item id="40354" name="makeshift boots">
+		<attribute key="weight" value="1450" />
+		<attribute key="armor" value="2" />
+		<attribute key="magiclevelpoints" value="1" />
+		<attribute key="absorbPercentFire" value="6" />
+		<attribute key="slotType" value="feet" />
+		<attribute key="loottype" value="boots" />
+		<attribute key="imbuingSlots" value="1" />
+	</item>
+	<item id="40355" name="make-do boots">
+		<attribute key="weight" value="1200" />
+		<attribute key="armor" value="2" />
+		<attribute key="magiclevelpoints" value="1" />
+		<attribute key="absorbPercentIce" value="6" />
+		<attribute key="slotType" value="feet" />
+		<attribute key="loottype" value="boots" />
+		<attribute key="imbuingSlots" value="1" />
+	</item>
+	<item id="40356" article="a" name="jungle rod">
+		<attribute key="weaponType" value="wand" />
+		<attribute key="loottype" value="wand" />
+		<attribute key="range" value="4" />
+		<attribute key="shootType" value="smallice" />
+		<attribute key="magiclevelpoints" value="1" />
+		<attribute key="absorbPercentEarth" value="3" />
+		<attribute key="weight" value="3700" />
+		<attribute key="imbuingSlots" value="2" />
+	</item>
+	<item id="40357" article="a" name="jungle wand">
+		<attribute key="weaponType" value="wand" />
+		<attribute key="loottype" value="wand" />
+		<attribute key="range" value="4" />
+		<attribute key="shootType" value="smallearth" />
+		<attribute key="magiclevelpoints" value="1" />
+		<attribute key="absorbPercentIce" value="3" />
+		<attribute key="weight" value="3200" />
+		<attribute key="imbuingSlots" value="2" />
+	</item>
+	<item id="40358" article="an" name="exotic amulet">
+		<attribute key="slotType" value="necklace" />
+		<attribute key="loottype" value="amulet" />
+		<attribute key="absorbPercentPhysical" value="4" />
+		<attribute key="absorbPercentEarth" value="5" />
+		<attribute key="weight" value="730" />
+	</item>
+	<item id="40061" article="a" name="rascoohan rat revealer">
+		<attribute key="description" value="The RRR is a testament if rascoohan ingenuity." />
+		<attribute key="weight" value="4000" />
+	</item>
+	<item id="40126" name="Rita's letter">
+		<attribute key="weight" value="50" />
+	</item>
+	<item id="40171" article="a" name="ballistic boulder">
+		<attribute key="weight" value="2500" />
+	</item>
+	<item id="40172" article="a" name="greenish flintstone">
+		<attribute key="weight" value="375" />
+	</item>
+	<item id="40193" article="a" name="dead exotic cave spider">
+		<attribute key="containerSize" value="30" />
+		<attribute key="decayTo" value="40194" />
+		<attribute key="duration" value="10" />
+		<attribute key="corpseType" value="venom" />
+		<attribute key="fluidSource" value="slime" />
+	</item>
+	<item id="40194" article="a" name="dead exotic cave spider">
+		<attribute key="containerSize" value="30" />
+		<attribute key="decayTo" value="40195" />
+		<attribute key="duration" value="300" />
+		<attribute key="corpseType" value="venom" />
+		<attribute key="fluidSource" value="slime" />
+	</item>
+	<item id="40195" article="a" name="dead exotic cave spider">
+		<attribute key="containerSize" value="30" />
+		<attribute key="decayTo" value="40196" />
+		<attribute key="duration" value="300" />
+		<attribute key="corpseType" value="venom" />
+		<attribute key="fluidSource" value="slime" />
+	</item>
+	<item id="40196" article="a" name="dead exotic cave spider">
+		<attribute key="containerSize" value="30" />
+		<attribute key="decayTo" value="0" />
+		<attribute key="duration" value="300" />
+		<attribute key="corpseType" value="venom" />
+		<attribute key="fluidSource" value="slime" />
+	</item>
+	<item id="40204" article="a" name="dead pirat cutthroat">
+		<attribute key="containerSize" value="30" />
+		<attribute key="decayTo" value="0" />
+		<attribute key="duration" value="300" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
+	</item>
+	<item id="40205" article="a" name="dead pirat cutthroat">
+		<attribute key="containerSize" value="30" />
+		<attribute key="decayTo" value="40204" />
+		<attribute key="duration" value="300" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
+	</item>
+	<item id="40206" article="a" name="dead pirat cutthroat">
+		<attribute key="containerSize" value="30" />
+		<attribute key="decayTo" value="40205" />
+		<attribute key="duration" value="300" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
+	</item>
+	<item id="40207" article="a" name="dead pirat cutthroat">
+		<attribute key="containerSize" value="30" />
+		<attribute key="decayTo" value="40206" />
+		<attribute key="duration" value="10" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
+	</item>
+	<item id="40211" article="a" name="magical water orb">
+		<attribute key="weight" value="250" />
+	</item>
+	<item id="40212" article="a" name="dead pirat scoundrel">
+		<attribute key="containerSize" value="30" />
+		<attribute key="decayTo" value="0" />
+		<attribute key="duration" value="300" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
+	</item>
+	<item id="40213" article="a" name="dead pirat scoundrel">
+		<attribute key="containerSize" value="30" />
+		<attribute key="decayTo" value="40212" />
+		<attribute key="duration" value="300" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
+	</item>
+	<item id="40214" article="a" name="dead pirat scoundrel">
+		<attribute key="containerSize" value="30" />
+		<attribute key="decayTo" value="40213" />
+		<attribute key="duration" value="300" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
+	</item>
+	<item id="40215" article="a" name="dead pirat scoundrel">
+		<attribute key="containerSize" value="30" />
+		<attribute key="decayTo" value="40214" />
+		<attribute key="duration" value="10" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
+	</item>
+	<item id="40314" article="a" name="bag of smuggled goods">
+		<attribute key="weight" value="800" />
+	</item>
+	<item id="40330" article="a" name="lace-trimmed handkerchief">
+		<attribute key="description" value="It is embroidered with the letter E." />
+		<attribute key="weight" value="50" />
+	</item>
+	<item id="40343" article="a" name="cheesy key">
+		<attribute key="weight" value="250" />
 	</item>
 	<item id="40359" article="a" name="jungle quiver">
 		<attribute key="weight" value="1800" />
