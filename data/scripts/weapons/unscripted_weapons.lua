@@ -4,7 +4,7 @@ local weapons = {
 		type = WEAPON_AMMO,
 		level = 150,
 		unproperly = true,
-		breakChance = 150
+		breakChance = 30
 	}, -- spectral bolt (no decay)
 	{
 		itemId = 38990,
@@ -1075,21 +1075,21 @@ local weapons = {
 		type = WEAPON_DISTANCE,
 		level = 120,
 		unproperly = true,
-		breakChance = 120
+		breakChance = 30
 	}, -- royal star
 	{
 		itemId = 29058,
 		type = WEAPON_AMMO,
 		level = 150,
 		unproperly = true,
-		breakChance = 150
+		breakChance = 30
 	}, -- spectral bolt
 	{
 		itemId = 29036,
 		type = WEAPON_DISTANCE,
 		level = 60,
 		unproperly = true,
-		breakChance = 60
+		breakChance = 30
 	}, -- leaf star
 	{
 		itemId = 29005,
@@ -1608,7 +1608,7 @@ local weapons = {
 		type = WEAPON_DISTANCE,
 		level = 60,
 		unproperly = true,
-		breakChance = 60
+		breakChance = 30
 	}, -- glooth spear
 	{
 		itemId = 22421,
@@ -1973,21 +1973,21 @@ local weapons = {
 		type = WEAPON_AMMO,
 		level = 70,
 		unproperly = true,
-		breakChance = 70
+		breakChance = 30
 	}, -- envenomed arrow
 	{
 		itemId = 18436,
 		type = WEAPON_AMMO,
 		level = 70,
 		unproperly = true,
-		breakChance = 70
+		breakChance = 30
 	}, -- drill bolt
 	{
 		itemId = 18435,
 		type = WEAPON_AMMO,
 		level = 90,
 		unproperly = true,
-		breakChance = 90
+		breakChance = 30
 	}, -- prismatic bolt
 	{
 		itemId = 18412,
@@ -2042,7 +2042,7 @@ local weapons = {
 		type = WEAPON_AMMO,
 		level = 90,
 		unproperly = true,
-		breakChance = 90
+		breakChance = 30
 	}, -- crystalline arrow
 	{
 		itemId = 18303,
@@ -2064,7 +2064,7 @@ local weapons = {
 		type = WEAPON_AMMO,
 		level = 40,
 		unproperly = true,
-		breakChance = 40
+		breakChance = 30
 	}, -- vortex bolt
 	{
 		itemId = 15648,
@@ -3513,21 +3513,21 @@ local weapons = {
 		type = WEAPON_DISTANCE,
 		level = 80,
 		unproperly = true,
-		breakChance = 80
+		breakChance = 30
 	}, -- assassin star
 	{
 		itemId = 7367,
 		type = WEAPON_DISTANCE,
 		level = 42,
 		unproperly = true,
-		breakChance = 42
+		breakChance = 30
 	}, -- enchanted spear
 	{
 		itemId = 7365,
 		type = WEAPON_AMMO,
 		level = 40,
 		unproperly = true,
-		breakChance = 40
+		breakChance = 30
 	}, -- onyx arrow
 	{
 		itemId = 7364,
@@ -3558,7 +3558,7 @@ local weapons = {
 		type = WEAPON_AMMO,
 		level = 110,
 		unproperly = true,
-		breakChance = 110
+		breakChance = 30
 	}, -- infernal bolt
 	{
 		itemId = 6528,
@@ -3624,7 +3624,7 @@ local weapons = {
 		type = WEAPON_AMMO,
 		level = 55,
 		unproperly = true,
-		breakChance = 55
+		breakChance = 30
 	}, -- power bolt
 	{
 		itemId = 2544,
