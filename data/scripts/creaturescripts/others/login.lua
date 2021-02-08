@@ -73,8 +73,8 @@ function playerLogin.onLogin(player)
 		end
 
 	else
-		player:sendTextMessage(MESSAGE_STATUS_DEFAULT, "Welcome to " .. SERVER_NAME .. "!")
-		player:sendTextMessage(MESSAGE_STATUS_DEFAULT, string.format("Your last visit in ".. SERVER_NAME ..": %s.", os.date("%d. %b %Y %X", player:getLastLoginSaved())))
+		player:sendTextMessage(MESSAGE_STATUS, "Welcome to " .. SERVER_NAME .. "!")
+		player:sendTextMessage(MESSAGE_LOGIN, string.format("Your last visit in ".. SERVER_NAME ..": %s.", os.date("%d. %b %Y %X", player:getLastLoginSaved())))
 	end
  
 local msg = [[
@@ -143,7 +143,7 @@ Tibia Coins on Level 100(50tc), 200(100tc), 300(150tc), 400(200tc), 500(250tc).
 		town = isInArray(freeTowns, town:getName()) and town or Town(defaultTown)
 		player:teleportTo(town:getTemplePosition())
 		player:setTown(town)
-		player:sendTextMessage(MESSAGE_STATUS_WARNING, "Your premium time has expired.")
+		player:sendTextMessage(MESSAGE_FAILURE, "Your premium time has expired.")
 		player:setStorageValue(Storage.PremiumAccount, 0)
 		if sex == 1 then
 			player:setOutfit({lookType = 128, lookFeet = 114, lookLegs = 134, lookHead = 114,lookAddons = 0})
@@ -152,8 +152,8 @@ Tibia Coins on Level 100(50tc), 200(100tc), 300(150tc), 400(200tc), 500(250tc).
         end
         if home ~= nil and not isPremium(player) then
             setHouseOwner(home, 0)
-            player:sendTextMessage(MESSAGE_STATUS_WARNING, 'You\'ve lost your house because you are not premium anymore.')
-			player:sendTextMessage(MESSAGE_STATUS_WARNING, 'Your items from house are send to your inbox.')
+            player:sendTextMessage(MESSAGE_GAME_HIGHLIGHT, 'You\'ve lost your house because you are not premium anymore.')
+			player:sendTextMessage(MESSAGE_GAME_HIGHLIGHT, 'Your items from house are send to your inbox.')
         end
 	end
 	-- End 'Premium Ends Teleport to Temple'
@@ -211,7 +211,8 @@ Tibia Coins on Level 100(50tc), 200(100tc), 300(150tc), 400(200tc), 500(250tc).
 		player:setGhostMode(true)
 	end
 	-- Boosted creature
-	player:sendTextMessage(MESSAGE_LOOT, "Today's boosted creature: " .. Game.getBoostedCreature() .. " \nBoosted creatures yield more experience points, carry more loot than usual and respawn at a faster rate.")
+	player:sendTextMessage(MESSAGE_BOOSTED_CREATURE, "Today's boosted creature: " .. Game.getBoostedCreature() .. " \
+	Boosted creatures yield more experience points, carry more loot than usual and respawn at a faster rate.")
 
 	-- Stamina
 	nextUseStaminaTime[playerId] = 1
@@ -268,7 +269,7 @@ Tibia Coins on Level 100(50tc), 200(100tc), 300(150tc), 400(200tc), 500(250tc).
 	-- Rewards
 	local rewards = #player:getRewardList()
 	if(rewards > 0) then
-		player:sendTextMessage(MESSAGE_INFO_DESCR, string.format("You have %d %s in your reward chest.",
+		player:sendTextMessage(MESSAGE_LOGIN, string.format("You have %d %s in your reward chest.",
 		rewards, rewards > 1 and "rewards" or "reward"))
 	end
 

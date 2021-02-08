@@ -39,7 +39,6 @@
 #include "spells.h"
 #include "weapons.h"
 #include "imbuements.h"
-#include "iostash.h"
 #include "iobestiary.h"
 #include "monsters.h"
 
@@ -405,6 +404,8 @@ void ProtocolGame::onRecvFirstMessage(NetworkMessage &msg)
 		enableCompact();
 	}
 
+	version = msg.get<uint16_t>();
+
 	clientVersion = msg.get<uint32_t>();
 
 	msg.skipBytes(3); // U16 dat revision, game preview state
@@ -472,6 +473,14 @@ void ProtocolGame::onRecvFirstMessage(NetworkMessage &msg)
 	// 	disconnectClient(ss.str());
 	// 	return;
 	// }
+	// if (clientVersion != g_config.getNumber(ConfigManager::CLIENT_VERSION))
+	// {
+	// 	std::ostringstream ss;
+	// 	ss << "Only clients with protocol " << g_config.getString(ConfigManager::CLIENT_VERSION_STR) << " allowed!";
+	// 	disconnectClient(ss.str());
+	// 	return;
+	// }
+
 	// if (clientVersion != g_config.getNumber(ConfigManager::CLIENT_VERSION))
 	// {
 	// 	std::ostringstream ss;
@@ -3557,7 +3566,7 @@ void ProtocolGame::sendMarketEnter(uint32_t depotId)
 			depotItems[itemType.wareId] += Item::countByType(item, -1);
 		}
 	} while (!containerList.empty());
-	StashItemList stashToSend = IOStash::getStoredItems(player->guid);
+	StashItemList stashToSend = player->getStashItems();
 	uint16_t size = 0;
 	for (auto item : stashToSend)
 	{
@@ -5820,6 +5829,10 @@ void ProtocolGame::sendImbuementWindow(Item *item)
 			if (!needItems.count(itm.first))
 			{
 				needItems[itm.first] = player->getItemTypeCount(itm.first);
+				uint32_t stashCount = player->getStashItemCount(Item::items[itm.first].clientId);
+				if (stashCount > 0) {
+					needItems[itm.first] += stashCount;
+				}
 			}
 		}
 	}
@@ -6155,7 +6168,7 @@ void ProtocolGame::sendOpenStash()
 
 void ProtocolGame::AddPlayerStowedItems(NetworkMessage &msg)
 {
-	StashItemList list = IOStash::getStoredItems(player->guid);
+	StashItemList list = player->getStashItems();
 
 	msg.add<uint16_t>(list.size());
 
@@ -6164,7 +6177,7 @@ void ProtocolGame::AddPlayerStowedItems(NetworkMessage &msg)
 		msg.add<uint16_t>(item.first);
 		msg.add<uint32_t>(item.second);
 	}
-	msg.add<uint16_t>(g_config.getNumber(ConfigManager::STASH_ITEMS) - IOStash::getStashSize(list));
+	msg.add<uint16_t>(g_config.getNumber(ConfigManager::STASH_ITEMS) - getStashSize(list));
 }
 
 void ProtocolGame::parseStashWithdraw(NetworkMessage &msg)

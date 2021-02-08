@@ -101,7 +101,8 @@ enum itemAttrTypes : uint32_t {
 enum VipStatus_t : uint8_t {
 	VIPSTATUS_OFFLINE = 0,
 	VIPSTATUS_ONLINE = 1,
-	VIPSTATUS_PENDING = 2
+	VIPSTATUS_PENDING = 2,
+	VIPSTATUS_TRAINING = 3
 };
 
 enum MarketAction_t {
@@ -243,7 +244,7 @@ enum charm_t {
 	CHARM_PASSIVE = 3,
 };
 
-enum BestiaryType_t : uint8_t { 
+enum BestiaryType_t : uint8_t {
 	BESTY_RACE_NONE = 0,
 
 	BESTY_RACE_AMPHIBIC = 1,
@@ -490,11 +491,7 @@ enum Vocation_t : uint16_t {
 	VOCATION_ELDER_DRUID = 6,
 	VOCATION_ROYAL_PALADIN = 7,
 	VOCATION_ELITE_KNIGHT = 8,
-	VOCATION_DAWNPORT_SORCERER = 9,
-	VOCATION_DAWNPORT_DRUID = 10,
-	VOCATION_DAWNPORT_PALADIN = 11,
-	VOCATION_DAWNPORT_KNIGHT = 12,
-	VOCATION_LAST = VOCATION_DAWNPORT_KNIGHT
+	VOCATION_LAST = VOCATION_ELITE_KNIGHT
 };
 
 enum ReturnValue {
@@ -823,6 +820,7 @@ struct CombatDamage
 	}
 };
 
+using StashContainerList = std::map<uint16_t, std::pair<bool, uint32_t>>;
 using StashItemList = std::map<uint16_t, uint32_t>;
 using MarketOfferList = std::list<MarketOffer>;
 using HistoryMarketOfferList = std::list<HistoryMarketOffer>;
@@ -991,6 +989,13 @@ enum Cipbia_Elementals_t : uint8_t {
 	CIPBIA_ELEMENTAL_DROWN = 8,
 	CIPBIA_ELEMENTAL_LIFEDRAIN = 9,
 	CIPBIA_ELEMENTAL_UNDEFINED = 10
+};
+
+enum Webhook_Colors_t : uint32_t {
+	WEBHOOK_COLOR_ONLINE = 0x00FF00,
+	WEBHOOK_COLOR_OFFLINE = 0xFF0000,
+	WEBHOOK_COLOR_WARNING = 0xFFFF00,
+	WEBHOOK_COLOR_RAID = 0x0000FF
 };
 
 #endif
