@@ -3,7 +3,7 @@ local spell = Spell(SPELL_INSTANT)
 function spell.onCastSpell(creature, variant)
 	local vocation = creature:getVocation()
 	if vocation then
-		return creature:conjureItem(0, 2789, 20, CONST_ME_MAGIC_BLUE)
+		return creature:conjureItem(0, 2789, 50, CONST_ME_MAGIC_BLUE)
 	else
 		creature:sendCancelMessage(RETURNVALUE_YOURVOCATIONCANNOTUSETHISSPELL)
 		creature:getPosition():sendMagicEffect(CONST_ME_POFF)

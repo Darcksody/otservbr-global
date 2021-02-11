@@ -13,10 +13,10 @@ end
 
 spell:name("Backpack Call")
 spell:id(181)
-spell:words("adori baackpack")
+spell:words("adori backpack")
 spell:level(1)
-spell:mana(20)
-spell:soul(30)
+spell:mana(10)
+spell:soul(10)
 spell:group("support")
 spell:isAggressive(false)
 spell:cooldown(5 *1000)

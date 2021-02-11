@@ -82,7 +82,7 @@ local msg = [[
 2 *> See our commands with !commands
 3 *> Free promotion at level 20.
 4 *> Protection at level 20.
-5 *> Free Blessings until level 80.
+5 *> Free Blessings until level 150.
 6 *> Custom balanced regeneration (Fast Mana and Health).
 7 *> On Level Up get 5 Platinum Coins.
 8 *> Fast Stamina Regeneration with Training Monks.

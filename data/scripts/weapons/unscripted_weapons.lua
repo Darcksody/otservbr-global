@@ -3683,12 +3683,12 @@ local weapons = {
 	{
 		itemId = 2544,
 		type = WEAPON_AMMO,
-		breakChance = 10
+		breakChance = 1
 	}, -- arrow
 	{
 		itemId = 2543,
 		type = WEAPON_AMMO,
-		breakChance = 10
+		breakChance = 1
 	}, -- bolt
 	{
 		itemId = 2456,
@@ -3961,7 +3961,7 @@ local weapons = {
 	{
 		itemId = 2410,
 		type = WEAPON_DISTANCE,
-		breakChance = 10
+		breakChance = 1
 	}, -- throwing knife
 	{
 		itemId = 2409,
@@ -4016,7 +4016,7 @@ local weapons = {
 	{
 		itemId = 2399,
 		type = WEAPON_DISTANCE,
-		breakChance = 10
+		breakChance = 1
 	}, -- throwing star
 	{
 		itemId = 2398,
@@ -4082,7 +4082,7 @@ local weapons = {
 	{
 		itemId = 2389,
 		type = WEAPON_DISTANCE,
-		breakChance = 10
+		breakChance = 1
 	}, -- spear
 	{
 		itemId = 2388,
