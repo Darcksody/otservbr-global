@@ -100,7 +100,9 @@ function loginEvents.onLogin(player)
 		"AutoLoot",
 		"HourCoin",
 		"LoginAccess",
-		"TibiaCoinsLevelUp"
+		"TibiaCoinsLevelUp",
+		-- The Rookie Guard
+		"VascalirRatKills"
 	}
 
 	for i = 1, #events do
