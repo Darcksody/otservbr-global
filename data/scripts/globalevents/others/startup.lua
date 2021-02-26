@@ -92,6 +92,8 @@ function serverstartup.onStartup()
 		result.free(banResultId)
 	end
 
+	print('>> LASTEXP');
+
 	-- db.query('ALTER TABLE `players` ADD `lastexp` BIGINT UNSIGNED NOT NULL DEFAULT '0' AFTER `experience`')
 	-- Select id, (experience-lastexp) as gamer FROM players ORDER BY gamer desc LIMIT 5
 	-- Get players current experience ORDER BY `lastlogin` DESC'
@@ -106,8 +108,6 @@ function serverstartup.onStartup()
 		until not result.next(expResultId)
 		result.free(expResultId)
 	end
-
-	print('LASTEXP');
 
 	-- Ferumbras Ascendant quest
 	for i = 1, #GlobalStorage.FerumbrasAscendant.Habitats do

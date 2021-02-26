@@ -152,7 +152,7 @@ registerMonsterType.flags = function(mtype, mask)
 		end
 		if mask.flags.runHealth then
 			if mtype:getName():lower() == 'rabbit' then
-				print('MONSTER_RUN_HEALTH_RATE: '..MONSTER_RUN_HEALTH_RATE)
+				print('>> MONSTER_RUN_HEALTH_RATE: '..MONSTER_RUN_HEALTH_RATE)
 			end
 			mtype:runHealth(mask.flags.runHealth * MONSTER_RUN_HEALTH_RATE)
 		end
@@ -238,7 +238,7 @@ end
 registerMonsterType.summons = function(mtype, mask)
 	if type(mask.summons) == "table" then
 		if mtype:getName():lower() == 'bonelord' then
-			print('MONSTER_SUMMON_MULT: '..MONSTER_SUMMON_MULT)
+			print('>> MONSTER_SUMMON_MULT: '..MONSTER_SUMMON_MULT)
 		end
 		for k, v in pairs(mask.summons) do
 			mtype:addSummon(v.name, v.interval, v.chance*500)
