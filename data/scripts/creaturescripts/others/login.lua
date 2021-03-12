@@ -80,15 +80,14 @@ function playerLogin.onLogin(player)
 	end
  
 local msg = [[
-1 *> Fast attack 25% in basics.
-2 *> See our commands with !commands
-3 *> Free promotion at level 20.
-4 *> Protection at level 20.
-5 *> Free Blessings until level 150.
-6 *> Custom balanced regeneration (Fast Mana and Health).
-7 *> On Level Up get 5 Platinum Coins.
-8 *> Fast Stamina Regeneration with Training Monks.
-9 *> Spell adori create item and consumes 30 soul points -
+1 *> See our commands with !commands
+2 *> Free promotion at level 20.
+3 *> Protection at level 20.
+4 *> Free Blessings until level 80.
+5 *> Custom balanced regeneration (Fast Mana and Health).
+6 *> On Level Up get 5 Platinum Coins.
+7 *> Fast Stamina Regeneration with Training Monks.
+8 *> Spell adori create item and consumes 30 soul points -
 - spell example: adori bag (bag,spear,backpack,rune,food,rope,shovel).
 -
 Stay Online and get 1 Tibia Coin every hour
@@ -124,15 +123,15 @@ Tibia Coins on Level 100(50tc), 200(100tc), 300(150tc), 400(200tc), 500(250tc).
 	if isPremium(player) then
 		player:setStorageValue(Storage.PremiumAccount, 1)
 
-		if player:getLevel() >= 20 then
-			if player:getStorageValue(STORAGEVALUE_PROMOTION) < 1 then
-				local promotion = player:getVocation():getPromotion()
-				player:setVocation(promotion)
-				player:setStorageValue(STORAGEVALUE_PROMOTION, 1)
-				player:addItem(2160, 1)
-				player:say('Congratulations! You are now promoted.', TALKTYPE_MONSTER_SAY)
-			end
-		end
+		-- if player:getLevel() >= 20 then
+		-- 	if player:getStorageValue(STORAGEVALUE_PROMOTION) < 1 then
+		-- 		local promotion = player:getVocation():getPromotion()
+		-- 		player:setVocation(promotion)
+		-- 		player:setStorageValue(STORAGEVALUE_PROMOTION, 1)
+		-- 		player:addItem(2160, 1)
+		-- 		player:say('Congratulations! You are now promoted.', TALKTYPE_MONSTER_SAY)
+		-- 	end
+		-- end
 	end
 	-- Premium Ends Teleport to Temple, change addon (citizen) houseless
 	local defaultTown = "Thais" -- default town where player is teleported if his home town is in premium area

@@ -6488,10 +6488,11 @@ void ProtocolGame::reloadCreature(const Creature *creature)
 
 void ProtocolGame::sendOpenStash()
 {
-	if (version < 1200) {
-		player->sendCancelMessage("Stash only works on the client 12.");
+	// if (version < 1200) {
+		player->sendCancelMessage("Stash dont works.");
+		// player->sendCancelMessage("Stash only works on the client 12.");
 		return;
-	}
+	// }
 	NetworkMessage msg;
 	msg.addByte(0x29);
 	AddPlayerStowedItems(msg);
