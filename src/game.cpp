@@ -2387,7 +2387,7 @@ void Game::internalQuickLootCorpse(Player* player, Container* corpse)
 		if (worth != 0) {
 			missedAnyGold = missedAnyGold || !success;
 			if (success) {
-				player->sendLootStats(item, worth);
+				player->sendLootStats(item, baseCount);
 				totalLootedGold += worth;
 			} else {
 				// item is not completely moved
@@ -2397,7 +2397,7 @@ void Game::internalQuickLootCorpse(Player* player, Container* corpse)
 			missedAnyItem = missedAnyItem || !success;
 			if (success || item->getItemCount() != baseCount) {
 				totalLootedItems++;
-				player->sendLootStats(item, totalLootedItems);
+				player->sendLootStats(item, item->getItemCount());
 			}
 		}
 	}
@@ -4493,7 +4493,7 @@ void Game::playerSetLootContainer(uint32_t playerId, ObjectCategory_t category, 
 	}
 
 	Container* container = thing->getContainer();
-	if (!container) {
+	if (!container || (container->getID() == ITEM_GOLD_POUCH && category != OBJECTCATEGORY_GOLD)) {
 		player->sendCancelMessage(RETURNVALUE_NOTPOSSIBLE);
 		return;
 	}
@@ -6525,8 +6525,11 @@ LightInfo Game::getWorldLightInfo() const
 
 bool Game::gameIsDay()
 {
-	if (lightHour >= ((6 * 60) + 30) && lightHour <= ((17 * 60) + 30))
+	if (lightHour >= (6 * 60) && lightHour <= (18 * 60)) {
 		isDay = true;
+	} else {
+		isDay = false;
+	}
 
 	return isDay;
 }
