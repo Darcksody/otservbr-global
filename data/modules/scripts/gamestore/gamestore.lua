@@ -4235,7 +4235,7 @@ GameStore.Categories = {
           itemtype = 25377,
           count = 50,
           description = "<i>Gold token package.</i>\n\n{info} can be exchanged with Yana for various weapons and for Creature Products that can be used to imbue them.",
-          type = GameStore.OfferTypes.OFFER_TYPE_ITEM,
+          type = GameStore.OfferTypes.OFFER_TYPE_STACKABLE,
         },
         {			
           -- icons = { "Silver_Token.png" },
@@ -4244,7 +4244,7 @@ GameStore.Categories = {
           itemtype = 25172,
           count = 100,
           description = "<i>Silver token package.</i>\n\n{info} can be exchanged with Cledwyn for various armors providing both a skill and a resistance bonus and also for the first and second addons of the Rift Warrior Outfits.",
-          type = GameStore.OfferTypes.OFFER_TYPE_ITEM,
+          type = GameStore.OfferTypes.OFFER_TYPE_STACKABLE,
         },
         {			
           -- icons = { "Obsidian_Knife.png" },
