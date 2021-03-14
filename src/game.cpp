@@ -4996,7 +4996,7 @@ bool Game::playerSaySpell(Player* player, SpeakClasses type, const std::string& 
 
 		int32_t value;
 		player->getStorageValue(48485022, value);
-		return internalCreatureSay(player, value == 1 ? TALKTYPE_MONSTER_SAY : TALKTYPE_SPELL_USE, words, false);
+		return internalCreatureSay(player, value == 1 ? TALKTYPE_MONSTER_SAY : TALKTYPE_SAY, words, false);
 
 	} else if (result == TALKACTION_FAILED) {
 		return true;
