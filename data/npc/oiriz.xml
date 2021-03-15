@@ -11,6 +11,7 @@
 		<parameter key="message_decline" value="Then not."/>
 		<parameter key="module_shop" value="1"/>
 		<parameter key="shop_sellable" value="
+			rainbow quartz, 29038, 500;
 			amber with a bug, 37459, 41000;
 			amber with a dragonfly, 37460, 56000;
 			amber, 37461, 20000;

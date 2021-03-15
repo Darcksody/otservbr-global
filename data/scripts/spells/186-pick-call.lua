@@ -3,7 +3,7 @@ local spell = Spell(SPELL_INSTANT)
 function spell.onCastSpell(creature, variant)
 	local vocation = creature:getVocation()
 	if vocation then
-		return creature:conjureItem(0, 1988, 1, CONST_ME_MAGIC_BLUE)
+		return creature:conjureItem(0, 2553, 1, CONST_ME_MAGIC_BLUE)
 	else
 		creature:sendCancelMessage(RETURNVALUE_YOURVOCATIONCANNOTUSETHISSPELL)
 		creature:getPosition():sendMagicEffect(CONST_ME_POFF)
@@ -11,9 +11,9 @@ function spell.onCastSpell(creature, variant)
 	end
 end
 
-spell:name("Backpack Call")
-spell:id(181)
-spell:words("adori backpack")
+spell:name("Pick Call")
+spell:id(186)
+spell:words("adori pick")
 spell:level(1)
 spell:mana(20)
 spell:soul(20)

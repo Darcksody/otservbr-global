@@ -5,6 +5,7 @@
 	<parameters>
 		<parameter key="module_shop" value="1"/>
 		<parameter key="shop_buyable" value="
+			rainbow quartz, 29038, 500;
 			animate dead rune, 2316, 375;
 			avalanche rune, 2274, 57;
 			black pearl, 2144, 560;

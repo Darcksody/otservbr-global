@@ -81,13 +81,13 @@ end
 local shopModule = ShopModule:new()
 npcHandler:addModule(shopModule)
 
-shopModule:addBuyableItem({'Broken Crossbow'}, 12407, 30)
-shopModule:addBuyableItem({'Minotaur Horn'}, 12428, 75)
-shopModule:addBuyableItem({'Piece of Archer Armor'}, 12439, 20)
-shopModule:addBuyableItem({'Piece of Warrior Armor'},  12438, 50)
-shopModule:addBuyableItem({'Purple Robe'}, 12429, 110)
+shopModule:addSellableItem({'Broken Crossbow'}, 12407, 30)
+shopModule:addSellableItem({'Minotaur Horn'}, 12428, 75)
+shopModule:addSellableItem({'Piece of Archer Armor'}, 12439, 20)
+shopModule:addSellableItem({'Piece of Warrior Armor'},  12438, 50)
+shopModule:addSellableItem({'Purple Robe'}, 12429, 110)
 
-shopModule:addSellableItem({'Flask with Beaver Bait'}, 11100, 100)
+shopModule:addBuyableItem({'Flask with Beaver Bait'}, 11100, 100)
 
 npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
 npcHandler:addModule(FocusModule:new())

@@ -82,13 +82,12 @@ function playerLogin.onLogin(player)
 local msg = [[
 1 *> See our commands with !commands
 2 *> Free promotion at level 20.
-3 *> Protection at level 20.
-4 *> Free Blessings until level 80.
+3 *> Protection at level 20 (Blessed until level 80).
 5 *> Custom balanced regeneration (Fast Mana and Health).
 6 *> On Level Up get 5 Platinum Coins.
-7 *> Fast Stamina Regeneration with Training Monks.
-8 *> Spell adori create item and consumes 30 soul points -
-- spell example: adori bag (bag,spear,backpack,rune,food,rope,shovel).
+7 *> Stamina Regeneration with Training Monks.
+8 *> Adori spell: consumes 20 soul, 20 mana.
+- E.g. adori bag (spear, backpack, rune, food, rope, shovel)
 -
 Stay Online and get 1 Tibia Coin every hour
 max 5 tibia coins at day, players level > 20.
