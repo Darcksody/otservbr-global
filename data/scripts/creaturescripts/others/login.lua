@@ -63,12 +63,12 @@ function playerLogin.onLogin(player)
 
 		local town = player:getTown()
 		if town and town:getId() == TOWNS_LIST.ROOKGAARD then
-			player:addItem(2461, 1, true, 1, CONST_SLOT_HEAD)
+			-- player:addItem(2461, 1, true, 1, CONST_SLOT_HEAD)
 			player:addItem(2650, 1, true, 1, CONST_SLOT_ARMOR)
-			player:addItem(2512, 1, true, 1, CONST_SLOT_RIGHT)
+			-- player:addItem(2512, 1, true, 1, CONST_SLOT_RIGHT)
 			player:addItem(2379, 1, true, 1, CONST_SLOT_LEFT)
-			player:addItem(2649, 1, true, 1, CONST_SLOT_LEGS)
-			player:addItem(2643, 1, true, 1, CONST_SLOT_FEET)
+			-- player:addItem(2649, 1, true, 1, CONST_SLOT_LEGS)
+			-- player:addItem(2643, 1, true, 1, CONST_SLOT_FEET)
 			player:addItem(2050, 1, true, 1, CONST_SLOT_AMMO)
 		end
 

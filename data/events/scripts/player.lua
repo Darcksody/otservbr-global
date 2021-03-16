@@ -764,6 +764,12 @@ function Player:onGainExperience(source, exp, rawExp)
 	end
 
 	self:setBaseXpGain(displayRate * 100)
+
+	-- Rookgaard Players
+	if self:getVocation():getId() == 0 then
+		exp = exp / 2
+	end
+	
 	return exp
 end
 

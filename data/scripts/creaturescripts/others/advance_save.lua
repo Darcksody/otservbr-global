@@ -13,7 +13,7 @@ function advanceSave.onAdvance(player, skill, oldLevel, newLevel)
 
 	if config.freePromotion then
 		if isPremium(player) then
-			if newLevel >= 20 then
+			if newLevel == 20 and player:getVocation():getId() > 0 then
 				if player:getStorageValue(STORAGEVALUE_PROMOTION) < 1 then
 					local promotion = player:getVocation():getPromotion()
 					player:setVocation(promotion)
@@ -25,11 +25,11 @@ function advanceSave.onAdvance(player, skill, oldLevel, newLevel)
 		end
     end
     
-    if newLevel >= 50 then
+    if newLevel == 50 then
         if player:getStorageValue(STORAGE_LVL_50_CC) < 1 then
             player:setStorageValue(STORAGE_LVL_50_CC, 1)
-            player:addItem(2160, 5)
-            player:say('Congratulations! You earned 5 crystal coins.', TALKTYPE_MONSTER_SAY)
+            player:addItem(2160, 2)
+            player:say('Congratulations! You earned 2 crystal coins.', TALKTYPE_MONSTER_SAY)
         end
     end
     
