@@ -1662,7 +1662,7 @@ local weapons = {
 		type = WEAPON_DISTANCE,
 		level = 60,
 		unproperly = true,
-		breakChance = 30
+		breakChance = 6
 	}, -- glooth spear
 	{
 		itemId = 22421,
@@ -3560,7 +3560,7 @@ local weapons = {
 		type = WEAPON_DISTANCE,
 		level = 25,
 		unproperly = true,
-		breakChance = 25
+		breakChance = 6
 	}, -- royal spear
 	{
 		itemId = 7368,
@@ -3574,7 +3574,7 @@ local weapons = {
 		type = WEAPON_DISTANCE,
 		level = 42,
 		unproperly = true,
-		breakChance = 30
+		breakChance = 6
 	}, -- enchanted spear
 	{
 		itemId = 7365,
@@ -3647,7 +3647,7 @@ local weapons = {
 		type = WEAPON_DISTANCE,
 		level = 20,
 		unproperly = true,
-		breakChance = 20
+		breakChance = 6
 	}, -- hunting spear
 	{
 		itemId = 3964,
