@@ -11000,6 +11000,7 @@
 		<attribute key="containerSize" value="10" />
 		<attribute key="decayTo" value="5765" />
 		<attribute key="duration" value="10" />
+		<attribute key="corpseType" value="blood" />
 		<attribute key="fluidSource" value="blood" />
 	</item>
 	<item id="6078" name="remains of Ferumbras">

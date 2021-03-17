@@ -1572,7 +1572,7 @@ local weapons = {
 	{
 		itemId = 23839,
 		type = WEAPON_AMMO,
-		breakChance = 10
+		breakChance = 3
 	}, -- simple arrow
 	--[[
 		the chiller
@@ -3683,12 +3683,12 @@ local weapons = {
 	{
 		itemId = 2544,
 		type = WEAPON_AMMO,
-		breakChance = 1
+		breakChance = 3
 	}, -- arrow
 	{
 		itemId = 2543,
 		type = WEAPON_AMMO,
-		breakChance = 1
+		breakChance = 3
 	}, -- bolt
 	{
 		itemId = 2456,
@@ -3961,7 +3961,7 @@ local weapons = {
 	{
 		itemId = 2410,
 		type = WEAPON_DISTANCE,
-		breakChance = 1
+		breakChance = 3
 	}, -- throwing knife
 	{
 		itemId = 2409,
@@ -4016,7 +4016,7 @@ local weapons = {
 	{
 		itemId = 2399,
 		type = WEAPON_DISTANCE,
-		breakChance = 1
+		breakChance = 3
 	}, -- throwing star
 	{
 		itemId = 2398,
@@ -4082,7 +4082,7 @@ local weapons = {
 	{
 		itemId = 2389,
 		type = WEAPON_DISTANCE,
-		breakChance = 1
+		breakChance = 3
 	}, -- spear
 	{
 		itemId = 2388,
