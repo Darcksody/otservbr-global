@@ -90,10 +90,10 @@ monster.loot = {
 	{name = "Diremaw Legs", chance = 9650, maxCount = 2},
 	{name = "Small Enchanted Emerald", chance = 2940, maxCount = 2},
 	{name = "Small Emerald", chance = 5080, maxCount = 2},
-	{name = "Gold Ingot", chance = 2970},
+	{name = "Gold Ingot", chance = 600},
 	{id = 7632, chance = 3100},
 	{name = "Suspicious Device", chance = 600},
-	{name = "Mycological Bow", chance = 1200},
+	{name = "Mycological Bow", chance = 200},
 	{name = "Mushroom Backpack", chance = 1500}
 }
 
