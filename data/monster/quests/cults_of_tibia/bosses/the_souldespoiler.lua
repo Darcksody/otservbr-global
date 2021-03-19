@@ -2,7 +2,7 @@ local mType = Game.createMonsterType("The Souldespoiler")
 local monster = {}
 
 monster.description = "The Souldespoiler"
-monster.experience = 0
+monster.experience = 50000
 monster.outfit = {
 	lookType = 875,
 	lookHead = 11,
@@ -13,11 +13,11 @@ monster.outfit = {
 	lookMount = 0
 }
 
-monster.health = 50000
-monster.maxHealth = 50000
+monster.health = 290000
+monster.maxHealth = 290000
 monster.race = "blood"
 monster.corpse = 26220
-monster.speed = 250
+monster.speed = 400
 monster.manaCost = 0
 monster.maxSummons = 5
 

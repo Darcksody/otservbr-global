@@ -78,7 +78,7 @@ monster.loot = {
 	{name = "gold coin", chance = 50000, maxCount = 70},
 	{name = "yellow gem", chance = 5000},
 	{name = "stealth ring", chance = 5000},
-	{name = "boots of haste", chance = 200},
+	{name = "boots of haste", chance = 20},
 	{name = "crystal arrow", chance = 100000},
 	{name = "arrow", chance = 10000, maxCount = 21},
 	{name = "poison arrow", chance = 10000, maxCount = 20},

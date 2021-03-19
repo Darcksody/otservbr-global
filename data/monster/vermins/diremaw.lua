@@ -30,7 +30,7 @@ monster.health = 4500
 monster.maxHealth = 4500
 monster.race = "blood"
 monster.corpse = 30729
-monster.speed = 300
+monster.speed = 350
 monster.manaCost = 0
 monster.maxSummons = 0
 
@@ -80,7 +80,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{name = "Ham", chance = 40080, maxCount = 4},
+	{name = "Ham", chance = 20000, maxCount = 4},
 	{name = "Diremaw Brainpan", chance = 24120},
 	{name = "Poisonous Slime", chance = 11930, maxCount = 5},
 	{name = "Blue Crystal Shard", chance = 9660},
@@ -93,19 +93,19 @@ monster.loot = {
 	{name = "Gold Ingot", chance = 600},
 	{id = 7632, chance = 3100},
 	{name = "Suspicious Device", chance = 600},
-	{name = "Mycological Bow", chance = 200},
+	{name = "Mycological Bow", chance = 100},
 	{name = "Mushroom Backpack", chance = 1500}
 }
 
 monster.attacks = {
-	{name ="combat", interval = 2000, chance = 25, type = COMBAT_EARTHDAMAGE, minDamage = -150, maxDamage = -200, range = 7, shootEffect = CONST_ANI_POISON, effect = CONST_ME_POISONAREA, target = false},
-	{name ="combat", interval = 2000, chance = 25, type = COMBAT_EARTHDAMAGE, minDamage = -150, maxDamage = -250, range = 7, radius = 4, shootEffect = CONST_ANI_POISON, effect = CONST_ME_POFF, target = true},
+	{name ="combat", interval = 2000, chance = 25, type = COMBAT_EARTHDAMAGE, minDamage = -150, maxDamage = -399, range = 7, shootEffect = CONST_ANI_POISON, effect = CONST_ME_POISONAREA, target = false},
+	{name ="combat", interval = 2000, chance = 25, type = COMBAT_EARTHDAMAGE, minDamage = -150, maxDamage = -399, range = 7, radius = 4, shootEffect = CONST_ANI_POISON, effect = CONST_ME_POFF, target = true},
 	-- poison
-	{name ="condition", type = CONDITION_POISON, interval = 2000, chance = 21, minDamage = -200, maxDamage = -310, radius = 4, effect = CONST_ME_GREEN_RINGS, target = false}
+	{name ="condition", type = CONDITION_POISON, interval = 2000, chance = 21, minDamage = -150, maxDamage = -360, radius = 4, effect = CONST_ME_GREEN_RINGS, target = false}
 }
 
 monster.defenses = {
-	defense = 5,
+	defense = 10,
 	armor = 10
 }
 

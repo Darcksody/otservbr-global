@@ -98,7 +98,7 @@ monster.loot = {
 	{name = "silver brooch", chance = 3400},
 	{name = "summer dress", chance = 3400},
 	{name = "wild flowers", chance = 3400},
-	{name = "boots of haste", chance = 50},
+	{name = "boots of haste", chance = 15},
 	{name = "butterfly ring", chance = 100}
 }
 
