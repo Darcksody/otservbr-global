@@ -86,12 +86,12 @@ monster.attacks = {
 }
 
 monster.defenses = {
-	defense = 3,
-	armor = 3
+	defense = 4,
+	armor = 4
 }
 
 monster.elements = {
-	{type = COMBAT_PHYSICALDAMAGE, percent = 0},
+	{type = COMBAT_PHYSICALDAMAGE, percent = -5},
 	{type = COMBAT_ENERGYDAMAGE, percent = 0},
 	{type = COMBAT_EARTHDAMAGE, percent = 25},
 	{type = COMBAT_FIREDAMAGE, percent = 0},
