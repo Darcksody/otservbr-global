@@ -80,15 +80,15 @@ monster.loot = {
 	{name = "steel helmet", chance = 11220},
 	{name = "two handed sword", chance = 8470},
 	{name = "battle hammer", chance = 6910},
-	{name = "warrior helmet", chance = 1110},
+	{name = "warrior helmet", chance = 510},
 	{name = "knight axe", chance = 1530},
 	{name = "dark helmet", chance = 2430},
 	{name = "dark armor", chance = 2020},
 	{name = "knight legs", chance = 350},
-	{name = "knight armor", chance = 450},
+	{name = "knight armor", chance = 300},
 	{name = "ruby necklace", chance = 750},
 	{name = "lightning legs", chance = 580},
-	{name = "boots of haste", chance = 20},
+	{name = "boots of haste", chance = 100},
 	{name = "dragon lance", chance = 290},
 	{name = "piggy bank", chance = 120}
 }

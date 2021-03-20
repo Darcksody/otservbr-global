@@ -85,15 +85,15 @@ monster.voices = {
 
 monster.loot = {
 	{name = "gold coin", chance = 30050, maxCount = 90},
-	{name = "boots of haste", chance = 10},
+	{name = "boots of haste", chance = 100},
 	{name = "clerical mace", chance = 390},
-	{name = "skull staff", chance = 100},
+	{name = "skull staff", chance = 250},
 	{name = "poison arrow", chance = 15000, maxCount = 5},
-	{name = "mystic turban", chance = 500},
+	{name = "mystic turban", chance = 550},
 	{name = "green mushroom", chance = 1470},
-	{name = "noble axe", chance = 10},
+	{name = "noble axe", chance = 350},
 	{name = "strong mana potion", chance = 300},
-	{name = "spellbook of warding", chance = 130},
+	{name = "spellbook of warding", chance = 230},
 	{name = "book of necromantic rituals", chance = 10130},
 	{name = "necromantic robe", chance = 1001}
 }
