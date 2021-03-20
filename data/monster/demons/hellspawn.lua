@@ -91,7 +91,7 @@ monster.loot = {
 	{name = "knight legs", chance = 3030},
 	{name = "red mushroom", chance = 7692, maxCount = 2},
 	{name = "demonic essence", chance = 9090},
-	{name = "assassin star", chance = 9090, maxCount = 2},
+	{name = "assassin star", chance = 9090, maxCount = 6},
 	{name = "onyx flail", chance = 103},
 	{name = "berserk potion", chance = 934},
 	{name = "spiked squelcher", chance = 970},

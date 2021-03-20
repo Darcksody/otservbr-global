@@ -87,7 +87,7 @@ monster.loot = {
 	{name = "stealth ring", chance = 1200},
 	{name = "boots of haste", chance = 10},
 	{name = "dark shield", chance = 2000},
-	{name = "assassin star", chance = 7600, maxCount = 10},
+	{name = "assassin star", chance = 7600, maxCount = 15},
 	{name = "diamond sceptre", chance = 960},
 	{name = "haunted blade", chance = 2000},
 	{name = "titan axe", chance = 2200},

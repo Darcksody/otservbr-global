@@ -13852,12 +13852,6 @@ if not equipmentsTable then
 			itemid = 2204,
 			type = "equip",
 			slot = "ring",
-			vocation = {
-				{"Knight", true},
-				{"Paladin", true, true},
-				{"Elite Knight"},
-				{"Royal Paladin"}
-			}
 		}, -- energy ring
 		{
 			itemid = 2204,
@@ -14204,12 +14198,6 @@ if not equipmentsTable then
 			itemid = 2167,
 			type = "equip",
 			slot = "ring",
-			vocation = {
-				{"Knight", true},
-				{"Paladin", true, true},
-				{"Elite Knight"},
-				{"Royal Paladin"}
-			}
 		}, -- energy ring
 		{
 			itemid = 2167,

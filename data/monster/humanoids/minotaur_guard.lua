@@ -87,7 +87,7 @@ monster.loot = {
 	{name = "brass armor", chance = 4390},
 	{name = "battle shield", chance = 2150},
 	{name = "fishing rod", chance = 480},
-	{name = "minotaur leather", chance = 1000},
+	{name = "minotaur leather", chance = 2000},
 	{id = 7401, chance = 80},
 	{name = "health potion", chance = 400},
 	{name = "minotaur horn", chance = 8330, maxCount = 2},

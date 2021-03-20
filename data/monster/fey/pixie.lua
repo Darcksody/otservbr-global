@@ -86,7 +86,7 @@ monster.loot = {
 	{name = "rainbow quartz", chance = 1086, maxCount = 5},
 	{name = "butterfly ring", chance = 492},
 	{name = "wooden spellbook", chance = 92},
-	{name = "dream blossom staff", chance = 92},
+	{name = "dream blossom staff", chance = 10},
 	{id = 2162, chance = 492},
 	{name = "green mushroom", chance = 492},
 	{name = "small enchanted amethyst", chance = 492, maxCount = 2},

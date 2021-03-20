@@ -97,7 +97,7 @@ monster.loot = {
 	{name = "bread", chance = 14000},
 	{name = "grave flower", chance = 880},
 	{name = "sling herb", chance = 5000},
-	{name = "holy orchid", chance = 5100},
+	{name = "holy orchid", chance = 6987},
 	{name = "strong mana potion", chance = 3000},
 	{name = "health potion", chance = 4000},
 	{name = "elvish talisman", chance = 10000},
