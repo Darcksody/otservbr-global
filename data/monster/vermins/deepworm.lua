@@ -2,7 +2,7 @@ local mType = Game.createMonsterType("Deepworm")
 local monster = {}
 
 monster.description = "a deepworm"
-monster.experience = 230
+monster.experience = 2300
 monster.outfit = {
 	lookType = 1033,
 	lookHead = 0,
@@ -26,11 +26,11 @@ monster.Bestiary = {
 	Locations = "Gnome Deep Hub."
 	}
 
-monster.health = 4500
+monster.health = 3500
 monster.maxHealth = 4500
 monster.race = "blood"
 monster.corpse = 30780
-monster.speed = 204
+monster.speed = 200
 monster.manaCost = 0
 monster.maxSummons = 0
 
@@ -92,16 +92,16 @@ monster.loot = {
 	{name = "Deepworm Spikes", chance = 3000},
 	{name = "Small Enchanted Amethyst", chance = 3430, maxCount = 2},
 	{name = "Terra Amulet", chance = 800},
-	{name = "Springsprout Rod", chance = 1120},
-	{name = "Sacred Tree Amulet", chance = 2390},
+	{name = "Springsprout Rod", chance = 620},
+	{name = "Sacred Tree Amulet", chance = 990},
 	{id = 7632, chance = 860},
 	{name = "Suspicious Device", chance = 220}
 }
 
 monster.attacks = {
-	{name ="melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -300},
-	{name ="combat", interval = 2000, chance = 15, type = COMBAT_EARTHDAMAGE, minDamage = -190, maxDamage = -300, range = 7, length = 6, spread = 2, effect = CONST_ME_POISONAREA, target = false},
-	{name ="combat", interval = 2000, chance = 15, type = COMBAT_EARTHDAMAGE, minDamage = -200, maxDamage = -400, length = 3, spread = 3, effect = CONST_ME_POISONAREA, target = false}
+	{name ="melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -400},
+	{name ="combat", interval = 2000, chance = 50, type = COMBAT_EARTHDAMAGE, minDamage = -190, maxDamage = -400, range = 7, length = 6, spread = 2, effect = CONST_ME_POISONAREA, target = false},
+	{name ="combat", interval = 2000, chance = 30, type = COMBAT_EARTHDAMAGE, minDamage = -200, maxDamage = -400, length = 3, spread = 3, effect = CONST_ME_POISONAREA, target = false}
 }
 
 monster.defenses = {

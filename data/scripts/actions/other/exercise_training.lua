@@ -59,14 +59,14 @@ local function startTraining(playerId, startPosition, itemid, tilePosition, bonu
                                     if not bonusDummy then
                                         player:addManaSpent(math.ceil(150*magicRate))
                                     else
-                                        player:addManaSpent(math.ceil(150*magicRate)*1.1) -- 10%
+                                        player:addManaSpent(math.ceil(150*magicRate)  ) -- 10%
                                     end
                                 else
                                     local skillRate = getRateFromTable(skillsStages, player:getEffectiveSkillLevel(skills[itemid].id), skillRateDefault)
                                     if not bonusDummy then
-                                        player:addSkillTries(skills[itemid].id, 3+skillRate)
+                                        player:addSkillTries(skills[itemid].id, 4+skillRate)
                                     else
-                                        player:addSkillTries(skills[itemid].id, (3+skillRate)*1.1) -- 10%
+                                        player:addSkillTries(skills[itemid].id, (4+skillRate)  ) -- 10%
                                     end
                                 end
                                     tilePosition:sendMagicEffect(CONST_ME_HITAREA)

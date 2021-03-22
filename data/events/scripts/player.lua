@@ -769,6 +769,18 @@ function Player:onGainExperience(source, exp, rawExp)
 	if self:getVocation():getId() == 0 then
 		exp = exp / 2
 	end
+
+	local guild = self:getGuild()
+    if guild ~= nil then
+		local membersOnline = #guild:getMembersOnline()
+        if membersOnline >= 15  then
+            exp = exp * 1.3 -- 3% exp
+		elseif membersOnline >= 10  then
+			exp = exp * 1.2 -- 2% exp
+		elseif membersOnline >= 5  then
+			exp = exp * 1.1 -- 1% exp
+        end
+    end
 	
 	return exp
 end
