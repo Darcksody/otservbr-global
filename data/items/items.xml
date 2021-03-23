@@ -39113,13 +39113,13 @@
 	</item>
 	<item id="28580" article="a" name="strong health potion keg">
 		<attribute key="charges" value="500" />
-		<attribute key="description" value="This keg can be used to refill great health potions." />
+		<attribute key="description" value="This keg can be used to refill strong health potions." />
 		<attribute key="weight" value="12500" />
 		<attribute key="wrapableTo" value="26054" />
 	</item>
 	<item id="28581" article="a" name="great health potion keg">
 		<attribute key="charges" value="500" />
-		<attribute key="description" value="This keg can be used to refill strong health potions." />
+		<attribute key="description" value="This keg can be used to refill great health potions." />
 		<attribute key="weight" value="12500" />
 		<attribute key="wrapableTo" value="26054" />
 	</item>
@@ -39143,13 +39143,13 @@
 	</item>
 	<item id="28585" article="a" name="strong mana potion keg">
 		<attribute key="charges" value="500" />
-		<attribute key="description" value="This keg can be used to refill great mana potions." />
+		<attribute key="description" value="This keg can be used to refill strong mana potions." />
 		<attribute key="weight" value="12500" />
 		<attribute key="wrapableTo" value="26054" />
 	</item>
 	<item id="28586" article="a" name="great mana potion keg">
 		<attribute key="charges" value="500" />
-		<attribute key="description" value="This keg can be used to refill strong mana potions." />
+		<attribute key="description" value="This keg can be used to refill great mana potions." />
 		<attribute key="weight" value="12500" />
 		<attribute key="wrapableTo" value="26054" />
 	</item>
