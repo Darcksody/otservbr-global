@@ -30,7 +30,7 @@ monster.health = 7200
 monster.maxHealth = 7200
 monster.race = "blood"
 monster.corpse = 34707
-monster.speed = 400
+monster.speed = 600
 monster.manaCost = 0
 monster.maxSummons = 0
 
@@ -85,28 +85,28 @@ monster.loot = {
 	{name = "Great Spirit Potion", chance = 50000, maxCount = 3},
 	{name = "Ultimate Health Potion", chance = 50000},
 	{name = "Essence of a Bad Dream", chance = 17000},
-	{name = "Knight Axe", chance = 14000},
-	{name = "Mino Shield", chance = 12000},
-	{name = "Terra Boots", chance = 7000},
-	{name = "Terra Hood", chance = 6400},
-	{name = "Beastslayer Axe", chance = 500},
+	{name = "Knight Axe", chance = 1800},
+	{name = "Mino Shield", chance = 1600},
+	{name = "Terra Boots", chance = 2000},
+	{name = "Terra Hood", chance = 1400},
+	{name = "Beastslayer Axe", chance = 300},
 	{name = "Black Shield", chance = 3500},
 	{name = "Bloody Pincers", chance = 4200},
 	{name = "Dark Shield", chance = 1500},
 	{name = "Obsidian Lance", chance = 1500},
 	{name = "Sickle", chance = 1100},
 	{name = "Titan Axe", chance = 1100},
-	{name = "Wand of Cosmic Energy", chance = 400},
-	{name = "Wand of Defiance", chance = 400},
-	{name = "Warrior's Axe", chance = 400},
-	{name = "Warrior's Shield", chance = 400}
+	{name = "Wand of Cosmic Energy", chance = 300},
+	{name = "Wand of Defiance", chance = 200},
+	{name = "Warrior's Axe", chance = 300},
+	{name = "Warrior's Shield", chance = 200}
 }
 
 monster.attacks = {
 	{name ="melee", interval = 2000, chance = 100, minDamage = -200, maxDamage = -450},
-	{name ="combat", interval = 2000, chance = 20, type = COMBAT_HOLYDAMAGE, minDamage = -250, maxDamage = -400, radius = 3, effect = CONST_ME_HOLYAREA, target = true},
-	{name ="combat", interval = 2000, chance = 20, type = COMBAT_ENERGYDAMAGE, minDamage = -280, maxDamage = -450, length = 4, spread = 3, effect = CONST_ME_ENERGYAREA, target = false},
-	{name ="combat", interval = 2000, chance = 15, type = COMBAT_PHYSICALDAMAGE, minDamage = -250, maxDamage = -400, radius = 6, effect = CONST_ME_BLOCKHIT, target = true}
+	{name ="combat", interval = 2000, chance = 20, type = COMBAT_HOLYDAMAGE, minDamage = -350, maxDamage = -499, radius = 3, effect = CONST_ME_HOLYAREA, target = true},
+	{name ="combat", interval = 2000, chance = 20, type = COMBAT_ENERGYDAMAGE, minDamage = -380, maxDamage = -499, length = 4, spread = 3, effect = CONST_ME_ENERGYAREA, target = false},
+	{name ="combat", interval = 2000, chance = 15, type = COMBAT_PHYSICALDAMAGE, minDamage = -350, maxDamage = -499, radius = 6, effect = CONST_ME_BLOCKHIT, target = true}
 }
 
 monster.defenses = {
