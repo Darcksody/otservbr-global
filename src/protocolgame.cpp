@@ -459,7 +459,8 @@ void ProtocolGame::onRecvFirstMessage(NetworkMessage &msg)
 		enableCompact();
 	}
 
-	clientVersion = msg.get<uint32_t>();
+	// clientVersion = msg.get<uint32_t>(); OLD VERSION
+	clientVersion = static_cast<int32_t>(msg.get<uint32_t>());
 
 	msg.skipBytes(3); // U16 dat revision, game preview state
 
@@ -519,25 +520,14 @@ void ProtocolGame::onRecvFirstMessage(NetworkMessage &msg)
 		return;
 	}
 
-	// if (clientVersion != CLIENT_VERSION)
+	// bool allowClientOld = g_config.getBoolean(ConfigManager::ALLOW_CLIENT_OLD);
+	// if (clientVersion != g_config.getNumber(ConfigManager::CLIENT_VERSION) && (allowClientOld && version != 1100))
 	// {
 	// 	std::ostringstream ss;
-	// 	ss << "Only clients with protocol " << CLIENT_VERSION_STR << " allowed!";
-	// 	disconnectClient(ss.str());
-	// 	return;
-	// }
-	// if (clientVersion != g_config.getNumber(ConfigManager::CLIENT_VERSION))
-	// {
-	// 	std::ostringstream ss;
-	// 	ss << "Only clients with protocol " << g_config.getString(ConfigManager::CLIENT_VERSION_STR) << " allowed!";
-	// 	disconnectClient(ss.str());
-	// 	return;
-	// }
-
-	// if (clientVersion != g_config.getNumber(ConfigManager::CLIENT_VERSION))
-	// {
-	// 	std::ostringstream ss;
-	// 	ss << "Only clients with protocol " << g_config.getString(ConfigManager::CLIENT_VERSION_STR) << " allowed!";
+	// 	ss << "Only clients with protocol " << g_config.getString(ConfigManager::CLIENT_VERSION_STR);
+	// 	if (allowClientOld)
+	// 		ss << " and 10.00";
+	// 	ss << " allowed!";
 	// 	disconnectClient(ss.str());
 	// 	return;
 	// }
@@ -3428,7 +3418,7 @@ void ProtocolGame::sendBlessStatus()
 	}
 
 	msg.addByte(0x9C);
-	if (version > 1200) {
+	if (version >= 1200) {
 		if (blessCount >= 5) //Show up the glowing effect in items if have all blesses
 			flag |= 1;
 
@@ -3535,18 +3525,39 @@ void ProtocolGame::sendTextMessage(const TextMessage &message)
 {
 	NetworkMessage msg;
 	msg.addByte(0xB4);
-	msg.addByte(message.type);
-	switch (message.type)
+	TextMessage newMsg = message;
+	if(version < 1200 && newMsg.type > MESSAGE_MARKET)
+	{
+		switch(newMsg.type)
+		{
+			case MESSAGE_BOOSTED_CREATURE:
+				newMsg.type = MESSAGE_LOOT;
+				break;
+			case MESSAGE_OFFLINE_TRAINING:
+			case MESSAGE_BEYOND_LAST:
+			case MESSAGE_TRANSACTION:
+				newMsg.type = MESSAGE_EVENT_ADVANCE;
+				break;
+			case MESSAGE_ATTENTION:
+			case MESSAGE_POTION:
+				newMsg.type = MESSAGE_HEALED;
+				break;
+			default:
+				break;
+		}
+	}
+	msg.addByte(newMsg.type);
+	switch (newMsg.type)
 	{
 	case MESSAGE_DAMAGE_DEALT:
 	case MESSAGE_DAMAGE_RECEIVED:
 	case MESSAGE_DAMAGE_OTHERS:
 	{
-		msg.addPosition(message.position);
-		msg.add<uint32_t>(message.primary.value);
-		msg.addByte(message.primary.color);
-		msg.add<uint32_t>(message.secondary.value);
-		msg.addByte(message.secondary.color);
+		msg.addPosition(newMsg.position);
+		msg.add<uint32_t>(newMsg.primary.value);
+		msg.addByte(newMsg.primary.color);
+		msg.add<uint32_t>(newMsg.secondary.value);
+		msg.addByte(newMsg.secondary.color);
 		break;
 	}
 	case MESSAGE_HEALED:
@@ -3554,22 +3565,22 @@ void ProtocolGame::sendTextMessage(const TextMessage &message)
 	case MESSAGE_EXPERIENCE:
 	case MESSAGE_EXPERIENCE_OTHERS:
 	{
-		msg.addPosition(message.position);
-		msg.add<uint32_t>(message.primary.value);
-		msg.addByte(message.primary.color);
+		msg.addPosition(newMsg.position);
+		msg.add<uint32_t>(newMsg.primary.value);
+		msg.addByte(newMsg.primary.color);
 		break;
 	}
 	case MESSAGE_GUILD:
 	case MESSAGE_PARTY_MANAGEMENT:
 	case MESSAGE_PARTY:
-		msg.add<uint16_t>(message.channelId);
+		msg.add<uint16_t>(newMsg.channelId);
 		break;
 	default:
 	{
 		break;
 	}
 	}
-	msg.addString(message.text);
+	msg.addString(newMsg.text);
 	writeToOutputBuffer(msg);
 }
 
@@ -6404,7 +6415,6 @@ void ProtocolGame::sendSpecialContainersAvailable()
 {
 	if (version < 1200)
 		return;
-
 	NetworkMessage msg;
 	msg.addByte(0x2A);
 	msg.addByte(player->isSupplyStashMenuAvailable() ? 0x01 : 0x00);
@@ -6701,11 +6711,10 @@ void ProtocolGame::reloadCreature(const Creature *creature)
 
 void ProtocolGame::sendOpenStash()
 {
-	// if (version < 1200) {
-		player->sendCancelMessage("Stash dont works.");
-		// player->sendCancelMessage("Stash only works on the client 12.");
+	if (version < 1200) {
+		player->sendCancelMessage("Stash only works on the client 12.");
 		return;
-	// }
+	}
 	NetworkMessage msg;
 	msg.addByte(0x29);
 	StashItemList list = player->getStashItems();
