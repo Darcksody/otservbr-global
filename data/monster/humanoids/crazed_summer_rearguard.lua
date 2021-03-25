@@ -96,7 +96,7 @@ monster.loot = {
 	{name = "wood cape", chance = 30000},
 	{name = "small diamond", chance = 800},
 	{name = "yellow gem", chance = 640},
-	{name = "crystal crossbow", chance = 600}
+	{name = "crystal crossbow", chance = 300}
 }
 
 monster.attacks = {
