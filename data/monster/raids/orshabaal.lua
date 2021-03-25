@@ -45,7 +45,7 @@ monster.flags = {
 	canPushCreatures = true,
 	staticAttackChance = 95,
 	targetDistance = 1,
-	runHealth = 2500,
+	runHealth = 1,
 	healthHidden = false,
 	isBlockable = false,
 	canWalkOnEnergy = false,
@@ -105,12 +105,12 @@ monster.loot = {
 	{name = "fire axe", chance = 12500},
 	{name = "dragon hammer", chance = 6666},
 	{name = "devil helmet", chance = 33333},
-	{name = "golden legs", chance = 12500},
-	{name = "magic plate armor", chance = 6666},
-	{name = "mastermind shield", chance = 6666},
+	{name = "golden legs", chance = 6678},
+	{name = "magic plate armor", chance = 5565},
+	{name = "mastermind shield", chance = 4651},
 	{name = "demon shield", chance = 25000},
-	{name = "Orshabaal's brain", chance = 6666},
-	{name = "thunder hammer", chance = 6666},
+	{name = "Orshabaal's brain", chance = 3898},
+	{name = "thunder hammer", chance = 3548},
 	{name = "demon horn", chance = 50000},
 	{id = 6300, chance = 50000},
 	{name = "demonic essence", chance = 100000},
@@ -119,7 +119,7 @@ monster.loot = {
 	{name = "great health potion", chance = 20000},
 	{name = "great spirit potion", chance = 12500},
 	{name = "ultimate health potion", chance = 33333},
-	{name = "gold ingot", chance = 6666}
+	{name = "gold ingot", chance = 10500}
 }
 
 monster.attacks = {
@@ -135,7 +135,7 @@ monster.attacks = {
 monster.defenses = {
 	defense = 111,
 	armor = 90,
-	{name ="combat", interval = 1000, chance = 9, type = COMBAT_HEALING, minDamage = 1500, maxDamage = 2500, effect = CONST_ME_MAGIC_BLUE, target = false},
+	{name ="combat", interval = 1000, chance = 9, type = COMBAT_HEALING, minDamage = 1000, maxDamage = 1500, effect = CONST_ME_MAGIC_BLUE, target = false},
 	{name ="combat", interval = 1000, chance = 17, type = COMBAT_HEALING, minDamage = 600, maxDamage = 1000, effect = CONST_ME_MAGIC_BLUE, target = false},
 	{name ="speed", interval = 1000, chance = 5, speedChange = 1901, effect = CONST_ME_MAGIC_RED, target = false, duration = 7000}
 }

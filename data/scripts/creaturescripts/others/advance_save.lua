@@ -127,14 +127,14 @@ function advanceSave.onAdvance(player, skill, oldLevel, newLevel)
         player:setStorageValue(TIBIA_COIN_LVL_100, 2)
     end
 
-    -- if player:getStorageValue(TIBIA_COIN_LVL_150) < 1 and newLevel == 150 then
-    --     db.query("UPDATE accounts SET coins = coins + 100 WHERE id = '" ..player:getAccountId().. "';")
-    --     player:getPosition():sendMagicEffect(CONST_ME_PINK_BEAM)
-    --     player:getPosition():sendMagicEffect(CONST_ME_HOLYAREA)
-    --     player:sendTextMessage(MESSAGE_STATUS_DEFAULT, "You earned 100 Tibia Coins for reaching level 150.")
-    --     player:say("You earned 100 Tibia Coins for reaching level 150.", TALKTYPE_MONSTER_SAY)
-    --     player:setStorageValue(TIBIA_COIN_LVL_150, 2)
-    -- end
+    if player:getStorageValue(TIBIA_COIN_LVL_150) < 1 and newLevel == 150 then
+        db.query("UPDATE accounts SET coins = coins + 75 WHERE id = '" ..player:getAccountId().. "';")
+        player:getPosition():sendMagicEffect(CONST_ME_PINK_BEAM)
+        player:getPosition():sendMagicEffect(CONST_ME_HOLYAREA)
+        player:sendTextMessage(MESSAGE_STATUS_DEFAULT, "You earned 75 Tibia Coins for reaching level 150.")
+        player:say("You earned 75 Tibia Coins for reaching level 150.", TALKTYPE_MONSTER_SAY)
+        player:setStorageValue(TIBIA_COIN_LVL_150, 2)
+    end
 
     if player:getStorageValue(TIBIA_COIN_LVL_200) < 1 and newLevel == 200 then
         db.query("UPDATE accounts SET coins = coins + 100 WHERE id = '" ..player:getAccountId().. "';")
