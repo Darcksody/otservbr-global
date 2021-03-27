@@ -91,7 +91,7 @@ monster.loot = {
 	{name = "Zaoan legs", chance = 170},
 	{name = "Zaoan sword", chance = 290},
 	{name = "elite draken mail", chance = 90},
-	{name = "twiceslicer", chance = 510}
+	{name = "twiceslicer", chance = 510},
 	{name = "draken sulphur", chance = 7600},
 	{name = "draken wristbands", chance = 14030},
 	{name = "broken draken mail", chance = 16930},
