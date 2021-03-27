@@ -1,7 +1,7 @@
 local stash = Action()
 
 function stash.onUse(player, item, fromPosition, target, toPosition, isHotkey)
-	-- player:openStash()
+	player:openStash()
 	return true
 end
 

@@ -13,8 +13,8 @@ monster.outfit = {
 	lookMount = 0
 }
 
-monster.health = 22500
-monster.maxHealth = 22500
+monster.health = 2
+monster.maxHealth = 2
 monster.race = "fire"
 monster.corpse = 5995
 monster.speed = 380
@@ -74,16 +74,17 @@ monster.voices = {
 }
 
 monster.loot = {
-	{name = "purple tome", chance = 20000},
+	{name="coconut", chance = 25356, maxCount = 10},
+	{name = "purple tome", chance = 26548},
 	{name = "golden mug", chance = 12500},
-	{name = "crystal necklace", chance = 20000},
+	{name = "crystal necklace", chance = 21684},
 	{name = "white pearl", chance = 33333, maxCount = 15},
 	{name = "black pearl", chance = 25000, maxCount = 8},
 	{name = "small diamond", chance = 20000, maxCount = 5},
 	{name = "small sapphire", chance = 33333, maxCount = 8},
 	{name = "small emerald", chance = 25000, maxCount = 7},
 	{name = "small amethyst", chance = 20000, maxCount = 17},
-	{name = "talon", chance = 20000, maxCount = 3},
+	{name = "talon", chance = 20000, maxCount = 10},
 	{name = "platinum coin", chance = 100000, maxCount = 69},
 	{name = "green gem", chance = 6666},
 	{name = "blue gem", chance = 20000},
@@ -95,22 +96,22 @@ monster.loot = {
 	{name = "orb", chance = 6666},
 	{name = "life crystal", chance = 12500},
 	{name = "mind stone", chance = 20000},
-	{name = "boots of haste", chance = 12500},
+	{name = "boots of haste", chance = 25876},
 	{name = "protection amulet", chance = 20000},
 	{name = "ring of healing", chance = 33333},
-	{name = "two handed sword", chance = 12500},
+	{name = "two handed sword", chance = 13500},
 	{name = "giant sword", chance = 25000},
 	{name = "silver dagger", chance = 6666},
 	{name = "golden sickle", chance = 6666},
 	{name = "fire axe", chance = 12500},
 	{name = "dragon hammer", chance = 6666},
 	{name = "devil helmet", chance = 33333},
-	{name = "golden legs", chance = 6678},
+	{name = "golden legs", chance = 7678},
 	{name = "magic plate armor", chance = 5565},
-	{name = "mastermind shield", chance = 4651},
+	{name = "mastermind shield", chance = 6651},
 	{name = "demon shield", chance = 25000},
-	{name = "Orshabaal's brain", chance = 3898},
-	{name = "thunder hammer", chance = 3548},
+	{name = "Orshabaal's brain", chance = 4898},
+	{name = "thunder hammer", chance = 4548},
 	{name = "demon horn", chance = 50000},
 	{id = 6300, chance = 50000},
 	{name = "demonic essence", chance = 100000},
@@ -119,7 +120,10 @@ monster.loot = {
 	{name = "great health potion", chance = 20000},
 	{name = "great spirit potion", chance = 12500},
 	{name = "ultimate health potion", chance = 33333},
-	{name = "gold ingot", chance = 10500}
+	{name = "gold ingot", chance = 10500},
+	{name = "robe of the underworld", chance = 11123},
+	{name = "teddy bear", chance = 12321}
+
 }
 
 monster.attacks = {

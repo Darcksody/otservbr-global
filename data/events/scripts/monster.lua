@@ -43,7 +43,7 @@ function Monster:onDropLoot(corpse)
 			else
 				 text = ("Loot of %s: %s"):format(mType:getNameDescription(), corpse:getContentDescription())
 				 if party or version < 1200 then
-					oldClientText = ("Loot of %s: %s"):format(mType:getNameDescription(), corpse:getContentDescription(true))
+					oldClientText = ("Loot of %s: %s"):format(mType:getNameDescription(), corpse:getContentDescription())
 				 end
 			end
 			local party = player:getParty()

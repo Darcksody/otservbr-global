@@ -155,11 +155,11 @@ GameStore.RecivedPackets = {
 }
 
 GameStore.ExpBoostValues = {
-	[1] = 30,
-	[2] = 45,
-	[3] = 90,
-	[4] = 180,
-	[5] = 360
+	[1] = 200,
+	[2] = 300,
+	[3] = 400,
+	[4] = 500,
+	[5] = 600
 }
 
 GameStore.DefaultValues = {
@@ -689,23 +689,21 @@ function sendShowStoreOffers(playerId, category, redirectId)
 	local count = 0
 	for k, offer in ipairs(category.offers) do
 		local name = offer.name or "Something Special"
-		if not offer.client or table.contains(offer.client, math.floor(player:getClient().version / 100)) then
-			if not offers[name] then
-				offers[name] = {}
-				count = count + 1
-				offers[name].offers = {}
-				offers[name].state = offer.state
-				offers[name].id = offer.id
-				offers[name].type = offer.type
-				offers[name].icons = offer.icons
-				offers[name].basePrice = offer.basePrice
-				offers[name].description = offer.description
-				if offer.sexId then
-					offers[name].sexId = offer.sexId
-				end
-				if offer.itemtype then
-					offers[name].itemtype = offer.itemtype
-				end
+		if not offers[name] then
+			offers[name] = {}
+			count = count + 1
+			offers[name].offers = {}
+			offers[name].state = offer.state
+			offers[name].id = offer.id
+			offers[name].type = offer.type
+			offers[name].icons = offer.icons
+			offers[name].basePrice = offer.basePrice
+			offers[name].description = offer.description
+			if offer.sexId then
+				offers[name].sexId = offer.sexId
+			end
+			if offer.itemtype then
+				offers[name].itemtype = offer.itemtype
 			end
 		end
 		table.insert(offers[name].offers, offer)

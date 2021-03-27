@@ -1031,7 +1031,7 @@ local function creatureSayCallback(cid, type, msg)
 			else
 				sendSkillNotLearned(cid, HIRELING_SKILLS.COOKING)
 			end
-		elseif msgcontains(msg, "stash----------False") then
+		elseif msgcontains(msg, "stash") then
 			if hireling:hasSkill(HIRELING_SKILLS.STEWARD) then
 				npcHandler:say(GREETINGS.STASH, cid)
 				player:openStash(true)

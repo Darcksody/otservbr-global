@@ -74,14 +74,19 @@ void ProtocolGame::AddItem(NetworkMessage &msg, uint16_t id, uint8_t count)
 		msg.addByte(0x00);
 		msg.addByte(0x00);
 	}
-	if (version < 1200 && it.isAnimation) {
-		msg.addByte(0xFE); // random phase (0xFF for async)
-	} else if (it.isPodium) {
-		msg.add<uint16_t>(0);
-		msg.add<uint16_t>(0);
 
-		msg.addByte(2);
-		msg.addByte(0x01);
+	if (version < 1200 && it.isAnimation) {
+			msg.addByte(0xFE); // random phase (0xFF for async)
+	}
+
+	if (version >= 1264) {
+		if (it.isPodium) {
+			msg.add<uint16_t>(0);
+			msg.add<uint16_t>(0);
+
+			msg.addByte(2);
+			msg.addByte(0x01);
+		}
 	}
 }
 
@@ -147,57 +152,62 @@ void ProtocolGame::AddItem(NetworkMessage &msg, const Item *item)
     	else
       		msg.addByte(0x00);
 	}
+
 	if (version < 1200 && it.isAnimation) {
 		msg.addByte(0xFE); // random phase (0xFF for async)
-	} else if (it.isPodium) {
-		const ItemAttributes::CustomAttribute* podiumVisible = item->getCustomAttribute("PodiumVisible");
-		const ItemAttributes::CustomAttribute* lookType = item->getCustomAttribute("LookType");
-		const ItemAttributes::CustomAttribute* lookMount = item->getCustomAttribute("LookMount");
-		const ItemAttributes::CustomAttribute* lookDirection = item->getCustomAttribute("LookDirection");
+	}
 
-		if (lookType) {
-			uint16_t look = static_cast<uint16_t>(boost::get<int64_t>(lookType->value));
-			msg.add<uint16_t>(look);
+	if (version >= 1264) {
+		if (it.isPodium) {
+			const ItemAttributes::CustomAttribute* podiumVisible = item->getCustomAttribute("PodiumVisible");
+			const ItemAttributes::CustomAttribute* lookType = item->getCustomAttribute("LookType");
+			const ItemAttributes::CustomAttribute* lookMount = item->getCustomAttribute("LookMount");
+			const ItemAttributes::CustomAttribute* lookDirection = item->getCustomAttribute("LookDirection");
 
-			if(look != 0) {
-				const ItemAttributes::CustomAttribute* lookHead = item->getCustomAttribute("LookHead");
-				const ItemAttributes::CustomAttribute* lookBody = item->getCustomAttribute("LookBody");
-				const ItemAttributes::CustomAttribute* lookLegs = item->getCustomAttribute("LookLegs");
-				const ItemAttributes::CustomAttribute* lookFeet = item->getCustomAttribute("LookFeet");
+			if (lookType) {
+				uint16_t look = static_cast<uint16_t>(boost::get<int64_t>(lookType->value));
+				msg.add<uint16_t>(look);
 
-				msg.addByte(lookHead ? static_cast<uint8_t>(boost::get<int64_t>(lookHead->value)) : 0);
-				msg.addByte(lookBody ? static_cast<uint8_t>(boost::get<int64_t>(lookBody->value)) : 0);
-				msg.addByte(lookLegs ? static_cast<uint8_t>(boost::get<int64_t>(lookLegs->value)) : 0);
-				msg.addByte(lookFeet ? static_cast<uint8_t>(boost::get<int64_t>(lookFeet->value)) : 0);
+				if(look != 0) {
+					const ItemAttributes::CustomAttribute* lookHead = item->getCustomAttribute("LookHead");
+					const ItemAttributes::CustomAttribute* lookBody = item->getCustomAttribute("LookBody");
+					const ItemAttributes::CustomAttribute* lookLegs = item->getCustomAttribute("LookLegs");
+					const ItemAttributes::CustomAttribute* lookFeet = item->getCustomAttribute("LookFeet");
 
-				const ItemAttributes::CustomAttribute* lookAddons = item->getCustomAttribute("LookAddons");
-				msg.addByte(lookAddons ? static_cast<uint8_t>(boost::get<int64_t>(lookAddons->value)) : 0);
+					msg.addByte(lookHead ? static_cast<uint8_t>(boost::get<int64_t>(lookHead->value)) : 0);
+					msg.addByte(lookBody ? static_cast<uint8_t>(boost::get<int64_t>(lookBody->value)) : 0);
+					msg.addByte(lookLegs ? static_cast<uint8_t>(boost::get<int64_t>(lookLegs->value)) : 0);
+					msg.addByte(lookFeet ? static_cast<uint8_t>(boost::get<int64_t>(lookFeet->value)) : 0);
+
+					const ItemAttributes::CustomAttribute* lookAddons = item->getCustomAttribute("LookAddons");
+					msg.addByte(lookAddons ? static_cast<uint8_t>(boost::get<int64_t>(lookAddons->value)) : 0);
+				}
+			} else {
+				msg.add<uint16_t>(0);
 			}
-		} else {
+
+			if (lookMount) {
+				uint16_t look = static_cast<uint16_t>(boost::get<int64_t>(lookMount->value));
+				msg.add<uint16_t>(look);
+
+				if (look != 0) {
+					const ItemAttributes::CustomAttribute* lookHead = item->getCustomAttribute("LookMountHead");
+					const ItemAttributes::CustomAttribute* lookBody = item->getCustomAttribute("LookMountBody");
+					const ItemAttributes::CustomAttribute* lookLegs = item->getCustomAttribute("LookMountLegs");
+					const ItemAttributes::CustomAttribute* lookFeet = item->getCustomAttribute("LookMountFeet");
+
+					msg.addByte(lookHead ? static_cast<uint8_t>(boost::get<int64_t>(lookHead->value)) : 0);
+					msg.addByte(lookBody ? static_cast<uint8_t>(boost::get<int64_t>(lookBody->value)) : 0);
+					msg.addByte(lookLegs ? static_cast<uint8_t>(boost::get<int64_t>(lookLegs->value)) : 0);
+					msg.addByte(lookFeet ? static_cast<uint8_t>(boost::get<int64_t>(lookFeet->value)) : 0);
+				}
+			} else {
 			msg.add<uint16_t>(0);
-		}
-
-		if (lookMount) {
-			uint16_t look = static_cast<uint16_t>(boost::get<int64_t>(lookMount->value));
-			msg.add<uint16_t>(look);
-
-			if (look != 0) {
-				const ItemAttributes::CustomAttribute* lookHead = item->getCustomAttribute("LookMountHead");
-				const ItemAttributes::CustomAttribute* lookBody = item->getCustomAttribute("LookMountBody");
-				const ItemAttributes::CustomAttribute* lookLegs = item->getCustomAttribute("LookMountLegs");
-				const ItemAttributes::CustomAttribute* lookFeet = item->getCustomAttribute("LookMountFeet");
-
-				msg.addByte(lookHead ? static_cast<uint8_t>(boost::get<int64_t>(lookHead->value)) : 0);
-				msg.addByte(lookBody ? static_cast<uint8_t>(boost::get<int64_t>(lookBody->value)) : 0);
-				msg.addByte(lookLegs ? static_cast<uint8_t>(boost::get<int64_t>(lookLegs->value)) : 0);
-				msg.addByte(lookFeet ? static_cast<uint8_t>(boost::get<int64_t>(lookFeet->value)) : 0);
 			}
-		} else {
-			msg.add<uint16_t>(0);
-		}
 
-		msg.addByte(lookDirection ? static_cast<uint8_t>(boost::get<int64_t>(lookDirection->value)) : 2);
-		msg.addByte(podiumVisible ? static_cast<uint8_t>(boost::get<int64_t>(podiumVisible->value)) : 0x01);
+			msg.addByte(lookDirection ? static_cast<uint8_t>(boost::get<int64_t>(lookDirection->value)) : 2);
+			msg.addByte(podiumVisible ? static_cast<uint8_t>(boost::get<int64_t>(podiumVisible->value)) : 0x01);
+		}
 	}
 }
 
@@ -439,7 +449,11 @@ void ProtocolGame::logout(bool displayEffect, bool forced)
 		}
 	}
 
-	sendSessionEndInformation(forced ? SESSION_END_FORCECLOSE : SESSION_END_LOGOUT);
+	if (player->getProtocolVersion() >= 1264) {
+		sendSessionEndInformation(forced ? SESSION_END_FORCECLOSE : SESSION_END_LOGOUT);
+	} else {
+		disconnect();
+	}
 
 	g_game.removeCreature(player);
 }
@@ -1145,19 +1159,24 @@ void ProtocolGame::parseSetOutfit(NetworkMessage &msg)
 			//if try outfit is set to 2 it expects uint32_t value after mounted and disable mounts from outfit window dialog
 			newOutfit.lookMount = 0;
 			msg.get<uint32_t>();
-		} else if (outfitType == 2) {
-			Position pos = msg.getPosition();
-			uint16_t spriteId = msg.get<uint16_t>();
-			uint8_t stackpos = msg.getByte();
-			newOutfit.lookMount = msg.get<uint16_t>();
-			newOutfit.lookMountHead = std::min<uint8_t>(132, msg.getByte());
-			newOutfit.lookMountBody = std::min<uint8_t>(132, msg.getByte());
-			newOutfit.lookMountLegs = std::min<uint8_t>(132, msg.getByte());
-			newOutfit.lookMountFeet = std::min<uint8_t>(132, msg.getByte());
-			uint8_t direction = std::max<uint8_t>(DIRECTION_NORTH, std::min<uint8_t>(DIRECTION_WEST, msg.getByte()));
-			uint8_t podiumVisible = msg.getByte();
-			g_game.playerSetShowOffSocket(player->getID(), newOutfit, pos, stackpos, spriteId, podiumVisible, direction);
+
+			if (version >= 1264) {
+				if (outfitType == 2) {
+					Position pos = msg.getPosition();
+					uint16_t spriteId = msg.get<uint16_t>();
+					uint8_t stackpos = msg.getByte();
+					newOutfit.lookMount = msg.get<uint16_t>();
+					newOutfit.lookMountHead = std::min<uint8_t>(132, msg.getByte());
+					newOutfit.lookMountBody = std::min<uint8_t>(132, msg.getByte());
+					newOutfit.lookMountLegs = std::min<uint8_t>(132, msg.getByte());
+					newOutfit.lookMountFeet = std::min<uint8_t>(132, msg.getByte());
+					uint8_t direction = std::max<uint8_t>(DIRECTION_NORTH, std::min<uint8_t>(DIRECTION_WEST, msg.getByte()));
+					uint8_t podiumVisible = msg.getByte();
+					g_game.playerSetShowOffSocket(player->getID(), newOutfit, pos, stackpos, spriteId, podiumVisible, direction);
+				}
+			}
 		}
+		addGameTask(&Game::playerChangeOutfit, player->getID(), newOutfit);
 	}
 }
 
@@ -1507,6 +1526,9 @@ void ProtocolGame::parseInspectionObject(NetworkMessage &msg)
 
 void ProtocolGame::sendSessionEndInformation(SessionEndInformations information)
 {
+	if (version < 1264)
+		return;
+	
 	auto output = OutputMessagePool::getOutputMessage();
 	output->addByte(0x18);
 	output->addByte(information);
@@ -2241,6 +2263,9 @@ void ProtocolGame::parseSendBuyCharmRune(NetworkMessage &msg)
 
 void ProtocolGame::refreshBestiaryTracker(std::list<MonsterType *> trackerList)
 {
+	if (version < 1200) 
+		return;
+
 	NetworkMessage msg;
 	IOBestiary g_bestiary;
 	msg.addByte(0xB9);
@@ -5593,6 +5618,9 @@ void ProtocolGame::sendOutfitWindow()
 
 void ProtocolGame::sendPodiumWindow(const Item* podium, const Position& position, uint16_t spriteId, uint8_t stackpos)
 {
+	if (version < 1264)
+		return;
+	
 	NetworkMessage msg;
 	msg.addByte(0xC8);
 
@@ -5719,6 +5747,9 @@ void ProtocolGame::sendPodiumWindow(const Item* podium, const Position& position
 
 void ProtocolGame::sendUpdatedVIPStatus(uint32_t guid, VipStatus_t newStatus)
 {
+	if (version < 1200)
+	return;
+
 	NetworkMessage msg;
 	msg.addByte(0xD3);
 	msg.add<uint32_t>(guid);
