@@ -30,7 +30,7 @@ monster.health = 8500
 monster.maxHealth = 8500
 monster.race = "fire"
 monster.corpse = 25432
-monster.speed = 270
+monster.speed = 370
 monster.manaCost = 0
 monster.maxSummons = 0
 
@@ -80,11 +80,11 @@ monster.voices = {
 }
 
 monster.loot = {
-	{name = "gold coin", chance = 100000, maxCount = 200},
-	{name = "platinum coin", chance = 100000, maxCount = 6},
-	{name = "great spirit potion", chance = 26010, maxCount = 5},
-	{name = "great mana potion", chance = 25210, maxCount = 5},
-	{name = "vexclaw talon", chance = 21500},
+	{name = "gold coin", chance = 10000, maxCount = 200},
+	{name = "platinum coin", chance = 10000, maxCount = 6},
+	{name = "great spirit potion", chance = 26010, maxCount = 3},
+	{name = "great mana potion", chance = 25210, maxCount = 3},
+	{name = "vexclaw talon", chance = 11500},
 	{name = "demonic essence", chance = 20730},
 	{name = "ultimate health potion", chance = 19960, maxCount = 5},
 	{name = "fire mushroom", chance = 19940, maxCount = 6},
@@ -96,21 +96,21 @@ monster.loot = {
 	{name = "small ruby", chance = 9590, maxCount = 5},
 	{name = "talon", chance = 5400},
 	{name = "yellow gem", chance = 5090},
-	{name = "wand of voodoo", chance = 4940},
+	{name = "wand of voodoo", chance = 1940},
 	{name = "red gem", chance = 4730},
 	{name = "ice rapier", chance = 4730},
-	{name = "fire axe", chance = 3520},
+	{name = "fire axe", chance = 1120},
 	{name = "might ring", chance = 2250},
-	{name = "giant sword", chance = 1880},
+	{name = "giant sword", chance = 980},
 	{name = "stealth ring", chance = 1790},
 	{name = "energy ring", chance = 1790},
-	{name = "rift lance", chance = 360},
+	{name = "rift lance", chance = 160},
 	{name = "ring of healing", chance = 1320},
 	{name = "platinum amulet", chance = 940},
 	{name = "devil helmet", chance = 520},
-	{name = "rift crossbow", chance = 170},
-	{name = "magic plate armor", chance = 70},
-	{name = "demonrage sword", chance = 30}
+	{name = "rift crossbow", chance = 80},
+	{name = "magic plate armor", chance = 30},
+	{name = "demonrage sword", chance = 40}
 }
 
 monster.attacks = {
@@ -118,10 +118,10 @@ monster.attacks = {
 	{name ="combat", interval = 2000, chance = 10, type = COMBAT_MANADRAIN, minDamage = 0, maxDamage = -120, range = 7, target = false},
 	{name ="combat", interval = 2000, chance = 20, type = COMBAT_FIREDAMAGE, minDamage = -150, maxDamage = -250, range = 7, radius = 7, shootEffect = CONST_ANI_FIRE, effect = CONST_ME_FIREAREA, target = true},
 	{name ="choking fear drown", interval = 2000, chance = 20, target = false},
-	{name ="combat", interval = 2000, chance = 20, type = COMBAT_DEATHDAMAGE, minDamage = -150, maxDamage = -400, radius = 4, shootEffect = CONST_ANI_SUDDENDEATH, effect = CONST_ME_MORTAREA, target = true},
-	{name ="combat", interval = 2000, chance = 10, type = COMBAT_LIFEDRAIN, minDamage = -50, maxDamage = -200, length = 8, spread = 3, effect = CONST_ME_PURPLEENERGY, target = false},
+	{name ="combat", interval = 2000, chance = 20, type = COMBAT_DEATHDAMAGE, minDamage = -350, maxDamage = -499, radius = 4, shootEffect = CONST_ANI_SUDDENDEATH, effect = CONST_ME_MORTAREA, target = true},
+	{name ="combat", interval = 2000, chance = 10, type = COMBAT_LIFEDRAIN, minDamage = -150, maxDamage = -299, length = 8, spread = 3, effect = CONST_ME_PURPLEENERGY, target = false},
 	{name ="firefield", interval = 2000, chance = 10, range = 7, radius = 1, shootEffect = CONST_ANI_FIRE, target = true},
-	{name ="combat", interval = 2000, chance = 10, type = COMBAT_LIFEDRAIN, minDamage = -300, maxDamage = -490, length = 8, spread = 3, effect = CONST_ME_PURPLEENERGY, target = false},
+	{name ="combat", interval = 2000, chance = 10, type = COMBAT_LIFEDRAIN, minDamage = -300, maxDamage = -499, length = 8, spread = 3, effect = CONST_ME_PURPLEENERGY, target = false},
 	{name ="energy strike", interval = 2000, chance = 10, minDamage = -210, maxDamage = -300, range = 1, target = false},
 	{name ="speed", interval = 2000, chance = 15, speedChange = -300, radius = 1, effect = CONST_ME_MAGIC_RED, target = true, duration = 30000}
 }

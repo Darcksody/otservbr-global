@@ -82,14 +82,14 @@ monster.loot = {
 	{id = 2792, chance = 4000, maxCount = 3},
 	{id = 5911, chance = 5000},
 	{id = 2150, chance = 4000, maxCount = 3},
-	{id = 13756, chance = 100, unique = true},
-	{id = 7443, chance = 1100},
-	{id = 9941, chance = 740},
+	{id = 13756, chance = 80, unique = true},
+	{id = 7443, chance = 900},
+	{id = 9941, chance = 540},
 	{id = 2195, chance = 20},
 	{id = 12410, chance = 370},
-	{id = 2114, chance = 1370},
-	{id = 2123, chance = 1370},
-	{id = 8901, chance = 2370}
+	{id = 2114, chance = 970},
+	{id = 2123, chance = 570},
+	{id = 8901, chance = 870}
 }
 
 monster.attacks = {
