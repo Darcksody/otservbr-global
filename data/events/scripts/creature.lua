@@ -62,23 +62,50 @@ end
 -- Increase Stamina when Attacking Trainer
 local staminaBonus = {
 	target = 'Training Monk',
-	period = 120000, -- time on miliseconds
+	period = 2000, -- time on miliseconds
+	hits = 61, -- +1 because start on hit 2
+	storage = TRAINING_MONK_STORAGE,
 	bonus = 1, -- gain stamina
 	events = {}
 }
 
 local function addStamina(name)
 	local player = Player(name)
-	if not player then
-		staminaBonus.events[name] = nil
-	else
-		local target = player:getTarget()
-		if not target or target:getName() ~= staminaBonus.target then
-			staminaBonus.events[name] = nil
+	if player ~= nil then
+		if player:getIp() ~= 0 then
+			local target = player:getTarget()
+			if target and target:getName() == staminaBonus.target then
+				local hitsCount = player:getStorageValue(Storage.isTraining)
+				if hitsCount == staminaBonus.hits then
+					player:sendTextMessage(MESSAGE_STATUS_DEFAULT, "You gain a stamina point.")
+					player:setStamina(player:getStamina() + staminaBonus.bonus)
+					player:setStorageValue(Storage.isTraining,1)
+					hitsCount = 1
+				end
+				player:setStorageValue(Storage.isTraining, hitsCount + 1)
+				staminaBonus.events[name] = addEvent(addStamina, staminaBonus.period, name)
+			else
+				staminaBonus.events[name] = nil
+				if player then
+					player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "Your training has stopped.")
+					player:setStorageValue(Storage.isTraining,0)
+        			player:setTraining(false)
+				end
+			end
 		else
-			player:sendTextMessage(MESSAGE_STATUS_DEFAULT, "You gain a stamina point.")
-			player:setStamina(player:getStamina() + staminaBonus.bonus)
-			staminaBonus.events[name] = addEvent(addStamina, staminaBonus.period, name)
+			staminaBonus.events[name] = nil
+			if player then
+				player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "Your training has stopped.")
+				player:setStorageValue(Storage.isTraining,0)
+        		player:setTraining(false)
+			end
+		end
+	else
+		staminaBonus.events[name] = nil
+		if player then
+			player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "Your training has stopped.")
+			player:setStorageValue(Storage.isTraining,0)
+        	player:setTraining(false)
 		end
 	end
 end
@@ -147,9 +174,11 @@ function Creature:onTargetCombat(target)
 	end
 
 	if self:isPlayer() then
-		if target and target:getName() == staminaBonus.target then
+		if target and target:getName() == staminaBonus.target and self:getIp() ~= 0 then
 			local name = self:getName()
 			if not staminaBonus.events[name] then
+				self:setStorageValue(Storage.isTraining,1)
+                self:setTraining(true)
 				staminaBonus.events[name] = addEvent(addStamina, staminaBonus.period, name)
 			end
 		end

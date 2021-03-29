@@ -113,7 +113,7 @@ local exerciseTraining = Action()
 
 function exerciseTraining.onUse(player, item, fromPosition, target, toPosition, isHotkey)
     local startPos = player:getPosition()
-    if player:getStorageValue(Storage.isTraining) == 1 then
+    if player:getStorageValue(Storage.isTraining) >= 1 then
         player:sendTextMessage(MESSAGE_FAILURE, "You are already training.")
         return false
     end
