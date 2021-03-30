@@ -4,7 +4,7 @@ local weapons = {
 		type = WEAPON_AMMO,
 		level = 150,
 		unproperly = true,
-		breakChance = 30
+		breakChance = 100
 	}, -- spectral bolt (no decay)
 	{
 		itemId = 40357,
@@ -1129,21 +1129,21 @@ local weapons = {
 		type = WEAPON_DISTANCE,
 		level = 120,
 		unproperly = true,
-		breakChance = 30
+		breakChance = 60
 	}, -- royal star
 	{
 		itemId = 29058,
 		type = WEAPON_AMMO,
 		level = 150,
 		unproperly = true,
-		breakChance = 30
+		breakChance = 100
 	}, -- spectral bolt
 	{
 		itemId = 29036,
 		type = WEAPON_DISTANCE,
 		level = 60,
 		unproperly = true,
-		breakChance = 30
+		breakChance = 60
 	}, -- leaf star
 	{
 		itemId = 29005,
@@ -2027,21 +2027,21 @@ local weapons = {
 		type = WEAPON_AMMO,
 		level = 70,
 		unproperly = true,
-		breakChance = 30
+		breakChance = 100
 	}, -- envenomed arrow
 	{
 		itemId = 18436,
 		type = WEAPON_AMMO,
 		level = 70,
 		unproperly = true,
-		breakChance = 30
+		breakChance = 100
 	}, -- drill bolt
 	{
 		itemId = 18435,
 		type = WEAPON_AMMO,
 		level = 90,
 		unproperly = true,
-		breakChance = 30
+		breakChance = 100
 	}, -- prismatic bolt
 	{
 		itemId = 18412,
@@ -2096,12 +2096,12 @@ local weapons = {
 		type = WEAPON_AMMO,
 		level = 90,
 		unproperly = true,
-		breakChance = 30
+		breakChance = 100
 	}, -- crystalline arrow
 	{
 		itemId = 18303,
 		type = WEAPON_AMMO,
-		breakChance = 10
+		breakChance = 100
 	}, -- crystal bolt
 	{
 		itemId = 16111,
@@ -2118,14 +2118,14 @@ local weapons = {
 		type = WEAPON_AMMO,
 		level = 40,
 		unproperly = true,
-		breakChance = 30
+		breakChance = 100
 	}, -- vortex bolt
 	{
 		itemId = 15648,
 		type = WEAPON_AMMO,
 		level = 30,
 		unproperly = true,
-		breakChance = 30
+		breakChance = 100
 	}, -- tarsal arrow
 	{
 		itemId = 15647,
@@ -2858,28 +2858,28 @@ local weapons = {
 		type = WEAPON_AMMO,
 		level = 20,
 		unproperly = true,
-		breakChance = 20
+		breakChance = 100
 	}, -- earth arrow
 	{
 		itemId = 7840,
 		type = WEAPON_AMMO,
 		level = 20,
 		unproperly = true,
-		breakChance = 20
+		breakChance = 100
 	}, -- flaming arrow
 	{
 		itemId = 7839,
 		type = WEAPON_AMMO,
 		level = 20,
 		unproperly = true,
-		breakChance = 20
+		breakChance = 100
 	}, -- shiver arrow
 	{
 		itemId = 7838,
 		type = WEAPON_AMMO,
 		level = 20,
 		unproperly = true,
-		breakChance = 20
+		breakChance = 100
 	}, -- flash arrow
 	{
 		itemId = 7777,
@@ -3567,7 +3567,7 @@ local weapons = {
 		type = WEAPON_DISTANCE,
 		level = 80,
 		unproperly = true,
-		breakChance = 30
+		breakChance = 60
 	}, -- assassin star
 	{
 		itemId = 7367,
@@ -3581,21 +3581,21 @@ local weapons = {
 		type = WEAPON_AMMO,
 		level = 40,
 		unproperly = true,
-		breakChance = 30
+		breakChance = 100
 	}, -- onyx arrow
 	{
 		itemId = 7364,
 		type = WEAPON_AMMO,
 		level = 20,
 		unproperly = true,
-		breakChance = 20
+		breakChance = 100
 	}, -- sniper arrow
 	{
 		itemId = 7363,
 		type = WEAPON_AMMO,
 		level = 30,
 		unproperly = true,
-		breakChance = 30
+		breakChance = 100
 	}, -- piercing bolt
 	{
 		itemId = 6553,
@@ -3612,7 +3612,7 @@ local weapons = {
 		type = WEAPON_AMMO,
 		level = 110,
 		unproperly = true,
-		breakChance = 30
+		breakChance = 100
 	}, -- infernal bolt
 	{
 		itemId = 6528,
@@ -3678,7 +3678,7 @@ local weapons = {
 		type = WEAPON_AMMO,
 		level = 55,
 		unproperly = true,
-		breakChance = 30
+		breakChance = 100
 	}, -- power bolt
 	{
 		itemId = 2544,
