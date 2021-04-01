@@ -34,11 +34,12 @@ function Monster:onDropLoot(corpse)
 		if player then
 			local text = {}
 			local oldClientText = ""
+			local party = player:getParty()
 			local version = player:getClient().version
 			if self:getName():lower() == (Game.getBoostedCreature()):lower() then
 				 text = ("Loot of %s: %s (boosted loot)"):format(mType:getNameDescription(), corpse:getContentDescription())
 				 if party or version < 1200 then
-					oldClientText = ("Loot of %s: %s (boosted loot)"):format(mType:getNameDescription(), corpse:getContentDescription(true))
+					oldClientText = ("Loot of %s: %s (boosted loot)"):format(mType:getNameDescription(), corpse:getContentDescription())
 				 end
 			else
 				 text = ("Loot of %s: %s"):format(mType:getNameDescription(), corpse:getContentDescription())
@@ -46,7 +47,7 @@ function Monster:onDropLoot(corpse)
 					oldClientText = ("Loot of %s: %s"):format(mType:getNameDescription(), corpse:getContentDescription())
 				 end
 			end
-			local party = player:getParty()
+			
 			if party then
 				party:broadcastPartyLoot(text, oldClientText)
 			else

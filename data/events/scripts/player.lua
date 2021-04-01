@@ -774,14 +774,14 @@ function Player:onGainExperience(source, exp, rawExp)
     if guild ~= nil then
 		local membersOnline = #guild:getMembersOnline()
         if membersOnline >= 15  then
-            exp = exp * 1.3 -- 3% exp
+            exp = exp * 1.03 -- 3% exp
 		elseif membersOnline >= 10  then
-			exp = exp * 1.2 -- 2% exp
+			exp = exp * 1.02 -- 2% exp
 		elseif membersOnline >= 5  then
-			exp = exp * 1.1 -- 1% exp
+			exp = exp * 1.01 -- 1% exp
         end
     end
-	
+
 	return exp
 end
 

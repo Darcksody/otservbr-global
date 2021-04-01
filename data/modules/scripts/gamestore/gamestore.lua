@@ -3813,10 +3813,10 @@ GameStore.Categories = {
         rookgaard = true,
         state = GameStore.States.STATE_NONE,
         offers = {
-            {
+            --[[ {
                 icons = {"Gold_Token.png"},
                 name = "Gold Token",
-                price = 175,
+                price = 250,
                 itemtype = 25377,
                 count = 50,
                 description = "<i>Gold token package.</i>\n\n{info} can be exchanged with Yana for various weapons and for Creature Products that can be used to imbue them.",
@@ -3824,12 +3824,14 @@ GameStore.Categories = {
             }, {
                 icons = {"Silver_Token.png"},
                 name = "Silver Token",
-                price = 175,
+                price = 200,
                 itemtype = 25172,
                 count = 100,
                 description = "<i>Silver token package.</i>\n\n{info} can be exchanged with Cledwyn for various armors providing both a skill and a resistance bonus and also for the first and second addons of the Rift Warrior Outfits.",
                 type = GameStore.OfferTypes.OFFER_TYPE_STACKABLE
-            }, {
+            },  ]]
+            
+            {
                 icons = {"Obsidian_Knife.png"},
                 name = "Obsidian Knife",
                 price = 50,
