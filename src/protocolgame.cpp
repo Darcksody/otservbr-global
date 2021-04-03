@@ -3546,67 +3546,46 @@ void ProtocolGame::sendPreyData(PreySlotNum_t slot, PreyState_t slotState)
 	writeToOutputBuffer(msg);
 }
 
-void ProtocolGame::sendTextMessage(const TextMessage &message)
+void ProtocolGame::sendTextMessage(const TextMessage& message)
 {
-	NetworkMessage msg;
-	msg.addByte(0xB4);
-	TextMessage newMsg = message;
-	if(version < 1200 && newMsg.type > MESSAGE_MARKET)
-	{
-		switch(newMsg.type)
-		{
-			case MESSAGE_BOOSTED_CREATURE:
-				newMsg.type = MESSAGE_LOOT;
-				break;
-			case MESSAGE_OFFLINE_TRAINING:
-			case MESSAGE_BEYOND_LAST:
-			case MESSAGE_TRANSACTION:
-				newMsg.type = MESSAGE_EVENT_ADVANCE;
-				break;
-			case MESSAGE_ATTENTION:
-			case MESSAGE_POTION:
-				newMsg.type = MESSAGE_HEALED;
-				break;
-			default:
-				break;
-		}
-	}
-	msg.addByte(newMsg.type);
-	switch (newMsg.type)
-	{
-	case MESSAGE_DAMAGE_DEALT:
-	case MESSAGE_DAMAGE_RECEIVED:
-	case MESSAGE_DAMAGE_OTHERS:
-	{
-		msg.addPosition(newMsg.position);
-		msg.add<uint32_t>(newMsg.primary.value);
-		msg.addByte(newMsg.primary.color);
-		msg.add<uint32_t>(newMsg.secondary.value);
-		msg.addByte(newMsg.secondary.color);
-		break;
-	}
-	case MESSAGE_HEALED:
-	case MESSAGE_HEALED_OTHERS:
-	case MESSAGE_EXPERIENCE:
-	case MESSAGE_EXPERIENCE_OTHERS:
-	{
-		msg.addPosition(newMsg.position);
-		msg.add<uint32_t>(newMsg.primary.value);
-		msg.addByte(newMsg.primary.color);
-		break;
-	}
-	case MESSAGE_GUILD:
-	case MESSAGE_PARTY_MANAGEMENT:
-	case MESSAGE_PARTY:
-		msg.add<uint16_t>(newMsg.channelId);
-		break;
-	default:
-	{
-		break;
-	}
-	}
-	msg.addString(newMsg.text);
-	writeToOutputBuffer(msg);
+  NetworkMessage msg;
+  msg.addByte(0xB4);
+  msg.addByte(message.type);
+  switch (message.type)
+  {
+  case MESSAGE_DAMAGE_DEALT:
+  case MESSAGE_DAMAGE_RECEIVED:
+  case MESSAGE_DAMAGE_OTHERS:
+  {
+    msg.addPosition(message.position);
+    msg.add<uint32_t>(message.primary.value);
+    msg.addByte(message.primary.color);
+    msg.add<uint32_t>(message.secondary.value);
+    msg.addByte(message.secondary.color);
+    break;
+  }
+  case MESSAGE_HEALED:
+  case MESSAGE_HEALED_OTHERS:
+  case MESSAGE_EXPERIENCE:
+  case MESSAGE_EXPERIENCE_OTHERS:
+  {
+    msg.addPosition(message.position);
+    msg.add<uint32_t>(message.primary.value);
+    msg.addByte(message.primary.color);
+    break;
+  }
+  case MESSAGE_GUILD:
+  case MESSAGE_PARTY_MANAGEMENT:
+  case MESSAGE_PARTY:
+    msg.add<uint16_t>(message.channelId);
+    break;
+  default:
+  {
+    break;
+  }
+  }
+  msg.addString(message.text);
+  writeToOutputBuffer(msg);
 }
 
 void ProtocolGame::sendClosePrivate(uint16_t channelId)

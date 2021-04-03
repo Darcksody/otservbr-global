@@ -97,7 +97,7 @@ monster.loot = {
 	{name = "panpipes", chance = 172},
 	{name = "cookie", chance = 55000, maxCount = 5},
 	{name = "great health potion", chance = 6400, maxCount = 2},
-	{name = "wooden spellbook", chance = 92},
+	{name = "wooden spellbook", chance = 30},
 	{name = "strong health potion", chance = 6800, maxCount = 2},
 	{name = "fresh fruit", chance = 3400, maxCount = 3},
 	{name = "rainbow quartz", chance = 1086, maxCount = 4},
