@@ -75,7 +75,8 @@ void ProtocolGame::AddItem(NetworkMessage &msg, uint16_t id, uint8_t count)
 		msg.addByte(0x00);
 	}
 
-	if (version < 1200 && it.isAnimation) {
+	if (version <= 1200) {
+		if (it.isAnimation)
 			msg.addByte(0xFE); // random phase (0xFF for async)
 	}
 
@@ -153,8 +154,9 @@ void ProtocolGame::AddItem(NetworkMessage &msg, const Item *item)
       		msg.addByte(0x00);
 	}
 
-	if (version < 1200 && it.isAnimation) {
-		msg.addByte(0xFE); // random phase (0xFF for async)
+	if (version <= 1200) {
+		if (it.isAnimation)
+			msg.addByte(0xFE); // random phase (0xFF for async)
 	}
 
 	if (version >= 1264) {
@@ -2513,7 +2515,9 @@ void ProtocolGame::parseMarketBrowse(NetworkMessage &msg)
 	}
 	else
 	{
-    player->sendMarketEnter(player->getLastDepotId());
+		if (version >= 1200) {
+			player->sendMarketEnter(player->getLastDepotId());
+		}
 		addGameTask(&Game::playerBrowseMarket, player->getID(), browseId);
 	}
 }
@@ -3949,8 +3953,10 @@ void ProtocolGame::sendMarketEnter(uint32_t depotId)
 {
 	NetworkMessage msg;
 	msg.addByte(0xF6);
-	if (version < 1200)
+	if (version < 1200) {
 		msg.add<uint64_t>(player->getBankBalance());
+	}
+
 	msg.addByte(std::min<uint32_t>(IOMarket::getPlayerOfferCount(player->getGUID()), std::numeric_limits<uint8_t>::max()));
 
 	DepotLocker *depotLocker = player->getDepotLocker(depotId);
