@@ -33,27 +33,21 @@ function Monster:onDropLoot(corpse)
 
 		if player then
 			local text = {}
-			local oldClientText = ""
 			local party = player:getParty()
 			local version = player:getClient().version
 			if self:getName():lower() == (Game.getBoostedCreature()):lower() then
 				 text = ("Loot of %s: %s (boosted loot)"):format(mType:getNameDescription(), corpse:getContentDescription())
-				 if party or version < 1200 then
-					oldClientText = ("Loot of %s: %s (boosted loot)"):format(mType:getNameDescription(), corpse:getContentDescription())
-				 end
 			else
 				 text = ("Loot of %s: %s"):format(mType:getNameDescription(), corpse:getContentDescription())
-				 if party or version < 1200 then
-					oldClientText = ("Loot of %s: %s"):format(mType:getNameDescription(), corpse:getContentDescription())
-				 end
 			end
 			
 			if party then
-				party:broadcastPartyLoot(text, oldClientText)
+				party:broadcastPartyLoot(text)
 			else
-				player:sendTextMessage(MESSAGE_LOOT, version >= 1200 and text or oldClientText)
 				if version < 1200 then
-					player:sendTextMessage(MESSAGE_GUILD, oldClientText, 9)
+					player:sendTextMessage(MESSAGE_GUILD, text, 9)
+				else
+					player:sendTextMessage(MESSAGE_LOOT, text)
 				end
 			end
 			player:updateKillTracker(self, corpse)
@@ -64,7 +58,11 @@ function Monster:onDropLoot(corpse)
 		if party then
 			party:broadcastPartyLoot(text)
 		else
-			player:sendTextMessage(MESSAGE_LOOT, text)
+			if version < 1200 then
+				player:sendTextMessage(MESSAGE_GUILD, text, 9)
+			else
+				player:sendTextMessage(MESSAGE_LOOT, text)
+			end
 		end
 	end
 end
