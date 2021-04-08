@@ -24,7 +24,7 @@ local function creatureSayCallback(cid, type, msg)
 	local AritosTask = player:getStorageValue(Storage.TibiaTales.AritosTask)
 		-- START TASK
 	if msgcontains(msg, "nomads") then
-		if player:getStorageValue(Storage.TibiaTales.AritosTask) <= 0 and player:getItemCount(8267) >= 0 then
+		if player:getStorageValue(Storage.TibiaTales.AritosTask) <= 0 and player:removeItem(8267, 1) then
 			npcHandler:say({
 				'What?? My name on a deathlist which you retrieved from a nomad?? Show me!! ...',
 				'Oh my god! They found me! You must help me! Please !!!!'

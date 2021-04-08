@@ -11,10 +11,12 @@ local destroy = Action()
 
 function destroy.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	-- Tibia tales quest, Aritos task
+	
 	local itemPosition = {x = 33205, y = 32537, z = 6}
-	if (toPosition == itemPosition) then
+
+	if (toPosition.x == itemPosition.x and toPosition.y == itemPosition.y) then
 		local itemTile = Tile(itemPosition)
-		local getItem = itemTile:getItemById(22679)
+		local getItem = itemTile:getItemById(6299)
 		if getItem then
 			if player:getStorageValue(Storage.TibiaTales.AritosTask) >= 0 then
 				item:remove()
