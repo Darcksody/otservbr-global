@@ -66,7 +66,7 @@
 		<colors colordark="#9c27b0" colorlight="#d087dc" />
 		<details displaypriority="0" isseasonal="0" specialevent="0" />
 	</event>
-	<event name="Double Exp and Skill" startdate="3/10/2021" enddate="3/11/2021" >
+	<event name="Double Exp and Skill" startdate="4/10/2021" enddate="4/11/2021" >
 		<ingame exprate="100" lootrate="100" spawnrate="100" skillrate="100" />
 		<description description="All monsters will yield twice the usual amount of experience points, and your skills, will advance fast." />
 		<colors colordark="#2d7400" colorlight="#6ca548" />
