@@ -86,19 +86,19 @@ monster.loot = {
 	{name = "Terra Hood", chance = 7400},
 	{name = "Terra Mantle", chance = 7250},
 	{name = "Magma Amulet", chance = 5500},
-	{name = "Silver Token", chance = 6000, maxCount = 4},
-	{name = "Gold Ingot", chance = 5000},
+	{name = "Silver Token", chance = 3000, maxCount = 4},
+	{name = "Gold Ingot", chance = 2000},
 	{name = "Terra Amulet", chance = 4800},
 	{name = "Giant Sapphire", chance = 4800},
 	{name = "Magma Monocle", chance = 3700},
-	{name = "Cobra Club", chance = 700},
-	{name = "Cobra Axe", chance = 600},
-	{name = "Cobra Crossbow", chance = 600},
-	{name = "Cobra Hood", chance = 400},
-	{name = "Cobra Rod", chance = 650},
-	{name = "Cobra Sword", chance = 650},
-	{name = "Cobra Wand", chance = 650},
-	{name = "The Cobra Amulet", chance = 350}
+	{name = "Cobra Club", chance = 5},
+	{name = "Cobra Axe", chance = 5},
+	{name = "Cobra Crossbow", chance = 5},
+	{name = "Cobra Hood", chance = 5},
+	{name = "Cobra Rod", chance = 5},
+	{name = "Cobra Sword", chance = 5},
+	{name = "Cobra Wand", chance = 5},
+	{name = "The Cobra Amulet", chance = 5}
 }
 
 monster.attacks = {

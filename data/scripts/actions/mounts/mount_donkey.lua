@@ -6,7 +6,7 @@ local config = {
 		lookType = 387,
 		id = 13,
 		type = TYPE_MONSTER,
-		chance = 40,
+		chance = 60,
 		fail = {
 			{removeTransformation = true, text = 'The donkey transformation suddenly wears off.'},
 			{broke = true, sound = 'Heeee-haaa-haaa-haaw!', text = 'You did not manage to feed the donkey enough apple slices.'}

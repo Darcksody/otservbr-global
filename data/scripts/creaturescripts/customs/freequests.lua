@@ -244,7 +244,7 @@ local questTable = {
 [243] = {storageId = Storage.TheShatteredIsles.Shipwrecked, storageValue = 2},
 [244] = {storageId = Storage.TheShatteredIsles.DragahsSpellbook, storageValue = 1},
 [245] = {storageId = Storage.TheShatteredIsles.TheCounterspell, storageValue = 4},
-[246] = {storageId = Storage.ThievesGuild.Quest, storageValue = 1},
+[246] = {storageId = Storage.ThievesGuild.Quest, storageValue = 8}, -- la ultima mision es 8
 [247] = {storageId = Storage.ThievesGuild.Mission01, storageValue = 2},
 [248] = {storageId = Storage.ThievesGuild.Mission02, storageValue = 3},
 [249] = {storageId = Storage.ThievesGuild.Mission03, storageValue = 3},
@@ -252,7 +252,7 @@ local questTable = {
 [251] = {storageId = Storage.ThievesGuild.Mission05, storageValue = 2},
 [252] = {storageId = Storage.ThievesGuild.Mission06, storageValue = 4},
 [253] = {storageId = Storage.ThievesGuild.Mission07, storageValue = 2},
-[254] = {storageId = Storage.ThievesGuild.Mission08, storageValue = 1},
+[254] = {storageId = Storage.ThievesGuild.Mission08, storageValue = 0}, -- no es uno es 0
 [255] = {storageId = Storage.TravellingTrader.Mission01, storageValue = 1},
 [256] = {storageId = Storage.TravellingTrader.Mission01, storageValue = 2},
 [257] = {storageId = Storage.TravellingTrader.Mission02, storageValue = 5},

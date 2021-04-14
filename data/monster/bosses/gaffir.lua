@@ -80,7 +80,7 @@ monster.loot = {
 	{name = "springsprout rod", chance = 21000},
 	{name = "blue crystal shard", chance = 21000},
 	{name = "blue gem", chance = 21000},
-	{name = "cobra crest", chance = 12560},
+	{name = "cobra crest", chance = 2560},
 	{name = "violet crystal shard", chance = 14800},
 	{id = 7632, chance = 14520}, -- giant shimmering pearl
 	{name = "gold ingot", chance = 14500},
@@ -88,8 +88,8 @@ monster.loot = {
 	{name = "ring of healing", chance = 5400},
 	{name = "terra hood", chance = 1600},
 	{name = "amulet of loss", chance = 2400},
-	{name = "wand of everblazing", chance = 1900},
-	{name = "cobra wand", chance = 40}
+	{name = "wand of everblazing", chance = 1000},
+	{name = "cobra wand", chance = 2}
 }
 
 monster.attacks = {

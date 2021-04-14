@@ -74,12 +74,12 @@ monster.loot = {
 	{name = "yellow gem", chance = 31000},
 	{name = "green crystal shard", chance = 8600},
 	{id = 7632, chance = 28000},--giant shimmering pearl
-	{name = "cobra boots", chance = 10},
-	{name = "cobra crest", chance = 11000},
-	{name = "cobra hood", chance = 8},
-	{name = "skull helmet", chance = 1500},
+	{name = "cobra boots", chance = 2},
+	{name = "cobra crest", chance = 5000},
+	{name = "cobra hood", chance = 2},
+	{name = "skull helmet", chance = 1000},
 	{id = 26198, chance = 7200},-- collar of blue plasma
-	{name = "cobra crossbow", chance = 5}
+	{name = "cobra crossbow", chance = 2}
 }
 
 monster.attacks = {
