@@ -72,5 +72,11 @@
 		<colors colordark="#2d7400" colorlight="#6ca548" />
 		<details displaypriority="0" isseasonal="0" specialevent="0" />
 	</event>
+	<event name="Double Loot" startdate="4/17/2021" enddate="4/18/2021" >
+		<ingame exprate="100" lootrate="100" spawnrate="100" skillrate="100" />
+		<description description="You have the chance to collect double the amount of loot from every monster you kill." />
+		<colors colordark="#935416" colorlight="#b17b45" />
+		<details displaypriority="0" isseasonal="0" specialevent="0" />
+	</event>
 </events>
  

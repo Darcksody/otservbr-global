@@ -30,8 +30,8 @@ function hourCoin.onLogin(player)
     local PID = player:getId()
     local playerIP = player:getIp()
     local geyDay = tonumber(os.date('%d', os.time()))
-
-    if player:getStorageValue(GET_DAY_STORAGE_HOURCOIN) < geyDay then
+ 
+    if player:getStorageValue(GET_DAY_STORAGE_HOURCOIN) ~= geyDay then
         if pointPlayers[player:getIp()] then
             pointPlayers[playerIP] = nil
         end
