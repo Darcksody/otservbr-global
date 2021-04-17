@@ -530,7 +530,7 @@ function onUsePick(player, item, fromPosition, target, toPosition, isHotkey)
         target:transform(469)
         target:decay()
         toPosition:sendMagicEffect(CONST_ME_HITAREA)
-    elseif target.itemid == 6299 and target.actionid > 0 then
+    elseif target.itemid == 6299 and target.actionid > 0 and target.actionid ~= 50090 then
         target:transform(482)
         target:decay()
         toPosition:sendMagicEffect(CONST_ME_HITAREA)
@@ -647,9 +647,9 @@ function onUsePick(player, item, fromPosition, target, toPosition, isHotkey)
         toPosition:sendMagicEffect(CONST_ME_POFF)
     elseif target.actionid == 50090 then
         -- The Hidden City of Beregar Quest
-        if player:getStorageValue(Storage.hiddenCityOfBeregar.WayToBeregar) == 1 then
             player:teleportTo(Position(32566, 31338, 10))
-        end
+            player:sendMagicEffect(CONST_ME_TELEPORT)
+
     elseif target.actionid == 50114 then
         if Tile(Position(32617, 31513, 9)):getItemById(1027) and Tile(Position(32617, 31514, 9)):getItemById(1205) then
             local rubbleItem = Tile(Position(32619, 31514, 9)):getItemById(5709)
