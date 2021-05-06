@@ -10,7 +10,7 @@ function broadcast.onSay(player, words, param)
 		return false
 	end
 
-	print("> broadcasted: \"" .. param .. "\".")
+	Spdlog.info("" .. player:getName() .. ": ".. param)
 	for _, targetPlayer in ipairs(Game.getPlayers()) do
 		targetPlayer:sendPrivateMessage(player, param, TALKTYPE_BROADCAST)
 	end
