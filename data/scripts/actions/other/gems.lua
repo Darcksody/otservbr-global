@@ -98,10 +98,11 @@ function gems.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 		toPosition:sendMagicEffect(CONST_ME_MAGIC_RED)
 		return true
 	end
-
+	
 	-- Gems teleport to feyrist
 	for index, value in pairs(shrine) do
 		if target.actionid == value.targetAction then
+			if (player:getStorageValue(Storage.ThreatenedDreams.TroubledMission01) == 17) then
 				if item.itemid == index then
 					player:teleportTo(value.destination)
 					player:getPosition():sendMagicEffect(value.effect)	
@@ -111,6 +112,10 @@ function gems.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 					player:sendCancelMessage(RETURNVALUE_NOTPOSSIBLE)
 					return true
 				end
+			else
+				player:say("When the time comes, '" ..item:getName() .. "' will be accepted at this shrine.")
+				return true
+			end
 		end
 	end
 
