@@ -2189,7 +2189,7 @@ GameStore.Categories = {
             }, {
                 icons = {"Bath_Tub.png"},
                 name = "Bath Tub",
-                price = 250,
+                price = 1000,
                 itemtype = 29312,
                 count = 1,
                 description = "{house}\n{box}\n{storeinbox}\n{use}\n{backtoinbox}",
@@ -3468,7 +3468,7 @@ GameStore.Categories = {
             }, {
                 icons = {"Demon_Exercise_Dummy.png"},
                 name = "Demon Exercise Dummy",
-                price = 250,
+                price = 500,
                 itemtype = 32145,
                 count = 1,
                 description = "<i>Exercise dummy works like normal train without boost!</i>\n\n{house}\n{box}\n{storeinbox}\n{usablebyall}\n{info} can only be used by one character at a time\n{useicon} use one of the exercise weapons on this dummy\n{backtoinbox}",
@@ -3476,7 +3476,7 @@ GameStore.Categories = {
             }, {
                 icons = {"Ferumbras_Exercise_Dummy.png"},
                 name = "Ferumbras Exercise Dummy",
-                price = 250,
+                price = 500,
                 itemtype = 32143,
                 count = 1,
                 description = "<i>Exercise dummy works like normal train without boost!!</i>\n\n{house}\n{box}\n{storeinbox}\n{usablebyall}\n{info} can only be used by one character at a time\n{useicon} use one of the exercise weapons on this dummy\n{backtoinbox}",
@@ -3508,7 +3508,7 @@ GameStore.Categories = {
             }, {
                 icons = {"Monk_Exercise_Dummy.png"},
                 name = "Monk Exercise Dummy",
-                price = 250,
+                price = 500,
                 itemtype = 32147,
                 count = 1,
                 description = "<i>Exercise dummy works like normal train without boost!</i>\n\n{house}\n{box}\n{storeinbox}\n{usablebyall}\n{info} can only be used by one character at a time\n- use one of the exercise weapons on this dummy\n{backtoinbox}",
