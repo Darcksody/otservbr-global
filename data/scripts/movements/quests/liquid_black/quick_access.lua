@@ -8,13 +8,10 @@ function quickAccess.onStepIn(creature, item, toPosition, fromPosition)
 		return true
 	end
 
-	if player:getStorageValue(Storage.LiquidBlackQuest.Visitor) >= 5 then
-		player:teleportTo(enterPosition)
-		player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
-	else
-		player:teleportTo(fromPosition, true)
-		player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
-	end
+	player:setStorageValue(Storage.LiquidBlackQuest.Visitor, 5)
+	player:teleportTo(enterPosition)
+	player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
+
 	return true
 end
 

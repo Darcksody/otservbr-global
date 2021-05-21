@@ -4,12 +4,16 @@ local boss = {
 	[3195] = "scorn of the emperor",
 	[3196] = "spite of the emperor",
 }
-
+ 
 local wrathEmperorMiss10Message = Action()
 function wrathEmperorMiss10Message.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	if boss[target.uid] and target.itemid == 12383 then
 		target:transform(11753)
+		Game.createMonster("Draken Warmaster", {x = toPosition.x + 3, y = toPosition.y, z = toPosition.z})
 		Game.createMonster(boss[target.uid], {x = toPosition.x + 4, y = toPosition.y, z = toPosition.z})
+		Game.createMonster("Ghastly Dragon", {x = toPosition.x + 5, y = toPosition.y, z = toPosition.z})
+		Game.createMonster("Ghastly Dragon", {x = toPosition.x + 4, y = toPosition.y + 1, z = toPosition.z})
+		Game.createMonster("Undead Dragon", {x = toPosition.x + 4, y = toPosition.y - 1, z = toPosition.z})
 		Game.setStorageValue(target.uid - 4, 1)
 	elseif target.itemid == 12317 then
 		if toPosition.x > 33034 and toPosition.x < 33071 and

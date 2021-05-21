@@ -694,6 +694,7 @@ static constexpr int32_t CHANNEL_PRIVATE = 0xFFFF;
 static constexpr int32_t STORAGEVALUE_PROMOTION = 30018;
 static constexpr int32_t STORAGEVALUE_EMOTE = 30019;
 static constexpr int32_t STORAGEVALUE_DAILYREWARD = 14898;
+static constexpr int32_t STORAGEVALUE_BATHTUB = 48485025;
 static constexpr int32_t STORAGEVALUE_BESTIARYKILLCOUNT = 61305000; // Can get up to 2000 storages!
 // Reserved player storage key ranges;
 // [10000000 - 20000000];

@@ -286,10 +286,10 @@ local questTable = {
 [285] = {storageId = Storage.FriendsandTraders.TheSweatyCyclops, storageValue = 2},
 [286] = {storageId = Storage.FriendsandTraders.TheMermaidMarina, storageValue = 2},
 [287] = {storageId = Storage.FriendsandTraders.TheBlessedStake, storageValue = 12},
-[288] = {storageId = 100157, storageValue = 1},
+[288] = {storageId = 100157, storageValue = 1}, 
 [289] = {storageId = 2500, storageValue = 0},
 [290] = {storageId = 22000, storageValue = 5},
-[291] = {storageId = Storage.WrathoftheEmperor.Questline, storageValue = 1},
+[291] = {storageId = Storage.WrathoftheEmperor.Questline, storageValue = 29},
 [292] = {storageId = Storage.WrathoftheEmperor.Mission01, storageValue = 3},
 [293] = {storageId = Storage.WrathoftheEmperor.Mission02, storageValue = 3},
 [294] = {storageId = Storage.WrathoftheEmperor.Mission03, storageValue = 3},
@@ -299,8 +299,8 @@ local questTable = {
 [298] = {storageId = Storage.WrathoftheEmperor.Mission07, storageValue = 6},
 [299] = {storageId = Storage.WrathoftheEmperor.Mission08, storageValue = 2},
 [300] = {storageId = Storage.WrathoftheEmperor.Mission09, storageValue = 2},
-[301] = {storageId = Storage.WrathoftheEmperor.Mission10, storageValue = 6},
-[302] = {storageId = Storage.WrathoftheEmperor.Mission11, storageValue = 1},
+[301] = {storageId = Storage.WrathoftheEmperor.Mission10, storageValue = 1},
+[302] = {storageId = Storage.WrathoftheEmperor.Mission11, storageValue = 0},
 [303] = {storageId = Storage.TheApeCity.Started, storageValue = 1},
 [304] = {storageId = Storage.TheApeCity.Questline, storageValue = 18},
 [305] = {storageId = Storage.Oramond.QuestLine, storageValue = 1},
@@ -324,7 +324,8 @@ local questTable = {
 [323] = {storageId = Storage.ForgottenKnowledge.AccessEarth, storageValue = 1},
 [324] = {storageId = Storage.ForgottenKnowledge.AccessFire, storageValue = 1},
 [325] = {storageId = Storage.ForgottenKnowledge.AccessIce, storageValue = 1},
-[326] = {storageId = Storage.ForgottenKnowledge.AccessGolden, storageValue = 1}
+[326] = {storageId = Storage.ForgottenKnowledge.AccessGolden, storageValue = 1},
+[327] = {storageId = Storage.LiquidBlackQuest.Visitor, storageValue = 5}
 }
 
 local upperLimit = 1 -- change upperLimit to a higher one after adding a new quest to questTable
