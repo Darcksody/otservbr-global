@@ -6811,7 +6811,7 @@ bool save = false;
 	time_t last_day;
 	account.GetPremiumRemaningDays(&rem_days);
 	account.GetPremiumLastDay(&last_day);
-	std::string email;
+	std::string name;
 	if (rem_days != 0) {
 		if (last_day == 0) {
 			account.SetPremiumLastDay(timeNow);
@@ -6821,9 +6821,9 @@ bool save = false;
 			if (days > 0) {
 				if (days >= rem_days) {
 					if(!account.SetPremiumRemaningDays(0) || !account.SetPremiumLastDay(0)) {
-						account.GetEmail(&email);
-						SPDLOG_ERROR("Failed to set account premium days, account email: {}",
-							email);
+						account.GetName(&name);
+						SPDLOG_ERROR("Failed to set account premium days, account name: {}",
+							name);
 					}
 				} else {
 					account.SetPremiumRemaningDays((rem_days - days));
@@ -6835,14 +6835,16 @@ bool save = false;
 			}
 		}
 	}
-	else if (last_day != 0) {
-		account.SetPremiumLastDay(0);
+  else if (last_day != 0)
+  {
+    account.SetPremiumLastDay(0);
 		save = true;
 	}
 
 	if (save && !account.SaveAccountDB()) {
-		account.GetEmail(&email);
-		SPDLOG_ERROR("Failed to save account: {}", email);
+		account.GetName(&name);
+		SPDLOG_ERROR("Failed to save account: {}",
+			name);
 	}
 }
 
