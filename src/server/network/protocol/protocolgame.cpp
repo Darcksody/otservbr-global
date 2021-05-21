@@ -499,7 +499,7 @@ void ProtocolGame::onRecvFirstMessage(NetworkMessage &msg)
 	size_t pos = sessionKey.find('\n');
 	if (pos == std::string::npos)
 	{
-		disconnectClient("You must enter your account name.");
+		disconnectClient("You must enter your email.");
 		return;
 	}
 
@@ -510,10 +510,10 @@ void ProtocolGame::onRecvFirstMessage(NetworkMessage &msg)
 		msg.getString();
 	}
 
-	std::string accountName = sessionKey.substr(0, pos);
-	if (accountName.empty())
+	std::string email = sessionKey.substr(0, pos);
+	if (email.empty())
 	{
-		disconnectClient("You must enter your account name.");
+		disconnectClient("You must enter your email.");
 		return;
 	}
 
@@ -571,10 +571,9 @@ void ProtocolGame::onRecvFirstMessage(NetworkMessage &msg)
 		return;
 	}
 
-	uint32_t accountId = IOLoginData::gameworldAuthentication(accountName, password, characterName, version < 1200);
-	if (accountId == 0)
-	{
-		disconnectClient("Account name or password is not correct.");
+	uint32_t accountId;
+	if (!IOLoginData::gameWorldAuthentication(email, password, characterName, &accountId)) {
+		disconnectClient("Email or password is not correct.");
 		return;
 	}
 
