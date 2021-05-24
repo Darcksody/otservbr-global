@@ -40,7 +40,10 @@ function bathtubEnter.onStepIn(creature, item, position, fromPosition)
 	conditionOutfit:setTicks(-1)
  
 	local conditionRegeneration = Condition(CONDITION_REGENERATION, CONDITIONID_DEFAULT)
+	conditionRegeneration:setParameter(CONDITION_PARAM_SUBID, 55555)
 	conditionRegeneration:setTicks(-1)
+	-- conditionRegeneration:setParameter(CONDITION_PARAM_HEALTHGAIN, vocation:getHealthGainAmount())
+	-- conditionRegeneration:setParameter(CONDITION_PARAM_HEALTHTICKS, vocation:getHealthGainTicks() * 1000)
 	conditionRegeneration:setParameter(CONDITION_PARAM_MANAGAIN, vocation:getManaGainAmount())
 	conditionRegeneration:setParameter(CONDITION_PARAM_MANATICKS, vocation:getManaGainTicks() * 1000)
 
@@ -68,6 +71,7 @@ function bathtubExit.onStepOut(creature, item, position, fromPosition)
 
 	item:transform(BATHTUB_FILLED)
 	creature:removeCondition(CONDITION_OUTFIT)
+	creature:removeCondition(CONDITION_REGENERATION, CONDITIONID_DEFAULT, 55555)
 	creature:setStorageValue(STORAGEVALUE_BATHTUB, 0)
 	return true
 end
