@@ -9,11 +9,33 @@
 		Stop him before its too late." />
 	<!--Single Spawns-->
 	<singlespawn delay="100000" name="Ferumbras" x="32368" y="32189" z="7"/>
-	<areaspawn delay="3000" fromx="32363" fromy="32186" fromz="7" tox="32375" toy="32192" toz="7">
-		<monster name="Warlock" amount="5" />
+
+	<areaspawn delay="40000" fromx="32361" fromy="32186" fromz="7" tox="32375" toy="32192" toz="7">
+		<monster name="Warlock" amount="4" />
 	</areaspawn>
-	<areaspawn delay="3000" fromx="32363" fromy="32186" fromz="7" tox="32375" toy="32192" toz="7">
-		<monster name="Demon" amount="3" />
+	<areaspawn delay="40000" fromx="32361" fromy="32186" fromz="7" tox="32375" toy="32192" toz="7">
+		<monster name="Demon" amount="2" />
+	</areaspawn>
+
+	<areaspawn delay="60000" fromx="32361" fromy="32186" fromz="7" tox="32375" toy="32192" toz="7">
+		<monster name="Warlock" amount="8" />
+	</areaspawn>
+	<areaspawn delay="60000" fromx="32361" fromy="32186" fromz="7" tox="32375" toy="32192" toz="7">
+		<monster name="Demon" amount="4" />
+	</areaspawn>
+
+	<areaspawn delay="80000" fromx="32361" fromy="32186" fromz="7" tox="32375" toy="32192" toz="7">
+		<monster name="Warlock" amount="12" />
+	</areaspawn>
+	<areaspawn delay="80000" fromx="32361" fromy="32186" fromz="7" tox="32375" toy="32192" toz="7">
+		<monster name="Demon" amount="6" />
+	</areaspawn>
+
+	<areaspawn delay="100000" fromx="32361" fromy="32186" fromz="7" tox="32375" toy="32192" toz="7">
+		<monster name="Warlock" amount="16" />
+	</areaspawn>
+	<areaspawn delay="100000" fromx="32361" fromy="32186" fromz="7" tox="32375" toy="32192" toz="7">
+		<monster name="Demon" amount="8" />
 	</areaspawn>
 
 </raid>
