@@ -92,7 +92,7 @@ monster.loot = {
 	{name = "spellbook of enlightenment", chance = 520},
 	{name = "gear wheel", chance = 940},
 	{name = "slime mould", chance = 340},
-	{name = "golden can of oil", chance = 40}
+	{name = "golden can of oil", chance = 10}
 }
 
 monster.attacks = {

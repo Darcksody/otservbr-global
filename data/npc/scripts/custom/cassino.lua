@@ -2,8 +2,8 @@ local config = {
 	bet = {
 		min = 10000, -- gold coins // 30k
 		max = 10000000000, 
-		win = 180, -- 170% high/low
-		winNum = 500, -- 300% numbers
+		win = 50, -- 170% high/low
+		winNum = 100, -- 300% numbers
 	},
 	playerPosition = Position(32352, 32226, 7), -- NpcPos(x-2) player must stay on this position to talk with npc
 	dicerCounter = Position(32352, 32225, 7), --	NpcPos(x-1, y-1) 	counter position
