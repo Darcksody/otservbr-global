@@ -2067,6 +2067,38 @@ GameStore.Categories = {
                 home = true
             }
         }
+    }, { -- Outfits III
+    icons = {"Category_Outfits.png"},
+    name = "Outfits III",
+    parent = "Outfits",
+    rookgaard = true,
+    state = GameStore.States.STATE_NONE,
+    offers = {
+        {
+            icons = {
+                "Outfit_Moth_Cape_Male_Addon_3.png",
+                "Outfit_Moth_Cape_Female_Addon_3.png"
+            },
+            name = "Full Moth Cape Outfit",
+            price = 600 - GAMESTORE_OUTFIT_DISCOUNT,
+            sexId = {female = 1339, male = 1338},
+            addon = 3,
+            description = "{character}\n{info} colours can be changed using the Outfit dialog",
+            type = GameStore.OfferTypes.OFFER_TYPE_OUTFIT
+        }, {
+            icons = {
+                "Outfit_Rascoohan_Male_Addon_3.png",
+                "Outfit_Rascoohan_Female_Addon_3.png"
+            },
+            name = "Full Rascoohan Outfit",
+            price = 870 - GAMESTORE_OUTFIT_DISCOUNT,
+            sexId = {female = 1372, male = 1371},
+            addon = 3,
+            description = "{character}\n{info} colours can be changed using the Outfit dialog",
+            type = GameStore.OfferTypes.OFFER_TYPE_OUTFIT,
+            home = true
+        }
+    }
     }, { -- House 
         icons = {"Category_HouseTools.png"},
         name = "Houses",
