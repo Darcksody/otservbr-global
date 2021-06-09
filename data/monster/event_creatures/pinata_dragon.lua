@@ -1,19 +1,20 @@
 local mType = Game.createMonsterType("Pinata Dragon")
 local monster = {}
 
+monster.name = "Piñata Dragon"
 monster.description = "a Pinata Dragon"
-monster.experience = 50
+monster.experience = 50000
 monster.outfit = {
 	lookTypeEx = 27730
 }
 
-monster.health = 10000
-monster.maxHealth = 10000
+monster.health = 100000
+monster.maxHealth = 100000
 monster.race = "undead"
 monster.corpse = 0
 monster.speed = 0
 monster.manaCost = 0
-monster.maxSummons = 3
+monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 2000,
@@ -54,7 +55,6 @@ monster.light = {
 }
 
 monster.summons = {
-	{name = "Demon", chance = 7, interval = 2000}
 }
 
 monster.voices = {
@@ -77,20 +77,20 @@ monster.attacks = {
 monster.defenses = {
 	defense = 1,
 	armor = 1,
-	{name ="combat", interval = 2000, chance = 30, type = COMBAT_HEALING, effect = CONST_ME_MORTAREA, target = false}
+	{name ="combat", interval = 2000, chance = 30, type = COMBAT_HEALING, minDamage = 10000, maxDamage = 50000, effect = CONST_ME_MAGIC_BLUE, target = false}
 }
 
 monster.elements = {
-	{type = COMBAT_PHYSICALDAMAGE, percent = 100},
-	{type = COMBAT_ENERGYDAMAGE, percent = 100},
-	{type = COMBAT_EARTHDAMAGE, percent = 100},
-	{type = COMBAT_FIREDAMAGE, percent = 100},
-	{type = COMBAT_LIFEDRAIN, percent = 100},
-	{type = COMBAT_MANADRAIN, percent = 0},
-	{type = COMBAT_DROWNDAMAGE, percent = 100},
-	{type = COMBAT_ICEDAMAGE, percent = 100},
-	{type = COMBAT_HOLYDAMAGE , percent = 100},
-	{type = COMBAT_DEATHDAMAGE , percent = 100}
+	{type = COMBAT_PHYSICALDAMAGE, percent = -50},
+	{type = COMBAT_ENERGYDAMAGE, percent = -50},
+	{type = COMBAT_EARTHDAMAGE, percent = -50},
+	{type = COMBAT_FIREDAMAGE, percent = -50},
+	{type = COMBAT_LIFEDRAIN, percent = -50},
+	{type = COMBAT_MANADRAIN, percent = -50},
+	{type = COMBAT_DROWNDAMAGE, percent = -50},
+	{type = COMBAT_ICEDAMAGE, percent = -50},
+	{type = COMBAT_HOLYDAMAGE , percent = -50},
+	{type = COMBAT_DEATHDAMAGE , percent = -50}
 }
 
 monster.immunities = {
