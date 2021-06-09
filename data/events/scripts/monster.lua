@@ -58,6 +58,7 @@ function Monster:onDropLoot(corpse)
 		if party then
 			party:broadcastPartyLoot(text)
 		else
+			local version = player:getClient().version
 			if version < 1200 then
 				player:sendTextMessage(MESSAGE_GUILD, text, 9)
 			else
