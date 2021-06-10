@@ -1,7 +1,7 @@
 local mType = Game.createMonsterType("Pinata Dragon")
 local monster = {}
 
-monster.name = "Piñata Dragon"
+monster.name = "Pinata Dragon"
 monster.description = "a Pinata Dragon"
 monster.experience = 50000
 monster.outfit = {
@@ -69,6 +69,25 @@ monster.voices = {
 }
 
 monster.loot = {
+	-- {name = "birthday backpack", chance = 1000},
+	-- {name = "anniversary backpack", chance = 900},
+	-- {name = "crystal coin", chance = 800, maxCount = 100},
+	-- {id = 27617, chance = 700},
+	-- {id = 7737, chance = 600},
+	-- {id = 9076, chance = 500},
+	-- {id = 7739, chance = 400},
+	-- {name = "silver token", chance = 300},
+	-- {name = "gold token", chance = 200},
+	-- {name = "plushie of devovorga", chance = 100},
+	-- {name = "plushie of gaz'Haragoth", chance = 90},
+	-- {name = "plushie of Tentugly", chance = 80},
+	-- {name = "Ferumbras' Candy Hat", chance = 70},
+	-- {name = "stamina potion", chance = 60},
+	-- {name = "vibrant egg", chance = 50},
+	-- {name = "crackling egg", chance = 40},
+	-- {name = "Store coin", chance = 30, maxCount = 100},
+	-- {name = "Store coin", chance = 20, maxCount = 100},
+	-- {name = "Store coin", chance = 10, maxCount = 50}
 }
 
 monster.attacks = {
@@ -77,7 +96,7 @@ monster.attacks = {
 monster.defenses = {
 	defense = 1,
 	armor = 1,
-	{name ="combat", interval = 2000, chance = 30, type = COMBAT_HEALING, minDamage = 10000, maxDamage = 50000, effect = CONST_ME_MAGIC_BLUE, target = false}
+	{name ="combat", interval = 2000, chance = 30, type = COMBAT_HEALING, minDamage = 1000, maxDamage = 25000, effect = CONST_ME_MAGIC_BLUE, target = false}
 }
 
 monster.elements = {
