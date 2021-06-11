@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<raid>
+	<!--Announcements-->
+	<announce delay="1000" type="Event" message="Strange cuddly dragons are seen all around Thais. Party time!." />
+	<announce delay="10000" type="Event" message="Strange cuddly dragons are seen all around Thais. Party time!." />
+	<announce delay="20000" type="Event" message="Strange cuddly dragons are seen all around Thais. Party time!." />
+
+	<!--Norte-->
+	<announce delay="600000" type="Event" message="Pinata Dragon!." />
+	<areaspawn delay="600000" fromx="32292" fromy="32178" fromz="7" tox="32484" toy="32122" toz="7">
+		<monster name="Pinata Dragon" amount="2" />
+	</areaspawn>
+
+	<announce delay="3000000" type="Event" message="Pinata Dragon!." />
+	<areaspawn delay="3000000" fromx="32292" fromy="32178" fromz="7" tox="32484" toy="32122" toz="7">
+		<monster name="Pinata Dragon" amount="1" />
+	</areaspawn>
+
+	<!--East > -->
+	<announce delay="1200000" type="Event" message="Pinata Dragon!." />
+	<areaspawn delay="1200000" fromx="32433" fromy="32164" fromz="7" tox="32474" toy="32272" toz="7">
+		<monster name="Pinata Dragon" amount="2" />
+	</areaspawn>
+
+	<announce delay="3600000" type="Event" message="Pinata Dragon!." />
+	<areaspawn delay="3600000" fromx="32433" fromy="32164" fromz="7" tox="32474" toy="32272" toz="7">
+		<monster name="Pinata Dragon" amount="1" />
+	</areaspawn>
+
+	<!-- South > -->
+	<announce delay="1800000" type="Event" message="Pinata Dragon!." />
+	<areaspawn delay="1800000" fromx="32430" fromy="32283" fromz="7" tox="32233" toy="32340" toz="7">
+		<monster name="Pinata Dragon" amount="2" />
+	</areaspawn>
+
+	<!-- < all > -->
+	<announce delay="2400000" type="Event" message="Pinata Dragon!." />
+	<areaspawn delay="2400000" fromx="32225" fromy="32307" fromz="7" tox="32484" toy="32122" toz="7">
+		<monster name="Pinata Dragon" amount="1" />
+	</areaspawn>
+
+	<announce delay="60000" type="Event" message="Pinata Dragon!." />
+	<areaspawn delay="60000" fromx="32225" fromy="32307" fromz="7" tox="32484" toy="32122" toz="7">
+		<monster name="Pinata Dragon" amount="1" />
+	</areaspawn>
+</raid>

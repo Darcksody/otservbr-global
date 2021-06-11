@@ -102,6 +102,8 @@
 	<raid name="RatsThais" file="thais/rats.xml" interval2="500" margin="80" />
 	<raid name="ChickenThais" file="thais/chickens.xml" interval2="500" margin="80" />
 	<raid name="Wild Horses" file="thais/wild_horses.xml" interval2="500" margin="80" />
+	<raid name="Feruthais" file="thais/ferumbras.xml" interval2="1440" margin="120" />
+	<raid name="pinatas" file="thais/pinata.xml" interval2="1440" margin="120" />
 	<!-- Venore -->
 	<raid name="Dharalion" file="venore/dharalion.xml" interval2="500" margin="70" />
 	<raid name="Elves" file="venore/elves.xml" interval2="500" margin="80" />
@@ -112,5 +114,4 @@
 	<raid name="The Old Widow" file="venore/the_old_widow.xml" interval2="1440" margin="60" />
 	<raid name="Undead Army" file="venore/undead.xml" interval2="500" margin="100" />
 	<raid name="Water Buffalo" file="venore/water_buffalo.xml" interval2="500" margin="100" />
-	<raid name="Feruthais" file="thais/ferumbras.xml" interval2="1440" margin="120" />
 </raids>

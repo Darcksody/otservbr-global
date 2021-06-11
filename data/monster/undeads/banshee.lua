@@ -108,7 +108,7 @@ monster.loot = {
 	{name = "terra mantle", chance = 340},
 	{name = "petrified scream", chance = 4150},
 	{name = "hair of a banshee", chance = 4810},
-	{name = "sweet smelling bait", chance = 40}
+	{name = "sweet smelling bait", chance = 10}
 }
 
 monster.attacks = {

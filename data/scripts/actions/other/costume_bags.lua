@@ -12,8 +12,20 @@ function costumeBags.onUse(player, item, fromPosition, target, toPosition, isHot
 	if not monsterNames then
 		return true
 	end
-    player:sendTextMessage(MESSAGE_STATUS, 'You will stay 5 minutes transformed in a monster!')
-	doSetMonsterOutfit(player, monsterNames[math.random(#monsterNames)], 300 * 1000)
+
+	local lookType = MonsterType(monsterNames[math.random(#monsterNames)]):getOutfit().lookType
+    if not lookType then
+        if not lookType then
+            player:sendCancelMessage("A monster with that name does not exist.")
+            return false
+        end
+    end
+
+	local playerOutfit = player:getOutfit()
+    playerOutfit.lookType = lookType
+    player:setOutfit(playerOutfit)
+
+    player:sendTextMessage(MESSAGE_STATUS, 'You are transformed in a monster!')
 	player:addAchievementProgress('Masquerader', 100)
 	item:getPosition():sendMagicEffect(36)
 	item:remove()
