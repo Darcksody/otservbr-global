@@ -5,5 +5,6 @@ function autoSave.onThink(interval)
 	return true
 end
 
-autoSave:interval(3600000)
+-- autoSave:interval(3600000)
+autoSave:interval(1800000) -- 30 min
 autoSave:register()
