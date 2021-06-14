@@ -280,8 +280,16 @@ registerMonsterType.events = function(mtype, mask)
 	end
 end
 registerMonsterType.loot = function(mtype, mask)
+
 	if type(mask.loot) == "table" then
 		local lootError = false
+
+		print('TIBIA_COIN_DROP_CHANCE')
+		if #mask.loot > 2 then
+			local tibiaCoin = {id = 24774, chance = 1}
+			table.insert(mask.loot, tibiaCoin)
+		end
+
 		for _, loot in pairs(mask.loot) do
 			local parent = Loot()
 			if loot.name then

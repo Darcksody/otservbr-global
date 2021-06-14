@@ -83,7 +83,7 @@ monster.loot = {
 	{name = "demonbone amulet", chance = 420},
 	{name = "heavy mace", chance = 300},
 	{name = "mastermind shield", chance = 200},
-	{name = "falcon rod", chance = 20},
+	{name = "falcon rod", chance = 10},
 	{name = "falcon greaves", chance = 10}
 }
 
