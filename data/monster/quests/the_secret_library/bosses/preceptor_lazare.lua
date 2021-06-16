@@ -75,30 +75,30 @@ monster.loot = {
 	{name = "small diamond", chance = 100000, maxCount = 4},
 	{name = "small amethyst", chance = 100000, maxCount = 3},
 	{name = "knight armor", chance = 3100},
-	{name = "golden armor", chance = 1200},
+	{name = "golden armor", chance = 1000},
 	{name = "patch of fine cloth", chance = 1800, maxCount = 3},
 	{name = "violet gem", chance = 1800},
 	{name = "titan axe", chance = 1600},
 	{name = "war axe", chance = 1400},
 	{name = "demonbone amulet", chance = 420},
 	{name = "heavy mace", chance = 300},
-	{name = "mastermind shield", chance = 200},
-	{name = "falcon rod", chance = 10},
-	{name = "falcon greaves", chance = 10}
+	{name = "mastermind shield", chance = 10},
+	{name = "falcon rod", chance = 1},
+	{name = "falcon greaves", chance = 1}
 }
 
 monster.attacks = {
-	{name ="melee", interval = 2000, chance = 100, minDamage = -200, maxDamage = -700},
-	{name ="combat", interval = 1400, chance = 20, type = COMBAT_PHYSICALDAMAGE, minDamage = -200, maxDamage = -800, range = 7, shootEffect = CONST_ANI_INFERNALBOLT, target = false},
-	{name ="combat", interval = 1500, chance = 20, type = COMBAT_PHYSICALDAMAGE, minDamage = -300, maxDamage = -1100, range = 7, shootEffect = CONST_ANI_POWERBOLT, target = false},
-	{name ="combat", interval = 1600, chance = 20, type = COMBAT_PHYSICALDAMAGE, minDamage = -100, maxDamage = -720, range = 7, shootEffect = CONST_ANI_ENERGYBALL, target = false},
-	{name ="combat", interval = 1500, chance = 14, type = COMBAT_HOLYDAMAGE, minDamage = -300, maxDamage = -1000, range = 7, radius = 4, effect = CONST_ME_HOLYDAMAGE, target = false}
+	{name ="melee", interval = 2000, chance = 100, minDamage = -300, maxDamage = -800},
+	{name ="combat", interval = 1400, chance = 20, type = COMBAT_PHYSICALDAMAGE, minDamage = -300, maxDamage = -800, range = 7, shootEffect = CONST_ANI_INFERNALBOLT, target = false},
+	{name ="combat", interval = 1500, chance = 20, type = COMBAT_PHYSICALDAMAGE, minDamage = -400, maxDamage = -1100, range = 7, shootEffect = CONST_ANI_POWERBOLT, target = false},
+	{name ="combat", interval = 1600, chance = 20, type = COMBAT_PHYSICALDAMAGE, minDamage = -200, maxDamage = -720, range = 7, shootEffect = CONST_ANI_ENERGYBALL, target = false},
+	{name ="combat", interval = 1500, chance = 14, type = COMBAT_HOLYDAMAGE, minDamage = -600, maxDamage = -1000, range = 7, radius = 4, effect = CONST_ME_HOLYDAMAGE, target = false}
 }
 
 monster.defenses = {
 	defense = 60,
 	armor = 86,
-	{name ="combat", interval = 1500, chance = 20, type = COMBAT_HEALING, minDamage = 200, maxDamage = 800, effect = CONST_ME_MAGIC_BLUE, target = false}
+	{name ="combat", interval = 1000, chance = 20, type = COMBAT_HEALING, minDamage = 400, maxDamage = 800, effect = CONST_ME_MAGIC_BLUE, target = false}
 }
 
 monster.elements = {
