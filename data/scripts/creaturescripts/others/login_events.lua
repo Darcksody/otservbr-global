@@ -102,7 +102,9 @@ function loginEvents.onLogin(player)
 		"LoginAccess",
 		"TibiaCoinsLevelUp",
 		-- The Rookie Guard
-		"VascalirRatKills"
+		"VascalirRatKills",
+		-- Custom Task System
+		"TaskSystemOnKill"
 	}
 
 	for i = 1, #events do

@@ -16,8 +16,16 @@ local function addStamina(name)
 		if storage ~= 1 then
 			staminaBonus.events[name] = nil
 		else
-			player:setStamina(player:getStamina() + staminaBonus.bonus)
-			player:sendTextMessage(MESSAGE_STATUS_DEFAULT, "You gain two stamina points.")
+
+			local StaminaLevel = player:getStamina()
+			local StaminaMax = 42 * 60
+
+			if StaminaLevel >= StaminaMax then
+			else
+				player:setStamina(StaminaLevel + staminaBonus.bonus)
+				player:sendTextMessage(MESSAGE_STATUS_DEFAULT, "Two minutes of stamina has been refilled.")
+			end
+
 			staminaBonus.events[name] = addEvent(addStamina, staminaBonus.period, name)
 		end
 	end

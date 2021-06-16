@@ -284,9 +284,13 @@ registerMonsterType.loot = function(mtype, mask)
 	if type(mask.loot) == "table" then
 		local lootError = false
 
-		print('TIBIA_COIN_DROP_CHANCE')
 		if #mask.loot > 2 then
-			local tibiaCoin = {id = 24774, chance = 1}
+
+			if mtype:getName():lower() == 'bonelord' then
+				print('TIBIA_COIN_DROP_CHANCE')
+			end
+
+			local tibiaCoin = {id = 24774, chance = 20}
 			table.insert(mask.loot, tibiaCoin)
 		end
 

@@ -298,6 +298,13 @@ Tibia Coins on Level 50(25tc), 100(50tc), 150(75tc), 200(100tc), 300(150tc), 400
 	player:setStaminaXpBoost(staminaBonus)
 	player:setBaseXpGain(baseExp)
 
+	local home = getHouseByPlayerGUID(getPlayerGUID(player))
+	if home then
+		player:setStorageValue(EXP_BOST_BY_HOUSE, 1)
+	else 
+		player:setStorageValue(EXP_BOST_BY_HOUSE, 0)
+	end
+
 	if player:getStorageValue(Storage.isTraining) >= 1 then --Reset exercise weapon storage
 		player:setStorageValue(Storage.isTraining,0)
 	end

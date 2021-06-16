@@ -15,3 +15,7 @@ dofile('data/lib/others/others.lua')
 
 -- Quests library
 dofile('data/lib/quests/quest.lua')
+
+-- Custom Task System
+dofile('data/lib/task_system/init.lua')
+

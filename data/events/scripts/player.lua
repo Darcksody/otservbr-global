@@ -782,6 +782,10 @@ function Player:onGainExperience(source, exp, rawExp)
         end
     end
 
+	if self:getStorageValue(EXP_BOST_BY_HOUSE) == 1 then
+		exp = exp * 1.01 -- 1% exp
+	end
+
 	return exp
 end
 

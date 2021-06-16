@@ -76,9 +76,18 @@ local function addStamina(name)
 			local target = player:getTarget()
 			if target and target:getName() == staminaBonus.target then
 				local hitsCount = player:getStorageValue(Storage.isTraining)
+
 				if hitsCount == staminaBonus.hits then
-					player:sendTextMessage(MESSAGE_STATUS_DEFAULT, "You gain a stamina point.")
-					player:setStamina(player:getStamina() + staminaBonus.bonus)
+
+				local StaminaLevel = player:getStamina()
+				local StaminaMax = 42 * 60
+
+				if StaminaLevel >= StaminaMax then
+				else
+					player:sendTextMessage(MESSAGE_STATUS_DEFAULT, "One minute of stamina has been refilled")
+					player:setStamina(StaminaLevel + staminaBonus.bonus)
+				end
+
 					player:setStorageValue(Storage.isTraining,1)
 					hitsCount = 1
 				end

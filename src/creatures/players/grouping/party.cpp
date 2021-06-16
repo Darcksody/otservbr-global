@@ -497,8 +497,10 @@ void Party::updatePlayerStatus(Player* player)
 	for (Player* member : memberList) {
 		bool condition = (maxDistance == 0 || (Position::getDistanceX(player->getPosition(), member->getPosition()) <= maxDistance && Position::getDistanceY(player->getPosition(), member->getPosition()) <= maxDistance));
 		if (condition) {
+			member->addStorageValue(48485026,1);
 			showPlayerStatus(player, member, true);
 		} else {
+			member->addStorageValue(48485026,0);
 			showPlayerStatus(player, member, false);
 		}
 	}
