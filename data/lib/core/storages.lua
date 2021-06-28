@@ -767,7 +767,7 @@ Storage = {
 		Mission49 = 50815,
 		Mission50 = 50816,
 		Mission51 = 50817,
-		Mission50 = 50818,
+		Mission52 = 50818,
 		Mission53 = 50819,
 		Mission54 = 50820,
 		Mission55 = 50821,
@@ -2256,7 +2256,6 @@ Storage = {
 		GraveDanger = {},
 		HandOfTheInquisitionOutfits = {},
 		-- Kilmaresh = {}, done earlier in the file
-		GraveDanger = {},
 		-- update 12.30
 		FeasterOfSouls = {},
 		PoltergeistOutfits = {}

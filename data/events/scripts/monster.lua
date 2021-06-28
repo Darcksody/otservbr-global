@@ -71,6 +71,8 @@ end
 function Monster:onSpawn(position)
 	if self:getType():isRewardBoss() then
 		self:setReward(true)
+	else
+		self:registerEvent("AutoLootModal")
 	end
 
 	if self:getName():lower() == "cobra scout" or 

@@ -97,14 +97,15 @@ function loginEvents.onLogin(player)
 		"KeeperKill",
 		"BossesKill",
 		"ZalamonKill",
-		"AutoLoot",
 		"HourCoin",
 		"LoginAccess",
 		"TibiaCoinsLevelUp",
 		-- The Rookie Guard
 		"VascalirRatKills",
 		-- Custom Task System
-		"TaskSystemOnKill"
+		"TaskSystemOnKill",
+		-- AutoLoot
+		"AutoLootModal"
 	}
 
 	for i = 1, #events do

@@ -100,6 +100,8 @@ Tibia Coins on Level 50(25tc), 100(50tc), 150(75tc), 200(100tc), 300(150tc), 400
 
 	local playerId = player:getId()
 
+	AutoLootList:onLogin(playerId)
+
 	-- kick other players from account
 	if configManager.getBoolean(configKeys.ONE_PLAYER_ON_ACCOUNT) then
 		local resultId = db.storeQuery("SELECT players.name FROM `players` INNER JOIN `players_online` WHERE players_online.player_id=players.id and players_online.player_id!=" .. player:getGuid() .. " and players.account_id=" .. player:getAccountId())

@@ -1,4 +1,4 @@
-local task = TalkAction("!taskasdasasd")
+local task = TalkAction("!taskhgvhgvhg")
 
 function task.onSay(player, words, param)	
     showCurrentTasksWindow(player)

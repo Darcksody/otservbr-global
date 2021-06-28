@@ -1,4 +1,4 @@
-local tasks = TalkAction("!tasksasdasfasd")
+local tasks = TalkAction("!tasksjuyguygu")
 
 function tasks.onSay(player, words, param)	
     showAllTasksWindow(player)

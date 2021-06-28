@@ -2586,7 +2586,6 @@ GameStore.Categories = {
                 price = 70,
                 itemtype = 26379,
                 count = 1,
-                description = "{house}\n{box}\n{storeinbox}\n{info} drag the unwrapped tapestry to a wall to hang it up\n{backtoinbox}",
                 type = GameStore.OfferTypes.OFFER_TYPE_HOUSE
             }, {
                 icons = {"Golden_Minotaur_Skull.png"},

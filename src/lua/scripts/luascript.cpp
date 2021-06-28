@@ -36,6 +36,7 @@
 #include "game/scheduling/scheduler.h"
 #include "database/databasetasks.h"
 #include "lua/creature/movement.h"
+#include "lua/creature/events.h"
 #include "lua/global/globalevent.h"
 #include "lua/scripts/scripts.h"
 #include "items/weapons/weapons.h"
@@ -51,6 +52,7 @@ extern Monsters g_monsters;
 extern ConfigManager g_config;
 extern Vocations g_vocations;
 extern Spells* g_spells;
+extern Events* g_events;
 extern Actions* g_actions;
 extern TalkActions* g_talkActions;
 extern CreatureEvents* g_creatureEvents;
@@ -5317,6 +5319,7 @@ int LuaScriptInterface::luaGameCreateMonster(lua_State* L)
 	const Position& position = getPosition(L, 2);
 	bool extended = getBoolean(L, 3, false);
 	bool force = getBoolean(L, 4, false);
+	g_events->eventMonsterOnSpawn(monster, position);
 	if (g_game.placeCreature(monster, position, extended, force)) {
 		pushUserdata<Monster>(L, monster);
 		setMetatable(L, -1, "Monster");

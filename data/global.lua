@@ -10,14 +10,6 @@ TIBIA_COIN_DROP_CHANCE = 10
 MONSTER_RUN_HEALTH_RATE = 1.5
 MONSTER_SUMMON_MULT = 500
 
--- AutoLoot config
-AUTO_LOOT_MAX_ITEMS = 10
-
--- Reserved storage
-AUTOLOOT_STORAGE_START = 48484848
-AUTOLOOT_STORAGE_END = AUTOLOOT_STORAGE_START + AUTO_LOOT_MAX_ITEMS
--- AutoLoot config end
-
 -- CoinsHour
 GET_DAY_STORAGE_HOURCOIN = 48485000
 MAX_STORAGE_HOURCOIN = 48485001
@@ -68,6 +60,46 @@ START_MONSTER_TASK_STORAGE = 49520000
 COUNT_PARTY_MEMBERS = true
 
 DOBLE_EXP_CLIENT = false
+
+-- AUTOLLOT START --
+AUTOLOOT_EXHAUSTED = 48485028
+AUTOLOOT_STATUS = 48485029
+AUTOLOOT_INCREASE = 49530000
+AUTOLOOT_MAXITEMS = 10
+
+function comma_value(n)
+	local left,num,right = string.match(n,'^([^%d]*%d)(%d*)(.-)$')
+	return left..(num:reverse():gsub('(%d%d%d)','%1,'):reverse())..right
+end
+
+
+function trim(string)
+   return string:match("^%s*(.-)%s*$")
+end
+
+
+local dataTypes = {
+    number = result.getNumber,
+    string = result.getString,
+    stream = result.getStream
+}
+ 
+function queryToTable(id, values)
+    local ret = {}
+    if not id then
+        return ret
+    end
+    repeat
+        local t = {}
+        for i = 1, #values do
+            local column, dataType = values[i]:match('(%a+):(%a+)')
+            t[column] = dataTypes[dataType](id, column)
+        end
+        table.insert(ret, t)
+    until not result.next(id)
+    return ret
+end
+-- AUTO LOOT END --
 
 NOT_MOVEABLE_ACTION = 100
 PARTY_PROTECTION = 1 -- Set to 0 to disable.

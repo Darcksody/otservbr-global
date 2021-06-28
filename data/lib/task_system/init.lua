@@ -29,7 +29,7 @@ TASK_SYSTEM = {
                 {name = "Dragon", points = 1},
                 {name = "Dragon Lord", points = 2},
             },
-            level = {minimum = 20, maximum = 50},
+            level = {minimum = 10, maximum = 1000},
             pointsToFinish = 1000,
             rewards = {
                 items = {{id = 2160, count = 10}, {id = 2400}},
@@ -49,7 +49,7 @@ TASK_SYSTEM = {
             maximumRepeat = 3,
             countPartyMembers = false,
             monsters = {{name = "Demon", points = 1}},
-            level = {minimum = 100, maximum = 200},
+            level = {minimum = 10, maximum = 1000},
             pointsToFinish = 666,
             rewards = {
                 items = {{id = 2160, count = 100}},
@@ -284,7 +284,7 @@ end
 
 function showAllTasksWindow(player)
     local window = ModalWindow {
-        title = 'Tasks',
+        title = 'Tasks Manager',
         message = 'Please choose which task you want to see.'
     }
 

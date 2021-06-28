@@ -19,3 +19,7 @@ dofile('data/lib/quests/quest.lua')
 -- Custom Task System
 dofile('data/lib/task_system/init.lua')
 
+
+-- Auto Loot
+dofile('data/lib/autoloot/autoloot.lua')
+

@@ -4,6 +4,10 @@ function playerLogout.onLogout(player)
 	if nextUseStaminaTime[playerId] ~= nil then
 		nextUseStaminaTime[playerId] = nil
 	end
+
+	local playerId = player:getId()
+	AutoLootList:onLogout(playerId)
+
 	player:saveSpecialStorage()
 	player:setStorageValue(Storage.ExerciseDummyExhaust, 0)
 
