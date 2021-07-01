@@ -3950,6 +3950,13 @@ GameStore.Categories = {
                 count = 1,
                 description = "<i>Provides permanent light.</i>\n\n{info} 6 squares of green light.",
                 type = GameStore.OfferTypes.OFFER_TYPE_ITEM
+            },
+            {
+                icons = {"Category_Extras.png"},
+                name = "AutoLoot Slot",
+                price = 250,
+                description = "<i>Provides permanent extra slot to your auto loot system.</i>\n\n{info} Auto loot increase +1.",
+                type = GameStore.OfferTypes.OFFER_TYPE_AUTOLOOT_SLOTS
             }
         }
     }

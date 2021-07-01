@@ -31,7 +31,8 @@ GameStore.OfferTypes = {
 	OFFER_TYPE_HIRELING_NAMECHANGE = 21,
 	OFFER_TYPE_HIRELING_SEXCHANGE = 22,
 	OFFER_TYPE_HIRELING_SKILL = 23,
-	OFFER_TYPE_HIRELING_OUTFIT = 24
+	OFFER_TYPE_HIRELING_OUTFIT = 24,
+	OFFER_TYPE_AUTOLOOT_SLOTS = 30
 }
 
 GameStore.ActionType = {
@@ -159,7 +160,11 @@ GameStore.ExpBoostValues = {
 	[2] = 300,
 	[3] = 400,
 	[4] = 500,
-	[5] = 600
+	[5] = 600,
+	[6] = 700,
+	[7] = 800,
+	[8] = 900,
+	[9] = 1000
 }
 
 GameStore.DefaultValues = {
@@ -362,6 +367,7 @@ function parseBuyStoreOffer(playerId, msg)
 			offer.type ~= GameStore.OfferTypes.OFFER_TYPE_HIRELING_SEXCHANGE and
 			offer.type ~= GameStore.OfferTypes.OFFER_TYPE_HIRELING_SKILL and
 			offer.type ~= GameStore.OfferTypes.OFFER_TYPE_HIRELING_OUTFIT and
+			offer.type ~= GameStore.OfferTypes.OFFER_TYPE_AUTOLOOT_SLOTS and
 	not offer.id) then
 		return queueSendStoreAlertToUser("This offer is unavailable [1]", 350, playerId, GameStore.StoreErrors.STORE_ERROR_INFORMATION)
 	end
@@ -402,6 +408,7 @@ function parseBuyStoreOffer(playerId, msg)
 		elseif offer.type == GameStore.OfferTypes.OFFER_TYPE_HIRELING_SEXCHANGE   then GameStore.processHirelingChangeSexPurchase(player, offer)
 		elseif offer.type == GameStore.OfferTypes.OFFER_TYPE_HIRELING_SKILL       then GameStore.processHirelingSkillPurchase(player, offer)
 		elseif offer.type == GameStore.OfferTypes.OFFER_TYPE_HIRELING_OUTFIT      then GameStore.processHirelingOutfitPurchase(player, offer)
+		elseif offer.type == GameStore.OfferTypes.OFFER_TYPE_AUTOLOOT_SLOTS      then GameStore.processAddAutoLootSlot(player)
 		else
 			-- This should never happen by our convention, but just in case the guarding condition is messed up...
 			error({code = 0, message = "This offer is unavailable [2]"})
@@ -1547,11 +1554,19 @@ function GameStore.processExpBoostPuchase(player)
 	player:setStoreXpBoost(50)
 	player:setExpBoostStamina(currentExpBoostTime + 3600)
 
-	if (player:getStorageValue(GameStore.Storages.expBoostCount) == -1 or expBoostCount == 6) then
+	if (player:getStorageValue(GameStore.Storages.expBoostCount) == -1 or expBoostCount == 9) then
 		player:setStorageValue(GameStore.Storages.expBoostCount, 1)
 	end
 
 	player:setStorageValue(GameStore.Storages.expBoostCount, expBoostCount + 1)
+end
+
+function GameStore.processAddAutoLootSlot(player)
+	local slotIncrease = 1
+	local storage = 48485030
+	local storageIncrease = player:getStorageValue(storage)
+
+	player:setStorageValue(storage, math.max(0, storageIncrease) + slotIncrease)
 end
 
 function GameStore.processPreySlotPurchase(player)
