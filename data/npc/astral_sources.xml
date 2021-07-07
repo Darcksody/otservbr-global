@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Astral Sources" walkinterval="2000" floorchange="0" script="imbuiments.lua">
+	<health now="100" max="100"/>
+	<look type="1067" head="0" body="0" legs="0" feet="0" addons="0"/>
+	<parameters>  
+		<parameter key="module_shop" value="1"/>
+		<parameter key="shop_buyable" value="
+			<!-- Scorch -->
+			fiery heart, 10553, 2875; 
+			green dragon scale, 5920, 5100; 
+			demon horn, 5954, 11100;
+
+			<!-- venom --> 
+			swamp grass, 10603, 2520;
+			poisonous slime, 10557, 5050;
+			slime heart, 23565, 10160;
+
+			<!-- frost -->
+			frosty heart, 10578, 2780;
+			seacrest hair, 24170, 5260;
+			polar bear paw, 10567, 10030;
+
+			<!-- electrify -->
+			rorc feather, 21310, 2570;
+			peacock feather fan, 24631, 5350;
+			energy vein, 26164, 10270;
+
+			<!-- reap -->
+			pile of grave earth, 12440, 2525;
+			demonic skeletal hand, 10564, 5080;
+			petrified scream, 11337, 10250;
+
+			<!-- vampirism -->
+			vampire teeth, 10602, 2775;
+			bloody pincers, 10550, 5100;
+			piece of dead brain, 10580, 10420;
+
+
+			rope belt, 12448, 2566;
+			silencer claws, 22534, 5390;
+			some grimeleech wings, 25386, 11200;
+
+			protective charm, 12400, 2560;
+			sabretooth, 11228, 5400;
+			vexclaw talon, 25384, 11100;
+
+			<!-- lich shroud -->
+			flask of embalming fluid, 12422, 2530;
+			gloom wolf fur, 24663, 5070;
+			mystical hourglass, 10577, 10700;
+
+			<!-- snake skin -->
+			piece of swampling wood, 20103, 2530;
+			snake skin, 10611, 5400;
+			brimstone fangs, 12658, 10380;
+
+			<!-- dragon hide -->
+			green dragon leather, 5877, 2600;
+			blazing bone, 18425, 5610;
+			draken sulphur, 12614, 10550;
+			
+			<!-- quara scale -->
+			winter wolf fur, 11212, 2520;
+			thick fur, 11224, 5150;
+			deepling warts, 15425, 10180;
+
+			<!-- cloud fabric -->
+			wyvern talisman, 10561, 2765;
+			crawler head plating, 15482, 5210;
+			wyrm scale, 10582, 10400;
+
+			<!-- demon presence -->
+			cultish robe, 10556, 2650;
+			cultish mask, 10555, 5280;
+			hellspawn tail, 11221, 10475;
+
+			<!-- swiftness -->
+			damselfly wing, 19738, 2520;
+			compass, 11219, 5045;
+			waspoid wing, 15484, 10190;
+
+			<!-- chop -->
+			orc tooth, 11113, 2650;
+			battle stone, 12403, 5290;
+			moohtant horn, 23571, 10140;
+
+			<!-- slash -->
+			lion's mane, 10608, 2560;
+			mooh'tah shell, 23573, 5110;
+			war crystal, 10571, 10460;
+
+			<!-- bash -->
+			cyclops toe, 10574, 2555;
+			ogre nose ring, 24845, 5210;
+			warmaster's wristguards, 11322, 10200;
+
+			<!-- precision -->
+			elven scouting glass, 12420, 2550;
+			elven hoof, 21311, 5115;
+			metal spike, 11215, 10320;
+
+			<!-- blockade -->
+			piece of scarab shell, 10558, 2545;
+			brimstone shell, 12659, 5210;
+			frazzle skin, 22533, 10400;
+
+			<!-- epiphany -->
+			elvish talisman, 10552, 2545;
+			broken shamanic staff, 12408, 5035;
+			strand of medusa hair, 11226, 10600;
+
+			<!-- featherweight -->
+			fairy wings, 28999, 2700;
+			little bowl of myrrh, 29007, 5500;
+			goosebump leather, 22539, 10650;"/>
+
+		<parameter key="shop_sellable" value="
+			<!-- Scorch -->
+			fiery heart, 10553, 375; 
+			green dragon scale, 5920, 100; 
+			demon horn, 5954, 1100;
+
+			<!-- venom --> 
+			swamp grass, 10603, 20;
+			poisonous slime, 10557, 50;
+			slime heart, 23565, 160;
+
+			<!-- frost -->
+			frosty heart, 10578, 280;
+			seacrest hair, 24170, 260;
+			polar bear paw, 10567, 30;
+
+			<!-- electrify -->
+			rorc feather, 21310, 70;
+			peacock feather fan, 24631, 350;
+			energy vein, 26164, 270;
+
+			<!-- reap -->
+			pile of grave earth, 12440, 25;
+			demonic skeletal hand, 10564, 80;
+			petrified scream, 11337, 250;
+
+			<!-- vampirism -->
+			vampire teeth, 10602, 275;
+			bloody pincers, 10550, 100;
+			piece of dead brain, 10580, 420;
+
+			<!-- void -->
+			rope belt, 12448, 66;
+			silencer claws, 22534, 390;
+			some grimeleech wings, 25386, 1200;
+
+			<!-- strike -->
+			protective charm, 12400, 60;
+			sabretooth, 11228, 400;
+			vexclaw talon, 25384, 1100;
+
+			<!-- lich shroud -->
+			flask of embalming fluid, 12422, 30;
+			gloom wolf fur, 24663, 70;
+			mystical hourglass, 10577, 700;
+
+			<!-- snake skin -->
+			piece of swampling wood, 20103, 30;
+			snake skin, 10611, 400;
+			brimstone fangs, 12658, 380;
+
+			<!-- dragon hide -->
+			green dragon leather, 5877, 100;
+			blazing bone, 18425, 610;
+			draken sulphur, 12614, 550;
+			
+			<!-- quara scale -->
+			winter wolf fur, 11212, 20;
+			thick fur, 11224, 150;
+			deepling warts, 15425, 180;
+
+			<!-- cloud fabric -->
+			wyvern talisman, 10561, 265;
+			crawler head plating, 15482, 210;
+			wyrm scale, 10582, 400;
+
+			<!-- demon presence -->
+			cultish robe, 10556, 150;
+			cultish mask, 10555, 280;
+			hellspawn tail, 11221, 475;
+
+			<!-- swiftness -->
+			damselfly wing, 19738, 20;
+			compass, 11219, 45;
+			waspoid wing, 15484, 190;
+
+			<!-- chop -->
+			orc tooth, 11113, 150;
+			battle stone, 12403, 290;
+			moohtant horn, 23571, 140;
+
+			<!-- slash -->
+			lion's mane, 10608, 60;
+			mooh'tah shell, 23573, 110;
+			war crystal, 10571, 460;
+
+			<!-- bash -->
+			cyclops toe, 10574, 55;
+			ogre nose ring, 24845, 210;
+			warmaster's wristguards, 11322, 200;
+
+			<!-- precision -->
+			elven scouting glass, 12420, 50;
+			elven hoof, 21311, 115;
+			metal spike, 11215, 320;
+
+			<!-- blockade -->
+			piece of scarab shell, 10558, 45;
+			brimstone shell, 12659, 210;
+			frazzle skin, 22533, 400;
+
+			<!-- epiphany -->
+			elvish talisman, 10552, 45;
+			broken shamanic staff, 12408, 35;
+			strand of medusa hair, 11226, 600;
+
+			<!-- featherweight -->
+			fairy wings, 28999, 200;
+			little bowl of myrrh, 29007, 500;
+			goosebump leather, 22539, 650;"/>
+	</parameters>
+</npc>
+ 
