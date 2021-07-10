@@ -13,13 +13,13 @@ monster.outfit = {
 	lookMount = 0
 }
 
-monster.health = 1200
-monster.maxHealth = 1200
+monster.health = 12000
+monster.maxHealth = 12000
 monster.race = "blood"
 monster.corpse = 6037
 monster.speed = 240
 monster.manaCost = 0
-monster.maxSummons = 5
+monster.maxSummons = 20
 
 monster.changeTarget = {
 	interval = 5000,
@@ -57,8 +57,10 @@ monster.light = {
 }
 
 monster.summons = {
-	{name = "demon skeleton", chance = 13, interval = 1000, max = 5},
-	{name = "ghost", chance = 12, interval = 1000, max = 4}
+	{name = "elder bonelord", chance = 50, interval = 1000, max = 10},
+	{name = "bonelord", chance = 50, interval = 1000, max = 10},
+	{name = "demon skeleton", chance = 25, interval = 1000, max = 10},
+	{name = "ghost", chance = 25, interval = 1000, max = 10}
 }
 
 monster.voices = {
@@ -69,6 +71,7 @@ monster.voices = {
 }
 
 monster.loot = {
+	{id = 21400, chance = 12500, maxCount = 5}, -- silver raid token
 	{id = 2148, chance = 100000, maxCount = 45},
 	{id = 5898, chance = 5000},
 	{id = 2148, chance = 80000, maxCount = 90}
@@ -90,20 +93,20 @@ monster.attacks = {
 monster.defenses = {
 	defense = 23,
 	armor = 19,
-	{name ="combat", interval = 1000, chance = 9, type = COMBAT_HEALING, minDamage = 1, maxDamage = 219, effect = CONST_ME_MAGIC_BLUE, target = false}
+	{name ="combat", interval = 1000, chance = 30, type = COMBAT_HEALING, minDamage = 1, maxDamage = 300, effect = CONST_ME_MAGIC_BLUE, target = false}
 }
 
 monster.elements = {
-	{type = COMBAT_PHYSICALDAMAGE, percent = 0},
-	{type = COMBAT_ENERGYDAMAGE, percent = 0},
+	{type = COMBAT_PHYSICALDAMAGE, percent = 80},
+	{type = COMBAT_ENERGYDAMAGE, percent = 70},
 	{type = COMBAT_EARTHDAMAGE, percent = 100},
-	{type = COMBAT_FIREDAMAGE, percent = 0},
-	{type = COMBAT_LIFEDRAIN, percent = 0},
-	{type = COMBAT_MANADRAIN, percent = 0},
-	{type = COMBAT_DROWNDAMAGE, percent = 0},
-	{type = COMBAT_ICEDAMAGE, percent = 0},
-	{type = COMBAT_HOLYDAMAGE , percent = -20},
-	{type = COMBAT_DEATHDAMAGE , percent = 0}
+	{type = COMBAT_FIREDAMAGE, percent = 70},
+	{type = COMBAT_LIFEDRAIN, percent = 70},
+	{type = COMBAT_MANADRAIN, percent = 70},
+	{type = COMBAT_DROWNDAMAGE, percent = 70},
+	{type = COMBAT_ICEDAMAGE, percent = 70},
+	{type = COMBAT_HOLYDAMAGE , percent = 70},
+	{type = COMBAT_DEATHDAMAGE , percent = 70}
 }
 
 monster.immunities = {

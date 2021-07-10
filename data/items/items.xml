@@ -5564,6 +5564,8 @@
 		<attribute key="containerSize" value="10" />
 		<attribute key="decayTo" value="2845" />
 		<attribute key="duration" value="300" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
 	</item>
 	<item id="2845" article="a" name="dead dragon">
 		<attribute key="containerSize" value="10" />
@@ -51014,6 +51016,8 @@
 		<attribute key="attack" value="8" />
 		<attribute key="HitChance" value="5" />
 		<attribute key="skillDist" value="4" />
+		<attribute key="skillcriticalchance" value="10" />
+		<attribute key="skillcriticaldamage" value="10" />
 		<attribute key="absorbPercentHoly" value="7" />
 		<attribute key="ammoType" value="arrow" />
 		<attribute key="imbuingSlots" value="3" />

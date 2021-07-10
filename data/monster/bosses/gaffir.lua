@@ -89,7 +89,7 @@ monster.loot = {
 	{name = "terra hood", chance = 1600},
 	{name = "amulet of loss", chance = 2400},
 	{name = "wand of everblazing", chance = 1000},
-	{name = "cobra wand", chance = 2}
+	{name = "cobra wand", chance = 20}
 }
 
 monster.attacks = {
