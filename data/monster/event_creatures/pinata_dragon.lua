@@ -3,13 +3,13 @@ local monster = {}
 
 monster.name = "Pinata Dragon"
 monster.description = "a Pinata Dragon"
-monster.experience = 1000000
+monster.experience = 500000
 monster.outfit = {
 	lookTypeEx = 27730
 }
 
-monster.health = 100000
-monster.maxHealth = 100000
+monster.health = 150000
+monster.maxHealth = 150000
 monster.race = "undead"
 monster.corpse = 27731
 monster.speed = 0
@@ -69,15 +69,17 @@ monster.voices = {
 }
 
 monster.loot = {
-	{name = "white pearl", chance = 5010, maxCount = 5},
-	{name = "black pearl", chance = 5030, maxCount = 5},
-	{name = "gold ingot", chance = 5000, maxCount = 3},
-	{name = "Store coin", chance = 50000, maxCount = 25},
-	{name = "Store coin", chance = 40000, maxCount = 25},
-	{name = "Store coin", chance = 30000, maxCount = 25},
-	{name = "gold coin", chance = 10000, maxCount = 100},
-	{name = "gold coin", chance = 10000, maxCount = 100},
-	{name = "gold coin", chance = 10000, maxCount = 100},
+	{id = 21400, chance = 20000, maxCount = 2}, -- silver raid token 
+	{id = 21400, chance = 20000, maxCount = 2}, -- silver raid token
+	{name = "white pearl", chance = 12500, maxCount = 5},
+	{name = "black pearl", chance = 12500, maxCount = 5},
+	{name = "gold ingot", chance = 12500, maxCount = 3},
+	{name = "Store coin", chance = 25000, maxCount = 10},
+	{name = "Store coin", chance = 20000, maxCount = 10},
+	{name = "Store coin", chance = 15000, maxCount = 10},
+	{name = "gold coin", chance = 25000, maxCount = 100},
+	{name = "gold coin", chance = 25000, maxCount = 100},
+	{name = "gold coin", chance = 25000, maxCount = 100},
 	{name = "platinum coin", chance = 10000, maxCount = 100},
 	{name = "platinum coin", chance = 10000, maxCount = 100},
 	{name = "small emerald", chance = 8000, maxCount = 10},
@@ -85,16 +87,16 @@ monster.loot = {
 	{name = "small ruby", chance = 8000, maxCount = 10},
 	{name = "small topaz", chance = 8000, maxCount = 10},
 	{name = "talon", chance = 8000, maxCount = 10},
-	{name = "platinum amulet", chance = 5680},
+	{name = "platinum amulet", chance = 12500},
 	{name = "life crystal", chance = 10000},
 	{name = "violet gem", chance = 10000},
 	{name = "green gem", chance = 10000},
 	{name = "red gem", chance = 10000},
-	{name = "crystal coin", chance = 5000, maxCount = 5},
+	{name = "crystal coin", chance = 12500, maxCount = 3},
 	{name = "crystal coin", chance = 5000, maxCount = 5},
 	{name = "birthday backpack", chance = 3600},
 	{name = "anniversary backpack", chance = 3400},
-	{name = "stamina potion", chance = 2000},
+	{name = "stamina potion", chance = 1000},
 	{name = "stamina potion", chance = 1000},
 
 	{id = 27617, chance = 5000},
@@ -114,43 +116,43 @@ monster.loot = {
 	{id = 9076, chance = 3000},
 	{id = 7739, chance = 3000},
 
-	{name = "silver token", chance = 5000, maxCount = 2},
-	{name = "gold token", chance = 4000, maxCount = 1},
-	{name = "silver token", chance = 2200, maxCount = 3},
-	{name = "gold token", chance = 2000, maxCount = 2},
+	{name = "silver token", chance = 12500, maxCount = 2},
+	{name = "gold token", chance = 12500, maxCount = 1},
+	{name = "silver token", chance = 12500, maxCount = 3},
+	{name = "gold token", chance = 12500, maxCount = 2},
 	{name = "plushie of devovorga", chance = 1000},
 	{name = "plushie of gaz'Haragoth", chance = 1000},
 	{name = "plushie of Tentugly", chance = 1000},
 	{name = "Ferumbras' Candy Hat", chance = 2000},
-	{name = "Store coin", chance = 5000, maxCount = 25},
-	{name = "Store coin", chance = 4000, maxCount = 25},
-	{name = "Store coin", chance = 3000, maxCount = 25},
-	{name = "Store coin", chance = 2000, maxCount = 25},
-	{name = "crackling egg", chance = 200},
-	{name = "vibrant egg", chance = 100}
+	{name = "Store coin", chance = 5000, maxCount = 10},
+	{name = "Store coin", chance = 4000, maxCount = 10},
+	{name = "Store coin", chance = 3000, maxCount = 10},
+	{name = "Store coin", chance = 2000, maxCount = 10},
+	-- {name = "crackling egg", chance = 200},
+	-- {name = "vibrant egg", chance = 100}
 }
 
 monster.attacks = {
-	{name ="melee", interval = 2000, chance = 100, minDamage = -50, maxDamage = -150}
+	{name ="melee", interval = 2000, chance = 100, minDamage = -10, maxDamage = -50}
 }
 
 monster.defenses = {
 	defense = 1,
 	armor = 1,
-	{name ="combat", interval = 2000, chance = 30, type = COMBAT_HEALING, minDamage = 1000, maxDamage = 25000, effect = CONST_ME_MAGIC_BLUE, target = false}
+	{name ="combat", interval = 1000, chance = 30, type = COMBAT_HEALING, minDamage = 2000, maxDamage = 30000, effect = CONST_ME_MAGIC_BLUE, target = false}
 }
 
 monster.elements = {
-	{type = COMBAT_PHYSICALDAMAGE, percent = -50},
-	{type = COMBAT_ENERGYDAMAGE, percent = -50},
-	{type = COMBAT_EARTHDAMAGE, percent = -50},
-	{type = COMBAT_FIREDAMAGE, percent = -50},
-	{type = COMBAT_LIFEDRAIN, percent = -50},
-	{type = COMBAT_MANADRAIN, percent = -50},
-	{type = COMBAT_DROWNDAMAGE, percent = -50},
-	{type = COMBAT_ICEDAMAGE, percent = -50},
-	{type = COMBAT_HOLYDAMAGE , percent = -50},
-	{type = COMBAT_DEATHDAMAGE , percent = -50}
+	{type = COMBAT_PHYSICALDAMAGE, percent = -80},
+	{type = COMBAT_ENERGYDAMAGE, percent = -80},
+	{type = COMBAT_EARTHDAMAGE, percent = -80},
+	{type = COMBAT_FIREDAMAGE, percent = -80},
+	{type = COMBAT_LIFEDRAIN, percent = -80},
+	{type = COMBAT_MANADRAIN, percent = -80},
+	{type = COMBAT_DROWNDAMAGE, percent = -80},
+	{type = COMBAT_ICEDAMAGE, percent = -80},
+	{type = COMBAT_HOLYDAMAGE , percent = -80},
+	{type = COMBAT_DEATHDAMAGE , percent = -80}
 }
 
 monster.immunities = {

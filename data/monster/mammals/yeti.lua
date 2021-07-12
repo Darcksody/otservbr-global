@@ -26,8 +26,8 @@ monster.Bestiary = {
 	Locations = "Folda, Chyllfroest, Isle of Merriment."
 	}
 
-monster.health = 950
-monster.maxHealth = 950
+monster.health = 20000
+monster.maxHealth = 20000
 monster.race = "blood"
 monster.corpse = 6038
 monster.speed = 250
@@ -78,6 +78,7 @@ monster.voices = {
 }
 
 monster.loot = {
+	{id = 21400, chance = 12500, maxCount = 1}, -- silver raid token 
 	{name = "snowball", chance = 10000, maxCount = 22},
 	{name = "gold coin", chance = 100000, maxCount = 60},
 	{name = "gold coin", chance = 100000, maxCount = 40},
