@@ -70,6 +70,7 @@ monster.voices = {
 }
 
 monster.loot = {
+	{id = 21400, chance = 12500, maxCount = 1}, -- silver raid token 
 	{id = 2148, chance = 100000, maxCount = 115},
 	{id = 7589, chance = 17500},
 	{id = 2144, chance = 15960},

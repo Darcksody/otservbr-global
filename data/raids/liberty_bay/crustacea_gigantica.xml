@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<raid>
+	<areaspawn delay="1000" fromx="32182" fromy="32937" fromz="9" tox="32182" toy="32937" toz="9">
+		<monster name="Crustacea Gigantica" amount="1" />
+	</areaspawn>
+
+	<areaspawn delay="2000" fromx="32107" fromy="32787" fromz="12" tox="32107" toy="32787" toz="12">
+		<monster name="Crustacea Gigantica" amount="1" />
+	</areaspawn>
+
+	<areaspawn delay="3000" fromx="32096" fromy="32738" fromz="12" tox="32096" toy="32738" toz="12">
+		<monster name="Crustacea Gigantica" amount="1" />
+	</areaspawn>
+
+	<areaspawn delay="4000" fromx="33556" fromy="31788" fromz="14" tox="33556" toy="31788" toz="14">
+		 <monster name="Crustacea Gigantica" amount="1" />
+	</areaspawn>
+
+	<areaspawn delay="5000" fromx="33502" fromy="31629" fromz="15" tox="33502" toy="31629" toz="15">
+		 <monster name="Crustacea Gigantica" amount="1" />
+	</areaspawn>
+
+</raid>

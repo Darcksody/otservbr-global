@@ -49,12 +49,10 @@
 	<raid name="GoFemor" file="kazordoon/goblins.xml" interval2="500" margin="70" />
 	<raid name="Horned Fox" file="kazordoon/horned.xml" interval2="1440" margin="180" />
 	<!-- Liberty Bay -->
+	<raid name="Crustacea Gigantica" file="liberty_bay/crustacea_gigantica.xml" interval2="1000" margin="50"/>
 	<!-- Under Treasure Island -->
-	<raid name="Crustacea Gigantica treasure" file="liberty_bay/crustacea_gigantica_1.xml" interval2="240" margin="20"/>
 	<!-- Calassa South -->
-	<raid name="Crustacea Gigantica calassa1" file="liberty_bay/crustacea_gigantica_2.xml" interval2="240" margin="20"/>
 	<!-- Calassa North -->
-	<raid name="Crustacea Gigantica calassa2" file="liberty_bay/crustacea_gigantica_3.xml" interval2="300" margin="20"/>
 	<raid name="Diblis The Fair" file="liberty_bay/diblis_the_fair.xml" interval2="1440" margin="180" />
 	<raid name="Ferumbras" file="liberty_bay/ferumbras.xml" interval2="1440" margin="120" />
 	<raid name="Morgaroth" file="liberty_bay/morgaroth.xml" interval2="1440" margin="120" />
@@ -64,15 +62,11 @@
 	<raid name="Undead Cavebear" file="liberty_bay/undead_cavebear.xml" interval2="230" margin="20"/>
 	<!-- Oramond -->
 	<!-- Seacrest Grounds South -->
-	<raid name="Crustacea Gigantica seacrest1" file="oramond/crustacea_gigantica_4.xml" interval2="240" margin="60"/>
 	<!-- Seacrest Grounds North -->
-	<raid name="Crustacea Gigantica seacrest2" file="oramond/crustacea_gigantica_5.xml" interval2="300" margin="60"/>
 	<!-- Port Hope -->
 	<raid name="Kongras" file="port_hope/kongras.xml" interval2="500" margin="60" />
 	<raid name="Lizards" file="port_hope/lizards.xml" interval2="500" margin="95" />
-	<raid name="Midnight Panther One" file="port_hope/midnight_panther_1.xml" interval2="280" margin="20"/>
-	<raid name="Midnight Panther Two" file="port_hope/midnight_panther_2.xml" interval2="280" margin="20"/>
-	<raid name="Midnight Panther Three" file="port_hope/midnight_panther_3.xml" interval2="280" margin="20"/>
+	<raid name="Midnight Panther" file="port_hope/midnight_panther.xml" interval2="280" margin="20"/>
 	<raid name="Sspawn" file="port_hope/serpent_spawn.xml" interval2="500" margin="60" />
 	<raid name="Terror" file="port_hope/terrorbirds.xml" interval2="500" margin="100" />
 	<raid name="The Welter" file="port_hope/the_welter.xml" interval2="440" margin="60"/>

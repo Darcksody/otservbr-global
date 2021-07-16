@@ -9,12 +9,19 @@ local raids = {
 		['14:30'] = {name = 'Ocyakao', probability = 3, centerPosition = Position(32353, 31052, 7), rangeX = 5, rangeY = 5, raid = true},
 		['21:30'] = {name = 'Ocyakao', probability = 4, centerPosition = Position(32353, 31052, 7), rangeX = 5, rangeY = 5, raid = true},
 
+		['02:30'] = {name = 'Sir Valorcrest', probability = 2, centerPosition = Position(33264, 31768, 10), rangeX = 5, rangeY = 5, raid = true},
+		['15:30'] = {name = 'Sir Valorcrest', probability = 3, centerPosition = Position(33264, 31768, 10), rangeX = 5, rangeY = 5, raid = true},
+		['22:30'] = {name = 'Sir Valorcrest', probability = 2, centerPosition = Position(33264, 31768, 10), rangeX = 5, rangeY = 5, raid = true},
+
 		['10:00'] = {name = 'Tyrn', probability = 1, raid = true},
 		['20:00'] = {name = 'Tyrn', probability = 2, raid = true},
 
+		
 		['04:30'] = {name = 'Countess Sorrow', probability = 1, centerPosition = Position(32802,32333,15), rangeX = 5, rangeY = 5},
 		['11:30'] = {name = 'Countess Sorrow', probability = 2, centerPosition = Position(32802,32333,15), rangeX = 5, rangeY = 5},
 		['18:30'] = {name = 'Countess Sorrow', probability = 3, centerPosition = Position(32802,32333,15), rangeX = 5, rangeY = 5},
+
+		['02:00'] = {name = 'Draptor', probability = 4, raid = true},
 	},
  
 	--Martes
@@ -23,9 +30,18 @@ local raids = {
 		['14:30'] = {name = 'Hirintror', probability = 3, centerPosition = Position(32101, 31167, 9), rangeX = 5, rangeY = 5, raid = true},
 		['21:30'] = {name = 'Hirintror', probability = 4, centerPosition = Position(32101, 31167, 9), rangeX = 5, rangeY = 5, raid = true},
 
+		['02:30'] = {name = 'Zevelon Duskbringer', probability = 2, centerPosition = Position(32754, 31578, 11), rangeX = 5, rangeY = 5, raid = true},
+		['15:30'] = {name = 'Zevelon Duskbringer', probability = 3, centerPosition = Position(32754, 31578, 11), rangeX = 5, rangeY = 5, raid = true},
+		['22:30'] = {name = 'Zevelon Duskbringer', probability = 2, centerPosition = Position(32754, 31578, 11), rangeX = 5, rangeY = 5, raid = true},
+
 		['04:30'] = {name = 'Dracola', probability = 1, centerPosition = Position(32837,32309,15), rangeX = 5, rangeY = 5},
 		['11:30'] = {name = 'Dracola', probability = 2, centerPosition = Position(32837,32309,15), rangeX = 5, rangeY = 5},
 		['18:30'] = {name = 'Dracola', probability = 3, centerPosition = Position(32837,32309,15), rangeX = 5, rangeY = 5},
+
+		['08:30'] = {name = 'Dharalion', probability = 2, centerPosition = Position(33038, 32176, 9), rangeX = 5, rangeY = 5, raid = true},
+		['16:30'] = {name = 'Dharalion', probability = 3, centerPosition = Position(33038, 32176, 9), rangeX = 5, rangeY = 5, raid = true},
+		['20:00'] = {name = 'Dharalion', probability = 2, centerPosition = Position(33038, 32176, 9), rangeX = 5, rangeY = 5, raid = true},
+
 	},
 
 	--Miercoles
@@ -44,6 +60,8 @@ local raids = {
 		['04:30'] = {name = 'The Handmaiden', probability = 1, centerPosition = Position(32785,32290,15), rangeX = 5, rangeY = 5},
 		['11:30'] = {name = 'The Handmaiden', probability = 2, centerPosition = Position(32785,32290,15), rangeX = 5, rangeY = 5},
 		['18:30'] = {name = 'The Handmaiden', probability = 3, centerPosition = Position(32785,32290,15), rangeX = 5, rangeY = 5},
+
+		['02:00'] = {name = 'Midnight Panther', probability = 4, raid = true},
 	},
 
 	--Jueves
@@ -52,26 +70,36 @@ local raids = {
 		['14:30'] = {name = 'Captain Jones', probability = 3, centerPosition = Position(33325, 32183, 7), rangeX = 5, rangeY = 5},
 		['21:30'] = {name = 'Captain Jones', probability = 4, centerPosition = Position(33325, 32183, 7), rangeX = 5, rangeY = 5},
 
-		['10:00'] = {name = 'Furyosa', probability = 2, centerPosition = Position(33281,31804,15), rangeX = 5, rangeY = 5, raid = true},
-		['20:00'] = {name = 'Furyosa', probability = 2, centerPosition = Position(33281,31804,15), rangeX = 5, rangeY = 5, raid = true},
+		['10:00'] = {name = 'Furyosa', probability = 2, centerPosition = Position(33299, 31829, 15), rangeX = 5, rangeY = 5, raid = true},
+		['20:00'] = {name = 'Furyosa', probability = 2, centerPosition = Position(33299, 31829, 15), rangeX = 5, rangeY = 5, raid = true},
 
 		['04:30'] = {name = 'Massacre', probability = 1, centerPosition = Position(32876,32270,15), rangeX = 5, rangeY = 5},
 		['11:30'] = {name = 'Massacre', probability = 2, centerPosition = Position(32876,32270,15), rangeX = 5, rangeY = 5},
 		['18:30'] = {name = 'Massacre', probability = 1, centerPosition = Position(32876,32270,15), rangeX = 5, rangeY = 5},
-	},
 
+		['02:30'] = {name = 'Arachir the Ancient One', probability = 2, centerPosition = Position(32965, 32400, 12), rangeX = 5, rangeY = 5, raid = true},
+		['15:30'] = {name = 'Arachir the Ancient One', probability = 3, centerPosition = Position(32965, 32400, 12), rangeX = 5, rangeY = 5, raid = true},
+		['22:30'] = {name = 'Arachir the Ancient One', probability = 2, centerPosition = Position(32965, 32400, 12), rangeX = 5, rangeY = 5, raid = true},
+	},
+ 
 	--Viernes
 	['Friday'] = {
-		['04:30'] = {name = 'Mr. Punis', probability = 1, centerPosition = Position(32763,32243,15), rangeX = 5, rangeY = 5},
-		['11:30'] = {name = 'Mr. Punis', probability = 2, centerPosition = Position(32763,32243,15), rangeX = 5, rangeY = 5},
-		['18:30'] = {name = 'Mr. Punis', probability = 3, centerPosition = Position(32763,32243,15), rangeX = 5, rangeY = 5},
+		['04:30'] = {name = 'Mr. Punish', probability = 1, centerPosition = Position(32763,32243,15), rangeX = 5, rangeY = 5},
+		['11:30'] = {name = 'Mr. Punish', probability = 2, centerPosition = Position(32763,32243,15), rangeX = 5, rangeY = 5},
+		['18:30'] = {name = 'Mr. Punish', probability = 3, centerPosition = Position(32763,32243,15), rangeX = 5, rangeY = 5},
 
 		['07:30'] = {name = 'Zushuka', probability = 2, centerPosition = Position(31941, 31388, 9), rangeX = 5, rangeY = 5, raid = true},
 		['14:30'] = {name = 'Zushuka', probability = 3, centerPosition = Position(31941, 31388, 9), rangeX = 5, rangeY = 5, raid = true},
 		['21:30'] = {name = 'Zushuka', probability = 4, centerPosition = Position(31941, 31388, 9), rangeX = 5, rangeY = 5, raid = true},
 
 		['18:00'] = {name = 'The Evil Eye', probability = 4, centerPosition = Position(32808, 31611, 14), rangeX = 5, rangeY = 5},
-		['22:00'] = {name = 'The Evil Eye', probability = 4, centerPosition = Position(32808, 31611, 14), rangeX = 5, rangeY = 5},
+		['22:30'] = {name = 'The Evil Eye', probability = 4, centerPosition = Position(32808, 31611, 14), rangeX = 5, rangeY = 5},
+
+		['02:30'] = {name = 'Gravelord Oshuran', probability = 2, centerPosition = Position(32980, 32393, 12), rangeX = 5, rangeY = 5},
+		['15:30'] = {name = 'Gravelord Oshuran', probability = 3, centerPosition = Position(32980, 32393, 12), rangeX = 5, rangeY = 5},
+		['09:30'] = {name = 'Gravelord Oshuran', probability = 2, centerPosition = Position(32980, 32393, 12), rangeX = 5, rangeY = 5},
+		
+		['02:00'] = {name = 'Undead Cavebear', probability = 4, raid = true},
 	},
 
 	--Sábado
@@ -94,9 +122,21 @@ local raids = {
 
 	--Domingo
 	['Sunday'] = {
+		['13:00'] = {name = 'Necropharus', probability = 3, raid = true},
+		['18:00'] = {name = 'Necropharus', probability = 3, raid = true},
+
 		['10:00'] = {name = 'Yeti', probability = 2, centerPosition = Position(32008, 31595, 7), rangeX = 10, rangeY = 10, raid = true},
 		['20:00'] = {name = 'Yeti', probability = 2, centerPosition = Position(32008, 31595, 7), rangeX = 10, rangeY = 10, raid = true},
 
+		['04:30'] = {name = 'The Plasmother', probability = 1, centerPosition = Position(32845,32332,15), rangeX = 5, rangeY = 5},
+		['11:30'] = {name = 'The Plasmother', probability = 2, centerPosition = Position(32845,32332,15), rangeX = 5, rangeY = 5},
+		['21:30'] = {name = 'The Plasmother', probability = 3, centerPosition = Position(32845,32332,15), rangeX = 5, rangeY = 5},
+
+		['02:30'] = {name = 'Weakened Shlorg', probability = 2, centerPosition = Position(33164, 31716, 9), rangeX = 5, rangeY = 5, raid = true},
+		['15:30'] = {name = 'Weakened Shlorg', probability = 3, centerPosition = Position(33164, 31716, 9), rangeX = 5, rangeY = 5, raid = true},
+		['22:30'] = {name = 'Weakened Shlorg', probability = 2, centerPosition = Position(33164, 31716, 9), rangeX = 5, rangeY = 5, raid = true},
+
+		['02:00'] = {name = 'Crustacea Gigantica', probability = 4, raid = true},
 	},
 
 	-- By date (Day/Month)

@@ -4141,7 +4141,7 @@ if not equipmentsTable then
 			type = "deequip",
 			slot = "hand"
 		}, -- blade of remedy
-		{
+--[[ 		{
 			itemid = 25888,
 			type = "equip",
 			slot = "hand",
@@ -4156,8 +4156,8 @@ if not equipmentsTable then
 			type = "deequip",
 			slot = "hand",
 			level = 100
-		}, -- rod of mayhem
-		{
+		}, -- rod of mayhem ]]
+--[[ 		{
 			itemid = 25887,
 			type = "equip",
 			slot = "hand",
@@ -4172,7 +4172,7 @@ if not equipmentsTable then
 			type = "deequip",
 			slot = "hand",
 			level = 100
-		}, -- wand of mayhem
+		}, -- wand of mayhem ]]
 		{
 			itemid = 25886,
 			type = "equip",
@@ -4183,7 +4183,7 @@ if not equipmentsTable then
 			type = "deequip",
 			slot = "hand"
 		}, -- crossbow of mayhem
-		{
+--[[ 		{
 			itemid = 25885,
 			type = "equip",
 			slot = "hand"
@@ -4192,7 +4192,7 @@ if not equipmentsTable then
 			itemid = 25885,
 			type = "deequip",
 			slot = "hand"
-		}, -- bow of mayhem
+		}, -- bow of mayhem ]]
 		{
 			itemid = 25884,
 			type = "equip",
@@ -4203,7 +4203,7 @@ if not equipmentsTable then
 			type = "deequip",
 			slot = "hand"
 		}, -- hammer of mayhem
-		{
+--[[ 		{
 			itemid = 25883,
 			type = "equip",
 			slot = "hand"
@@ -4212,7 +4212,7 @@ if not equipmentsTable then
 			itemid = 25883,
 			type = "deequip",
 			slot = "hand"
-		}, -- mace of mayhem
+		}, -- mace of mayhem ]]
 		{
 			itemid = 25882,
 			type = "equip",
@@ -4223,7 +4223,7 @@ if not equipmentsTable then
 			type = "deequip",
 			slot = "hand"
 		}, -- chopper of mayhem
-		{
+--[[ 		{
 			itemid = 25881,
 			type = "equip",
 			slot = "hand"
@@ -4232,7 +4232,7 @@ if not equipmentsTable then
 			itemid = 25881,
 			type = "deequip",
 			slot = "hand"
-		}, -- axe of mayhem
+		}, -- axe of mayhem ]]
 		{
 			itemid = 25880,
 			type = "equip",
@@ -4243,16 +4243,16 @@ if not equipmentsTable then
 			type = "deequip",
 			slot = "hand"
 		}, -- slayer of mayhem
-		{
-			itemid = 25879,
-			type = "equip",
-			slot = "hand"
-		}, -- blade of mayhem
-		{
-			itemid = 25879,
-			type = "deequip",
-			slot = "hand"
-		}, -- blade of mayhem
+		-- {
+		-- 	itemid = 25879,
+		-- 	type = "equip",
+		-- 	slot = "hand"
+		-- }, -- blade of mayhem
+		-- {
+		-- 	itemid = 25879,
+		-- 	type = "deequip",
+		-- 	slot = "hand"
+		-- }, -- blade of mayhem
 		{
 			itemid = 25546,
 			type = "equip",

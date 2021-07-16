@@ -77,6 +77,7 @@ monster.voices = {
 }
 
 monster.loot = {
+	{id = 21400, chance = 12500, maxCount = 1}, -- silver raid token 
 	{name = "gold coin", chance = 31820, maxCount = 80},
 	{name = "maxilla", chance = 13640},
 	{name = "cavebear skull", chance = 2600},

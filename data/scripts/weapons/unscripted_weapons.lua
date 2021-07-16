@@ -1367,7 +1367,7 @@ local weapons = {
 			{"Elite Knight"}
 		}
 	}, -- blade of remedy
-	{
+--[[ 	{
 		itemId = 25888,
 		type = WEAPON_WAND,
 		wandType = "ice",
@@ -1378,8 +1378,8 @@ local weapons = {
 			{"Druid", true},
 			{"Elder Druid"}
 		}
-	}, -- rod of mayhem
-	{
+	}, -- rod of mayhem ]]
+--[[ 	{
 		itemId = 25887,
 		type = WEAPON_WAND,
 		wandType = "energy",
@@ -1390,7 +1390,7 @@ local weapons = {
 			{"Sorcerer", true},
 			{"Master Sorcerer"}
 		}
-	}, -- wand of mayhem
+	}, -- wand of mayhem ]]
 	{
 		itemId = 25886,
 		type = WEAPON_DISTANCE,
@@ -1401,7 +1401,7 @@ local weapons = {
 			{"Royal Paladin"}
 		}
 	}, -- crossbow of mayhem
-	{
+--[[ 	{
 		itemId = 25885,
 		type = WEAPON_DISTANCE,
 		level = 100,
@@ -1410,7 +1410,7 @@ local weapons = {
 			{"Paladin", true},
 			{"Royal Paladin"}
 		}
-	}, -- bow of mayhem
+	}, -- bow of mayhem ]]
 	{
 		itemId = 25884,
 		type = WEAPON_CLUB,
@@ -1421,7 +1421,7 @@ local weapons = {
 			{"Elite Knight"}
 		}
 	}, -- hammer of mayhem
-	{
+--[[ 	{
 		itemId = 25883,
 		type = WEAPON_CLUB,
 		level = 100,
@@ -1430,7 +1430,7 @@ local weapons = {
 			{"Knight", true},
 			{"Elite Knight"}
 		}
-	}, -- mace of mayhem
+	}, -- mace of mayhem ]]
 	{
 		itemId = 25882,
 		type = WEAPON_AXE,
@@ -1441,7 +1441,7 @@ local weapons = {
 			{"Elite Knight"}
 		}
 	}, -- chopper of mayhem
-	{
+	--[[ {
 		itemId = 25881,
 		type = WEAPON_AXE,
 		level = 100,
@@ -1450,7 +1450,7 @@ local weapons = {
 			{"Knight", true},
 			{"Elite Knight"}
 		}
-	}, -- axe of mayhem
+	}, -- axe of mayhem ]]
 	{
 		itemId = 25880,
 		type = WEAPON_SWORD,
@@ -1461,7 +1461,7 @@ local weapons = {
 			{"Elite Knight"}
 		}
 	}, -- slayer of mayhem
-	{
+	--[[ {
 		itemId = 25879,
 		type = WEAPON_SWORD,
 		level = 100,
@@ -1470,7 +1470,7 @@ local weapons = {
 			{"Knight", true},
 			{"Elite Knight"}
 		}
-	}, -- blade of mayhem
+	}, -- blade of mayhem ]]
 	{
 		itemId = 25523,
 		type = WEAPON_DISTANCE,

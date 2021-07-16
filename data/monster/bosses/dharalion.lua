@@ -74,6 +74,7 @@ monster.voices = {
 }
 
 monster.loot = {
+	{id = 21400, chance = 12500, maxCount = 1}, -- silver raid token 
 	{name = "gold coin", chance = 100000, maxCount = 100},
 	{name = "holy orchid", chance = 100000},
 	{name = "elvish talisman", chance = 88000},

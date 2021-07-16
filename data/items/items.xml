@@ -36820,7 +36820,10 @@
 	</item>
 	<item fromid="25845" toid="25869" name="rift wall" />
 	<item fromid="25870" toid="25878" name="glowing" />
-	<item id="25879" article="a" name="blade of mayhem">
+	<item id="25879" article="a" name="eternal training sword">
+		<attribute key="weight" value="1000" />
+	</item>
+	<!-- <item id="25879" article="a" name="blade of mayhem">
 		<attribute key="description" value="It can only be wielded properly by players of level 100 or higher." />
 		<attribute key="defense" value="33" />
 		<attribute key="attack" value="50" />
@@ -36828,7 +36831,7 @@
 		<attribute key="loottype" value="sword" />
 		<attribute key="weight" value="5000" />
 		<attribute key="imbuingSlots" value="3" />
-	</item>
+	</item> -->
 	<item id="25880" article="a" name="slayer of mayhem">
 		<attribute key="description" value="It can only be wielded properly by players of level 100 or higher." />
 		<attribute key="defense" value="32" />
@@ -36839,7 +36842,10 @@
 		<attribute key="weight" value="7000" />
 		<attribute key="imbuingSlots" value="3" />
 	</item>
-	<item id="25881" article="an" name="axe of mayhem">
+	<item id="25881" article="a" name="eternal training axe">
+		<attribute key="weight" value="1000" />
+	</item>
+	<!-- <item id="25881" article="an" name="axe of mayhem">
 		<attribute key="description" value="It can only be wielded properly by players of level 100 or higher." />
 		<attribute key="defense" value="31" />
 		<attribute key="attack" value="51" />
@@ -36847,7 +36853,7 @@
 		<attribute key="loottype" value="axe" />
 		<attribute key="weight" value="5000" />
 		<attribute key="imbuingSlots" value="3" />
-	</item>
+	</item> -->
 	<item id="25882" article="a" name="chopper of mayhem">
 		<attribute key="description" value="It can only be wielded properly by players of level 100 or higher." />
 		<attribute key="defense" value="32" />
@@ -36858,7 +36864,10 @@
 		<attribute key="weight" value="7000" />
 		<attribute key="imbuingSlots" value="3" />
 	</item>
-	<item id="25883" article="a" name="mace of mayhem">
+	<item id="25883" article="a" name="eternal training mace">
+		<attribute key="weight" value="1000" />
+	</item>
+	<!-- <item id="25883" article="a" name="mace of mayhem">
 		<attribute key="description" value="It can only be wielded properly by players of level 100 or higher." />
 		<attribute key="defense" value="30" />
 		<attribute key="attack" value="50" />
@@ -36866,7 +36875,7 @@
 		<attribute key="loottype" value="club" />
 		<attribute key="weight" value="5000" />
 		<attribute key="imbuingSlots" value="3" />
-	</item>
+	</item> -->
 	<item id="25884" article="a" name="hammer of mayhem">
 		<attribute key="description" value="It can only be wielded properly by players of level 100 or higher." />
 		<attribute key="defense" value="30" />
@@ -36877,7 +36886,10 @@
 		<attribute key="slotType" value="two-handed" />
 		<attribute key="imbuingSlots" value="3" />
 	</item>
-	<item id="25885" article="a" name="bow of mayhem">
+	<item id="25885" article="a" name="eternal training bow">
+		<attribute key="weight" value="1000" />
+	</item>
+	<!-- <item id="25885" article="a" name="bow of mayhem">
 		<attribute key="description" value="It can only be wielded properly by players of level 100 or higher." />
 		<attribute key="weight" value="5500" />
 		<attribute key="slotType" value="two-handed" />
@@ -36888,7 +36900,7 @@
 		<attribute key="hitChance" value="6" />
 		<attribute key="attack" value="6" />
 		<attribute key="imbuingSlots" value="3" />
-	</item>
+	</item> -->
 	<item id="25886" article="a" name="crossbow of mayhem">
 		<attribute key="description" value="It can only be wielded properly by players of level 100 or higher." />
 		<attribute key="weight" value="6500" />
@@ -36901,7 +36913,10 @@
 		<attribute key="attack" value="6" />
 		<attribute key="imbuingSlots" value="3" />
 	</item>
-	<item id="25887" article="a" name="wand of mayhem">
+	<item id="25887" article="a" name="eternal training wand">
+		<attribute key="weight" value="1000" />
+	</item>
+	<!-- <item id="25887" article="a" name="wand of mayhem">
 		<attribute key="description" value="It can only be wielded properly by sorcerers of level 100 or higher." />
 		<attribute key="weight" value="3500" />
 		<attribute key="weaponType" value="wand" />
@@ -36909,8 +36924,11 @@
 		<attribute key="shootType" value="energy" />
 		<attribute key="range" value="3" />
 		<attribute key="imbuingSlots" value="3" />
+	</item> -->
+	<item id="25888" article="a" name="eternal training rod">
+		<attribute key="weight" value="1000" />
 	</item>
-	<item id="25888" article="a" name="rod of mayhem">
+	<!-- <item id="25888" article="a" name="rod of mayhem">
 		<attribute key="description" value="It can only be wielded properly by druids of level 100 or higher." />
 		<attribute key="weight" value="3500" />
 		<attribute key="weaponType" value="wand" />
@@ -36918,7 +36936,7 @@
 		<attribute key="shootType" value="ice" />
 		<attribute key="range" value="3" />
 		<attribute key="imbuingSlots" value="3" />
-	</item>
+	</item> -->
 	<item id="25889" article="a" name="blade of mayhem"/>
 	<item id="25890" article="a" name="slayer of mayhem"/>
 	<item id="25891" article="a" name="axe of mayhem"/>
@@ -37204,16 +37222,22 @@
 		<attribute key="containerSize" value="30" />
 		<attribute key="decayTo" value="26045" />
 		<attribute key="duration" value="40" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
 	</item>
 	<item id="26045" article="a" name="dead sparkion">
 		<attribute key="containerSize" value="30" />
 		<attribute key="decayTo" value="26046" />
 		<attribute key="duration" value="10" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
 	</item>
 	<item id="26046" article="a" name="dead sparkion">
 		<attribute key="containerSize" value="30" />
 		<attribute key="decayTo" value="26047" />
 		<attribute key="duration" value="10" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
 	</item>
 	<item id="26047" article="a" name="dead sparkion">
 		<attribute key="containerSize" value="30" />
@@ -37224,16 +37248,22 @@
 		<attribute key="containerSize" value="30" />
 		<attribute key="decayTo" value="26049" />
 		<attribute key="duration" value="40" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
 	</item>
 	<item id="26049" article="a" name="slain breach brood">
 		<attribute key="containerSize" value="20" />
 		<attribute key="decayTo" value="26050" />
 		<attribute key="duration" value="10" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
 	</item>
 	<item id="26050" article="a" name="slain breach brood">
 		<attribute key="containerSize" value="20" />
 		<attribute key="decayTo" value="26051" />
 		<attribute key="duration" value="10" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
 	</item>
 	<item id="26051" article="a" name="slain breach brood">
 		<attribute key="containerSize" value="20" />
@@ -37304,11 +37334,15 @@
 		<attribute key="containerSize" value="30" />
 		<attribute key="decayTo" value="26069" />
 		<attribute key="duration" value="40" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
 	</item>
 	<item id="26069" article="a" name="dead reality reaver">
 		<attribute key="containerSize" value="30" />
 		<attribute key="decayTo" value="26071" />
 		<attribute key="duration" value="40" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
 	</item>
 	<item id="26070" article="a" name="ferocious table">
 		<attribute key="rotateTo" value="26067" />
@@ -37318,6 +37352,8 @@
 		<attribute key="containerSize" value="30" />
 		<attribute key="decayTo" value="26072" />
 		<attribute key="duration" value="40" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
 	</item>
 	<item id="26072" article="a" name="dead reality reaver">
 		<attribute key="weight" value="25000" />
@@ -37895,16 +37931,22 @@
 		<attribute key="containerSize" value="30" />
 		<attribute key="decayTo" value="26210" />
 		<attribute key="duration" value="40" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
 	</item>
 	<item id="26210" article="a" name="dead breach brood">
 		<attribute key="containerSize" value="30" />
 		<attribute key="decayTo" value="26211" />
 		<attribute key="duration" value="10" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
 	</item>
 	<item id="26211" article="a" name="dead breach brood">
 		<attribute key="containerSize" value="30" />
 		<attribute key="decayTo" value="26212" />
 		<attribute key="duration" value="10" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
 	</item>
 	<item id="26212" article="a" name="dead breach brood">
 		<attribute key="containerSize" value="30" />
@@ -37915,16 +37957,22 @@
 		<attribute key="containerSize" value="30" />
 		<attribute key="decayTo" value="26214" />
 		<attribute key="duration" value="40" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
 	</item>
 	<item id="26214" article="a" name="dead dread intruder">
 		<attribute key="containerSize" value="30" />
 		<attribute key="decayTo" value="26215" />
 		<attribute key="duration" value="40" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
 	</item>
 	<item id="26215" article="a" name="slain dread intruder">
 		<attribute key="containerSize" value="30" />
 		<attribute key="decayTo" value="26216" />
 		<attribute key="duration" value="30" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
 	</item>
 	<item id="26216" article="a" name="dead dread intruder">
 		<attribute key="containerSize" value="30" />
@@ -52165,9 +52213,12 @@
 	</item>
 	<item id="40359" article="a" name="jungle quiver">
 		<attribute key="weight" value="1800" />
-		<attribute key="containerSize" value="8" />
+		<attribute key="containerSize" value="10" />
 		<attribute key="weaponType" value="quiver" />
 		<attribute key="slotType" value="right-hand" />
+		<attribute key="skillDist" value="1" />
+		<attribute key="defense" value="5" />
+		<attribute key="hitChance" value="3" />
 	</item>
 	<item id="40397" article="a" name="quiver">
 		<attribute key="weight" value="1700" />
