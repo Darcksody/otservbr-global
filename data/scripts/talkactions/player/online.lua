@@ -1,7 +1,15 @@
-local maxPlayersPerMessage = 10
+local maxPlayersPerMessage = 20
 local playersOnline = TalkAction("!online")
 
-function playersOnline.onSay(player, words, param)	
+function playersOnline.onSay(player, words, param)
+
+    if player:getStorageValue(AUTOLOOT_EXHAUSTED) > os.time() then
+        player:sendCancelMessage('You are exhausted.')
+        return false
+    end
+
+    player:setStorageValue(AUTOLOOT_EXHAUSTED, os.time() + 2)
+
     local hasAccess = player:getGroup():getAccess()
     local players = Game.getPlayers()
     local onlineList = {}
@@ -20,6 +28,7 @@ function playersOnline.onSay(player, words, param)
         local msg = table.concat(onlineList, ", ", i, j) .. "."
         player:sendTextMessage(MESSAGE_ATTENTION, msg)
     end
+
     return false
 end
 

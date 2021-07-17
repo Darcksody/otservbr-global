@@ -80,7 +80,7 @@ function playerLogin.onLogin(player)
 	end
  
 local msg = [[
-1 *> See our commands with !commands
+1 *> See our !commands
 2 *> Free promotion at level 20.
 3 *> Protection at level 20 (Blessed until level 80).
 5 *> Custom balanced regeneration (Mana and Health).
@@ -89,14 +89,16 @@ local msg = [[
 8 *> Adori spell: consumes 20 soul, 20 mana.
 - E.g. adori bag (spear, backpack, rune, food, rope, shovel)
 -
-Stay Online and get 1 Tibia Coin every hour
-max 5 tibia coins at day, players level > 20.
+Stay Online and get 1 Tibia Coin every hour max 5 tibia coins at day, players level > 20.
 -
 Tibia Coins on Level 50(25tc), 100(50tc), 150(75tc), 200(100tc), 300(150tc), 400(200tc), 500(250tc).
--]]
+-
+Disable/Enable this popup do !log command
+]]
 
-	player:popupFYI(msg)
-
+	if player:getStorageValue(TOGGLE_LOG_LOGIN) ~= 1 then
+		player:popupFYI(msg)
+	end
 
 	local playerId = player:getId()
 

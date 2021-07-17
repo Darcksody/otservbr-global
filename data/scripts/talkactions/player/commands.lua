@@ -10,8 +10,12 @@ function commands.onSay(player, words, param)
 5 *> !sellhouse
 6 *> !time
 7 *> !emotespells
+8 *> !log (Enable/Disable on login popup information).
+9 *> !online
 ]]
+
 player:popupFYI(msg)
+
 	return false
 end
 

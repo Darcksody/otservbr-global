@@ -51,7 +51,8 @@ registerMonsterType.Bestiary = function(mtype, mask)
 			mtype:BestiarySecondUnlock(mask.Bestiary.SecondUnlock)
 		end
 		if mask.Bestiary.CharmsPoints then
-			mtype:BestiaryCharmsPoints(mask.Bestiary.CharmsPoints * 3)
+				-- CHARM POINTS X 2
+			mtype:BestiaryCharmsPoints(mask.Bestiary.CharmsPoints * 2)
 		end
 		if mask.Bestiary.Stars then
 			mtype:BestiaryStars(mask.Bestiary.Stars)
