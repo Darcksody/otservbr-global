@@ -7,5 +7,5 @@ function drumeEntrance.onStepIn(creature, item, position, fromPosition)
 	end
 	return true
 end
-drumeEntrance:aid(59601)
+drumeEntrance:aid(59600)
 drumeEntrance:register()
