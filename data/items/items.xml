@@ -25902,6 +25902,11 @@
 		<attribute key="weight" value="970" />
 		<attribute key="description" value="A true Hearth of the Sea, cut by Deeplings in depths of deepest black. It feels cold and lifeless." />
 	</item>
+	<item id="15640" article="a" name="treasure chest">
+		<attribute key="containersize" value="32" />
+		<attribute key="pickupable" value="0" />
+		<attribute key="moveable" value="0" />
+	</item>
 	<item id="15643" article="a" name="hive bow">
 		<attribute key="weight" value="4600" />
 		<attribute key="slotType" value="two-handed" />

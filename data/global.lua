@@ -104,6 +104,11 @@ function queryToTable(id, values)
 end
 -- AUTO LOOT END --
 
+TANJIS_BOSS_ACTION = 58241
+JAUL_BOSS_ACTION = 58242
+OBUJOS_BOSS_ACTION = 58243
+EXIT_BOSS_ACTION = 58244
+
 NOT_MOVEABLE_ACTION = 100
 PARTY_PROTECTION = 1 -- Set to 0 to disable.
 ADVANCED_SECURE_MODE = 1 -- Set to 0 to disable.
@@ -261,3 +266,15 @@ end
 if not playerDelayPotion then
 	playerDelayPotion = {}
 end
+
+-- Delay Depplings Bosses
+if not playerDepplingsBosses then
+	playerDepplingsBosses = {}
+end
+
+-- Event Depplings Bosses
+if not eventDepplingsBosses then
+	eventDepplingsBosses = {}
+end
+
+

@@ -1,9 +1,9 @@
 local config = {
 	teleportId = 1387,
 	days = {
-		["Saturday"] = {Position(33649, 31261, 11), Position(33647, 31254, 11)}, -- tanjis
-		["Friday"] = {Position(33558, 31282, 11), Position(33545, 31263, 11)}, -- jaul
-		["Sunday"] = {Position(33438, 31248, 11), Position(33419, 31255, 11)}, -- obujos
+		["Friday"] = {teleportPos = Position(33649, 31261, 11), aid = TANJIS_BOSS_ACTION}, -- tanjis
+		["Saturday"] = {teleportPos = Position(33558, 31282, 11), aid = JAUL_BOSS_ACTION}, -- jaul
+		["Sunday"] = {teleportPos = Position(33438, 31248, 11), aid = OBUJOS_BOSS_ACTION}, -- obujos
 	}
 }
 
@@ -11,12 +11,17 @@ local gray = GlobalEvent("gray island bosses")
 function gray.onStartup()
 	local day = config.days[os.date("%A")]
 	if day then
-		local item = Game.createItem(config.teleportId, 1, day[1])
-		if not item:isTeleport() then
-			item:remove()
+
+		local teleportItem = Game.createItem(config.teleportId, 1, day.teleportPos)
+		if not teleportItem:isTeleport() then
+			teleportItem:remove()
 			return false
 		end
-		item:setDestination(day[2])
+
+		if teleportItem then
+			teleportItem:setActionId(day.aid)
+		end
+
 	end
 	return true
 end

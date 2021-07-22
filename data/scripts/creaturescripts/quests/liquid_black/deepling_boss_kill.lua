@@ -19,9 +19,14 @@ function deeplingBosses.onKill(creature, target)
 	for pid, _ in pairs(targetMonster:getDamageMap()) do
 		local attackerPlayer = Player(pid)
 		if attackerPlayer then
-			if attackerPlayer:getStorageValue(Storage.DeeplingBosses.DeeplingStatus) < bossConfig.status then
-				attackerPlayer:setStorageValue(Storage.DeeplingBosses.DeeplingStatus, bossConfig.status)
+
+			-- Delay Depplings Bosses
+			if not playerDepplingsBosses[attackerPlayer:getId()] then
+				playerDepplingsBosses[attackerPlayer:getId()] = 0
 			end
+
+			playerDepplingsBosses[attackerPlayer:getId()] = bossConfig.status
+
 			attackerPlayer:setStorageValue(bossConfig.storage, 1)
 		end
 	end
